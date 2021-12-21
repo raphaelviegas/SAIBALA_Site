@@ -2419,11 +2419,19 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   padding-top: 80px;
 }
 .product-detail section.cta .btn {
-  margin-top: 20px ;
+  margin-bottom: 20px ;
 }
 .product-detail section.cta h1 {
   font-size: 40px;
   text-transform: uppercase;
+}
+.product-detail section.cta .share h3 {
+  text-transform: uppercase;
+}
+.product-detail section.cta .share a {
+  color: black;
+  font-size: 20px;
+  margin: 0px 5px;
 }
 
 div.sobre .title h1 {
