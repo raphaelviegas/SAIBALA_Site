@@ -1,0 +1,153 @@
+@red: #F6EB2A;
+@gray: #2b2b2b;
+@lightgray: #7c7c7c;
+@light:#eceeef;
+@green: #127749;
+@light: #FEF6E7;
+@yellow: #E3B96A;
+@darkyellow: #F6EB2A;
+@mdgray: #DDDDDD;
+@darkgray: #383838;
+@black: #000000;
+
+#myaccount {
+	padding:80px 0px; 
+}
+.woocommerce-view-order {
+	.woocommerce-order-details {
+		table {
+			width: 100%;
+			margin-bottom: 30px;
+			td,th {
+				padding:6px;
+				border-bottom: 1px solid;
+				border-color: #9e7f87;
+			}
+		}
+	}
+}
+
+#customer_login {
+    h2 {
+        margin-top:40px;
+        font-size:30px;
+        font-weight: 300;
+        margin-left:-5px;
+    }
+    .password-input {
+        width:100%;
+    }
+}
+
+.itemOrder {
+    .btn {
+        margin-top:10px;
+    }
+    .box {
+        background:#f1f1f1;
+        padding:10px;
+        text-align:center;
+    }
+    .status {
+        display:inline-block;
+        width:100%;
+        font-size:12px;
+        margin-top:10px;
+    }
+}
+
+.woocommerce-MyAccount-content {
+	padding:30px;
+	border-radius: 8px;
+    background: white;
+    @media (max-width:576px){
+        padding:5px;
+        margin-top:5px;
+    }
+    .woocommerce-address-fields {
+        .input-text,select {
+            padding:5px;
+            width:100%;
+            border:1px solid #ddd;
+            margin-bottom:10px;
+        }
+    }
+	.woocommerce-input-wrapper,.password-input {
+		width: 100%;
+		display: inline-block;
+    }
+    legend, h3,h2 {
+        font-weight:300;
+        font-size:24px;
+        margin-bottom:10px;
+
+    }
+}
+.side-account {
+    margin-bottom:30px;
+	aside {
+		background: @red;
+		color:white;
+		padding:15px 25px;
+		border-radius: 8px 8px 0px 0px;
+		h5 {
+			margin-bottom: 0px;
+			margin-top: 20px;
+		}
+	}
+	.list-group {
+		a {
+			color:@gray;
+			&:last-child {
+				border-radius: 0px 0px 8px 8px;
+			}
+			&.active {
+				background: @light;
+				color:@gray;
+				border-color:@light;
+			}
+		}
+	}
+}
+
+.box-myaccount {
+    ul {
+        list-style: none;
+        margin:0;
+        padding:0;
+        li {
+            border-bottom:1px solid #ddd;
+            padding:10px 5px;
+            a {
+                color:black;
+            }
+        }
+    }
+	.box-contact {
+        position:absolute;
+        bottom:20px;
+        left:20px;
+        width:~"calc(100% - 40px)";
+		a {
+			color:black;
+			transition: color .5s;
+			&:hover {
+				color:@darkyellow;
+			}
+		}
+		h4 {
+			font-weight: 600;
+			font-size:18px;
+			margin-bottom: 10px;
+		}
+		a {
+			display: inline-block;
+			width: 100%;
+			padding:3px 0px;
+			&.bold {
+				font-weight: bold;
+				text-decoration: underline; 
+			}
+		}
+	}
+}

@@ -1,0 +1,357 @@
+@yellow : #F6EB2A;
+
+body,html {
+	font-family: 'Roboto', sans-serif;
+}
+header {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	padding:15px;
+	z-index:3;
+	a {
+		color:white;
+	}
+	.buttons {
+		a {
+			font-size: 16px;
+			padding:5px 15px;
+			&:hover {
+				color:@yellow;
+			}
+		}
+	}
+	ul {
+		list-style: none;
+		margin:0;
+		padding:0;
+		li {
+			display: inline-block;
+			padding:0px 10px;
+			a {
+				font-weight: normal;
+				font-size: 16px;
+				padding:5px 10px;
+				display: inline-block;
+				&.active, &:hover {
+					color:white;
+					text-decoration: none;
+					border-bottom:2px solid @yellow;
+				}
+			}
+		}
+	}
+	&.black {
+		a {
+			color:black;
+			&:hover {
+				color:@yellow;
+			}
+		}
+		.logo {
+			filter:brightness(0%);
+		}
+	}
+	@media (max-width: 576px){
+		img {
+			max-width: 100%;
+		}
+		.buttons {
+			a {
+				font-size: 18px;
+				padding:5px 6px;
+			}
+		}
+	}
+}
+
+footer {
+	background: #151515;
+	color:white;
+	padding:60px 0px;
+	a {
+		color:white;
+		font-size: 22px;
+		display: inline-block;
+		padding:0px 5px;
+		&:hover {
+			color:@yellow;
+		}
+	}
+}
+
+.btn {
+	border-radius: 0px;
+	font-size: 18px;
+	padding:10px 30px;
+	&.btn-secondary {
+		border:1px solid white;
+		background: black;
+	}
+	&.btn-primary {
+		border:1px solid black;
+		background: white;
+		color:black;
+	}
+	&.btn-warning {
+		border:1px solid @yellow;
+		background: @yellow	;
+	}
+}
+
+.box-expansivel {
+	position:fixed;
+	top:0;
+	right: 0;
+	height: 100%;;
+	z-index:102;
+	background:white;
+	box-shadow:0px 0px 5px rgba(0,0,0,0.2);
+	transition:transform .5s;
+	transform:translateX(110%);
+	width: 320px;
+	&.active {
+		transform:translateX(0);
+	}
+	@media (max-width:576px){
+		right:auto;
+		left:0px;
+		transform:translateX(-110%);
+		z-index:100;
+	}
+	hr {
+		margin:30px 0px;
+	}
+	h2 {
+		font-size: 15px;
+		font-weight: 200;
+		margin-top:15px;
+		margin-bottom: 15px;
+	}
+	label {
+		font-size:13px;
+	}
+	.form-control {		
+		font-size: 14px;
+		font-weight: 300;
+		border-radius: 0px;
+		border:0px none;
+		border: 1px solid #ddd;
+		margin-bottom:10px;
+		padding:5px;
+	}
+	&.box-login {
+		.btn-neutral {
+			display: none;
+		}
+	}
+	&.box-expansivel-small {
+		width:320px;
+	}
+	&.box-expansivel-large {
+		width:620px;
+	}
+	&.box-expansivel-medium {
+		width:530px;
+	}
+	@media (max-width: 576px){
+		&.box-expansivel-large {
+			width:320px;
+		}
+		&.box-expansivel-medium {
+			width:320px;
+		}
+	}
+	.header {
+		background:black;
+		color:white;
+		padding:15px 20px;
+		position:relative;
+		h3 {
+			margin-bottom: 0px;
+			font-size: 18px;
+			text-transform:uppercase;
+		}
+		button {
+			background:none;
+			color:white;
+			position:absolute;
+			top:10px;
+			right:10px;
+			font-size: 20px;
+			border:0px none;;
+		}
+	}
+	.scroll {
+		padding:15px 20px;
+		height: ~"calc(100vh - 68px)";
+		overflow:auto;
+	}
+}
+.box-myaccount {
+	width: 300px;
+	.menu-header-container {
+		width: 100%;
+		display: inline-block;
+	}
+    ul {
+        list-style: none;
+        margin:0;
+        padding:0;
+        li {
+            border-bottom:1px solid #ddd;
+            padding:10px 5px;
+            a {
+                color:black; 
+            }
+        }
+    }
+}
+
+.woocommerce-input-wrapper, .password-input {
+	width: 100%; 
+}
+
+.menu-header-container {
+	display: inline-block;
+	margin:auto;
+}
+
+
+#review_form_wrapper {
+	label {
+		font-weight: bold;
+		display: inline-block;
+		width: 100%;
+	}
+	.stars {
+		a {
+			//background:white;
+			//border:1px solid #3d0010;
+			display: inline-block;
+			font-style: normal;
+			text-indent: -9999px;
+			position: relative;
+			width: 22px;
+			height: 22px;
+			color:@yellow;
+			&:after {
+				font-family: Font Awesome\ 5 Pro;
+				content: "\f005";
+				position: absolute;
+				top:0;
+				left:0;
+				text-indent: 0px;
+				font-weight: 900;
+			}
+			&.active {
+				+ a {
+					&:after { font-weight: 400; }
+					+ a {
+						&:after { font-weight: 400; }
+
+						+ a {
+							&:after { font-weight: 400; }
+
+							+ a {
+								&:after { font-weight: 400; }
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+	}
+
+	#commentform { 
+		textarea, input[type='text'], input[type='email']{ 
+			width: 100%;
+			display: inline-block;
+			background: none;
+			border:0px none;
+			border: 1px solid #ccc;  
+			border-radius: 0px;
+			padding:15px;
+		}
+
+	}
+
+	.submit {
+		border:0px none;
+		background: @yellow;
+		color:black;
+		text-align: center;
+		margin-bottom: 15px;
+		width: 100%;
+		display: inline-block;
+		padding:10px;
+		text-transform: uppercase;
+	}	
+	.commentlist {
+		list-style:none;
+		margin:0;
+		padding:0;
+		li {
+			position: relative;
+			padding-left: 80px;
+			margin-bottom: 50px;
+			.star-rating {
+				position: absolute;
+				top:0px;
+				right: 0px;
+			}
+			p.meta {
+				margin-bottom: 0px;
+			}
+			.woocommerce-review__author {
+				font-size: 22px;
+				font-weight: normal;
+			}
+			.woocommerce-review__dash, .woocommerce-review__published-date {
+				display: none;
+			}
+			img {
+				position: absolute;
+				top:0;
+				left:0;
+				border-radius: 100px;
+			}
+		}
+	}
+
+
+@media (max-width: 768px){
+	.learndash_post_sfwd-courses {
+		padding:80px 15px;
+	}
+}
+
+
+#thankyou {
+	.button {
+		background: @yellow;
+		width: 100%;
+		padding:15px;
+		color:black;
+		margin:10px 0px;
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+#checkout {
+	.woocommerce-error {
+		color: #721c24;
+	    background-color: #f8d7da;
+	    border-color: #f5c6cb;
+	    padding: .75rem 1.25rem;
+	    margin-bottom: 1rem;
+	    border: 1px solid transparent;
+	    border-radius: .25rem;
+	    list-style: none;
+	    margin:0px 10px
+	}
+}

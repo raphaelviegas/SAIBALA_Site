@@ -1,0 +1,421 @@
+@yellow : #F6EB2A;
+.commentsProject {
+	margin-top: 40px;
+	padding-top:40px;
+	border-top: 1px solid #eee;
+	a {
+		color:black;
+	}
+	.logged-in-as {
+		a {
+			margin-right: 5px;
+			font-size: 12px;
+		}
+	}
+}
+.product-detail {
+	padding:80px 0px;
+	@media (max-width: 768px){
+		.owl-carousel {
+			margin-top: 100px;
+		}
+	}
+	.summary {
+		position: relative;
+		.btn {
+			@media (min-width:768px){
+				position: absolute;
+				top:0;
+				right: 0;
+				width: 250px;
+				&.btn-primary {
+					top:60px;
+				}
+			}
+			@media (max-width: 768px){
+				width: 100%;
+				margin-top:15px;
+			}
+		}
+		h1 {
+			font-size: 40px;
+			text-transform: uppercase;
+			@media (min-width: 768px){
+				max-width: ~"calc(100% - 270px)";
+			}
+		}
+
+	}
+	section.depoimentos {
+		padding:60px 0px;
+		h3 {
+			font-size: 24px;
+			margin-bottom: 40px;
+		}
+		.item {
+			background: #f1f1f1;
+			padding:30px;
+			text-align: left;
+			font-size: 16px;
+			h4 {
+				font-size: 18px;
+			}
+		}
+		.owl-item {
+			opacity: 0.5;
+			&.center {
+				opacity: 1;
+			}
+		}
+		.owl-nav {
+			button {
+				position: absolute;
+				top:-80px;
+				left:100px;
+				background: url(../../img/prev.png);
+				width: 60px;
+				height: 60px;
+				&.owl-next {
+					right: 100px;
+					left:auto;
+					background: url(../../img/next.png);
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+		.owl-dots {
+			display: inline-block;
+			width:100%;
+			padding:10px 0px;
+			button {
+				width: 8px; height: 8px;
+				border:1px solid black;
+				background: black;
+				border-radius: 100px;
+				margin:0px 5px;
+				&.active {
+					background: white;
+				}
+			}
+		}
+	}
+
+	section.projetos {
+		padding:60px 0px 0px 0px;
+		h3 {
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
+		.item {
+			background: #f1f1f1;
+			text-align: left;
+			font-size: 16px;
+			background: black;
+			h4 {
+				font-size: 18px;
+			}
+		}
+		.owl-item {
+			img {
+				opacity: 0.5;
+			}
+			&.center {
+				img {
+					opacity: 1;
+				}
+			}
+		}
+		.owl-nav {
+			button {
+				position: absolute;
+				top:-80px;
+				left:100px;
+				background: url(../../img/prev.png);
+				width: 60px;
+				height: 60px;
+				&.owl-next {
+					right: 100px;
+					left:auto;
+					background: url(../../img/next.png);
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+		.owl-dots {
+			display: inline-block;
+			width:100%;
+			padding:10px 0px;
+			button {
+				width: 8px; height: 8px;
+				border:1px solid white;
+				background: black;
+				border-radius: 100px;
+				margin:0px 5px;
+				&.active {
+					background: white;
+				}
+			}
+		}
+	}
+
+
+	section.professores {
+		background: black;
+		padding:120px 0px;
+		margin-top: -45px;
+		z-index: -1;
+		color:white;
+		position: relative;
+		@media (min-width: 768px){
+			&:after {
+				position: absolute;
+				bottom:0;
+				left:0;
+				width: 100%;
+				background: url(../../img/hr-professor.png) center center;
+				height: 332px;
+				content:'';
+			}
+		}
+		h3 {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 20px;
+			margin-bottom: 25px;
+		}
+		h2 {
+			font-size:30px;
+			font-weight: bold;
+			line-height: 25px;
+			margin-bottom: 50px;
+			span {
+				display: inline-block;
+				width: 100%;
+				font-size: 20px;
+				font-weight: normal;
+			}
+		}
+		.item {
+			background: #f1f1f1;
+			text-align: left;
+			font-size: 16px;
+			background: black;
+			h4 {
+				font-size: 18px;
+			}
+		}
+		.owl-item {
+			img {
+				opacity: 0.5;
+			}
+			&.center {
+				img {
+					opacity: 1;
+				}
+			}
+		}
+		.owl-nav {
+			button {
+				position: absolute;
+				top:-80px;
+				left:100px;
+				background: url(../../img/prev.png);
+				width: 60px;
+				height: 60px;
+				&.owl-next {
+					right: 100px;
+					left:auto;
+					background: url(../../img/next.png);
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+		.owl-dots {
+			display: inline-block;
+			width:100%;
+			padding:10px 0px;
+			button {
+				width: 8px; height: 8px;
+				border:1px solid white;
+				background: black;
+				border-radius: 100px;
+				margin:0px 5px;
+				&.active {
+					background: white;
+				}
+			}
+		}
+	}
+
+	section.percurso {
+		background: black;
+		color:white;
+		padding-bottom: 60px;
+		h3 {
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.items {
+			margin-top: 25px;
+			.item {
+				margin-bottom: 45px;
+				h2 {
+					font-size: 20px;
+					font-weight: bold;
+					b {
+						text-transform: uppercase;
+						color:@yellow;
+					}
+				}
+				ul {
+					list-style:none;
+					margin:0;
+					padding:0;
+					li {
+						display: inline-block;
+						width: 100%;
+						background: url(../../img/check.png) left 2px no-repeat;
+						padding-left: 30px;
+						padding-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.video {
+		position: relative;
+		margin-top: 60px;
+		&:after {
+			width: 100%;
+			height: 150px;
+			bottom:-10px;
+			background: black;
+			position: absolute;
+			content:'';
+		}
+		iframe {
+			position: relative;
+			z-index: 2;
+		}
+	}
+	.timelineJornada {
+		background: black;
+		color:white;
+		padding:70px 0px;
+		img {
+			width: 100%;
+		}
+		h4 {
+			margin-bottom: 20px;
+			color:@yellow;
+			text-transform: uppercase;
+		}
+	}
+	.aprender {
+		padding:50px 0px;
+		img {
+			width: 100%;
+		}
+		h4 {
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		h5 {
+			margin:20px 0px;
+			font-size: 22px;
+			@media (min-width: 990px){
+				max-width: 50%;
+			}
+		}
+	}
+	.paraquem {
+		background: @yellow;
+		color:black;
+		padding:50px 0px;
+		h4 {
+			text-transform: uppercase;
+			font-size: 18px;
+			margin-bottom: 20px;
+			+ p {
+				width: 80%;
+			}
+		}
+		.box {
+			position: relative;
+			img {
+				position: absolute;
+				top:0;
+				left:0;
+				width: 100px;
+			}
+			h5 {
+				text-transform: uppercase;
+				padding-left: 110px;
+				padding-top: 40px;
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+
+body.single {
+	.woocommerce-notices-wrapper {
+		position: fixed;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0.6);
+		z-index: 10;
+		ul {
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform:translateX(-50%) translateY(-50%);
+			width: 320px;
+			background: white;
+			border-radius: 10px;
+			padding:30px;
+			list-style:none;
+			margin:0;
+			text-align: center;
+			li {
+				display: inline-block;
+				width: 100%;
+				.button {
+					background: @yellow;
+					color:black;
+					text-align: center;
+					margin-bottom: 15px;
+					width: 100%;
+					display: inline-block;
+					padding:10px;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.woocommerce-message {
+			text-align: center;
+			.button {
+				background: @yellow;
+				color:black;
+				text-align: center;
+				margin-bottom: 15px;
+				width: 100%;
+				display: inline-block;
+				padding:10px;
+				text-transform: uppercase;
+			}			
+		}
+	}
+}
