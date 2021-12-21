@@ -2067,13 +2067,16 @@ footer a:hover {
 }
 .product-detail section.professores {
   background: black;
-  padding: 120px 0px;
+  padding: 70px 0px 20px;
   margin-top: -45px;
   z-index: -1;
   color: white;
   position: relative;
 }
 @media (min-width: 768px) {
+  .product-detail section.professores {
+    padding: 120px 0px;
+  }
   .product-detail section.professores:after {
     position: absolute;
     bottom: 0;
@@ -2165,6 +2168,11 @@ footer a:hover {
 .product-detail section.percurso .items .item {
   margin-bottom: 45px;
 }
+@media (min-width: 992px) {
+  .product-detail section.percurso .items .item {
+    padding-right: 55px;
+  }
+}
 .product-detail section.percurso .items .item h2 {
   font-size: 20px;
   font-weight: bold;
@@ -2197,14 +2205,20 @@ footer a:hover {
   position: absolute;
   content: '';
 }
-.product-detail .video iframe {
+.product-detail .video iframe,
+.product-detail .video img {
   position: relative;
   z-index: 2;
 }
 .product-detail .timelineJornada {
   background: black;
   color: white;
-  padding: 70px 0px;
+  padding: 40px 0px 50px;
+}
+@media (min-width: 992px) {
+  .product-detail .timelineJornada {
+    padding: 70px 0px;
+  }
 }
 .product-detail .timelineJornada img {
   width: 100%;
@@ -2244,23 +2258,69 @@ footer a:hover {
   font-size: 18px;
   margin-bottom: 20px;
 }
-.product-detail .paraquem h4 + p {
-  width: 80%;
+@media (min-width: 992px) {
+  .product-detail .paraquem h4 + p {
+    width: 80%;
+  }
 }
 .product-detail .paraquem .box {
   position: relative;
+  flex-direction: column;
+  display: flex;
+}
+.product-detail .paraquem .box .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 .product-detail .paraquem .box img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100px;
 }
 .product-detail .paraquem .box h5 {
   text-transform: uppercase;
-  padding-left: 110px;
-  padding-top: 40px;
-  margin-bottom: 40px;
+  margin-left: 0.5rem;
+  padding-top: 10px;
+}
+.product-detail .paraquem .box p {
+  padding: 0 1rem;
+}
+@media (min-width: 992px) {
+  .product-detail .paraquem .box p {
+    padding: 0;
+  }
+}
+.product-detail.jornada .video img {
+  min-height: 300px;
+  object-fit: cover;
+}
+.product-detail.jornada section.professores .box > div {
+  margin-bottom: 3rem !important;
+}
+@media (min-width: 992px) {
+  .product-detail.jornada section.professores .box > div {
+    margin-bottom: 5rem !important;
+  }
+}
+.product-detail.jornada section.professores .box > div:last-of-type {
+  margin-bottom: 0 !important;
+}
+.product-detail.jornada section.professores h2 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+@media (min-width: 992px) {
+  .product-detail.jornada section.professores h2 {
+    margin-top: 0;
+  }
+}
+.product-detail.jornada section.professores h2 span {
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  .product-detail.jornada section.professores.par:after {
+    transform: rotateY(180deg);
+    bottom: 3.5rem;
+  }
 }
 body.single .woocommerce-notices-wrapper {
   position: fixed;

@@ -31,8 +31,8 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div class="product-detail " id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-
+<div class="product-detail <?php if(get_field('jornada') == '1') { ?>jornada<?php } ?>" id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+	
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
@@ -144,8 +144,10 @@ if ( post_password_required() ) {
 					        ?>
 					        <div class='col-md-4'>
 					            <div class="box">
-					            	<img src="<?php the_sub_field('icone');?>"/>
-					            	<h5><?php the_sub_field('titulo');?></h5>
+												<div class="content">
+													<img src="<?php the_sub_field('icone');?>"/>
+													<h5><?php the_sub_field('titulo');?></h5>
+												</div>
 					            	<p><?php the_sub_field('descricao');?></p>
 					            </div>
 					        </div>
@@ -232,12 +234,14 @@ if ( post_password_required() ) {
 	<?php 
 	if(get_field('professor')){
 		$ids = array();
+		$index = 0;
 		foreach (get_field('professor') as $key => $value) {
 			$ids[] = $value->ID;
+			$index ++;
 		}
 		?>
 
-		<section class="professores">
+		<section class="professores <?php if($index % 2 == 0){echo "par"; }else{echo "impar";} ?>">
 			<div class="container">
 				<?php				
 				if(get_field('jornada') == '1'){
@@ -253,8 +257,8 @@ if ( post_password_required() ) {
 				<div class="box">
 					<?php 
 						$args = array(
-						    'post_type'  => 'professores', 
-						    'showposts'=> -1,
+							'post_type'  => 'professores', 
+							'showposts'=> -1,
 							'post__in'			=> $ids,
 						);
 						$projetos = new WP_Query($args);
@@ -268,9 +272,7 @@ if ( post_password_required() ) {
 							$class1 = '';
 							$class2 = '';
 						}
-						?>
-
-						
+						?>				
 							<div class="row mb-3">
 								<div class="col-md-5 <?php echo $class1;?>">
 									<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" class='w-100'/>
@@ -303,7 +305,7 @@ if ( post_password_required() ) {
 		<section class="percurso">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-8 col-lg-6 col-xl-4">
 						<h3><?php the_field('percurso_titulo');?></h3>
 						<p><?php the_field('percurso_descricao');?></p>
 						<p><b>Confira tudo o que você vai aprender:</b></p>
