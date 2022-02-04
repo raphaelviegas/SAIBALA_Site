@@ -2155,7 +2155,12 @@ footer a:hover {
 .product-detail section.percurso {
   background: black;
   color: white;
-  padding-bottom: 60px;
+  padding-bottom: 140px;
+}
+@media (min-width: 768px) {
+  .product-detail section.percurso {
+    padding-bottom: 100px;
+  }
 }
 .product-detail section.percurso h3 {
   font-size: 20px;
@@ -2192,6 +2197,207 @@ footer a:hover {
   background: url(../../img/check.png) left 2px no-repeat;
   padding-left: 30px;
   padding-bottom: 15px;
+}
+.product-detail section.jornada-final {
+  margin-bottom: -2rem;
+}
+.product-detail section.jornada-final .box {
+  border: 2px solid black;
+  transform: translateY(-9.1rem);
+  margin-bottom: -6rem;
+}
+@media (min-width: 768px) {
+  .product-detail section.jornada-final .box {
+    transform: translateY(-6.1rem);
+    margin-bottom: -2rem;
+  }
+}
+.product-detail section.jornada-final .box .box-content {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .product-detail section.jornada-final .box .box-content {
+    width: 55%;
+  }
+}
+.product-detail section.jornada-final .box .box-head {
+  background-color: #F6EB2A;
+  padding-top: 2px;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-detail section.jornada-final .box .box-head .box-content {
+  flex-wrap: wrap;
+  padding-top: 0.75rem;
+}
+@media (min-width: 768px) {
+  .product-detail section.jornada-final .box .box-head .box-content {
+    padding-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .product-detail section.jornada-final .box .box-head {
+    height: 6rem;
+  }
+}
+.product-detail section.jornada-final .box .box-head svg {
+  position: absolute;
+  height: 3rem;
+  width: auto;
+  left: 3.5rem;
+  top: 0.1rem;
+}
+@media (min-width: 768px) {
+  .product-detail section.jornada-final .box .box-head svg {
+    top: unset;
+    left: -1.5rem;
+  }
+}
+.product-detail section.jornada-final .box .box-head h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 24px;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  margin-left: 2.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .product-detail section.jornada-final .box .box-head h3 {
+    margin-bottom: 0;
+    width: auto;
+    text-align: left;
+  }
+}
+.product-detail section.jornada-final .box .box-head span.regular-price {
+  color: #9D9500;
+}
+.product-detail section.jornada-final .box .box-head span {
+  font-size: 32px;
+  font-weight: 600;
+}
+.product-detail section.jornada-final .box .box-head span.highlight bdi {
+  position: relative;
+  z-index: 1;
+}
+.product-detail section.jornada-final .box .box-head span.highlight bdi ::after {
+  content: ' ';
+  position: absolute;
+  height: 1rem;
+  width: 100%;
+  z-index: -1;
+  right: -2px;
+  bottom: 1px;
+  background-color: white;
+}
+.product-detail section.jornada-final .box .box-head small {
+  font-size: 16px;
+  font-weight: 400;
+}
+.product-detail section.jornada-final .box .box-body .box-content {
+  display: block;
+}
+.product-detail section.jornada-final .box .box-body .box-content .box-body-title {
+  margin: 2.5rem 0 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 24px;
+}
+.product-detail section.jornada-final .box .box-body .box-content .box-body-subtitle {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  max-width: 230px;
+}
+.product-detail section.jornada-final .box .box-body .box-content .list-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.product-detail section.jornada-final .box .box-body .box-content .list-items ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .product-detail section.jornada-final .box .box-body .box-content .list-items ul {
+    width: 45%;
+  }
+}
+.product-detail section.jornada-final .box .box-body .box-content .list-items ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.product-detail section.jornada-final .box .box-body .box-content .list-items ul li:first-of-type {
+  margin-top: 0;
+}
+.product-detail section.jornada-final .box .box-body .box-content .list-items ul li:last-of-type {
+  margin-bottom: 0;
+}
+.product-detail section.jornada-final .box .box-body .box-content .list-items ul li div {
+  padding-right: 3px;
+  max-width: 60%;
+  font-size: 14px;
+}
+.product-detail section.jornada-final .box .box-body .box-content .list-items ul li div .title {
+  font-weight: 600;
+}
+.product-detail section.jornada-final .box .box-body .box-content .list-items ul li .price-box {
+  border: 1px solid #F6EB2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  font-size: 14px;
+}
+.product-detail section.jornada-final .box .box-body .box-content hr {
+  border-top: 3px dashed #F6EB2A;
+}
+.product-detail section.jornada-final .box .box-body .box-content .prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+.product-detail section.jornada-final .box .box-body .box-content .prices span {
+  font-weight: 600;
+  font-size: 22px;
+  text-align: right;
+  line-height: 1.2;
+}
+.product-detail section.jornada-final .box .box-body .box-content .prices span.op {
+  color: #CECECE;
+  opacity: 1 !important;
+  margin-right: 10px;
+  text-decoration: line-through;
+  text-align: left;
+}
+.product-detail section.jornada-final .box .op {
+  opacity: 0.6;
+}
+.product-detail section.jornada-final .obs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.product-detail section.jornada-final .obs h4 {
+  font-weight: 600;
+  font-size: 22px;
+}
+.product-detail section.jornada-final .obs p {
+  font-size: 14px;
 }
 .product-detail .video {
   position: relative;

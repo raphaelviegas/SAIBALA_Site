@@ -162,7 +162,6 @@
 		}
 	}
 
-
 	section.professores {
 		background: black;
 		padding:70px 0px 20px;
@@ -257,7 +256,10 @@
 	section.percurso {
 		background: black;
 		color:white;
-		padding-bottom: 60px;
+		padding-bottom: 140px;
+		@media (min-width: 768px) {
+			padding-bottom: 100px;
+		}
 		h3 {
 			font-size: 20px;
 			text-transform: uppercase;
@@ -294,6 +296,196 @@
 		}
 	}
 
+	section.jornada-final {
+		margin-bottom: -2rem;
+		.box{
+			border: 2px solid black;
+			transform: translateY(-9.1rem);
+			margin-bottom: -6rem;
+			@media (min-width: 768px) {
+				transform: translateY(-6.1rem);
+				margin-bottom: -2rem;
+			}
+			.box-content {
+				width: 85%;
+				margin: auto;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				position: relative;
+				@media (min-width: 768px) {
+					width: 55%;
+				}
+			}
+			.box-head {
+				background-color: @yellow;
+				padding-top: 2px;
+				height: 9rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.box-content {
+					flex-wrap: wrap;
+					padding-top: 0.75rem;
+					@media (min-width: 768px) {
+						padding-top: 0;
+					}
+				}
+				@media (min-width: 768px) {
+					height: 6rem;
+				}
+				svg {
+					position: absolute;
+					height: 3rem;
+					width: auto;
+					left: 3.5rem;
+					top: 0.1rem;
+					@media (min-width: 768px) {
+						top: unset;
+						left: -1.5rem;
+					}
+				}
+				h3 {
+					text-transform: uppercase;
+					font-weight: 600;
+					font-size: 24px;
+					width: 100%;
+					margin-bottom: 1.25rem;
+					margin-left: 2.5rem;
+					text-align: center;
+					@media (min-width: 768px) {
+						margin-bottom: 0;
+						width: auto;
+						text-align: left;
+					}
+				}
+				span.regular-price {
+					color: #9D9500;
+				}
+				span {
+					font-size: 32px;
+					font-weight: 600;
+				}
+				span.highlight bdi{
+					position: relative;
+					z-index: 1;
+					::after {
+						content: ' ';
+						position: absolute;
+						height: 1rem;
+						width: 100%;
+						z-index: -1;
+						right: -2px;
+						bottom: 1px;
+						background-color: white;
+					}
+				}
+				small{
+					font-size: 16px;
+					font-weight: 400;
+				}
+			}
+			.box-body {
+				.box-content {
+					display: block;
+					.box-body-title {
+						margin: 2.5rem 0 2rem;
+						text-transform: uppercase;
+						font-weight: 600;
+						font-size: 24px;
+					}
+					.box-body-subtitle {
+						margin-bottom: 1.5rem;
+						font-weight: 600;
+						font-size: 18px;
+						line-height: 1.2;
+						max-width: 230px;
+					}
+					.list-items {
+						display: flex;
+						justify-content: space-between;
+						flex-wrap: wrap;
+						ul {
+							list-style: none;
+							width: 100%;
+							padding: 0;
+							@media (min-width: 768px) {
+								width: 45%;
+							}
+							li {
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+								margin: 1rem 0;
+								&:first-of-type {
+									margin-top: 0;
+								}
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+								div {
+									padding-right: 3px;
+									max-width: 60%;
+									font-size: 14px;
+									.title {
+										font-weight: 600;
+									}
+								}
+								.price-box {
+									border: 1px solid @yellow;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									min-width: 60px;
+									font-size: 14px;
+								}
+							}
+						}
+					}
+					hr {
+						border-top: 3px dashed @yellow;
+					}
+					.prices {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						margin-top: 1.5rem;
+						margin-bottom: 3rem;
+						span {
+							font-weight: 600;
+							font-size: 22px;
+							text-align: right;
+							line-height: 1.2;
+							&.op {
+								color: #CECECE;
+								opacity: 1 !important;
+								margin-right: 10px;
+								text-decoration: line-through;
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+			.op {
+				opacity: 0.6;
+			}
+		}
+		.obs {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			h4 {
+				font-weight: 600;
+				font-size: 22px;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+
 	.video {
 		position: relative;
 		margin-top: 60px;
@@ -310,6 +502,7 @@
 			z-index: 2;
 		}
 	}
+
 	.timelineJornada {
 		background: black;
 		color:white;
@@ -326,6 +519,7 @@
 			text-transform: uppercase;
 		}
 	}
+
 	.aprender {
 		padding:50px 0px;
 		img {
@@ -344,6 +538,7 @@
 			}
 		}
 	}
+
 	.paraquem {
 		background: @yellow;
 		color:black;

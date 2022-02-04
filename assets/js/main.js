@@ -55,8 +55,7 @@ var base = function () {
            
             var url = window.location.origin + window.location.pathname;
             $('.cat a').removeClass('active');
-            $(".cat a[href='"+url+"']").addClass('active');
-            
+            $(".cat a[href='"+url+"']").addClass('active');            
 
             $("#home .cursos .owl-carousel").owlCarousel({
                 loop: true,
@@ -95,7 +94,6 @@ var base = function () {
                 $(this).fadeOut();
             });
 
-
             $(".projetos .owl-carousel").owlCarousel({
                 loop: true,
                 center: true,
@@ -113,20 +111,18 @@ var base = function () {
                 }
             }); 
 
-
             $('.btn-exp').click(function(e){
                 e.preventDefault();
                 var item = $(this).attr('href').replace('#','');
                 $('.box-expansivel').removeClass('active');
                 $(".box-expansivel[data-name='"+item+"']").addClass('active');
             });
-
          
             $('.box-expansivel .header button').click(function(){
                 $(this).closest('.box-expansivel').removeClass('active');
             });
 
-                 $('#checkout .form-login-box .btn-neutral').click(function(e){
+            $('#checkout .form-login-box .btn-neutral').click(function(e){
                 e.preventDefault();
                 $('#checkout .form-login-box').hide();
                 $('#checkout .form-register-box').fadeIn();
@@ -147,7 +143,6 @@ var base = function () {
 
             $('#checkout select').addClass('form-control');
             $('#checkout .form-row').removeClass('form-row');
-            
             
             $('#checkout .step2 .btn-prev').click(function(e){
                 e.preventDefault();
@@ -189,9 +184,6 @@ var base = function () {
                     $("#checkout .steps div[data-step='3']").addClass('active');
                 }
             });
-
-
-
         }
     };
 }();
