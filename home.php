@@ -103,6 +103,16 @@
 					$terms = get_terms( array(
 					    'taxonomy' => 'product_cat',
 					    'hide_empty' => true,
+							'meta_query'	=> array(
+								'relation'		=> 'AND',
+								array(
+									'key'	  	=> 'show_on_home',
+									'value'	  	=> '1',
+									'compare' 	=> '=',
+								),
+							),
+							// 'meta_key'		=> 'show_on_home',
+							// 'meta_value'	=> '1'
 					) );
 					foreach ($terms as $term) {
 						$name = $term->name;

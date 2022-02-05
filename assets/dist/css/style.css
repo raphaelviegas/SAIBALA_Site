@@ -948,7 +948,6 @@ footer a:hover {
   padding: 40px 0px;
 }
 #home section.video .box h3 {
-  font-weight: 300;
   font-size: 34px;
   text-transform: uppercase;
   font-weight: bold;
@@ -965,13 +964,21 @@ footer a:hover {
   font-size: 34px;
   text-transform: uppercase;
 }
+#home section.video .video {
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  #home section.video .video {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 576px) {
   #home section.video iframe {
     height: 300px!important;
   }
 }
 #home section.cta {
-  padding: 50px 0px;
+  padding: 100px 0px;
 }
 #home section.cta .box {
   border: 1px solid white;
@@ -1009,17 +1016,37 @@ footer a:hover {
 #home section.cursos h3 {
   font-size: 24px;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 #home section.cursos .tabs {
   text-align: left;
   padding: 10px 0px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  #home section.cursos .tabs {
+    width: 100%;
+  }
 }
 #home section.cursos .tabs a {
   font-size: 22px;
   font-weight: normal;
   color: white;
   padding: 5px 0px;
-  margin-right: 20px;
+  margin: 0 10px 0.5rem;
+  border-bottom: 2px solid transparent;
+}
+@media (min-width: 768px) {
+  #home section.cursos .tabs a:first-of-type {
+    margin-left: 0;
+  }
+  #home section.cursos .tabs a:last-of-type {
+    margin-right: 0;
+  }
 }
 #home section.cursos .tabs a.active,
 #home section.cursos .tabs a:hover {
@@ -1029,8 +1056,8 @@ footer a:hover {
 }
 @media (max-width: 576px) {
   #home section.cursos .tabs a {
-    width: 100%;
     font-size: 18px;
+    margin: 0 0.5rem;
     display: inline-block;
   }
 }
@@ -1097,6 +1124,7 @@ footer a:hover {
 #home section.professores h3 {
   font-size: 24px;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 #home section.professores .list .box {
   margin-bottom: 30px;
@@ -1138,11 +1166,12 @@ footer a:hover {
   display: block;
 }
 #home section.depoimentos {
-  padding: 60px 0px;
+  padding: 100px 0px 60px;
 }
 #home section.depoimentos h3 {
   font-size: 24px;
   margin-bottom: 40px;
+  font-weight: 600;
 }
 #home section.depoimentos .item {
   background: #151515;
@@ -1458,6 +1487,7 @@ footer a:hover {
   margin-top: -150px;
   top: 0px;
   content: '';
+  left: 0;
   position: absolute;
 }
 #home section.form h3 {

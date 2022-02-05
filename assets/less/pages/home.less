@@ -97,7 +97,6 @@
 		.box {
 			padding:40px 0px;
 			h3 {
-				font-weight: 300;
 				font-size: 34px;
 				text-transform: uppercase;
 				font-weight: bold;
@@ -115,6 +114,12 @@
 				text-transform: uppercase;
 			}
 		}
+		.video {
+			margin-bottom: 3rem;
+			@media (min-width: 768px) {
+				margin-bottom: 0;
+			}
+		}
 		@media (max-width: 576px){
 			iframe {
 				height: 300px!important;
@@ -123,7 +128,7 @@
 	}
 
 	section.cta {
-		padding:50px 0px;
+		padding:100px 0px;
 		.box {
 			border:1px solid white;
 			padding:20px 30px;
@@ -165,16 +170,37 @@
 		h3 {
 			font-size: 24px;
 			margin-bottom: 30px;
+			font-weight: 600;
 		}
 		.tabs {
 			text-align: left;
 			padding:10px 0px 30px;
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 95%;
+			margin: auto;
+			@media (min-width: 768px) {
+				width:	100%;
+			}
+
 			a {
 				font-size:22px;
 				font-weight: normal;
 				color:white;
 				padding:5px 0px;
-				margin-right:20px;
+				margin: 0 10px 0.5rem;
+				border-bottom: 2px solid transparent;
+				@media (min-width: 768px) {
+					&:first-of-type {
+						margin-left: 0;
+					}
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+
 				&.active, &:hover {
 					color:white;
 					text-decoration: none;
@@ -183,8 +209,8 @@
 			}
 			@media (max-width: 576px){
 				a {
-					width: 100%;
 					font-size: 18px;
+					margin: 0 0.5rem;
 					display: inline-block;
 				}
 			}
@@ -252,6 +278,7 @@
 		h3 {
 			font-size: 24px;
 			margin-bottom: 30px;
+			font-weight: 600;
 		}
 		.list {
 			.box {
@@ -298,10 +325,11 @@
 
 
 	section.depoimentos {
-		padding:60px 0px;
+		padding:100px 0px 60px;
 		h3 {
 			font-size: 24px;
 			margin-bottom: 40px;
+			font-weight: 600;
 		}
 		.item {
 			background: #151515;
@@ -625,6 +653,7 @@
 			margin-top: -150px;
 			top:0px;
 			content:'';
+			left: 0;
 			position: absolute;
 		}
 		h3 {
