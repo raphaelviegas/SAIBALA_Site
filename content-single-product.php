@@ -88,41 +88,47 @@ if ( post_password_required() ) {
 	<?php //if(get_field('jornada') == '1'){?>
 	<div class="timelineJornada">
 		<div class="container">
-			<h4>Transforme seu aprendizado em uma jornada!</h4>
-			<div class="row">
-				<div class="col-md-4">
+			<div class="row position-relative">
+				<div class="col-md-7 timelineJornada-content">
+					<h2>Transforme seu aprendizado em uma jornada!</h2>
 					<p>Os cursos da Saibalá foram organizados em um formato mais completo e engajador.  Conheça a nossa jornada de aprendizado.</p>
-				</div>
-				<div class="col-md-4">
 					<p>O mercado de cursos oferece hoje uma ampla gama de opções para quem procura especialização.  Mas como fazer a melhor escolha para seu tempo e investimento? Com o objetivo de oferecer uma experiência de ensino mais completa e engajadora, a Saibalá reuniu seus cursos em unidades interconectadas. </p>
-				</div>
-				<div class="col-md-4">
 					<p>Nasceram, assim, as jornadas de aprendizado. Desenvolvidas com técnicas inovadoras, as nossas jornadas são comandadas por profissionais experientes e treinados para oferecer uma visão ampla e objetiva sobre sua área de interesse, com o dinamismo que você precisa.</p>
 					<p>Impulsione sua carreira com conteúdo de alta qualidade e um formato adaptado à sua rotina! </p>
 				</div>
+				<img class="chartJourney" src="<?php echo get_template_directory_uri(); ?>/assets/img/chartJourney2.png"/>
 			</div>
 		</div>
-		<div class="container-fluid">
+		<!-- <div class="container-fluid">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/chartJourney.png"/>
-		</div>
+		</div> -->
 	</div>
 	<?php //}?>
 	<div class="aprender">
 		<div class="container">
-			<h4>O que você vai aprender:</h4>
 			<div class="row">
-				<div class="col-md-8">
-					<h5><?php the_field('aprender_titulo');?></h5>
+				<div class="col-md-7 <?php if(get_field('jornada') == '0') { ?>order-2 order-md-1<?php } ?> ">
+					<h2>O que você vai aprender:</h2>
+					<h3>
+						<?php if(get_field('jornada') == '1') { the_field('aprender_titulo'); } ?>
+					</h3>
 					<?php the_field('aprender_descricao');?>
 				</div>
-				<div class="col-md-4">
-					<?php 
-					$images = get_field('aprender_imagem');
-					if( $images ): ?>
-			            <?php foreach( $images as $image ): ?>
-			                <img class='w-100' src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-			            <?php endforeach; ?>
+				<div class="col-md-4 offset-md-1 <?php if(get_field('jornada') == '0') { ?>d-md-flex align-items-center order-1 order-md-2<?php } ?>">
+					<?php
+						if(get_field('jornada') == '0'): 
+					?>
+					<h3 class="text-md-right" style="max-width: 100% !important;>">
+						<?php the_field('aprender_titulo'); ?>
+					</h3>
 					<?php endif; ?>
+					<?php 
+						$images = get_field('aprender_imagem');
+						if( $images ): ?>
+							<?php foreach( $images as $image ): ?>
+									<img class='w-100' src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+							<?php endforeach; ?>
+						<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -161,28 +167,28 @@ if ( post_password_required() ) {
 
 	<?php if( have_rows('depoimentos') ): ?>
 	<section class="depoimentos">
-	<div class="container-fluid p-0">
-		<div class="text-center">
-			<h3>Veja o que nossos alunos falam</h3>
-			<div class="owl-carousel">
-			    <?php while( have_rows('depoimentos') ): the_row(); 
-			        $image = get_sub_field('image');
-			        ?>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php the_sub_field('foto');?>"/>
-							</div>
-							<div class="col-md-8">
-								<h4><?php the_sub_field('nome');?></h4>
-								<p><?php the_sub_field('depoimento');?></p>
+		<div class="container-fluid p-0">
+			<div class="text-center">
+				<h3>Veja o que nossos alunos falam</h3>
+				<div class="owl-carousel">
+						<?php while( have_rows('depoimentos') ): the_row(); 
+								$image = get_sub_field('image');
+								?>
+						<div class='item'>
+							<div class="row">
+								<div class="col-md-4">
+									<img src="<?php the_sub_field('foto');?>"/>
+								</div>
+								<div class="col-md-8">
+									<h4><?php the_sub_field('nome');?></h4>
+									<p><?php the_sub_field('depoimento');?></p>
+								</div>
 							</div>
 						</div>
-					</div>
-			    <?php endwhile; ?>
+						<?php endwhile; ?>
+				</div>
 			</div>
 		</div>
-	</div>
 	</section>
 	<?php endif; ?>
 	
@@ -246,11 +252,11 @@ if ( post_password_required() ) {
 				<?php				
 				if(get_field('jornada') == '1'){
 					?>
-					<h3>Conheça os professores</h3>
+					<h2>Conheça os professores:</h2>
 					<?php
 				} else {
 					?>
-					<h3>Conheça o professor</h3>
+					<h2>Conheça o professor:</h2>
 					<?php
 				}
 				?>
@@ -267,7 +273,7 @@ if ( post_password_required() ) {
 						$count = $count+1;
 						if($count % 2 == 0){
 							$class1 = 'order-1 order-md-2';
-							$class2 = 'order-2 order-md-1';
+							$class2 = 'order-2 order-md-1 text-md-right';
 						} else {
 							$class1 = '';
 							$class2 = '';
@@ -278,7 +284,7 @@ if ( post_password_required() ) {
 									<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" class='w-100'/>
 								</div>
 								<div class="col-md-7 <?php echo $class2;?>">
-									<h2><?php the_title();?> <span><?php the_field('especialidade');?></h2>
+									<h3><?php the_title();?> <span><?php the_field('especialidade');?></h3>
 									<?php the_content();?>
 								</div>								
 							</div>
@@ -305,37 +311,65 @@ if ( post_password_required() ) {
 		<section class="percurso">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-lg-6 col-xl-4">
-						<h3><?php the_field('percurso_titulo');?></h3>
-						<p><?php the_field('percurso_descricao');?></p>
-						<p><b>Confira tudo o que você vai aprender:</b></p>
+					<div class="col-md-8 col-lg-6">
+						<h3 class="percurso-titulo"><?php the_field('percurso_titulo');?></h3>
+						<p class="percurso-descricao"><?php the_field('percurso_descricao');?></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-10">
+						<h2>Confira tudo o que você vai aprender:</h2>
 					</div>
 				</div>
 				<div class="row items">
-
 				    <?php
 				    	$count = 0;
 				    	while( have_rows('etapas') ): the_row(); 
 				    	$count = $count + 1;
 				        ?>
-				        <?php if(get_field('jornada') == '1'){?>
-						<div class="item col-md-6">
-						<?php } else { ?>
-						<div class="item col-md-12">						
-						<?php } ?>
-							<h2><?php if(get_field('jornada') == '1'){?><b>Etapa <?php echo $count;?> |</b><?php }?> <?php the_sub_field('titulo');?></h2>
-							<p><?php the_sub_field('descricao');?></p>
-							<ul>								
-							    <?php
-							    if(have_rows('itens')){
-							    	while( have_rows('itens') ): the_row(); 
-							        ?>
-									<li><?php the_sub_field('titulo');?></li>
-							    <?php endwhile;
-							    } ?>
-							</ul>
-						</div>
-				    <?php endwhile; ?>
+								<?php if(get_field('jornada') == '1'){?>
+									<div class="item col-md-12">
+										<a class="jornada-toogle-button collapsed" role="button" data-toggle="collapse" href="#etapa-<?php echo $count;?>" aria-expanded="false" aria-controls="etapa-<?php echo $count;?>">
+											<div>
+												<h3>Etapa <?php echo sprintf("%02d", $count);?> |</h3>
+												<p><?php the_sub_field('titulo');?></p>
+											</div>
+											<img class="chevron d-none d-md-block" src="<?php echo get_template_directory_uri(); ?>/assets/img/chevron.png"/>
+										</a>
+										<div class="collapse" id="etapa-<?php echo $count;?>">
+											<div>
+												<ul>								
+												<p><?php the_sub_field('descricao');?></p>
+												<?php
+														if(have_rows('itens')){
+															while( have_rows('itens') ): the_row(); 
+																?>
+														<li><?php the_sub_field('titulo');?></li>
+														<?php endwhile;
+														} ?>
+												</ul>
+											</div>
+										</div>
+										<a style="min-height: auto !important" class="jornada-toogle-button collapsed d-md-none" role="button" data-toggle="collapse" href="#etapa-<?php echo $count;?>" aria-expanded="false" aria-controls="etapa-<?php echo $count;?>">
+											<img class="chevron d-md-none" src="<?php echo get_template_directory_uri(); ?>/assets/img/chevron.png"/>
+										</a>
+									</div>
+								<?php } else { ?>
+									<div class="item col-md-10 offset-md-1">	
+										<h2><?php the_sub_field('titulo');?></h2>
+										<p><?php the_sub_field('descricao');?></p>
+										<ul>								
+												<?php
+												if(have_rows('itens')){
+													while( have_rows('itens') ): the_row(); 
+														?>
+												<li><?php the_sub_field('titulo');?></li>
+												<?php endwhile;
+												} ?>
+										</ul>
+									</div>					
+								<?php } 
+							endwhile; ?>
 				</div>
 			</div>
 		</section>
