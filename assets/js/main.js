@@ -69,6 +69,10 @@ var base = function () {
                 }
             });  
 
+            // $("#home .submitForm").submit(function (e){
+            //     alert('Apenas um teste...')
+            // })
+
             $(".depoimentos .owl-carousel").owlCarousel({
                 loop: true,
                 center: true,

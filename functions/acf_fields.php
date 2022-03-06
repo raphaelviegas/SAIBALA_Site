@@ -719,7 +719,6 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-
 acf_add_local_field_group(array(
 	'key' => 'group_601053e5a5eb0',
 	'title' => 'Produto - Informações básicas',
@@ -832,7 +831,6 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-
 acf_add_local_field_group(array(
 	'key' => 'group_60105403df865',
 	'title' => 'Professores',
@@ -934,7 +932,6 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
-
 
 acf_add_local_field_group(array(
 	'key' => 'group_617c09b6bff95',

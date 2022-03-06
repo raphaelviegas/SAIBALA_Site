@@ -1518,6 +1518,24 @@ footer a:hover {
   background: none;
   font-size: 18px;
 }
+#home section.form .wpcf7-not-valid-tip {
+  color: #F6EB2A !important;
+  margin: 0.3rem 10px 0.5rem;
+}
+#home section.form .wpcf7-response-output {
+  margin: 1rem -15px !important;
+  padding: 0.5rem 1rem !important;
+  text-align: center;
+  text-transform: uppercase;
+}
+#home section.form .wpcf7-form.invalid .wpcf7-response-output {
+  border-color: #F6EB2A;
+}
+#home section.form .wpcf7-form.sent .wpcf7-response-output {
+  border: none !important;
+  background-color: #F6EB2A;
+  color: black !important;
+}
 
 #list {
   padding: 120px 0px 80px 0px;

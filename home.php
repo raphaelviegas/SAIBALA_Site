@@ -9,8 +9,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
-						<h1>Existem infinitos caminhos para o sucesso. <b>encontrar o seu.</b></h1>
-						<a href="https://saibala.com.br/categoria-produto/cursos/" class="btn btn-secondary">Comece aqui</a>
+						<h1>É aprendendo que você transforma o seu caminho. <b>Comece agora a sua transformação!</b></h1>
+						<a href="https://saibala.com.br/categoria-produto/jornadas/" class="btn btn-secondary">Comece aqui</a>
 					</div>
 					<div class="col-md-8">
 						<?php if(!wp_is_mobile()){?>
@@ -37,26 +37,29 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="box">
-						<h2>Aprenda com os melhores</h2>
+						<h2>Aprenda com os melhores profissionais:</h2>
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ico1.png"/>
 						</div>
-						<p>O conteúdo que você procura, apresentado pelos melhores profissionais, com olhar orientado aos desafios do dia-a-dia. Na Saibalá, você aprende em primeira mão as soluções originais de especialistas com carreiras de sucesso no mercado criativo.</p>
+						<p>A Saibalá reuniu os professores mais renomados e especialistas em suas áreas de atuação para te ajudar nessa jornada!<br>Aqui você irá aprender com os melhores e poderá compartilhar da vivência e experiências de cada um deles pra encurtar seus caminhos.
+						</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="box">
-						<h2>Conheça histórias inspiradoras  </h2>
+						<h2>Os melhores cursos:</h2>
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ico2.png"/>
 						</div>
-						<p>Quando o roteiro é bem contado, a gente não quer perder um capítulo. Desenvolvidas com tratamento narrativo e fotográfico de alto nível, nossas vídeo-aulas são engajadoras como sua série favorita. Assista quando e como você quiser.</p>
+						<p>Nosso foco está na qualidade do seu aprendizado.<br>Com roteiros muito bem pensados, qualidade de cinema e ferramentas inovadoras, a Saibalá oferece uma experiência de aprendizagem criativa e diferente de tudo o que você já viu.
+						</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="box">
-						<h2>Construa relações para a vida </h2>
+						<h2>Autonomia no aprendizado:</h2>
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ico3.png"/>
 						</div>
-						<p>A Saibalá é uma comunidade viva, onde você vai conhecer pessoas com os mesmos interesses que você, trocar referências, compartilhar projetos e criar contatos de trabalho que podem mudar a sua carreira.</p>
+						<p>A Saibalá te entrega as ferramentas, mas é você quem constrói o seu caminho. Você assiste aos cursos quando e de onde quiser.<br>Seja o protagonista do seu projeto de vida.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -76,7 +79,7 @@
 			<div class="text-center">
 				<div class="box">
 					<p>Uma nova visão de futuro,</p>
-					<h3>UMA NOVA VERSÃO DE VOCÊ</h3>
+					<h3>UMA NOVA VERSÃO DE VOCÊ!</h3>
 				</div>
 			</div>
 		</div>
@@ -87,7 +90,7 @@
 			<div class="col-md-10 offset-md-1">
 				<div class="box">
 					<h3>Aproveite o melhor que a Saibalá tem a oferecer e receba acesso ao <b>pacote completo dos nossos cursos.</b></h3>
-					<a href="https://saibala.com.br/categoria-produto/cursos/" class="btn btn-warning">Comece!</a>
+					<a href="https://saibala.com.br/categoria-produto/jornadas/" class="btn btn-warning">Comece!</a>
 				</div>
 			</div>
 		</div>
@@ -96,7 +99,8 @@
 	<section class="cursos">
 		<div class="container">
 			<div class="text-center">
-				<h3>Categoria de cursos</h3>
+				<h3 class="mb-2">Universo Saibalá</h3>
+				<p>Confira tudo o que você pode aprender</p>
 			</div>
 			<div class="tabs">
 				<?php
@@ -171,7 +175,7 @@
 	<section class="professores">
 		<div class="container">
 			<div class="text-center">
-				<h3>Conheça alguns de nossos profissionais</h3>
+				<h3>Conheça alguns de nossos professores</h3>
 			</div>
 			<?php if(wp_is_mobile()){
 				?>
@@ -226,7 +230,7 @@
 	<section class="depoimentos">
 		<div class="container-fluid">
 			<div class="text-center">
-				<h3>Veja o que nossos alunos falam</h3>
+				<h3>O impacto que causamos em nossos alunos</h3>
 				<div class="owl-carousel">
 					<div class='item'>
 						<div class="row">
@@ -517,10 +521,12 @@
 		</div>
 	</section>
 -->
-	<section class="form">
+	<section class="form" name="formulario-home">
 		<div class="container">
-			<h3>Fale conosco:</h3>
-			<form class="submitForm">
+			<h3>Fale conosco:</h3>	
+			<?php echo apply_shortcodes( '[contact-form-7 title="Home"  html_id="contato-site"]' ); ?>
+
+			<!-- <form class="submitForm">
 				<div class="alert alert-success d-none">Mensagem enviada com sucesso</div>
 				<div class="row">
 					<div class="col-md-2 p-0"><label>E-mail</label></div>
@@ -534,7 +540,7 @@
 						<button class='btn btn-warning'>Enviar</button>
 					</div>
 				</div>
-			</form>
+			</form> -->
 		</div>
 	</section>
 

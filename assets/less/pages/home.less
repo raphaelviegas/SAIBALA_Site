@@ -682,6 +682,24 @@
 			background: none;
 			font-size: 18px;
 		}
+		.wpcf7-not-valid-tip {
+			color: @yellow !important;
+			margin: 0.3rem 10px 0.5rem;
+		}
+		.wpcf7-response-output {
+			margin: 1rem -15px !important;
+			padding: 0.5rem 1rem !important;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.wpcf7-form.invalid .wpcf7-response-output{
+			border-color: @yellow;
+		}
+		.wpcf7-form.sent .wpcf7-response-output{
+			border: none !important;
+			background-color: @yellow;
+			color: black !important;
+		}
 	}
 
 }
