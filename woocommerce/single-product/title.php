@@ -20,4 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 the_title( '<h1 class="product_title entry-title">', '</h1>' );
-echo "<span class='professor'>".the_field('subtitulo')."</span>";
+echo '<span>' . get_field('subtitulo') . '</span>';

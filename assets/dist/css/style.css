@@ -1069,7 +1069,7 @@ footer a:hover {
 }
 @media (max-width: 576px) {
   #home section.cursos .tabs-content iframe {
-    height: 320px!important;
+    aspect-ratio: 1.77777778;
   }
 }
 #home section.cursos .nav {
@@ -1090,7 +1090,7 @@ footer a:hover {
 }
 @media (max-width: 576px) {
   #home section.cursos .nav {
-    padding: 25px 40px;
+    padding: 0px 40px;
   }
 }
 #home section.cursos .owl-nav button {
@@ -1119,21 +1119,83 @@ footer a:hover {
 }
 #home section.professores {
   padding: 60px 0px 0px;
-  margin-top: 40px;
+}
+@media (min-width: 992px) {
+  #home section.professores {
+    margin-top: 40px;
+  }
 }
 #home section.professores h3 {
   font-size: 24px;
   margin-bottom: 30px;
   font-weight: 600;
 }
-#home section.professores .list .box {
-  margin-bottom: 30px;
+#home section.professores .owl-carousel .box {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#home section.professores .owl-carousel .box img {
+  width: 100%;
+}
+#home section.professores .owl-carousel .box .info {
+  text-align: center;
+  width: 100%;
+  padding: 14px 10px 16px;
+  z-index: 2;
+}
+#home section.professores .owl-carousel .box .info h4 {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+#home section.professores .owl-carousel .box .info p {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+#home section.professores .owl-carousel .owl-stage {
+  margin-top: 30px;
+}
+#home section.professores .owl-carousel .owl-nav button {
+  position: absolute;
+  left: 0;
+  background: url(../../img/prev.png);
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  background-size: 100%!important;
+}
+#home section.professores .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+  left: auto;
+  background: url(../../img/next.png);
+}
+#home section.professores .owl-carousel .owl-nav button span {
+  display: none;
+}
+@media (min-width: 992px) {
+  #home section.professores .owl-carousel .owl-nav button {
+    top: -80px;
+    width: 60px;
+    height: 60px;
+  }
+}
+#home section.professores .list .box {
+  position: relative;
+  margin-bottom: 30px;
 }
 #home section.professores .list .box img {
-  width: 100%;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
   opacity: 0.5;
   transition: opacity .5s;
+}
+@media (min-width: 992px) {
+  #home section.professores .list .box img {
+    width: 100%;
+  }
 }
 #home section.professores .list .box .info {
   text-align: center;
@@ -1166,7 +1228,12 @@ footer a:hover {
   display: block;
 }
 #home section.depoimentos {
-  padding: 100px 0px 60px;
+  padding: 50px 0px 60px;
+}
+@media (min-width: 992px) {
+  #home section.depoimentos {
+    padding: 100px 0 60px;
+  }
 }
 #home section.depoimentos h3 {
   font-size: 24px;
@@ -1191,15 +1258,25 @@ footer a:hover {
 #home section.depoimentos .owl-nav button {
   position: absolute;
   top: -80px;
-  left: 100px;
+  left: 0;
   background: url(../../img/prev.png);
   width: 60px;
   height: 60px;
 }
+@media (min-width: 992px) {
+  #home section.depoimentos .owl-nav button {
+    left: 150px;
+  }
+}
 #home section.depoimentos .owl-nav button.owl-next {
-  right: 100px;
+  right: 0;
   left: auto;
   background: url(../../img/next.png);
+}
+@media (min-width: 992px) {
+  #home section.depoimentos .owl-nav button.owl-next {
+    right: 150px;
+  }
 }
 #home section.depoimentos .owl-nav button span {
   display: none;
@@ -2059,6 +2136,16 @@ footer a:hover {
 .product-detail section.depoimentos .owl-dots button.active {
   background: white;
 }
+.product-detail section.middle-cta {
+  padding: 0 0 40px !important;
+  width: 95%;
+  margin: auto;
+}
+@media (min-width: 992px) {
+  .product-detail section.middle-cta {
+    width: 100%;
+  }
+}
 .product-detail section.projetos {
   padding: 60px 0px 0px 0px;
 }
@@ -2116,7 +2203,6 @@ footer a:hover {
 .product-detail section.professores {
   background: black;
   padding: 70px 0px 20px;
-  margin-top: -45px;
   z-index: -1;
   color: white;
   position: relative;
@@ -2538,6 +2624,16 @@ footer a:hover {
 }
 .product-detail .aprender {
   padding: 70px 0px;
+  background-color: black;
+  color: white;
+}
+@media (min-width: 992px) {
+  .product-detail .aprender {
+    padding-bottom: 10px;
+  }
+}
+.product-detail .aprender .chartJourney {
+  margin-top: 20px;
 }
 .product-detail .aprender img {
   width: 100%;
@@ -2744,6 +2840,13 @@ footer a:hover {
 .product-detail.jornada section.percurso .items .item ul li {
   background: url(../../img/check.png) left 2px no-repeat !important;
 }
+@media (min-width: 992px) {
+  .product-detail.jornada section.middle-cta {
+    background: black;
+    color: white;
+    padding-top: 60px !important;
+  }
+}
 body.single .woocommerce-notices-wrapper {
   position: fixed;
   top: 0;
@@ -2846,6 +2949,10 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 .product-detail section.cta h1 {
   font-size: 40px;
   text-transform: uppercase;
+  margin-bottom: 0;
+}
+.product-detail section.cta form {
+  margin-top: 10px;
 }
 .product-detail section.cta .share h3 {
   text-transform: uppercase;

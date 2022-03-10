@@ -86,6 +86,7 @@ if ( post_password_required() ) {
 	</div>
 
 	<?php //if(get_field('jornada') == '1'){?>
+	<!-- 
 	<div class="timelineJornada">
 		<div class="container">
 			<div class="row position-relative">
@@ -99,10 +100,8 @@ if ( post_password_required() ) {
 				<img class="chartJourney" src="<?php echo get_template_directory_uri(); ?>/assets/img/chartJourney2.png"/>
 			</div>
 		</div>
-		<!-- <div class="container-fluid">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/chartJourney.png"/>
-		</div> -->
 	</div>
+	-->
 	<?php //}?>
 	<div class="aprender">
 		<div class="container">
@@ -131,6 +130,9 @@ if ( post_password_required() ) {
 						<?php endif; ?>
 				</div>
 			</div>
+		</div>
+		<div class="container-fluid px-0">
+			<img class="chartJourney d-none d-md-block" src="<?php echo get_template_directory_uri(); ?>/assets/img/chartJourney3_1.png"/>
 		</div>
 	</div>
 
@@ -192,6 +194,23 @@ if ( post_password_required() ) {
 	</section>
 	<?php endif; ?>
 	
+	<section class="cta middle-cta">
+		<?php
+			/**
+			 * Hook: woocommerce_single_product_summary.
+			 *
+			 * @hooked woocommerce_template_single_title - 5
+			 * @hooked woocommerce_template_single_rating - 10
+			 * @hooked woocommerce_template_single_price - 10
+			 * @hooked woocommerce_template_single_excerpt - 20
+			 * @hooked woocommerce_template_single_add_to_cart - 30
+			 * @hooked woocommerce_template_single_meta - 40
+			 * @hooked woocommerce_template_single_sharing - 50
+			 * @hooked WC_Structured_Data::generate_product_data() - 60
+			 */
+			do_action( 'woocommerce_single_product_summary' );
+			?>
+	</section>
 
 	<?php 
 	if(get_field('projetos')){

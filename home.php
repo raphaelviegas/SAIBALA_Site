@@ -89,8 +89,8 @@
 		<div class="container">
 			<div class="col-md-10 offset-md-1">
 				<div class="box">
-					<h3>Aproveite o melhor que a Saibalá tem a oferecer e receba acesso ao <b>pacote completo dos nossos cursos.</b></h3>
-					<a href="https://saibala.com.br/categoria-produto/jornadas/" class="btn btn-warning">Comece!</a>
+					<h3>Quer fazer parte de um grupo exclusivo e receber as melhores dicas e conteúdos em primeira mão? <b>Assine já a nossa newsletter! </b></h3>
+					<a href="https://lancamento.saibala.com.br/landing-page-newsletter?utm_campaign=newsletter_saibala_4_edicao&utm_medium=email&utm_source=RD+Station" class="btn btn-warning">Assine!</a>
 				</div>
 			</div>
 		</div>
@@ -177,18 +177,53 @@
 			<div class="text-center">
 				<h3>Conheça alguns de nossos professores</h3>
 			</div>
-			<?php if(wp_is_mobile()){
-				?>
-				<div class="owl-carousel">
-				<?php
-			} else {?>
-			<div class="list row">
-			<?php } ?>
+			<div class="owl-carousel d-md-none">
+				<?php 
+					$args = array(
+							'post_type'  => 'professores', 
+							'showposts'=> 12,
+							'orderby' => 'rand'
+					);
+					$projetos = new WP_Query($args);
+					while ($projetos->have_posts()) : $projetos->the_post();
+						if(wp_is_mobile()){
+							?>
+							<div class="box">
+								<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" />
+								<div class="info">
+									<h4><?php the_title();?></h4>
+									<p><?php the_field('especialidade');?></p>
+								</div>
+							</div>
+							<?php
+						} else {
+					?>
+
+						<div class="col-md-3">
+							<div class="box">
+								<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" />
+								<div class="info">
+									<h4><?php the_title();?></h4>
+									<p><?php the_field('especialidade');?></p>
+								</div>
+							</div>
+						</div>
+
+					<?php
+						}
+					endwhile; 
+					$projetos = null; 
+					$projetos = $temp; 
+					wp_reset_postdata();
+					?>
+		
+			</div>
+			<div class="list row d-none d-md-flex">
 					<?php 
 						$args = array(
-						    'post_type'  => 'professores', 
-						    'showposts'=> 12,
-						    'orderby' => 'rand'
+								'post_type'  => 'professores', 
+								'showposts'=> 12,
+								'orderby' => 'rand'
 						);
 						$projetos = new WP_Query($args);
 						while ($projetos->have_posts()) : $projetos->the_post();
@@ -222,7 +257,7 @@
 						$projetos = $temp; 
 						wp_reset_postdata();
 						?>
-				
+			
 			</div>
 		</div>
 	</section>

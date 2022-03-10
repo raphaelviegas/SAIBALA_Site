@@ -224,7 +224,8 @@
 			}
 			@media (max-width: 576px){
 				iframe {
-					height: 320px!important;
+					// height: 320px!important;
+					aspect-ratio: 384 / 216;
 				}
 			}
 		}
@@ -243,7 +244,7 @@
 				padding-top: 15px;
 			}
 			@media (max-width: 576px){
-				padding:25px 40px;
+				padding:0px 40px;
 			}
 		}
 		.owl-nav {
@@ -274,18 +275,86 @@
 
 	section.professores {
 		padding:60px 0px 0px;
-		margin-top:40px;
+		@media (min-width: 992px) {
+			margin-top:40px;
+		}
 		h3 {
 			font-size: 24px;
 			margin-bottom: 30px;
 			font-weight: 600;
 		}
-		.list {
+		.owl-carousel {
 			.box {
-				margin-bottom: 30px;
 				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 				img {
 					width:100%;
+					// border: 1px solid @yellow;
+					// border-bottom: none;
+				}
+				.info {
+					text-align:center;
+					width: 100%;
+					// border: 1px solid @yellow;
+					// border-top: none;
+					padding:14px 10px 16px;
+					// background-color: @yellow;
+					// color: black;
+					z-index: 2;
+					h4 {
+						font-size: 20px;
+						margin-bottom: 0px;
+					}
+					p {
+						font-size: 16px;
+						margin-bottom: 0px;
+					}
+				}
+			}
+			.owl-stage {
+				margin-top: 30px;
+			}
+			.owl-nav {
+				button {
+					position: absolute;
+					// left:100px;
+					left:0;
+					background: url(../../img/prev.png);
+					top:-15px;
+					width: 30px;
+					height: 30px;
+					background-size: 100%!important;
+					&.owl-next {
+						// right: 100px;
+						right: 0;
+						left:auto;
+						background: url(../../img/next.png);
+					}
+					span {
+						display: none;
+					}
+					@media (min-width: 992px) {
+						top:-80px;
+						width: 60px;
+						height: 60px;
+					}
+				}
+			}
+		}
+		.list {
+			.box {
+				position: relative;
+				margin-bottom: 30px;
+				img {
+					width: 350px;
+					margin-left: auto;
+					margin-right: auto;
+					@media (min-width: 992px) {
+						width:100%;
+					}
 					opacity: 0.5;
 					transition: opacity .5s;
 				}
@@ -325,7 +394,10 @@
 
 
 	section.depoimentos {
-		padding:100px 0px 60px;
+		padding:50px 0px 60px;
+		@media (min-width: 992px) {
+			padding: 100px 0 60px;
+		}
 		h3 {
 			font-size: 24px;
 			margin-bottom: 40px;
@@ -350,14 +422,22 @@
 			button {
 				position: absolute;
 				top:-80px;
-				left:100px;
+				// left:100px;
+				left: 0;
 				background: url(../../img/prev.png);
 				width: 60px;
 				height: 60px;
+				@media (min-width: 992px) {
+					left: 150px;
+				}
 				&.owl-next {
-					right: 100px;
+					// right: 100px;
+					right: 0;
 					left:auto;
 					background: url(../../img/next.png);
+					@media (min-width: 992px) {
+						right: 150px;
+					}
 				}
 				span {
 					display: none;

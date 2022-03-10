@@ -73,6 +73,23 @@ var base = function () {
             //     alert('Apenas um teste...')
             // })
 
+            $(".professores .owl-carousel").owlCarousel({
+                loop: true,
+                center: true,
+                items:1,
+                nav: true,
+                dots: true,
+                margin: 0,
+                responsive: {
+                    0: {
+                        items:1
+                    },
+                    768: {
+                        items:2
+                    },
+                }
+            }); 
+
             $(".depoimentos .owl-carousel").owlCarousel({
                 loop: true,
                 center: true,
@@ -188,6 +205,17 @@ var base = function () {
                     $("#checkout .steps div[data-step='3']").addClass('active');
                 }
             });
+            // var lastScrollPosition = 0
+            // $(window).scroll(function (event) {
+            //     var scroll = $(window).scrollTop();
+            //     console.log(scroll);
+            //     if (scroll > 400 && scroll > lastScrollPosition) {
+            //         console.log('Exibe o botão')
+            //     } else {
+            //         console.log('Esconde o botão')
+            //     }
+            //     lastScrollPosition = scroll
+            // });
         }
     };
 }();
