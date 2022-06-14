@@ -2,6 +2,15 @@ body,
 html {
   font-family: 'Roboto', sans-serif;
 }
+.single header.black {
+  background: black;
+}
+.single header.black .logo {
+  filter: none;
+}
+.single header.black a {
+  color: white;
+}
 header {
   position: absolute;
   top: 0;
@@ -12,6 +21,14 @@ header {
 }
 header a {
   color: white;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .buttons {
+  display: flex;
+  justify-content: flex-end;
 }
 header .buttons a {
   font-size: 16px;
@@ -34,6 +51,7 @@ header ul li a {
   font-size: 16px;
   padding: 5px 10px;
   display: inline-block;
+  border-bottom: 2px solid transparent;
 }
 header ul li a.active,
 header ul li a:hover {

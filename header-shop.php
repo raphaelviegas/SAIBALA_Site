@@ -30,7 +30,7 @@
 		</head>
 		<body <?php body_class(); ?>>
 		<header class='black'>
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-5 logo">
 						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logoheader.png"/></a>
