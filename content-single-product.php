@@ -31,8 +31,166 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div class="product-detail <?php if(get_field('jornada') == '1') { ?>jornada<?php } ?>" id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+<div class="product-detail-v2 <?php if(get_field('jornada') == '1') { ?>jornada<?php } ?>" id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 	
+<section class="single-header">
+	Single Header
+</section>
+
+<section class="single-um-jeito-de-aprender">
+	<div class="container">
+		<h2>jeito saibalá de aprender:</h2>
+		<div class="row mx-md-0">
+			<div class="col-md-3 content">
+				<h3>aprenda no seu tempo</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+			</div>
+			<div class="col-md-3 content">
+				<h3>professores de peso</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+			</div>
+			<div class="col-md-3 content">
+				<h3>acesso vitalício</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+			</div>
+			<div class="col-md-3 content">
+				<h3>qualidade de cinema</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="single-beneficios">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<h2>Você se tornará um expert em produto</h2>
+				<p>Lorem ipsum dolor sit amet, Duis consectetur adipiscing elit. Duis at facilisis lectus. Sed rhoncus, tellus non lacinia sollicitudin Lorem ipsum dolor sit amet, consectetur ipsum dolor Lorem ipsum dolor sit amet, Duis consectetur adipiscing elit. Duis at facilisis lectus. Sed rhoncus, tellus non lacinia sollicitudin</p>
+			</div>
+			<div class="col-md-6 offset-md-1">
+				<div class="row">
+					<div class="col-md-6 content">
+						<h3>sub-benefícios</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+					</div>
+					<div class="col-md-6 content">
+						<h3>sub-benefícios</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+					</div>
+					<div class="col-md-6 content">
+						<h3>sub-benefícios</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+					</div>
+					<div class="col-md-6 content">
+						<h3>sub-benefícios</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="single-professores">
+	<div class="container">
+		<h2>aprenda com <br>grandes nomes</h2>
+	</div>
+</section>
+
+<section class="single-para-quem">
+	<div class="container">
+		<h2>para quem este programa é indicado</h2>
+		<div class="row mx-md-0">
+
+					<?php if( have_rows('paraquem_lista') ): ?>
+						<?php while( have_rows('paraquem_lista') ): the_row(); 
+							$image = get_sub_field('image');
+							?>
+								<div class="col-md-4 px-0">
+									<div class="box">
+										<div class="box-content">
+											<h3><?php the_sub_field('titulo');?></h3>
+											<p><?php the_sub_field('descricao');?></p>
+										</div>
+										<img src="<?php the_sub_field('icone');?>"/>
+									</div>
+								</div>
+						<?php endwhile; ?>
+					<?php endif; ?>
+
+		</div>
+	</div>
+</section>
+
+<section class="single-o-que-aprender">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 main">
+				<h2>O que você vai aprender</h2>
+				<p>Lorem ipsum dolor sit amet, Duis consectetur adipiscing elit. Duis at facilisis lectus. Sed rhoncus, tellus non lacinia sollicitudin Lorem ipsum dolor sit amet, consectetur ipsum dolor Lorem ipsum dolor sit amet, Duis consectetur adipiscing elit. Duis at facilisis lectus. Sed rhoncus, tellus non lacinia sollicitudin</p>
+			</div>
+			<div class="col-md-7 offset-md-1">
+				<div class="row">
+					<div class="col-md-6 content">
+						<h3>sub-benefícios</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+					</div>
+					<div class="col-md-6 content">
+						<h3>sub-benefícios</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+					</div>
+					<div class="col-md-6 content">
+						<h3>sub-benefícios</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+					</div>
+					<div class="col-md-6 content">
+						<h3>sub-benefícios</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed ea a hic numquam, veritatis temporibus dolorem!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="single-certificado">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				Icon
+			</div>
+			<div class="col-md-10">
+				<h2>certificado da saibalá</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="single-programa-completo">
+	Section Programa Completo
+</section>
+
+<section class="single-depoimentos">
+	Section Depoimentos
+</section>
+
+<section class="single-investimento">
+	Section Investimento
+</section>
+
+<section class="single-saibala">
+	Section Saibalá
+</section>
+
+<section class="single-faq">
+	Section Perguntas Frequentes
+</section>
+
+
+<!-- Estrutura Antiga -->
+
+
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
@@ -85,24 +243,6 @@ if ( post_password_required() ) {
 		</div>
 	</div>
 
-	<?php //if(get_field('jornada') == '1'){?>
-	<!-- 
-	<div class="timelineJornada">
-		<div class="container">
-			<div class="row position-relative">
-				<div class="col-md-7 timelineJornada-content">
-					<h2>Transforme seu aprendizado em uma jornada!</h2>
-					<p>Os cursos da Saibalá foram organizados em um formato mais completo e engajador.  Conheça a nossa jornada de aprendizado.</p>
-					<p>O mercado de cursos oferece hoje uma ampla gama de opções para quem procura especialização.  Mas como fazer a melhor escolha para seu tempo e investimento? Com o objetivo de oferecer uma experiência de ensino mais completa e engajadora, a Saibalá reuniu seus cursos em unidades interconectadas. </p>
-					<p>Nasceram, assim, as jornadas de aprendizado. Desenvolvidas com técnicas inovadoras, as nossas jornadas são comandadas por profissionais experientes e treinados para oferecer uma visão ampla e objetiva sobre sua área de interesse, com o dinamismo que você precisa.</p>
-					<p>Impulsione sua carreira com conteúdo de alta qualidade e um formato adaptado à sua rotina! </p>
-				</div>
-				<img class="chartJourney" src="<?php echo get_template_directory_uri(); ?>/assets/img/chartJourney2.png"/>
-			</div>
-		</div>
-	</div>
-	-->
-	<?php //}?>
 	<div class="aprender">
 		<div class="container">
 			<div class="row">
@@ -211,50 +351,6 @@ if ( post_password_required() ) {
 			do_action( 'woocommerce_single_product_summary' );
 			?>
 	</section>
-
-	<?php 
-	if(get_field('projetos')){
-		$ids = array();
-		foreach (get_field('projetos') as $key => $value) {
-			$ids[] = $value->ID;
-		}
-		?>
-
-		<section class="projetos">
-			<div class="container-fluid p-0">
-				<div class="text-center">
-					<h3>Veja o que produzimos<br> nas últimas aulas</h3>
-					<div class="owl-carousel">
-						<?php 
-							$args = array(
-							    'post_type'  => 'projetos', 
-							    'showposts'=> -1,
-								'post__in'			=> $ids,
-							);
-							$projetos = new WP_Query($args);
-							while ($projetos->have_posts()) : $projetos->the_post();
-							?>
-
-							
-								<div class="item">
-											<img src="<?php echo get_post_meta(get_the_id(),'imagem_url',true)?>" class='w-100'/>	
-								</div>
-
-
-							<?php
-							endwhile; 
-							$projetos = null; 
-							$projetos = $temp; 
-							wp_reset_postdata();
-							?>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<?php
-	}?>
-
 
 	<?php 
 	if(get_field('professor')){

@@ -3,6 +3,7 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 .single header.black {
+  padding: 15px 0;
   background: black;
 }
 .single header.black .logo {
@@ -2057,6 +2058,271 @@ footer a:hover {
   border-bottom: 1px solid white;
 }
 
+.product-detail-v2 {
+  padding: 80px 0;
+  overflow: hidden;
+}
+.product-detail-v2 section {
+  padding: 40px 0;
+}
+.product-detail-v2 h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 2rem ;
+}
+@media (min-width: 992px) {
+  .product-detail-v2 h2 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+}
+.product-detail-v2 .single-um-jeito-de-aprender h2 {
+  max-width: 275px;
+}
+.product-detail-v2 .single-um-jeito-de-aprender .content {
+  padding-left: 4rem;
+  position: relative;
+}
+.product-detail-v2 .single-um-jeito-de-aprender .content:before {
+  content: " ";
+  position: absolute;
+  left: -48px;
+  top: -10px;
+  width: 100px;
+  height: 50px;
+  background-image: url('../../img/arrow.svg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.product-detail-v2 .single-um-jeito-de-aprender h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 992px) {
+  .product-detail-v2 .single-um-jeito-de-aprender {
+    background: #FAF7F7;
+  }
+  .product-detail-v2 .single-um-jeito-de-aprender h2 {
+    color: #A36FFF;
+    max-width: unset;
+  }
+  .product-detail-v2 .single-um-jeito-de-aprender .content {
+    padding-left: 0;
+  }
+  .product-detail-v2 .single-um-jeito-de-aprender .content::before {
+    content: none;
+  }
+  .product-detail-v2 .single-um-jeito-de-aprender h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .product-detail-v2 .single-um-jeito-de-aprender h3:before {
+    content: ">";
+    color: #A36FFF;
+    position: absolute;
+    left: -1rem;
+    font-size: 1.5rem;
+  }
+}
+.product-detail-v2 .single-beneficios {
+  padding: 50px 0;
+}
+.product-detail-v2 .single-beneficios .content {
+  padding-left: 4rem;
+  position: relative;
+}
+.product-detail-v2 .single-beneficios .content:before {
+  content: " ";
+  position: absolute;
+  left: -48px;
+  top: -10px;
+  width: 100px;
+  height: 50px;
+  background-image: url('../../img/arrow.svg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.product-detail-v2 .single-beneficios h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 992px) {
+  .product-detail-v2 .single-beneficios h2 {
+    color: #3196FF;
+  }
+  .product-detail-v2 .single-beneficios .content {
+    padding-left: 0;
+  }
+  .product-detail-v2 .single-beneficios .content::before {
+    content: none;
+  }
+  .product-detail-v2 .single-beneficios h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .product-detail-v2 .single-beneficios h3:before {
+    content: ">";
+    color: #3196FF;
+    position: absolute;
+    left: -1rem;
+    font-size: 1.5rem;
+  }
+}
+.product-detail-v2 .single-professores {
+  background: black;
+}
+.product-detail-v2 .single-professores h2 {
+  color: #ffff00;
+}
+.product-detail-v2 .single-para-quem {
+  overflow: hidden;
+}
+.product-detail-v2 .single-para-quem .box {
+  border: 4px solid #A36FFF;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform: translateX(20px);
+  margin-bottom: 2rem;
+}
+.product-detail-v2 .single-para-quem .box .box-content {
+  width: 55%;
+}
+.product-detail-v2 .single-para-quem .box img {
+  width: 45%;
+}
+.product-detail-v2 .single-para-quem .box h3 {
+  color: #A36FFF;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.product-detail-v2 .single-para-quem .box p {
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .product-detail-v2 .single-para-quem {
+    background: #FAF7F7;
+  }
+  .product-detail-v2 .single-para-quem h2 {
+    max-width: 350px;
+    margin-bottom: 2rem;
+  }
+  .product-detail-v2 .single-para-quem .col-md-4 {
+    padding: 0 0.5rem !important;
+    display: flex;
+  }
+  .product-detail-v2 .single-para-quem .col-md-4:first-of-type {
+    padding: 0 1rem 0 0 !important;
+  }
+  .product-detail-v2 .single-para-quem .col-md-4:last-of-type {
+    padding: 0 0 0 1rem !important;
+  }
+  .product-detail-v2 .single-para-quem .box {
+    transform: none;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+  }
+  .product-detail-v2 .single-para-quem .box .box-content {
+    width: 100%;
+  }
+  .product-detail-v2 .single-para-quem .box h3 {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+}
+.product-detail-v2 .single-o-que-aprender {
+  padding: 50px 0;
+}
+.product-detail-v2 .single-o-que-aprender .content {
+  padding-left: 4rem;
+  position: relative;
+}
+.product-detail-v2 .single-o-que-aprender .content:before {
+  content: " ";
+  position: absolute;
+  left: -48px;
+  top: -10px;
+  width: 100px;
+  height: 50px;
+  background-image: url('../../img/arrow.svg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.product-detail-v2 .single-o-que-aprender h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 992px) {
+  .product-detail-v2 .single-o-que-aprender .content {
+    padding-left: 0;
+  }
+  .product-detail-v2 .single-o-que-aprender .content::before {
+    content: none;
+  }
+  .product-detail-v2 .single-o-que-aprender .main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-detail-v2 .single-o-que-aprender .main:before {
+    content: " ";
+    position: absolute;
+    left: -270px;
+    width: 250px;
+    height: 130px;
+    margin-bottom: 1rem;
+    background-image: url('../../img/arrow.svg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .product-detail-v2 .single-o-que-aprender h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .product-detail-v2 .single-o-que-aprender h3:before {
+    content: ">";
+    background: #ffff00;
+    position: absolute;
+    left: -1.75rem;
+    top: 2px;
+    font-weight: 300;
+    padding: 0px 0px 1px 2px;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) and (min-width: 1400) {
+  .product-detail-v2 .single-o-que-aprender .main:before {
+    left: -270px;
+    height: 130px;
+  }
+}
 .commentsProject {
   margin-top: 40px;
   padding-top: 40px;
@@ -2363,7 +2629,7 @@ footer a:hover {
 }
 .product-detail section.percurso .items .item h2 b {
   text-transform: uppercase;
-  color: #F6EB2A;
+  color: #ffff00;
 }
 .product-detail section.percurso .items .item ul {
   list-style: none;
@@ -2411,7 +2677,7 @@ footer a:hover {
   }
 }
 .product-detail section.jornada-final .box .box-head {
-  background-color: #F6EB2A;
+  background-color: #ffff00;
   padding-top: 2px;
   height: 9rem;
   display: flex;
@@ -2538,7 +2804,7 @@ footer a:hover {
   font-weight: 600;
 }
 .product-detail section.jornada-final .box .box-body .box-content .list-items ul li .price-box {
-  border: 1px solid #F6EB2A;
+  border: 1px solid #ffff00;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2546,7 +2812,7 @@ footer a:hover {
   font-size: 14px;
 }
 .product-detail section.jornada-final .box .box-body .box-content hr {
-  border-top: 3px dashed #F6EB2A;
+  border-top: 3px dashed #ffff00;
 }
 .product-detail section.jornada-final .box .box-body .box-content .prices {
   display: flex;
@@ -2636,7 +2902,7 @@ footer a:hover {
 }
 .product-detail .timelineJornada h2 {
   margin-bottom: 20px;
-  color: #F6EB2A;
+  color: #ffff00;
   font-size: 1.5rem;
   line-height: 1.3;
   text-transform: uppercase;
@@ -2681,7 +2947,7 @@ footer a:hover {
   font-size: 20px;
 }
 .product-detail .paraquem {
-  background: #F6EB2A;
+  background: #ffff00;
   color: black;
   padding: 50px 0px;
 }
@@ -2780,7 +3046,7 @@ footer a:hover {
 .product-detail.jornada section.percurso .items .item {
   margin-bottom: 30px;
   padding: 0 0 20px;
-  border-bottom: 1px solid #F6EB2A;
+  border-bottom: 1px solid #ffff00;
 }
 .product-detail.jornada section.percurso .items .item .jornada-toogle-button {
   display: flex;
@@ -2823,7 +3089,7 @@ footer a:hover {
 }
 .product-detail.jornada section.percurso .items .item .jornada-toogle-button h3 {
   text-transform: uppercase;
-  color: #F6EB2A;
+  color: #ffff00;
   flex-wrap: nowrap;
   margin-right: 7px;
   margin-top: 4px;
@@ -2898,7 +3164,7 @@ body.single .woocommerce-notices-wrapper ul li {
   width: 100%;
 }
 body.single .woocommerce-notices-wrapper ul li .button {
-  background: #F6EB2A;
+  background: #ffff00;
   color: black;
   text-align: center;
   margin-bottom: 15px;
@@ -2911,7 +3177,7 @@ body.single .woocommerce-notices-wrapper .woocommerce-message {
   text-align: center;
 }
 body.single .woocommerce-notices-wrapper .woocommerce-message .button {
-  background: #F6EB2A;
+  background: #ffff00;
   color: black;
   text-align: center;
   margin-bottom: 15px;
