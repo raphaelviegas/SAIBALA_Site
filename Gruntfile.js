@@ -21,6 +21,7 @@ module.exports = function(grunt) {
         tasks: ['uglify'],
         options: {
           spawn: false,
+          livereload: true
         },
       },
       css: {
@@ -31,6 +32,13 @@ module.exports = function(grunt) {
           livereload: true
         },
       },
+      html: {
+        files: ['*.php', '**/*.php'],
+        options: {
+          spawn: false,
+          livereload: true
+        }
+      }
     },
   });
 

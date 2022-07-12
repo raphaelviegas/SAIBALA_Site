@@ -73,6 +73,52 @@ var base = function () {
             //     alert('Apenas um teste...')
             // })
 
+            $(".single-professores .owl-carousel").owlCarousel({
+                loop: true,
+                center: true,
+                items:1,
+                nav: true,
+                dots: false,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 7500,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items:1
+                    },
+                    768: {
+                        items:2
+                    },
+                    1024: {
+                        items: 3
+                    }
+                }
+            }); 
+
+            $(".single-depoimentos .owl-carousel").owlCarousel({
+                loop: true,
+                center: true,
+                items:1,
+                nav: true,
+                dots: false,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 7500,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items:1
+                    },
+                    768: {
+                        items:2
+                    },
+                    1024: {
+                        items: 3
+                    }
+                }
+            }); 
+
             $(".professores .owl-carousel").owlCarousel({
                 loop: true,
                 center: true,

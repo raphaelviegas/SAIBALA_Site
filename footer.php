@@ -21,6 +21,7 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/wow/wow.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+		<!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/fslightbox/fslightbox.js"></script> -->
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 		<!--[if lt IE 9]>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/crossbrowserjs/html5shiv.js"></script>
