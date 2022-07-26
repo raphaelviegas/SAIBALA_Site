@@ -63,7 +63,7 @@ if(get_field('layout') == 'v2') { ?>
 	<div class="container">
 		<div class="content">
 			<h1><?php the_title() ?></h1>
-			<p>Torne-se o melhor product manager que você conhece as 10.000 horas para se tornar um expert consolidado em 8 horas</p>
+			<p><?php the_field('subtitulo') ?></p>
 		</div>
 		<div class="hero-block">
 			<span class="overlay d-md-none"></span>
@@ -88,18 +88,18 @@ if(get_field('layout') == 'v2') { ?>
 		<div class="row mx-md-0">
 			<div class="col-md-3 content">
 				<h3>qualidade de cinema</h3>
-				<p>Já pensou aprender como se estivesse assistindo a uma série? A Saibalá tornou isso possível! Utilizando as melhores ferramentas de audiovisual para você aprender em qualidade de cinema. Assista ao nosso trailer!</p>
+				<p>Utilizamos as melhores ferramentas de audiovisual para você aprender em qualidade de cinema. Assista ao nosso trailer!</p>
 			</div>
 			<div class="col-md-3 content">
 				<h3>professores de peso</h3>
-				<p>Aprenda com quem faz! Reunimos alguns dos profissionais mais renomados no mercado e especialistas que você só encontra aqui na Saibalá.</p>
+				<p>Aprenda com quem faz. Reunimos alguns dos profissionais mais renomados no mercado que você só encontra aqui na Saibalá!</p>
 			</div>
 			<div class="col-md-3 content">
 				<h3>acesso vitalício</h3>
 				<p>Você terá acesso vitalício a todas as aulas do programa para consultar e reassistir sempre que quiser!</p>
 			</div>
 			<div class="col-md-3 content">
-				<h3>qualidade de cinema</h3>
+				<h3>aprenda no seu ritmo</h3>
 				<p>Todas as aulas são online e gravadas para você mergulhar nos conteúdos de onde quiser e quando quiser!</p>
 			</div>
 		</div>
@@ -113,7 +113,7 @@ if(get_field('layout') == 'v2') { ?>
 				<h2><?php the_field('beneficio-destaque')?></h2>
 				<p><?php the_field('beneficios-conteudo')?></p>
 			</div>
-			<div class="col-md-5 offset-md-1">
+			<div class="col-md-5 offset-md-1 content-box">
 				<div class="row">
 					<?php if( have_rows('sub-beneficios') ): ?>
 						<?php while( have_rows('sub-beneficios') ): the_row(); ?>
@@ -273,7 +273,7 @@ if(get_field('professor')){
 			</div>
 			<div class="col-md-10 px-0">
 				<h2>certificado da saibalá</h2>
-				<p><?php the_field('certificado-texto'); ?></p>
+				<p>Ao concluir o curso você ainda recebe um certificado digital para poder compartilhar em seu Linkedin, fazer novas conexões e networking, e mostrar suas habilidades para o mercado com o certificado Saibalá.</p>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/certificado.png" alt="Certificado Saibalá">
 			</div>
 		</div>
@@ -462,7 +462,7 @@ if(get_field('professor')){
 		<ul class="content">
 			<li class="item first-col">
 				<div>
-					<p class="heading">+100k</p>
+					<p class="heading">+1 milhão</p>
 					<p class="text-1">alunos já passaram pelos nossos cursos</p>
 				</div>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icones/1.png" alt="icone-1" class="icon">
@@ -508,14 +508,14 @@ if(get_field('professor')){
 			<li class="spacer"></li>
 			<li class="item first-col">
 				<div>
-					<p class="heading">+300</p>
+					<p class="heading">+3.000</p>
 					<p>cursos produzidos</p>
 				</div>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icones/7.png" alt="icone-7" class="icon">
 			</li>
 			<li class="item second-col">
 				<div>
-					<p class="heading">+5k horas</p>
+					<p class="heading">+40k horas</p>
 					<p>de cursos produzidos</p>
 				</div>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icones/8.png" alt="icone-8" class="icon icon-8">

@@ -5,6 +5,7 @@
 @sectionPadding: 40px 0;
 
 .product-detail-v2 {
+	font-family: 'Vinila','Roboto', sans-serif;
 	padding: 66px 0;
 	overflow: hidden;
 	section {
@@ -12,7 +13,7 @@
 	}
 	h2{
 		font-weight: 700;
-		font-size: 3rem;
+		font-size: 2.75rem;
 		line-height: 1.1;
 		margin-bottom: 2rem ;
 		text-transform: lowercase;
@@ -20,6 +21,9 @@
 			font-size: 2.25rem;
 			line-height: 1;
 			margin-bottom: 1rem;
+		}
+		@media (max-width: 361px){
+			font-size: 2.4rem;
 		}
 	}
 	.single-fixed-cta {
@@ -44,8 +48,11 @@
 			text-align: center;
 			color: black;
 			font-weight: 700;
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 			margin-bottom: 0.5rem;
+			@media (min-width: 768px) {
+				font-size: 2rem;
+			}
 			&:hover {
 				text-decoration: none;
 			}
@@ -74,10 +81,14 @@
 				line-height: 1.5;
 				padding: 0.25rem 0rem 0.3rem;
 				display: inline;
-				font-weight: 900;
-				font-size: 3.5rem;
+				font-weight: 800;
+				font-size: 2.5rem;
 				transform: translateX(0.25rem);
 				box-shadow: 1.5rem 0 0  @yellow, -0.5rem 0 0  @yellow;
+				@media (min-width: 768px){
+					line-height: 1.35;
+					font-size: 3.5rem;
+				}
 			}
 			p {
 				margin-top: 0.5rem;
@@ -128,7 +139,7 @@
 	}
 	.single-um-jeito-de-aprender {
 		h2{
-			max-width: 275px;
+			max-width: 290px;
 		}
 		.content {
 			padding-left: 4rem;
@@ -151,6 +162,9 @@
 			font-size: 1.5rem;
 			position: relative;
 			margin-bottom: 0.25rem;
+		}
+		p {
+			font-weight: 300;
 		}
 		@media (min-width: 768px) {
 			background: @bgpurple;
@@ -186,6 +200,12 @@
 		.container > .row {
 			align-items: center;
 		}
+		.content-box {
+			margin-top: 2rem;
+			@media (min-width: 768px) {
+				margin-top:0;
+			}
+		}
 		.content {
 			padding-left: 4rem;
 			position: relative;
@@ -207,6 +227,9 @@
 			font-size: 1.5rem;
 			position: relative;
 			margin-bottom: 0.25rem;
+		}
+		p {
+			font-weight: 300;
 		}
 		@media (min-width: 768px) {
 			h2 {
@@ -321,6 +344,7 @@
 				}
 				.content {
 					p {
+						font-weight: 300;
 						overflow: hidden;
 						display: -webkit-box;
 						-webkit-box-orient: vertical;
@@ -359,12 +383,12 @@
 				display: flex;
 				justify-content: space-between;
 				color: @yellow;
-				font-size: 6rem;
+				font-size: 4rem;
 				@media (min-width: 768px) {
 					width: 425px;
 					left: 50%;
 					transform: translate(-50%, -50%);
-					font-size: 7rem;
+					font-size: 4rem;
 				}
 				button:focus {
 					outline: none;
@@ -389,16 +413,17 @@
 				width: 55%;
 			}
 			img {
-				width: 45%;
+				width: 40%;
 			}
 			h3 {
 				color: @purple;
-				font-size: 1.75rem;
+				font-size: 1.25rem;
 				font-weight: 700;
 				text-transform: lowercase;
 			}
 			p {
 				margin-bottom: 0;
+				font-weight: 300;
 			}
 		}
 		@media (min-width: 768px) {
@@ -432,6 +457,7 @@
 					font-size: 1.25rem;
 				}
 				img {
+					width: 45%;
 					margin-top: 1rem;
 				}
 			}
@@ -442,6 +468,7 @@
 		.content {
 			padding-left: 4rem;
 			position: relative;
+			margin-bottom: 0.75rem;
 			&:before {
 				content: " ";
 				position: absolute;
@@ -461,12 +488,20 @@
 			position: relative;
 			margin-bottom: 0.25rem;
 		}
+		p {
+			font-weight: 300;
+			padding-right: 0.5rem;
+		}
 		@media (min-width: 768px) {
 			.content {
 				padding-left: 0;
 				padding-right: 2rem;
+				margin-bottom: 0;
 				&::before {
 					content: none;
+				}
+				p {
+					padding-right: 0;
 				}
 			}
 			.main {
@@ -566,6 +601,7 @@
 			}
 			p {
 				max-width: 400px;
+				font-weight: 300;
 			}
 			img {
 				width: 100%;
@@ -643,6 +679,9 @@
 					}
 				}	
 				.collapse.show div {
+					p, li {
+						font-weight: 300;
+					}
 					@media (min-width: 768px){
 						width: 880px;
 						margin: auto;
@@ -721,6 +760,7 @@
 			}
 			.content {
 				p {
+					font-weight: 300;
 					overflow: hidden;
 					display: -webkit-box;
 					-webkit-box-orient: vertical;
@@ -759,12 +799,12 @@
 			display: flex;
 			justify-content: space-between;
 			color: @yellow;
-			font-size: 6rem;
+			font-size: 4rem;
 			@media (min-width: 768px) {
 				width: 425px;
 				left: 50%;
 				transform: translate(-50%, -50%);
-				font-size: 7rem;
+				font-size: 4rem;
 			}
 			button:focus {
 				outline: none;
@@ -776,6 +816,10 @@
 		background-image: linear-gradient(to bottom, var(--white), var(--white) 18%, #ffffce 48%, #fbfb7f 76%, #ff0);
 		border-bottom: 4px solid black;
 		.content-grid {
+			.acesso-vitalicio p,
+			.garantia p {
+				font-weight: 300;
+			}
 			.acesso-vitalicio {
 				grid-area: acesso;
 			}
@@ -1025,9 +1069,12 @@
 					}
 					p.heading {
 						font-weight: 700;
-						font-size: 2.5rem;
+						font-size: 2.25rem;
 						margin-bottom: 0.75rem;
 						padding-right: 0;
+						@media (min-width: 768px){
+							font-size: 2.5rem;
+						}
 					}
 				}
 				img {
@@ -1145,6 +1192,9 @@
 							}
 						}
 					}
+					p, li {
+						font-weight: 300;
+					}
 				}
 			}
 		}
@@ -1155,10 +1205,18 @@
 			}
 			p {
 				margin-bottom: -0.5rem;
+				font-weight: 300;
+				max-width: 250px;
+				@media (min-width: 768px) {
+					max-width: none;
+				}
 			}
 			a {
-				font-size: 2rem;
+				font-size: 1.5rem;
 				color: @blue;
+				@media (min-width: 768px) {
+					font-size: 2rem;
+				}
 				&:hover {
 					color: @purple;
 					text-decoration: none;

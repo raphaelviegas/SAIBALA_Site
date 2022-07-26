@@ -2059,6 +2059,7 @@ footer a:hover {
 }
 
 .product-detail-v2 {
+  font-family: 'Vinila', 'Roboto', sans-serif;
   padding: 66px 0;
   overflow: hidden;
 }
@@ -2067,7 +2068,7 @@ footer a:hover {
 }
 .product-detail-v2 h2 {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.75rem;
   line-height: 1.1;
   margin-bottom: 2rem ;
   text-transform: lowercase;
@@ -2077,6 +2078,11 @@ footer a:hover {
     font-size: 2.25rem;
     line-height: 1;
     margin-bottom: 1rem;
+  }
+}
+@media (max-width: 361px) {
+  .product-detail-v2 h2 {
+    font-size: 2.4rem;
   }
 }
 .product-detail-v2 .single-fixed-cta {
@@ -2102,8 +2108,13 @@ footer a:hover {
   text-align: center;
   color: black;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  .product-detail-v2 .single-fixed-cta a {
+    font-size: 2rem;
+  }
 }
 .product-detail-v2 .single-fixed-cta a:hover {
   text-decoration: none;
@@ -2135,10 +2146,16 @@ footer a:hover {
   line-height: 1.5;
   padding: 0.25rem 0rem 0.3rem;
   display: inline;
-  font-weight: 900;
-  font-size: 3.5rem;
+  font-weight: 800;
+  font-size: 2.5rem;
   transform: translateX(0.25rem);
   box-shadow: 1.5rem 0 0 #ffff00, -0.5rem 0 0 #ffff00;
+}
+@media (min-width: 768px) {
+  .product-detail-v2 .single-header .content h1 {
+    line-height: 1.35;
+    font-size: 3.5rem;
+  }
 }
 .product-detail-v2 .single-header .content p {
   margin-top: 0.5rem;
@@ -2188,7 +2205,7 @@ footer a:hover {
   z-index: 0;
 }
 .product-detail-v2 .single-um-jeito-de-aprender h2 {
-  max-width: 275px;
+  max-width: 290px;
 }
 .product-detail-v2 .single-um-jeito-de-aprender .content {
   padding-left: 4rem;
@@ -2211,6 +2228,9 @@ footer a:hover {
   font-size: 1.5rem;
   position: relative;
   margin-bottom: 0.25rem;
+}
+.product-detail-v2 .single-um-jeito-de-aprender p {
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .product-detail-v2 .single-um-jeito-de-aprender {
@@ -2248,6 +2268,14 @@ footer a:hover {
 .product-detail-v2 .single-beneficios .container > .row {
   align-items: center;
 }
+.product-detail-v2 .single-beneficios .content-box {
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .product-detail-v2 .single-beneficios .content-box {
+    margin-top: 0;
+  }
+}
 .product-detail-v2 .single-beneficios .content {
   padding-left: 4rem;
   position: relative;
@@ -2269,6 +2297,9 @@ footer a:hover {
   font-size: 1.5rem;
   position: relative;
   margin-bottom: 0.25rem;
+}
+.product-detail-v2 .single-beneficios p {
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .product-detail-v2 .single-beneficios h2 {
@@ -2384,6 +2415,7 @@ footer a:hover {
   height: 300px;
 }
 .product-detail-v2 .single-professores .jornada .single-professores-item .content p {
+  font-weight: 300;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -2418,14 +2450,14 @@ footer a:hover {
   display: flex;
   justify-content: space-between;
   color: #ffff00;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 @media (min-width: 768px) {
   .product-detail-v2 .single-professores .jornada .owl-nav {
     width: 425px;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 7rem;
+    font-size: 4rem;
   }
 }
 .product-detail-v2 .single-professores .jornada .owl-nav button:focus {
@@ -2449,16 +2481,17 @@ footer a:hover {
   width: 55%;
 }
 .product-detail-v2 .single-para-quem .box img {
-  width: 45%;
+  width: 40%;
 }
 .product-detail-v2 .single-para-quem .box h3 {
   color: #A36FFF;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 700;
   text-transform: lowercase;
 }
 .product-detail-v2 .single-para-quem .box p {
   margin-bottom: 0;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .product-detail-v2 .single-para-quem {
@@ -2494,6 +2527,7 @@ footer a:hover {
     font-size: 1.25rem;
   }
   .product-detail-v2 .single-para-quem .box img {
+    width: 45%;
     margin-top: 1rem;
   }
 }
@@ -2503,6 +2537,7 @@ footer a:hover {
 .product-detail-v2 .single-o-que-aprender .content {
   padding-left: 4rem;
   position: relative;
+  margin-bottom: 0.75rem;
 }
 .product-detail-v2 .single-o-que-aprender .content:before {
   content: " ";
@@ -2522,13 +2557,21 @@ footer a:hover {
   position: relative;
   margin-bottom: 0.25rem;
 }
+.product-detail-v2 .single-o-que-aprender p {
+  font-weight: 300;
+  padding-right: 0.5rem;
+}
 @media (min-width: 768px) {
   .product-detail-v2 .single-o-que-aprender .content {
     padding-left: 0;
     padding-right: 2rem;
+    margin-bottom: 0;
   }
   .product-detail-v2 .single-o-que-aprender .content::before {
     content: none;
+  }
+  .product-detail-v2 .single-o-que-aprender .content p {
+    padding-right: 0;
   }
   .product-detail-v2 .single-o-que-aprender .main {
     position: relative;
@@ -2636,6 +2679,7 @@ footer a:hover {
 }
 .product-detail-v2 .single-certificado .row p {
   max-width: 400px;
+  font-weight: 300;
 }
 .product-detail-v2 .single-certificado .row img {
   width: 100%;
@@ -2720,6 +2764,10 @@ footer a:hover {
 .product-detail-v2 .single-programa-completo .items .item .jornada-toogle-button.collapsed .chevron {
   transform: rotate(0deg);
 }
+.product-detail-v2 .single-programa-completo .items .item .collapse.show div p,
+.product-detail-v2 .single-programa-completo .items .item .collapse.show div li {
+  font-weight: 300;
+}
 @media (min-width: 768px) {
   .product-detail-v2 .single-programa-completo .items .item .collapse.show div {
     width: 880px;
@@ -2799,6 +2847,7 @@ footer a:hover {
   background: linear-gradient(180deg, rgba(255, 255, 0, 0) 0%, rgba(255, 255, 0, 0.2) 76%, rgba(255, 255, 0, 0.8) 91%, #ffff00 100%);
 }
 .product-detail-v2 .single-depoimentos .single-depoimentos-item .content p {
+  font-weight: 300;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -2833,14 +2882,14 @@ footer a:hover {
   display: flex;
   justify-content: space-between;
   color: #ffff00;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 @media (min-width: 768px) {
   .product-detail-v2 .single-depoimentos .owl-nav {
     width: 425px;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 7rem;
+    font-size: 4rem;
   }
 }
 .product-detail-v2 .single-depoimentos .owl-nav button:focus {
@@ -2855,6 +2904,10 @@ footer a:hover {
   display: grid;
   grid-template-areas: 'acesso' 'conteudo' 'garantia';
   gap: 10px;
+}
+.product-detail-v2 .single-investimento .content-grid .acesso-vitalicio p,
+.product-detail-v2 .single-investimento .content-grid .garantia p {
+  font-weight: 300;
 }
 .product-detail-v2 .single-investimento .content-grid .acesso-vitalicio {
   grid-area: acesso;
@@ -3115,9 +3168,14 @@ footer a:hover {
 }
 .product-detail-v2 .single-saibala .content li.item div p.heading {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin-bottom: 0.75rem;
   padding-right: 0;
+}
+@media (min-width: 768px) {
+  .product-detail-v2 .single-saibala .content li.item div p.heading {
+    font-size: 2.5rem;
+  }
 }
 .product-detail-v2 .single-saibala .content li.item img {
   flex: none;
@@ -3244,6 +3302,10 @@ footer a:hover {
     background-size: 14px;
   }
 }
+.product-detail-v2 .single-faq .items .item .content p,
+.product-detail-v2 .single-faq .items .item .content li {
+  font-weight: 300;
+}
 .product-detail-v2 .single-faq .contato {
   margin-top: 50px;
 }
@@ -3252,10 +3314,22 @@ footer a:hover {
 }
 .product-detail-v2 .single-faq .contato p {
   margin-bottom: -0.5rem;
+  font-weight: 300;
+  max-width: 250px;
+}
+@media (min-width: 768px) {
+  .product-detail-v2 .single-faq .contato p {
+    max-width: none;
+  }
 }
 .product-detail-v2 .single-faq .contato a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #3196FF;
+}
+@media (min-width: 768px) {
+  .product-detail-v2 .single-faq .contato a {
+    font-size: 2rem;
+  }
 }
 .product-detail-v2 .single-faq .contato a:hover {
   color: #A36FFF;
