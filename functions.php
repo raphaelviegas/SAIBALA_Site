@@ -7,7 +7,7 @@ require_once(ABSPATH . "wp-admin" . '/includes/media.php');
 /* General functions */
 include "functions/general.php";
 include "functions/product_sidebar.php";
-include "functions/acf_fields.php";
+// include "functions/acf_fields.php";
 
 
 if( function_exists('acf_add_options_page') ) {

@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-BoldOblique.woff2') format('woff2'),
+        url('Vinila-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-Black.woff2') format('woff2'),
+        url('Vinila-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-BlackOblique.woff2') format('woff2'),
+        url('Vinila-BlackOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-ExtraBold.woff2') format('woff2'),
+        url('Vinila-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-Bold.woff2') format('woff2'),
+        url('Vinila-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-ExtraBoldOblique.woff2') format('woff2'),
+        url('Vinila-ExtraBoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-Regular.woff2') format('woff2'),
+        url('Vinila-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-Oblique.woff2') format('woff2'),
+        url('Vinila-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-ThinOblique.woff2') format('woff2'),
+        url('Vinila-ThinOblique.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-Light.woff2') format('woff2'),
+        url('Vinila-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-Thin.woff2') format('woff2'),
+        url('Vinila-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila';
+    src: url('Vinila-LightOblique.woff2') format('woff2'),
+        url('Vinila-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
