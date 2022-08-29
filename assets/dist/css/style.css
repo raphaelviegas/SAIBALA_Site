@@ -1,6 +1,9 @@
 body,
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
+}
+a {
+  text-decoration: none !important;
 }
 .single header.black {
   padding: 15px 0;
@@ -2055,9 +2058,11 @@ footer a:hover {
 }
 
 .product-detail-v2 {
-  font-family: 'Vinila', 'Roboto', sans-serif;
   padding: 66px 0;
   overflow: hidden;
+}
+.product-detail-v2 * {
+  font-family: 'Vinila', 'Roboto', sans-serif !important;
 }
 .product-detail-v2 section {
   padding: 40px 0;
