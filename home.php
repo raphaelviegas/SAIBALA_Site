@@ -12,12 +12,12 @@
 						<h1>É aprendendo que você transforma o seu caminho. <b>Comece agora a sua transformação!</b></h1>
 						<a href="https://saibala.com.br/categoria-produto/jornadas/" class="btn btn-secondary">Comece aqui</a>
 					</div>
-					<div class="col-md-8">
-						<?php if(!wp_is_mobile()){?>
+					<div class="col-md-8 d-none d-md-block">
 						<video loop muted autoplay width="100%" height="420">
 						  <source src="<?php echo get_template_directory_uri(); ?>/assets/video.mp4" type="video/mp4">
 						  Your browser does not support the video tag.
 						</video>
+						<?php if(!wp_is_mobile()){?>
 						<?php } else {
 							?>
 							
@@ -27,9 +27,9 @@
 				</div>
 			</div>
 		</div>
-		<?php if(!wp_is_mobile()){?>
+		<!-- <?php if(!wp_is_mobile()){?>
 		<img class='w-100' src="<?php echo get_template_directory_uri(); ?>/assets/img/homeBanner.png"/>
-		<?php }?>
+		<?php }?> -->
 	</section>
 
 	<section class="features">

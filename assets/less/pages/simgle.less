@@ -50,9 +50,6 @@
 			font-weight: 700;
 			font-size: 1.25rem;
 			margin-bottom: 0.5rem;
-			@media (min-width: 768px) {
-				font-size: 2rem;
-			}
 			&:hover {
 				text-decoration: none;
 			}
@@ -60,6 +57,45 @@
 		p	{
 			font-size: 0.85rem;
 			margin-bottom: 0.75rem;
+		}
+		@media (min-width: 768px) {
+			background: transparent;
+			backdrop-filter: blur(4px);
+			border-radius: 0;
+			background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,149,1) 98%, rgba(255,255,0,1) 100%);
+			flex-direction: row;
+			padding: 1rem 0;
+			a {
+				position: relative;
+				width: max-content;
+				max-width: 500px;
+				line-height: 1;
+				border-radius: 1.25rem;
+				font-size: 1.5rem;
+				padding: 0.5rem 2rem 0.5rem 6rem;
+				&:before {
+					content: '';
+					background-image: url('../../img/cta-icon.svg');
+					height: 100px;
+					width: 100px;
+					display: inline-flex;
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+					position: absolute;
+					left: -0.5rem;
+					top: -1rem;
+				}
+			}
+			p {
+				margin-left: 1rem;
+				font-weight: 300;
+				max-width: 170px;
+				span {
+					color: @blue;
+					font-weight: 700;
+				}
+			}
 		}
 	}
 	.single-header {
@@ -72,7 +108,7 @@
 			z-index: 10;
 			padding-top: 3rem;
 			@media (min-width: 768px){
-				max-width: 30%;
+				max-width: 45%;
 				margin-left: 0.25rem;
 				padding-top: 1rem;
 			}
@@ -97,6 +133,37 @@
 				@media (min-width: 768px){
 					color: black;
 				}
+			}
+		}
+		.lightbox-trigger {
+			text-transform: uppercase;
+			background: #FFFFFF;
+			color: black;
+			border-radius: 0.5rem;
+			padding: 0.75rem 1rem 0.6rem 2.5rem;
+			position: relative;
+			font-size: 14px;
+			&:hover {
+				text-decoration: none;
+				background: @yellow;
+			}
+			&:before {
+				content: '';
+				background-image: url('../../img/play.svg');
+				height: 20px;
+				width: 20px;
+				display: inline-flex;
+				background-size: 20px;
+				position: absolute;
+				left: 0.85rem;
+				top: 7px;
+				@media (min-width: 992px) {
+					left: 1.25rem;
+				}
+			}
+			@media (min-width: 992px) {
+				padding: 0.5rem 1rem 0.4rem 3rem;
+				border-radius: 1rem;
 			}
 		}
 		.hero-block {
@@ -134,7 +201,13 @@
 				position: relative;
 				z-index: 0;
 			}
+			.lightbox-trigger {
+				position: absolute;
+				bottom: 1rem;
+				left: 1rem;
+			}
 		}
+		
 		
 	}
 	.single-um-jeito-de-aprender {

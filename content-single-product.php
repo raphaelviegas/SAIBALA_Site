@@ -56,7 +56,7 @@ if(get_field('layout') == 'v2') { ?>
 			$args
 		);
 	?>
-	<p>comprando agora ganhe <?php echo $desconto?>% de desconto</p>
+	<p>comprando agora ganhe <span><?php echo $desconto?>%</span> de desconto</p>
 </section>
 
 <section class="single-header">
@@ -64,10 +64,30 @@ if(get_field('layout') == 'v2') { ?>
 		<div class="content">
 			<h1><?php the_title() ?></h1>
 			<p><?php the_field('subtitulo') ?></p>
+			<?php 
+			if(get_field('vimeo_video_id')){ ?>
+			<a data-fslightbox="lightbox" href="#vimeo" class="lightbox-trigger d-md-none">Assista o video</a>
+			<div class="d-none">
+				<iframe
+					src="https://player.vimeo.com/video/<?php the_field('vimeo_video_id'); ?>"
+					id="vimeo"
+					width="1920px"
+					height="1080px"
+					frameBorder="0"
+					allow="autoplay; fullscreen"
+					allowFullScreen>
+				</iframe>
+			</div>	
+			<?php } ?>
 		</div>
 		<div class="hero-block">
 			<span class="overlay d-md-none"></span>
 			<?php
+			the_post_thumbnail('full',['class'=>'w-100']);
+			if(get_field('vimeo_video_id')){ ?>
+				<a data-fslightbox="lightbox" href="#vimeo" class="lightbox-trigger d-none d-md-block">Assista o video</a>
+			<?php }
+			/*
 			if(get_field('video')){
 				the_field('video');
 				the_post_thumbnail('full',['class'=>'d-md-none w-100']);
@@ -77,7 +97,9 @@ if(get_field('layout') == 'v2') { ?>
 				<?php } else {
 					the_post_thumbnail('full',['class'=>'w-100']);
 				}
-			} ?>
+			} 
+			*/
+			?>
 		</div>
 	</div>
 </section>
@@ -136,12 +158,12 @@ if(get_field('professor')){
 	foreach (get_field('professor') as $key => $value) {
 		$ids[] = $value->ID;
 		$index ++;
-	}
+	};
 ?>
 <section class="single-professores">
-	<div class="container <?php if(get_field('jornada') == '1') { ?>jornada<?php } ?>">
+	<div class="container <?php if(count($ids) > 1) { ?>jornada<?php } ?>">
 		<h2>aprenda com <br>grandes nomes</h2>
-		<?php if(get_field('jornada') == '1') { ?>
+		<?php if(count($ids) > 1) { ?>
 			<div class="owl-carousel">
 				<?php
 					$args = array(
@@ -237,7 +259,7 @@ if(get_field('professor')){
 		<div class="row">
 			<div class="col-md-4 main">
 				<h2><?php the_field('o-que-aprender-destaque')?></h2>
-				<p><?php the_field('o-que-aprender-conteudo')?></p>
+				<!-- <p><?php the_field('o-que-aprender-conteudo')?></p> -->
 			</div>
 			<div class="col-md-7 offset-md-1">
 				<div class="row">
