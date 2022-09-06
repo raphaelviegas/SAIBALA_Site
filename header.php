@@ -1,4 +1,3 @@
-<?php echo 'fgdgdgdfgfdgfdgdfgdfg'; ?>
 <!DOCTYPE html>
 <!--[if IE 8]> 
 <html lang="pt" class="ie8">
