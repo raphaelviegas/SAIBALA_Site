@@ -1,4 +1,3 @@
-<?php var_dump(site_url()); ?>
 <!DOCTYPE html>
 <!--[if IE 8]> 
 <html lang="pt" class="ie8">
