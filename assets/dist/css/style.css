@@ -81,18 +81,167 @@ header.black .logo {
     padding: 5px 6px;
   }
 }
-footer {
+.footer {
   background: #151515;
-  color: white;
+  color: #fff;
   padding: 60px 0px;
+  width: 100%;
 }
-footer a {
-  color: white;
+.footer a {
+  padding: 0;
+}
+.footer-container {
+  width: 80%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.footer-logo {
+  width: 215px;
+  height: 41.5px;
+}
+@media (max-width: 767px) {
+  .footer-logo {
+    width: 115.76px;
+    height: 22.41px;
+  }
+}
+.footer-wrapper {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .footer-contact {
+    width: 100%;
+  }
+}
+.footer-contact--container {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .footer-contact--container:first-child {
+    display: none;
+  }
+}
+.footer-contact--container + .footer-contact--container {
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .footer-contact--container + .footer-contact--container {
+    margin-top: 0;
+  }
+}
+.footer-contact--container strong {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .footer-contact--container strong {
+    font-size: 14px;
+  }
+}
+.footer-contact--container a {
+  font-size: 20px;
+  font-weight: 300;
+  color: #d8d3d3;
+}
+@media (max-width: 767px) {
+  .footer-contact--container a {
+    font-size: 13px;
+  }
+}
+.footer-contact--medias {
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .footer-contact--medias {
+    width: 90%;
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .footer-contact--medias a img {
+    width: 27.3px;
+    height: 27.3px;
+  }
+}
+.footer-contact--medias a + a {
+  margin-left: 41px;
+}
+@media (max-width: 767px) {
+  .footer-contact--medias a + a {
+    margin-left: 27px;
+  }
+}
+.footer-content {
+  width: 50%;
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .footer-content {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+}
+.footer-content--container + .footer-content--container {
+  margin-left: 60px;
+}
+.footer-content--container strong {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .footer-content--container strong {
+    font-size: 16px;
+  }
+}
+.footer-content--container ul {
+  height: 100%;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline-start: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-content--container ul li {
+  list-style-type: none;
+}
+.footer-content--container ul li a {
+  font-size: 20px;
+  font-weight: 300;
+  color: #d8d3d3;
+}
+.footer-content--container ul li a:hover {
+  color: #F6EB2A;
+}
+@media (max-width: 767px) {
+  .footer-content--container ul li a {
+    font-size: 15px;
+  }
+}
+.footer a {
+  color: #fff;
   font-size: 22px;
-  display: inline-block;
   padding: 0px 5px;
 }
-footer a:hover {
+.footer a:hover {
   color: #F6EB2A;
 }
 .btn {
@@ -4342,31 +4491,910 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   margin: 0px 5px;
 }
 
-div.sobre .title h1 {
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 70px;
-}
-div.sobre .menu ul {
-  display: inline-block;
-  width: 100%;
-  padding: 0px 30px;
+#novo-sobre {
+  overflow-x: hidden;
+  padding: 0;
   margin: 0;
-  list-style: none;
-  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  width: 100%;
 }
-div.sobre .menu ul li {
-  border: 1px solid black;
-  display: inline-block;
-  padding: 10px 25px;
-  margin: 0px 2px;
-  margin-bottom: -1px;
+.novo-sobre__hero {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Vinila", "Roboto", sans-serif;
+  margin-top: 64px;
 }
-div.sobre .menu ul li a {
-  color: black;
+.novo-sobre__hero-wrapper {
+  width: 90%;
+  max-width: 1318px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__hero-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: initial;
+    position: relative;
+    margin: 0;
+  }
+}
+.novo-sobre__hero-content {
+  width: 30%;
+  margin: 39px 0 30px;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__hero-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.novo-sobre__hero-content > div {
+  width: 80%;
+  max-width: 470px;
+}
+.novo-sobre__hero-content > div + div {
+  margin: 26px 0 0 0;
+}
+.novo-sobre__hero-content > div h1 {
+  max-width: 270px;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.29;
+  text-align: left;
+  color: #f6eb2a;
+}
+.novo-sobre__hero-content > div h1 mark {
+  padding: 0 10px;
+  background-color: #f6eb2a;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__hero-content > div h1 mark {
+    padding: 0;
+  }
+}
+@media (max-width: 1080px) {
+  .novo-sobre__hero-content > div h1 {
+    max-width: 100%;
+    font-size: 38px;
+  }
+}
+.novo-sobre__hero-content > div p {
+  max-width: 333px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .novo-sobre__hero-content > div p {
+    max-width: 100%;
+  }
+}
+.novo-sobre__hero-img {
+  width: 70%;
+  max-width: 696px;
+  height: 100%;
+  min-height: 100%;
+  max-height: 385px;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center 70%;
+  background-size: cover;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__hero-img {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  .novo-sobre__hero-img::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.95));
+  }
+}
+.novo-sobre__hero-img img {
+  width: 100%;
+  height: 100%;
+}
+.novo-sobre__hero-footer {
+  background: #faf7f7;
+  padding: 42px 0;
+}
+.novo-sobre__hero-footer--wrapper {
+  width: 80%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+@media (max-width: 925px) {
+  .novo-sobre__hero-footer--wrapper {
+    flex-direction: column;
+  }
+}
+.novo-sobre__hero-footer--wrapper h2 {
+  margin: 0;
+  max-width: 198px;
+  font-size: 28px;
+  line-height: 1.14;
+  font-weight: 300;
+  color: #000;
+}
+.novo-sobre__hero-footer--wrapper h2 span {
+  font-weight: 600;
+  color: #a36fff;
+}
+@media (max-width: 925px) {
+  .novo-sobre__hero-footer--wrapper h2 {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.novo-sobre__hero-footer--wrapper p {
+  max-width: 323px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.29;
+  margin-bottom: 0;
+}
+@media (max-width: 1050px) {
+  .novo-sobre__hero-footer--wrapper p {
+    max-width: 250px;
+  }
+}
+@media (max-width: 925px) {
+  .novo-sobre__hero-footer--wrapper p {
+    max-width: 100%;
+  }
+}
+.novo-sobre__hero-footer--wrapper > div {
+  max-width: 290px;
+}
+@media (max-width: 925px) {
+  .novo-sobre__hero-footer--wrapper > div {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+.novo-sobre__hero-footer--wrapper > div p:last-child {
+  margin-top: 10px;
+}
+.novo-sobre__hero-footer--wrapper > div p:last-child span {
+  font-weight: 600;
+  color: #a36fff;
+}
+@media (max-width: 925px) {
+  .novo-sobre__hero-footer--wrapper > div p:last-child {
+    margin-top: 20px;
+  }
+}
+.novo-sobre__welcome {
+  margin: 52px 0 185px;
+  font-family: "Vinila", "Roboto", sans-serif;
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome {
+    margin: 70px 0 52px;
+  }
+}
+.novo-sobre__welcome-title {
+  margin: 0;
+  margin-block: 0;
+}
+.novo-sobre__welcome-title h2 {
+  font-size: 56px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 56px;
+  color: #000;
+}
+.novo-sobre__welcome-title h2 span {
+  color: #3196ff;
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-title {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .novo-sobre__welcome-title h2 {
+    max-width: 262px;
+    font-size: 38px;
+    text-align: left;
+  }
+}
+.novo-sobre__welcome-wrapper {
+  width: 80%;
+  max-width: 1140px;
+  margin: 45.5px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 925px) {
+  .novo-sobre__welcome-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.novo-sobre__welcome-wrapper div {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 1050px) {
+  .novo-sobre__welcome-wrapper div {
+    max-width: 200px;
+  }
+}
+@media (max-width: 925px) {
+  .novo-sobre__welcome-wrapper div {
+    max-width: 100%;
+  }
+  .novo-sobre__welcome-wrapper div + div {
+    margin-top: 50px;
+  }
+}
+.novo-sobre__welcome-wrapper div .novo-sobre__welcome-wrapper--arrow-desk {
+  margin-top: 4px;
+  width: 11.5px;
+  height: 17.3px;
+}
+@media (max-width: 925px) {
+  .novo-sobre__welcome-wrapper div .novo-sobre__welcome-wrapper--arrow-desk {
+    display: none;
+  }
+}
+@media (min-width: 926px) {
+  .novo-sobre__welcome-wrapper div .novo-sobre__welcome-wrapper--arrow-mob {
+    display: none;
+  }
+}
+.novo-sobre__welcome-wrapper div p {
+  margin: 0 0 0 13px;
+  max-width: 231px;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 16px;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-wrapper div p {
+    max-width: 170px;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+.novo-sobre__welcome-wrapper div p a {
+  color: #3196ff;
+  text-decoration: underline !important;
+}
+.novo-sobre__welcome-bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.novo-sobre__welcome-bg.novo-sobre__welcome-bg--first {
+  margin: 35px 0 62px;
+}
+.novo-sobre__welcome-bg.novo-sobre__welcome-bg--last {
+  margin: 52px 0 92px;
+}
+.novo-sobre__welcome-bg--content {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.novo-sobre__welcome-bg--content h3 {
+  margin: 0;
+  margin-block: 0;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 42px;
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-bg--content h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+.novo-sobre__welcome-bg--content--01 h3 {
+  color: #fff;
+  max-width: 490px;
+}
+.novo-sobre__welcome-bg--content--01 h3 span {
+  color: #f6eb2a;
+}
+.novo-sobre__welcome-bg--content--02 h3 {
+  max-width: 830px;
+  color: #000;
+}
+.novo-sobre__welcome-bg--content--02 h3::first-letter {
+  line-height: 48px;
+}
+.novo-sobre__welcome-bg--content--02 h3 q {
+  background: #fff;
+  color: #3196ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: initial;
+  font-weight: 900;
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-bg--content--02 h3 q {
+    line-height: 39px;
+  }
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-bg--content--02 h3 {
+    max-width: 300px;
+    text-align: left;
+    margin: 0 auto;
+  }
+}
+.novo-sobre__welcome-bg--01,
+.novo-sobre__welcome-bg--02 {
+  min-width: 1280px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.novo-sobre__welcome-bg--01 {
+  height: 303px;
+  background-position: center 25%;
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-bg--01 {
+    background-position: none;
+    height: 337px;
+  }
+}
+.novo-sobre__welcome-bg--02 {
+  height: 371px;
+  background-position: 100% 73%;
+  filter: brightness(135%);
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-bg--02 {
+    background-position: none;
+    height: 415px;
+  }
+}
+.novo-sobre__welcome-content {
+  width: 30%;
+  max-width: 369px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-content {
+    width: 90%;
+  }
+}
+.novo-sobre__welcome-content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .novo-sobre__welcome-content p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+  }
+}
+.novo-sobre__welcome-content p span {
+  font-weight: 700;
+  color: #a36fff;
+}
+.novo-sobre__welcome-content p a {
+  color: #3196ff;
+  text-decoration: underline !important;
+}
+.novo-sobre__methodology {
+  width: 100%;
+  margin: 0 auto 122px;
+  padding: 61px 0 135px;
+  background: #faf7f7;
+}
+@media (max-width: 767px) {
+  .novo-sobre__methodology {
+    margin: 0 auto 55px;
+    padding: 10px 0 155px;
+  }
+}
+.novo-sobre__methodology-header {
+  width: 80%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.novo-sobre__methodology-header h2 {
+  max-width: 308px;
+  margin-bottom: 61px;
+  font-size: 47px;
+  font-weight: 500;
+  line-height: 1.13;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .novo-sobre__methodology-header h2 {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: left;
+    max-width: 210px;
+    margin-bottom: 27px;
+  }
+}
+.novo-sobre__methodology-header h2 q {
+  font-weight: 600;
+  color: #46beaa;
+}
+.novo-sobre__methodology-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (max-width: 1180px) {
+  .novo-sobre__methodology-header__container {
+    width: 100%;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.novo-sobre__methodology-header__container > div {
+  max-width: 430px;
+}
+@media (max-width: 767px) {
+  .novo-sobre__methodology-header__container > div {
+    margin-bottom: 20px;
+  }
+}
+.novo-sobre__methodology-header__container > div h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .novo-sobre__methodology-header__container > div h3 {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+.novo-sobre__methodology-header__container > div p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .novo-sobre__methodology-header__container > div p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.novo-sobre__methodology-header__container img {
+  width: 548.15px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1180px) {
+  .novo-sobre__methodology-header__container img {
+    width: 90%;
+    height: 110px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .novo-sobre__methodology-header__container img {
+    height: 80px;
+    width: 100%;
+  }
+}
+.novo-sobre__methodology-header > h3 {
+  margin: 120px 0 0 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+}
+.novo-sobre__methodology-content {
+  width: 100%;
+  margin: 270px auto 0;
+}
+@media (max-width: 960px) {
+  .novo-sobre__methodology-content {
+    display: none;
+  }
+}
+.novo-sobre__methodology-content--container {
+  width: 40%;
+  max-width: 390px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.novo-sobre__methodology-content--container > img {
+  position: absolute;
+}
+.novo-sobre__methodology-content--container-roda--01,
+.novo-sobre__methodology-content--container-roda--03 {
+  left: -250%;
+  height: 690.7px;
+}
+.novo-sobre__methodology-content--container-roda--02 {
+  right: -250%;
+  height: 690.7px;
+}
+.novo-sobre__methodology-content--container-icon--01 {
+  left: -150px;
+  width: 106.9px;
+  height: 68.2px;
+}
+.novo-sobre__methodology-content--container-icon--02 {
+  right: -150px;
+  width: 80.4px;
+  height: 80.4px;
+}
+.novo-sobre__methodology-content--container-icon--03 {
+  left: -150px;
+  width: 68.1px;
+  height: 108.8px;
+}
+.novo-sobre__methodology-content--container > div {
+  max-width: 390px;
+}
+.novo-sobre__methodology-content--container > div h4 {
+  font-size: 20px;
+  font-weight: 700;
+  font-stretch: normal;
+  margin-bottom: 0;
+}
+.novo-sobre__methodology-content--container > div p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 300;
+}
+.novo-sobre__methodology-content--container + div {
+  margin-top: 200px;
+}
+.novo-sobre__methodology-content--02 {
+  width: 90%;
+  max-width: 1140px;
+  margin: 245px auto 200px;
+  position: relative;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__methodology-content--02 {
+    margin: 100px auto;
+  }
+}
+.novo-sobre__methodology-content--02-img {
+  position: absolute;
+  left: 37%;
+  width: 203px;
+  height: 100%;
+}
+@media (max-width: 1180px) {
+  .novo-sobre__methodology-content--02-img {
+    width: 151px;
+    left: 40%;
+  }
+}
+@media (max-width: 1080px) {
+  .novo-sobre__methodology-content--02-img {
+    left: -13%;
+  }
+}
+@media (max-width: 900px) {
+  .novo-sobre__methodology-content--02-img {
+    left: -14%;
+  }
+}
+@media (max-width: 700px) {
+  .novo-sobre__methodology-content--02-img {
+    left: -16%;
+  }
+}
+@media (max-width: 520px) {
+  .novo-sobre__methodology-content--02-img {
+    left: -21%;
+  }
+}
+@media (max-width: 375px) {
+  .novo-sobre__methodology-content--02-img {
+    width: 151px;
+    left: -25%;
+  }
+}
+.novo-sobre__methodology-content--02-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__methodology-content--02-container {
+    width: 60%;
+  }
+}
+@media (max-width: 860px) {
+  .novo-sobre__methodology-content--02-container {
+    width: 65%;
+    margin-left: 15%;
+  }
+}
+@media (max-width: 620px) {
+  .novo-sobre__methodology-content--02-container {
+    width: 70%;
+    margin-left: 20%;
+  }
+}
+@media (max-width: 520px) {
+  .novo-sobre__methodology-content--02-container {
+    width: 70%;
+    margin-left: 25%;
+  }
+}
+.novo-sobre__methodology-content--02-container-01,
+.novo-sobre__methodology-content--02-container-03 {
+  align-self: flex-end;
+}
+.novo-sobre__methodology-content--02-container-02 {
+  align-self: flex-start;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__methodology-content--02-container-02 {
+    align-self: flex-end;
+  }
+}
+@media (max-width: 767px) {
+  .novo-sobre__methodology-content--02-container-02 {
+    align-self: flex-end;
+  }
+}
+.novo-sobre__methodology-content--02-container > div {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  max-width: 421px;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__methodology-content--02-container > div + div {
+    margin-top: 30px;
+  }
+}
+.novo-sobre__methodology-content--02-container > div h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+.novo-sobre__methodology-content--02-container > div p {
   font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 0;
+  color: #000;
 }
-div.sobre .menu ul li.current_page_item {
-  border-bottom: 1px solid white;
+.novo-sobre__methodology-content--03 {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+}
+.novo-sobre__methodology-content--03 h2 {
+  margin-bottom: 61px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .novo-sobre__methodology-content--03 h2 {
+    font-size: 12px;
+    margin-bottom: 31px;
+  }
+}
+.novo-sobre__methodology-content--03-img {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (max-width: 1080px) {
+  .novo-sobre__methodology-content--03-img {
+    width: 100%;
+    max-width: 560px;
+  }
+}
+.novo-sobre__form {
+  width: 80%;
+  max-width: 1140px;
+  margin: 0 auto 61px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .novo-sobre__form {
+    flex-direction: column;
+    position: relative;
+    padding: 0 0 84px 0;
+    margin: 0 auto 67px;
+  }
+}
+.novo-sobre__form-content {
+  width: 48%;
+  max-width: 478px;
+}
+@media (max-width: 900px) {
+  .novo-sobre__form-content {
+    width: 100%;
+  }
+}
+.novo-sobre__form-content p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  text-align: left;
+  color: #000;
+}
+.novo-sobre__form-content p span {
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .novo-sobre__form-content p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.novo-sobre__form-content p:last-child {
+  margin-top: 30px;
+}
+@media (max-width: 900px) {
+  .novo-sobre__form-content p:last-child {
+    margin-top: 0;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+  }
+}
+.novo-sobre__form-formField {
+  width: 48%;
+  max-width: 359px;
+  padding: 38px 20px 41px;
+  border-radius: 25px;
+  background: #faf7f7;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.35);
+}
+@media (max-width: 900px) {
+  .novo-sobre__form-formField {
+    width: 100%;
+    margin: 60px 0 0;
+  }
+}
+.novo-sobre__form-formField__header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.03;
+  text-align: left;
+  color: #000;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .novo-sobre__form-formField__header h2 {
+    font-size: 27px;
+    line-height: 28px;
+  }
+}
+.novo-sobre__form-formField__header p {
+  margin-top: 11px;
+  margin-bottom: 0;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.16;
+  text-align: left;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .novo-sobre__form-formField__header p {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.novo-sobre__form-formField__container {
+  width: 100%;
+  margin-top: 39px;
+}
+.novo-sobre__form-formField__container > div .screen-reader-response ul li {
+  list-style-type: none;
+}
+.novo-sobre__form-formField__container > div form > p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.novo-sobre__form-formField__container > div form > p .wpcf7-form-control-wrap {
+  position: initial;
+  width: 100%;
+}
+.novo-sobre__form-formField__container > div form > p .wpcf7-form-control-wrap + span {
+  margin-top: 18px;
+}
+.novo-sobre__form-formField__container > div form > p .wpcf7-form-control-wrap input {
+  width: 100%;
+  padding: 12.5px 11px;
+  height: 100%;
+  border-radius: 15px;
+  border: none;
+  background-color: #fff;
+  font-size: 11px;
+  font-weight: 300;
+  color: #535252;
+}
+.novo-sobre__form-formField__container > div form > p .wpcf7-form-control-wrap input::placeholder {
+  font-size: 11px;
+  font-weight: 300;
+  color: #535252;
+}
+.novo-sobre__form-formField__container > div form > p .wpcf7-form-control-wrap input:focus {
+  outline: 1.5px solid #535252;
+}
+.novo-sobre__form-formField__container > div form > p .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  color: red;
+  font-weight: 300;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.novo-sobre__form-formField__container > div form > p input[type="submit"] {
+  margin-top: 48px;
+  background: #a36fff;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 12px;
+}
+@media (max-width: 767px) {
+  .novo-sobre__form-formField__container > div form > p input[type="submit"] {
+    padding: 5px;
+    height: 33px;
+  }
+}
+.novo-sobre__form-formField__container > div form > p .wpcf7-spinner {
+  display: none;
+}
+.novo-sobre__form-formField__container > div form .wpcf7-response-output {
+  border: none;
+  margin: 10px 0 0 0;
+  padding: 5px;
+  color: red;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 500;
 }

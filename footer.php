@@ -1,19 +1,58 @@
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-4">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logofooter.png"/>
-					</div>
-					<div class="col-8 text-right">
-						<a target="_blank" href="mailto:contato@saibala.com.br"><i class='fa fa-envelope'></i> <span class='d-none d-md-inline-block'>contato@saibala.com.br</span></a>
-						<a target="_blank" href="https://www.instagram.com/saibala_edu/"><i class='fab fa-instagram'></i></a>
-						<a target="_blank" href="https://www.youtube.com/user/escolasaibala"><i class='fab fa-youtube'></i></a>
-						<a target="_blank" href="https://www.facebook.com/escolasaibala"><i class='fab fa-facebook-f'></i></a>
-					</div>
+<footer class="footer">
+	<div class="footer-container">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icones/logo-footer.svg" class="footer-logo"/>
+
+		<div class="footer-wrapper">
+
+			<div class="footer-contact">
+				<div class="footer-contact--container foter-contact--container-whatsapp">
+				<strong>Whatsapp</strong>
+				<a href="https://api.whatsapp.com/send?phone=5511999680694">+55 (11) 99968-0694</a>
+				</div>
+
+				<div class="footer-contact--container">
+				<strong>E-mail:</strong>
+				<a href="mailto:contato@saibala.com.br">contato@saibala.com.br</a>
+				</div>
+
+				<div class="footer-contact--medias">
+					<a target="_blank" href="https://www.instagram.com/saibala_edu/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icones/instagram-logo.svg"/></a>
+
+					<a target="_blank" href="https://www.facebook.com/escolasaibala"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icones/facebook-logo.svg"/></a>
+
+					<a target="_blank" href="https://www.linkedin.com/company/saibalaedu/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icones/linkedin-logo.svg"/></a>
 				</div>
 			</div>
-		</footer>        
 
+			<div class="footer-content">
+				<div class="footer-content--container">
+					<strong>Cursos:</strong>
+					<ul>
+						<li>
+							<a href="<?php bloginfo ('url'); ?>/categoria-produto/jornadas/">
+								Nossas Series
+							</a>
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="footer-content--container">
+					<strong>Sobre:</strong>
+					
+					<ul>
+						<li>
+							<a href="#">
+								Sobre nós
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+    </div>
+	</div>
+</footer>
 
 		<!-- -->
 		<!-- ================== BEGIN BASE JS ================== -->
