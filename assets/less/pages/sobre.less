@@ -16,21 +16,17 @@
 
 .novo-sobre__hero {
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   font-family: "Vinila", "Roboto", sans-serif;
   margin: 0 0 0 auto;
   margin-top: 64px;
 
-  @media (max-width: 1080px) {
-    width: 100%;
-  }
-
   &-wrapper {
     width: 100%;
     display: flex;
-
-    justify-content: space-between;
+    height: 100%;
+    position: relative;
 
     @media (max-width: 1280px) {
       max-width: 1280px;
@@ -40,41 +36,23 @@
       width: 100%;
       min-height: 100vh;
       display: initial;
-      position: relative;
       margin: 0;
     }
   }
 
   &-content {
-    width: 30%;
+    width: 80%;
+    max-width: 1140px;
     margin-top: 39px;
     margin-bottom: 30px;
-    margin-left: 11%;
-
-    @media (min-width: 1899px) {
-      margin-left: 21%;
-    }
-
-    @media (max-width: 1800px) {
-      margin-left: 19%;
-    }
-
-    @media (min-width: 1500px) {
-      margin-left: 18%;
-    }
-
-    @media (min-width: 1400px) {
-      margin-left: 18%;
-    }
-
-    @media (min-width: 1800px) {
-    }
+    margin-left: auto;
+    margin-right: auto;
 
     @media (max-width: 1080px) {
       position: absolute;
       width: 100%;
       height: 100%;
-      z-index: 100;
+      z-index: 10;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -131,7 +109,7 @@
   }
 
   &-img {
-    width: 70%;
+    width: 58%;
     height: 100%;
     min-height: 100%;
     max-height: 385px;
@@ -139,6 +117,13 @@
     background-repeat: no-repeat;
     background-position: center 70%;
     background-size: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @media (min-width: 1380px) {
+      width: 57%;
+    }
 
     @media (max-width: 1080px) {
       width: 100%;
@@ -146,7 +131,7 @@
       min-height: 100vh;
       max-height: 100%;
       position: relative;
-      z-index: 10;
+      z-index: 5;
 
       &::after {
         content: "";
@@ -435,7 +420,6 @@
           }
 
           @media (max-width: 767px) {
-            max-width: 300px;
             text-align: left;
             margin: 0 auto;
           }
@@ -535,7 +519,8 @@
     margin: 0 auto;
 
     h2 {
-      max-width: 308px;
+      width: 50%;
+      max-width: 400px;
       margin-bottom: 61px;
       font-size: 47px;
       font-weight: 500;
@@ -604,8 +589,9 @@
       }
 
       img {
-        width: 548.15px;
-        margin-bottom: 10px;
+        width: 50%;
+        margin-bottom: 5px;
+        max-width: 550px;
 
         @media (max-width: 1180px) {
           width: 90%;

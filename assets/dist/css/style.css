@@ -28,6 +28,15 @@ header .container {
   padding-left: 0;
   padding-right: 0;
 }
+header .container .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+header .container .row .col-md3,
+header .container .row .col-md6 {
+  padding-left: 0;
+  padding-right: 0;
+}
 header a {
   color: white;
 }
@@ -272,7 +281,7 @@ header.black .logo {
 }
 .box-expansivel {
   position: fixed;
-  top: 0;
+  top: 64px;
   right: 0;
   height: 100%;
   z-index: 102;
@@ -291,6 +300,7 @@ header.black .logo {
     left: 0px;
     transform: translateX(-110%);
     z-index: 100;
+    top: 67px;
   }
 }
 .box-expansivel hr {
@@ -4508,21 +4518,17 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 }
 .novo-sobre__hero {
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   font-family: "Vinila", "Roboto", sans-serif;
   margin: 0 0 0 auto;
   margin-top: 64px;
 }
-@media (max-width: 1080px) {
-  .novo-sobre__hero {
-    width: 100%;
-  }
-}
 .novo-sobre__hero-wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  height: 100%;
+  position: relative;
 }
 @media (max-width: 1280px) {
   .novo-sobre__hero-wrapper {
@@ -4534,42 +4540,23 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
     width: 100%;
     min-height: 100vh;
     display: initial;
-    position: relative;
     margin: 0;
   }
 }
 .novo-sobre__hero-content {
-  width: 30%;
+  width: 80%;
+  max-width: 1140px;
   margin-top: 39px;
   margin-bottom: 30px;
-  margin-left: 11%;
-}
-@media (min-width: 1899px) {
-  .novo-sobre__hero-content {
-    margin-left: 21%;
-  }
-}
-@media (max-width: 1800px) {
-  .novo-sobre__hero-content {
-    margin-left: 19%;
-  }
-}
-@media (min-width: 1500px) {
-  .novo-sobre__hero-content {
-    margin-left: 18%;
-  }
-}
-@media (min-width: 1400px) {
-  .novo-sobre__hero-content {
-    margin-left: 18%;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 1080px) {
   .novo-sobre__hero-content {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: 10;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -4619,7 +4606,7 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   }
 }
 .novo-sobre__hero-img {
-  width: 70%;
+  width: 58%;
   height: 100%;
   min-height: 100%;
   max-height: 385px;
@@ -4627,6 +4614,14 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   background-repeat: no-repeat;
   background-position: center 70%;
   background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+@media (min-width: 1380px) {
+  .novo-sobre__hero-img {
+    width: 57%;
+  }
 }
 @media (max-width: 1080px) {
   .novo-sobre__hero-img {
@@ -4635,7 +4630,7 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
     min-height: 100vh;
     max-height: 100%;
     position: relative;
-    z-index: 10;
+    z-index: 5;
   }
   .novo-sobre__hero-img::after {
     content: "";
@@ -4902,7 +4897,6 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 }
 @media (max-width: 767px) {
   .novo-sobre__welcome-bg--content--02 h3 {
-    max-width: 300px;
     text-align: left;
     margin: 0 auto;
   }
@@ -4993,7 +4987,8 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   margin: 0 auto;
 }
 .novo-sobre__methodology-header h2 {
-  max-width: 308px;
+  width: 50%;
+  max-width: 400px;
   margin-bottom: 61px;
   font-size: 47px;
   font-weight: 500;
@@ -5061,8 +5056,9 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   }
 }
 .novo-sobre__methodology-header__container img {
-  width: 548.15px;
-  margin-bottom: 10px;
+  width: 50%;
+  margin-bottom: 5px;
+  max-width: 550px;
 }
 @media (max-width: 1180px) {
   .novo-sobre__methodology-header__container img {

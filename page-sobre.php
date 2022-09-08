@@ -153,7 +153,10 @@ get_header('shop');
     <section class="novo-sobre__methodology">
       <div class="novo-sobre__methodology-header">
         <h2>
-          <?php the_field("metodologia_titulo_principal") ?>
+          <?php the_field("metodologia_titulo_principal_first_line") ?>
+          <q><?php the_field("metodologia_titulo_principal_details") ?></q>
+          <?php the_field("metodologia_titulo_principal_last_line") ?>
+          
         </h2>
 
         <div class="novo-sobre__methodology-header__container"> 
@@ -285,7 +288,7 @@ get_header('shop');
         </div>
 
           <div class="novo-sobre__form-formField__container">
-            <?php echo do_shortcode('[contact-form-7 id="3773" title="Sobre"]')?>
+            <?php echo do_shortcode('[contact-form-7 id="5167" title="Newsletter"]')?>
           </div>
       </div>
     </section>
