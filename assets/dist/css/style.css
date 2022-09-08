@@ -4620,7 +4620,6 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 }
 .novo-sobre__hero-img {
   width: 70%;
-  max-width: 696px;
   height: 100%;
   min-height: 100%;
   max-height: 385px;
@@ -4928,7 +4927,6 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 .novo-sobre__welcome-bg--02 {
   height: 371px;
   background-position: 100% 73%;
-  filter: brightness(135%);
 }
 @media (max-width: 767px) {
   .novo-sobre__welcome-bg--02 {

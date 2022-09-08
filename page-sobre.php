@@ -129,7 +129,7 @@ get_header('shop');
       <div class="novo-sobre__welcome-bg novo-sobre__welcome-bg--last ">
 
         <div  class="novo-sobre__welcome-bg--02"
-        style=" background-image: linear-gradient(0deg, rgba(49, 150, 255, 0.5), rgba(49, 150, 255, 0.5)),  url('<?php echo $background_image_02;?>');">
+        style=" background-image: linear-gradient(0deg, rgba(49, 150, 255, 0.1), rgba(49, 150, 255, 0.2)),  url('<?php echo $background_image_02;?>');">
         </div>
 
         <div class="novo-sobre__welcome-bg--content novo-sobre__welcome-bg--content--02">
