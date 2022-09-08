@@ -257,7 +257,7 @@
   &-wrapper {
     width: 80%;
     max-width: 1140px;
-    margin: 45.5px auto 0;
+    margin: 45.5px auto 35px;
     display: flex;
     justify-content: space-between;
 
@@ -327,14 +327,6 @@
     height: 100%;
     position: relative;
 
-    &.novo-sobre__welcome-bg--first {
-      margin: 35px 0 62px;
-    }
-
-    &.novo-sobre__welcome-bg--last {
-      margin: 52px 0 92px;
-    }
-
     &--content {
       position: absolute;
       top: 50%;
@@ -363,12 +355,14 @@
       }
 
       &--01 {
+        max-width: 310px;
+
         h3 {
           color: @white;
-
-          max-width: 490px;
+          max-width: 310px;
 
           span {
+            display: block;
             color: @yellow;
           }
         }
@@ -439,9 +433,16 @@
     width: 30%;
     max-width: 369px;
     margin: 0 auto;
+    margin-top: 62px;
+    margin-bottom: 52px;
 
     @media (max-width: 767px) {
       width: 90%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: 95px;
     }
 
     p {
@@ -449,6 +450,11 @@
       font-weight: 400;
       line-height: 1.29;
       color: @black;
+      margin-bottom: 0;
+
+      & + p {
+        margin-top: 34px;
+      }
 
       @media (max-width: 767px) {
         font-size: 12px;

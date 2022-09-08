@@ -4720,7 +4720,7 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 .novo-sobre__welcome-wrapper {
   width: 80%;
   max-width: 1140px;
-  margin: 45.5px auto 0;
+  margin: 45.5px auto 35px;
   display: flex;
   justify-content: space-between;
 }
@@ -4788,12 +4788,6 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   height: 100%;
   position: relative;
 }
-.novo-sobre__welcome-bg.novo-sobre__welcome-bg--first {
-  margin: 35px 0 62px;
-}
-.novo-sobre__welcome-bg.novo-sobre__welcome-bg--last {
-  margin: 52px 0 92px;
-}
 .novo-sobre__welcome-bg--content {
   position: absolute;
   top: 50%;
@@ -4818,11 +4812,15 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
     line-height: 32px;
   }
 }
+.novo-sobre__welcome-bg--content--01 {
+  max-width: 310px;
+}
 .novo-sobre__welcome-bg--content--01 h3 {
   color: #fff;
-  max-width: 490px;
+  max-width: 310px;
 }
 .novo-sobre__welcome-bg--content--01 h3 span {
+  display: block;
   color: #f6eb2a;
 }
 .novo-sobre__welcome-bg--content--02 h3 {
@@ -4884,17 +4882,27 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   width: 30%;
   max-width: 369px;
   margin: 0 auto;
+  margin-top: 62px;
+  margin-bottom: 52px;
 }
 @media (max-width: 767px) {
   .novo-sobre__welcome-content {
     width: 90%;
   }
 }
+.novo-sobre__welcome-content:last-child {
+  margin-bottom: 0;
+  margin-top: 95px;
+}
 .novo-sobre__welcome-content p {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.29;
   color: #000;
+  margin-bottom: 0;
+}
+.novo-sobre__welcome-content p + p {
+  margin-top: 34px;
 }
 @media (max-width: 767px) {
   .novo-sobre__welcome-content p {
