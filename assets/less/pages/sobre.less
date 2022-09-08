@@ -17,16 +17,24 @@
 .novo-sobre__hero {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-family: "Vinila", "Roboto", sans-serif;
-
+  margin: 0 0 0 auto;
   margin-top: 64px;
 
+  @media (max-width: 1080px) {
+    width: 100%;
+  }
+
   &-wrapper {
-    width: 90%;
-    max-width: 1318px;
+    width: 100%;
     display: flex;
+
     justify-content: space-between;
+
+    @media (max-width: 1280px) {
+      max-width: 1280px;
+    }
 
     @media (max-width: 1080px) {
       width: 100%;
@@ -39,7 +47,28 @@
 
   &-content {
     width: 30%;
-    margin: 39px 0 30px;
+    margin-top: 39px;
+    margin-bottom: 30px;
+    margin-left: 11%;
+
+    @media (min-width: 1899px) {
+      margin-left: 21%;
+    }
+
+    @media (max-width: 1800px) {
+      margin-left: 19%;
+    }
+
+    @media (min-width: 1500px) {
+      margin-left: 18%;
+    }
+
+    @media (min-width: 1400px) {
+      margin-left: 18%;
+    }
+
+    @media (min-width: 1800px) {
+    }
 
     @media (max-width: 1080px) {
       position: absolute;
@@ -327,22 +356,28 @@
     height: 100%;
     position: relative;
 
+    &.novo-sobre__welcome-bg--first {
+      margin: 35px 0 62px;
+    }
+
+    &.novo-sobre__welcome-bg--last {
+      margin: 52px 0 92px;
+    }
+
     &--content {
       position: absolute;
       top: 50%;
       bottom: 50%;
 
       display: flex;
-
       justify-content: center;
       align-items: center;
       margin: 0 auto;
-      width: 100%;
 
       h3 {
-        margin: 0;
+        width: 100%;
+        margin: 0 auto;
         margin-block: 0;
-
         text-align: center;
         font-size: 36px;
         font-weight: 500;
@@ -355,20 +390,30 @@
       }
 
       &--01 {
-        max-width: 310px;
+        width: 100%;
+        left: 25%;
+        right: 25%;
+        max-width: 300px;
+
+        @media (max-width: 580px) {
+          left: 0%;
+          right: 0%;
+        }
 
         h3 {
           color: @white;
-          max-width: 310px;
 
           span {
-            display: block;
             color: @yellow;
           }
         }
       }
 
       &--02 {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+
         h3 {
           max-width: 830px;
           color: @black;
@@ -431,7 +476,7 @@
 
   &-content {
     width: 30%;
-    max-width: 369px;
+    max-width: 363px;
     margin: 0 auto;
     margin-top: 62px;
     margin-bottom: 52px;

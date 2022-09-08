@@ -1,6 +1,6 @@
 <?php
 
-// Template Name: Sobre
+// Template Name: Novo-Sobre
 
 // Hero Image
 
@@ -145,7 +145,7 @@ get_header('shop');
 
       <div class="novo-sobre__welcome-content">
         <p>
-          <?php the_field("welcome_content_text_03"); ?>  
+          <?php the_field("welcome_content_text_03"); ?> <a href="<?php the_field("welcome_section_header_texto_03_link"); ?>"><?php the_field("welcome_section_header_texto_03_link_text"); ?></a>
         </p>
       </div>
     </section>
@@ -170,7 +170,7 @@ get_header('shop');
           
         </div>
         <h3>
-          
+          <?php the_field("metodologia_subtitulo_02") ?>
         </h3>
       </div>
 
@@ -186,7 +186,6 @@ get_header('shop');
               </h4>
                 <p>
                   <?php the_field("metodologia_conteudo_01_texto_01") ?>
-                
                 </p>
             </div>
            
@@ -223,7 +222,9 @@ get_header('shop');
       </div>
 
       <div class="novo-sobre__methodology-content--02">
+
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/novo-sobre-pilar.png" class="novo-sobre__methodology-content--02-img"/>
+        
         <div class="novo-sobre__methodology-content--02-container">
           <div class="novo-sobre__methodology-content--02-container-01">
             <h4>

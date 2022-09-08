@@ -1,6 +1,6 @@
 body,
 html {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
 }
 a {
   text-decoration: none !important;
@@ -20,8 +20,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px;
-  z-index: 3;
+  z-index: 200;
+  padding: 15px 0;
+}
+header .container {
+  width: 80%;
+  padding-left: 0;
+  padding-right: 0;
 }
 header a {
   color: white;
@@ -39,7 +44,7 @@ header .buttons a {
   padding: 5px 15px;
 }
 header .buttons a:hover {
-  color: #F6EB2A;
+  color: #f6eb2a;
 }
 header ul {
   list-style: none;
@@ -61,16 +66,19 @@ header ul li a.active,
 header ul li a:hover {
   color: white;
   text-decoration: none;
-  border-bottom: 2px solid #F6EB2A;
+  border-bottom: 2px solid #f6eb2a;
+}
+header.black {
+  background: black;
 }
 header.black a {
-  color: black;
+  color: white;
 }
 header.black a:hover {
-  color: #F6EB2A;
+  color: #f6eb2a;
 }
 header.black .logo {
-  filter: brightness(0%);
+  filter: brightness(100%);
 }
 @media (max-width: 576px) {
   header img {
@@ -229,7 +237,7 @@ header.black .logo {
   color: #d8d3d3;
 }
 .footer-content--container ul li a:hover {
-  color: #F6EB2A;
+  color: #f6eb2a;
 }
 @media (max-width: 767px) {
   .footer-content--container ul li a {
@@ -242,7 +250,7 @@ header.black .logo {
   padding: 0px 5px;
 }
 .footer a:hover {
-  color: #F6EB2A;
+  color: #f6eb2a;
 }
 .btn {
   border-radius: 0px;
@@ -259,8 +267,8 @@ header.black .logo {
   color: black;
 }
 .btn.btn-warning {
-  border: 1px solid #F6EB2A;
-  background: #F6EB2A;
+  border: 1px solid #f6eb2a;
+  background: #f6eb2a;
 }
 .box-expansivel {
   position: fixed;
@@ -270,7 +278,7 @@ header.black .logo {
   z-index: 102;
   background: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  transition: transform .5s;
+  transition: transform 0.5s;
   transform: translateX(110%);
   width: 320px;
 }
@@ -390,10 +398,10 @@ header.black .logo {
   position: relative;
   width: 22px;
   height: 22px;
-  color: #F6EB2A;
+  color: #f6eb2a;
 }
 #review_form_wrapper .stars a:after {
-  font-family: Font Awesome\ 5 Pro;
+  font-family: Font Awesome\5 Pro;
   content: "\f005";
   position: absolute;
   top: 0;
@@ -414,8 +422,8 @@ header.black .logo {
   font-weight: 400;
 }
 #commentform textarea,
-#commentform input[type='text'],
-#commentform input[type='email'] {
+#commentform input[type="text"],
+#commentform input[type="email"] {
   width: 100%;
   display: inline-block;
   background: none;
@@ -426,7 +434,7 @@ header.black .logo {
 }
 .submit {
   border: 0px none;
-  background: #F6EB2A;
+  background: #f6eb2a;
   color: black;
   text-align: center;
   margin-bottom: 15px;
@@ -473,7 +481,7 @@ header.black .logo {
   }
 }
 #thankyou .button {
-  background: #F6EB2A;
+  background: #f6eb2a;
   padding: 15px;
   color: black;
   margin: 10px 0px;
@@ -484,10 +492,10 @@ header.black .logo {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   list-style: none;
   margin: 0px 10px;
 }
@@ -4501,15 +4509,25 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 .novo-sobre__hero {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-family: "Vinila", "Roboto", sans-serif;
+  margin: 0 0 0 auto;
   margin-top: 64px;
 }
+@media (max-width: 1080px) {
+  .novo-sobre__hero {
+    width: 100%;
+  }
+}
 .novo-sobre__hero-wrapper {
-  width: 90%;
-  max-width: 1318px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 1280px) {
+  .novo-sobre__hero-wrapper {
+    max-width: 1280px;
+  }
 }
 @media (max-width: 1080px) {
   .novo-sobre__hero-wrapper {
@@ -4522,7 +4540,29 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 }
 .novo-sobre__hero-content {
   width: 30%;
-  margin: 39px 0 30px;
+  margin-top: 39px;
+  margin-bottom: 30px;
+  margin-left: 11%;
+}
+@media (min-width: 1899px) {
+  .novo-sobre__hero-content {
+    margin-left: 21%;
+  }
+}
+@media (max-width: 1800px) {
+  .novo-sobre__hero-content {
+    margin-left: 19%;
+  }
+}
+@media (min-width: 1500px) {
+  .novo-sobre__hero-content {
+    margin-left: 18%;
+  }
+}
+@media (min-width: 1400px) {
+  .novo-sobre__hero-content {
+    margin-left: 18%;
+  }
 }
 @media (max-width: 1080px) {
   .novo-sobre__hero-content {
@@ -4788,6 +4828,12 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   height: 100%;
   position: relative;
 }
+.novo-sobre__welcome-bg.novo-sobre__welcome-bg--first {
+  margin: 35px 0 62px;
+}
+.novo-sobre__welcome-bg.novo-sobre__welcome-bg--last {
+  margin: 52px 0 92px;
+}
 .novo-sobre__welcome-bg--content {
   position: absolute;
   top: 50%;
@@ -4796,10 +4842,10 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 100%;
 }
 .novo-sobre__welcome-bg--content h3 {
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
   margin-block: 0;
   text-align: center;
   font-size: 36px;
@@ -4813,15 +4859,27 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   }
 }
 .novo-sobre__welcome-bg--content--01 {
-  max-width: 310px;
+  width: 100%;
+  left: 25%;
+  right: 25%;
+  max-width: 300px;
+}
+@media (max-width: 580px) {
+  .novo-sobre__welcome-bg--content--01 {
+    left: 0%;
+    right: 0%;
+  }
 }
 .novo-sobre__welcome-bg--content--01 h3 {
   color: #fff;
-  max-width: 310px;
 }
 .novo-sobre__welcome-bg--content--01 h3 span {
-  display: block;
   color: #f6eb2a;
+}
+.novo-sobre__welcome-bg--content--02 {
+  width: 90%;
+  left: 5%;
+  right: 5%;
 }
 .novo-sobre__welcome-bg--content--02 h3 {
   max-width: 830px;
@@ -4880,7 +4938,7 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
 }
 .novo-sobre__welcome-content {
   width: 30%;
-  max-width: 369px;
+  max-width: 363px;
   margin: 0 auto;
   margin-top: 62px;
   margin-bottom: 52px;
