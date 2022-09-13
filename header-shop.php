@@ -19,7 +19,7 @@
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/wow/animate.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" />
-			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/style.css?v=3.2" rel="stylesheet" />
+			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/style.css?v=4.1" rel="stylesheet" />
 			<!-- ================== END BASE CSS STYLE ================== -->
 
 			<!-- ================== FAVICON END ================== -->

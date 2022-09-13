@@ -69,8 +69,8 @@ if( is_product_category() ) {
 			$tags = get_the_terms( $product->ID, 'product_tag' );
 			?>
 			<div class="infos">
-				<span><?php echo end($terms)->name;?></span>
-				<span><i class='fal fa-bars'></i> <?php echo end($tags)->name;?></span>
+				<span><?php if ($terms) echo end($terms)->name;?></span>
+				<span><i class='fal fa-bars'></i> <?php if ($tags) echo end($tags)->name;?></span>
 				<span><i class='fal fa-heart'></i></span>
 			</div>
 			<a href="<?php the_permalink();?>" class='btn btn-warning'>Saiba Mais</a> 
