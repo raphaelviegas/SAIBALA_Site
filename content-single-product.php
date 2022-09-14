@@ -35,9 +35,13 @@ if ( post_password_required() ) {
 
 
 <?php 
+if ($product->sale_price !== '') {
 $desconto = round($product->sale_price / $product->regular_price - 1,2)*-100;
 $parcela = round($product->sale_price /12,2);
-
+} else {
+	$desconto = '100';
+	$parcela = '0';
+}
 if(get_field('layout') == 'v2') { ?>
 
 <section class="single-fixed-cta">
