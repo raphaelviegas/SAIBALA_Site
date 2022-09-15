@@ -70,7 +70,7 @@ if( is_product_category() ) {
 			?>
 			<div class="infos">
 				<span><?php if ($terms) echo end($terms)->name;?></span>
-				<span><i class='fal fa-bars'></i> <?php if ($tags) echo end($tags)->name;?></span>
+				<span><i class='fal fa-bars'></i> <?php if (!is_wp_error($tags) && !empty($tags)) echo end($tags)->name;?></span>
 				<span><i class='fal fa-heart'></i></span>
 			</div>
 			<a href="<?php the_permalink();?>" class='btn btn-warning'>Saiba Mais</a> 
