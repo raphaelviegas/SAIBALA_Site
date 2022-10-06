@@ -440,14 +440,13 @@ function header_status() {
 }
 
 // add class hide_header
-add_filter( 'body_class', function( $classes ) {
-  $hideHeader = get_field('hide_header');
-  $hideHeaderUrl = $_GET['hideHeader'];
-
-  if (true === $hideHeader || 'true' === $hideHeaderUrl) {
-	  return array_merge( $classes, array( 'hide_header' ) );
-  }
-});
+$hideHeader = get_field('hide_header');
+$hideHeaderUrl = $_GET['hideHeader'];  
+if (true === $hideHeader || 'true' === $hideHeaderUrl) {
+  add_filter( 'body_class', function( $classes ) { 
+    return array_merge( $classes, array( 'hide_header' ) );  
+  });
+}
 
 // enqueue style
 function enqueue_style_header() {
