@@ -1,3 +1,8 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
 <?php
 
 // Template Name: Catalogo
@@ -91,7 +96,7 @@ endif;
         
       </div>
     </div>
-    <div class="catalogo__hero-bg-03" style="background-image:url('<?php echo get_template_directory_uri();?> /assets/img/catalogo-hero-03.png')">
+    <div class="catalogo__hero-bg-03" style="background-image:url(<?php echo $hero_image_03;?>)">
 
       <div class="catalogo__hero-bg-03--content">
       <h2><?php echo get_field('hero_03_postit_title');?></h2>
@@ -170,7 +175,8 @@ endif;
                     ?>
                     
 
-                    <div class = "series__itens-card swiper-slide" style = "background-image: linear-gradient(
+                  <div class="swiper-slide">
+                    <div class="series__itens-card" style = "background-image: linear-gradient(
                             180deg,
                             #000,
                             #595656 0.1%,
@@ -224,14 +230,10 @@ endif;
                        
                           </div>
                         </div>
-                   
-                        <div class="series__itens-card--content-duration">
-                          <ion-icon name="time-outline"></ion-icon>
-                          <span>1:30 horas</span>
-                        </div>
                       </div>
                       
                       <a href="<?php echo esc_url($permalink); ?>" class="series__itens-card--btn" style="background: <?php echo $rgb?>" >ver mais <div class="arrow"></div></a>
+                    </div>
                   </div>
                 <?php endforeach; ?>
               </div>
@@ -250,23 +252,23 @@ endif;
 
       <h2 class="more-series-title">confira todas as <span>séries</span> da saibalá:</h2>
 
-      <div class="more-series-menu swiper-container menuSwiper">
-        <?php
-          $terms = get_field('products_categories');
-        if ($terms) : ?>
-              <ul class="more-series-menu-wrapper swiper-wrapper">
-                <?php foreach ($terms as $term) : ?>
-                    <?php $termObject = get_term($term);
-                    ?>
-                   
-                      <button class="btn-more-series swiper-slide" data-category-id="<?php echo $term?>"><?php echo $termObject -> name?></button>
-                   
-                 
-                <?php endforeach; ?>
-                <div class="gradient"></div>
-              </ul>
-        <?php endif; ?>
-      </div> 
+      <div class="more-series-menu">
+        <div class="swiper menuSwiper">
+          <?php
+            $terms = get_field('products_categories');
+          if ($terms) : ?>
+                <ul class="swiper-wrapper">
+                  <?php foreach ($terms as $term) : ?>
+                      <?php $termObject = get_term($term);
+                      ?>
+                    <div class="swiper-slide">
+                      <button class="btn-more-series" data-category-id="<?php echo $term?>"><?php echo $termObject -> name?></button>
+                    </div>
+                  <?php endforeach; ?>
+                </ul>
+          <?php endif; ?>
+        </div>
+      </div>
 
 
       <div class="more-series-content">
@@ -339,7 +341,10 @@ endif;
                               
                             </div>
                             
-                            <a href="<?php echo esc_url($permalinkSeries);?>" class="more-series-item-content-link">ver mais <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                            <a href="<?php echo esc_url($permalinkSeries);?>" class="more-series-item-content-link">
+                            ver mais 
+                            <div class="arrow"></div>
+                          </a>
                           </div>
                         </div>
                     <?php endwhile; ?>
@@ -443,14 +448,35 @@ endif;
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<style>
+	* {
+		font-family: "Vinila", sans-serif;
+	}
+
+  .catalogo__series .swiper {
+    width: calc(100vw - ((100vw - 980px)/1.97));
+    margin-right: 0;
+	  padding-right: 30px;
+  }
+
+  @media (max-width: 960px) {
+    .catalogo__series .swiper {
+      width: 100%;
+      margin-left: 5%;
+      margin-right: 0;
+    }
+  }
+</style>
 
 <!-- Initialize Swiper -->
 <script type="text/javascript">
   var swiper = new Swiper(".swiperSeries", {
     spaceBetween: 20,
-    loop: false,
+    loop: true,
     loopFillGroupWithBlank: true,
+    watchSlidesProgress: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: false,
@@ -461,7 +487,7 @@ endif;
     },
     breakpoints: {
       320: {
-      slidesPerView: 1,
+      slidesPerView: 1.3,
       spaceBetween: 10,
       },
       480: {
@@ -472,22 +498,21 @@ endif;
         spaceBetween: 15,
       },
       1200: {
-        slidesPerView: 4,
+        slidesPerView: 3.7,
         spaceBetween: 20,
       }
     }
   });
 
   var swiperMenu = new Swiper('.menuSwiper', {
-      slidesPerView: "auto",
-      width: "auto",
-      spaceBetween: 20,
-     
-      breakpoints: {
-        375: {
-          spaceBetween: 15,
-        },
-      }
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    loop: true,
+    breakpoints: {
+      375: {
+        spaceBetween: 15,
+      },
+    }
   });
 
   /* Changed Series */
