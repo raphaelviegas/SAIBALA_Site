@@ -7,23 +7,25 @@ $shortcode = get_field('shortcode');
 get_header('shop');
 ?>
 
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 
 <section class="more-programas" id="programas">
-  
 
-
-<a  class="more-programas__btn-back" href="<?php echo bloginfo('url');
+<a  class="more-programas__btn-back" href="<?php echo get_site_url();
         ;?>/catalogo#series"><ion-icon name="arrow-back-outline"></ion-icon>voltar para <span>séries</span></a>
 
     <div class="more-programas-wrapper">
 
       <h2 class="more-programas-title">confira todas os <span>programas</span> da saibalá:</h2>
 
-      <div class="more-programas-menu swiper-container menuSwiperPrograma">
+      <div class="more-programas-menu swiper menuSwiperPrograma">
         <?php
         $terms = get_field('journeys_categories');
         if ($terms) : ?>
@@ -31,9 +33,9 @@ get_header('shop');
                 <?php foreach ($terms as $term) : ?>
                     <?php $termObject = get_term($term);
                     ?>
-                   
-                      <button class="btn-more-programas swiper-slide" data-category-id="<?php echo $term?>"><?php echo $termObject -> name?></button>
-                   
+                  <div class="swiper-slide">
+                      <button class="btn-more-programas" data-category-id="<?php echo $term?>"><?php echo $termObject -> name?></button>
+                  </div>
                  
                 <?php endforeach; ?>
               </ul>
@@ -111,7 +113,7 @@ get_header('shop');
                               
                             </div>
                             
-                            <a href="<?php echo esc_url($permalinkProgramas);?>" class="more-programas-item-content-link">ver mais <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                            <a href="<?php echo esc_url($permalinkProgramas);?>" class="more-programas-item-content-link">ver mais <div class="arrow"></div></a>
                           </div>
                         </div>
                     <?php endwhile; ?>
@@ -204,16 +206,21 @@ $loop = new WP_Query($args);
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+<style>
+	* {
+		font-family: "Vinila", sans-serif;
+	}
+</style>
+
 <script type="text/javascript">
 
   /* Btn Back */
   var swiperMenuPrograma = new Swiper('.menuSwiperPrograma', {
       slidesPerView: "auto",
-      width: "auto",
-      spaceBetween: 20,
+      loop: true,
       breakpoints: {
         375: {
-          spaceBetween: 15,
+          spaceBetween: 40,
         },
       }
     });
@@ -237,13 +244,13 @@ $loop = new WP_Query($args);
       else {
         element.style.borderBottom = '3px solid #46beaa';
       }
-      const dataCategoryP = element.getAttribute('data-category-id')
-      const containerP = document.querySelector(`[data-container-category-id='${dataCategory}']`)
-      const allContainersP = document.querySelectorAll('.more-programas-container')
+      const dataCategory = element.getAttribute('data-category-id')
+      const container = document.querySelector(`[data-container-category-id='${dataCategory}']`)
+      const allContainers = document.querySelectorAll('.more-programas-container')
       allContainers.forEach(element => {
         element.style.display = 'none';
       });
-      containerP.style.display = 'block';
+      container.style.display = 'block';
     })
   })
 
