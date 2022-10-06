@@ -2,8 +2,7 @@
 
 // Template Name: Catalogo
 
-$email_contact = 'xxx@saibala.com.br';
-$url_current = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER["REQUEST_URI"];
+$email_contact = get_field('email_contact');
 $hero_image_01 = get_field('hero_image_01');
 $hero_image_02 = get_field('hero_image_02');
 $hero_image_03 = get_field('hero_image_03');
@@ -68,26 +67,40 @@ endif;
   <section class="catalogo__hero">
     <?php $hero = get_field('hero_item'); ?>
     <div class="catalogo__hero-bg-01" style="background-image:url(<?php echo $hero_image_01;?>)">
+  
+
       <div class="catalogo__hero-bg-01--content">
         <h2><?php echo get_field('hero_01_postit_title');?></h2>
         <p><?php echo get_field('hero_01_postit_subtitle');?></p>
-        <a href="<?php echo get_field('hero_01_postit_link');?>">ver mais <img src="<?php echo get_template_directory_uri(); ?>/assets/img/programas-arrow-black.png" /></a>
+        <div class="catalogo__hero-bg-01--content-link">
+          <a href="<?php echo get_field('hero_01_postit_link');?>">ver mais </a>
+          <div class="arrow"></div>
+        </div>
       </div>
+ 
     </div>
     <div class="catalogo__hero-wrapper">
     <div class="catalogo__hero-bg-02" style="background-image:url(<?php echo $hero_image_02;?>)">
       <div class="catalogo__hero-bg-02--content">
       <h2><?php echo get_field('hero_02_postit_title');?></h2>
         <p><?php echo get_field('hero_02_postit_subtitle');?></p>
-        <a href="<?php echo get_field('hero_02_postit_link');?>">ver mais <img src="<?php echo get_template_directory_uri(); ?>/assets/img/programas-arrow-white.png" /></a>
+        <div class="catalogo__hero-bg-02--content-link">
+          <a href="<?php echo get_field('hero_02_postit_link');?>">ver mais </a>
+          <div class="arrow"></div>
+        </div>
+        
       </div>
     </div>
-    <div class="catalogo__hero-bg-03" style="background-image:url(<?php echo $hero_image_03;?>)">
+    <div class="catalogo__hero-bg-03" style="background-image:url('<?php echo get_template_directory_uri();?> /assets/img/catalogo-hero-03.png')">
 
       <div class="catalogo__hero-bg-03--content">
       <h2><?php echo get_field('hero_03_postit_title');?></h2>
         <p><?php echo get_field('hero_03_postit_subtitle');?></p>
-        <a href="<?php echo get_field('hero_03_postit_link');?>">ver mais <img src="<?php echo get_template_directory_uri(); ?>/assets/img/programas-arrow-white.png" /></a>
+        <div class="catalogo__hero-bg-03--content-link">
+          <a href="<?php echo get_field('hero_03_postit_link');?>">ver mais </a>
+          <div class="arrow"></div>
+        </div>
+        
       </div>
 
     </div>
@@ -218,7 +231,7 @@ endif;
                         </div>
                       </div>
                       
-                      <a href="<?php echo esc_url($permalink); ?>" class="series__itens-card--btn" style="background: <?php echo $rgb?>" >ver mais</a>
+                      <a href="<?php echo esc_url($permalink); ?>" class="series__itens-card--btn" style="background: <?php echo $rgb?>" >ver mais <div class="arrow"></div></a>
                   </div>
                 <?php endforeach; ?>
               </div>
@@ -250,6 +263,7 @@ endif;
                    
                  
                 <?php endforeach; ?>
+                <div class="gradient"></div>
               </ul>
         <?php endif; ?>
       </div> 
@@ -367,7 +381,8 @@ endif;
 
     <div class="catalogo__programas-header">
       <h2>confira também nossos <span>programas</span>, clicando aqui:</h2>
-        <a href="<?php echo $url_current;?>programas">programas</a>
+        <a href="<?php echo bloginfo('url');
+        ;?>/catalogo/programas">programas</a>
     </div>
 
     <div class="catalogo__programas-form">
@@ -464,30 +479,46 @@ endif;
   });
 
   var swiperMenu = new Swiper('.menuSwiper', {
-      slidesPerView: 6.5,
-      slidesPerColumn: 6,
+      slidesPerView: "auto",
+      width: "auto",
       spaceBetween: 20,
+     
       breakpoints: {
         375: {
-          slidesPerView: 4.5,
-          slidesPerColumn: 5,
-          spaceBetween: 16,
+          spaceBetween: 15,
         },
-        769: {
-          slidesPerView: 6.5,
-          slidesPerColumn: 5.5,
-          spaceBetween: 20,
-        }
       }
   });
 
   /* Changed Series */
     
   const btnSeries = document.querySelectorAll('.btn-more-series')
-
-  btnSeries.forEach(element => {
+  if(window.screen.width >= 769) {
+    btnSeries.item(0).style.fontWeight = 'bold'
+    btnSeries.item(0).style.borderBottom = '5px solid #3196ff'
+  }
+  else {
+    btnSeries.item(0).style.fontWeight = 'bold'
+    btnSeries.item(0).style.borderBottom = '3px solid #3196ff'
+  }
+ 
   
+  btnSeries.forEach(element => {
     element.addEventListener('click', async () => {
+      btnSeries.forEach(item => {
+        item.style.borderBottom  = 'none';
+        item.style.fontWeight = '300';
+      })
+      element.style.fontWeight = 'bold';
+      if(window.screen.width >= 769) {
+       
+        element.style.borderBottom = '5px solid #3196ff'
+      }
+      else {
+        
+        element.style.borderBottom = '3px solid #3196ff'
+      }
+
       const dataCategory = element.getAttribute('data-category-id')
       const container = document.querySelector(`[data-container-category-id='${dataCategory}']`)
       const allContainers = document.querySelectorAll('.more-series-container')
@@ -522,6 +553,6 @@ endif;
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-                <?php
-                get_footer();
-                ?>
+<?php
+  get_footer();
+?>

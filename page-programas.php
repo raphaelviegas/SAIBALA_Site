@@ -1,7 +1,7 @@
 <?php
 
 // Template Name: Programas
-$email_contact = 'xxx@saibala.com.br';
+$email_contact = get_field('email_contact');
 $shortcode = get_field('shortcode');
 
 get_header('shop');
@@ -14,10 +14,10 @@ get_header('shop');
 
 <section class="more-programas" id="programas">
   
-<div class="more-programas__btn-back">
-  <ion-icon name="arrow-back-outline"></ion-icon>
-  <a href="https://saibala.com.br/catalogo/programas">voltar para <span>séries</span></a>
-</div>
+
+
+<a  class="more-programas__btn-back" href="<?php echo bloginfo('url');
+        ;?>/catalogo#series"><ion-icon name="arrow-back-outline"></ion-icon>voltar para <span>séries</span></a>
 
     <div class="more-programas-wrapper">
 
@@ -179,7 +179,7 @@ $loop = new WP_Query($args);
                     $loop->the_post();
                     $count = $count + 1;
                     ?>
-                    <div class="programas__faq-item">
+                    <div class="programas__faq-item" id="programas__faq-item-select">
                     <div class="programas__faq-item-question">
                       <h3><?php the_title();?></h3>
                       <button class="programas__faq-item-btn">
@@ -197,7 +197,7 @@ $loop = new WP_Query($args);
         <div class="catalogo__programas-faq-footer">
             <h3>ainda tem dúvidas?</h3>
             <p>entre em contato com a nossa equipe pelo email:</p>
-            <a href="mailto:contato@saibala.com.br">contato@saibala.com.br</a>
+            <a href="mailto:<?php echo $email_contact ?>"><?php echo $email_contact ?></a>
         </div>
     
 </section>
@@ -206,30 +206,37 @@ $loop = new WP_Query($args);
 
 <script type="text/javascript">
 
+  /* Btn Back */
   var swiperMenuPrograma = new Swiper('.menuSwiperPrograma', {
-        slidesPerView: 6.5,
-        slidesPerColumn: 6,
-        spaceBetween: 20,
-        breakpoints: {
-          375: {
-            slidesPerView: 4.5,
-            slidesPerColumn: 5,
-            spaceBetween: 16,
-          },
-          769: {
-            slidesPerView: 6.5,
-            slidesPerColumn: 5.5,
-            spaceBetween: 20,
-          }
-        }
+      slidesPerView: "auto",
+      width: "auto",
+      spaceBetween: 20,
+      breakpoints: {
+        375: {
+          spaceBetween: 15,
+        },
+      }
     });
 
   const btnProgramas = document.querySelectorAll('.btn-more-programas')
-
-  
+  if(window.screen.width >= 769) {
+    btnProgramas.item(0).style.borderBottom = '5px solid #46beaa'
+  }
+  else {
+    btnProgramas.item(0).style.borderBottom = '3px solid #46beaa'
+  }
   btnProgramas.forEach(element => {
   
   element.addEventListener('click', async () => {
+    btnProgramas.forEach(item => {
+        item.style.borderBottom  = 'none';
+      })
+      if (window.screen.width >= 769) {
+        element.style.borderBottom = '5px solid #46beaa';
+      }
+      else {
+        element.style.borderBottom = '3px solid #46beaa';
+      }
       const dataCategoryP = element.getAttribute('data-category-id')
       const containerP = document.querySelector(`[data-container-category-id='${dataCategory}']`)
       const allContainersP = document.querySelectorAll('.more-programas-container')
@@ -240,26 +247,23 @@ $loop = new WP_Query($args);
     })
   })
 
-
-
-
   /* Faq Animation */
 
-  const faqItemsProgramas = document.querySelectorAll('.programas__faq-item')
+  const faqItems = document.querySelectorAll('.programas__faq-item')
 
-  faqItemsProgramas.forEach(element => {
-    element.firstElementChild.addEventListener('click', () => {
-      element.classList.toggle('active')
+faqItems.forEach(element => {
+  element.firstElementChild.addEventListener('click', () => {
+    element.classList.toggle('active')
 
-      if(element.classList.contains('active')) {
-        element.lastElementChild.style.maxHeight = element.lastElementChild.scrollHeight + 'px'
-        element.lastChild.style.pointerEvents = 'none'
-      }
-      else {
-        element.lastElementChild.style.maxHeight = '0px'
-      }
-    })
+    if(element.classList.contains('active')) {
+      element.lastElementChild.style.maxHeight = element.lastElementChild.scrollHeight + 'px'
+      element.lastChild.style.pointerEvents = 'none'
+    }
+    else {
+      element.lastElementChild.style.maxHeight = '0px'
+    }
   })
+})
  
 </script>
 
