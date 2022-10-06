@@ -220,7 +220,7 @@ $loop = new WP_Query($args);
       loop: true,
       breakpoints: {
         375: {
-          spaceBetween: 40,
+          spaceBetween: 30,
         },
       }
     });

@@ -454,29 +454,15 @@ endif;
 	* {
 		font-family: "Vinila", sans-serif;
 	}
-
-  .catalogo__series .swiper {
-    width: calc(100vw - ((100vw - 980px)/1.97));
-    margin-right: 0;
-	  padding-right: 30px;
-  }
-
-  @media (max-width: 960px) {
-    .catalogo__series .swiper {
-      width: 100%;
-      margin-left: 5%;
-      margin-right: 0;
-    }
-  }
 </style>
 
 <!-- Initialize Swiper -->
 <script type="text/javascript">
   var swiper = new Swiper(".swiperSeries", {
-    spaceBetween: 20,
     loop: true,
-    loopFillGroupWithBlank: true,
+	  loopedSlides: 7,
     watchSlidesProgress: true,
+	  centeredSlides: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: false,
@@ -487,30 +473,26 @@ endif;
     },
     breakpoints: {
       320: {
-      slidesPerView: 1.3,
-      spaceBetween: 10,
-      },
-      480: {
-        slidesPerView: 1.5,
-      },
-      768: {
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         spaceBetween: 15,
       },
+      768: {
+        slidesPerView: 2,
+		    spaceBetween: 20,
+      },
       1200: {
-        slidesPerView: 3.7,
-        spaceBetween: 20,
+        slidesPerView: 5,
+		    spaceBetween: 20,
       }
     }
   });
 
   var swiperMenu = new Swiper('.menuSwiper', {
     slidesPerView: 'auto',
-    spaceBetween: 40,
     loop: true,
     breakpoints: {
       375: {
-        spaceBetween: 15,
+        spaceBetween: 30,
       },
     }
   });
