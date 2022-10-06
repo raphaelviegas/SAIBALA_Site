@@ -431,24 +431,20 @@ function custom_checkout_get_value( $value, $input ) {
   Return style on header
 */
 function header_status() {
-    $hideHeader = get_field('hide_header');
+    $hideHeader = get_field('hide_header', $post->ID);
     $hideHeaderUrl = $_GET['hideHeader'];
 
     if (true === $hideHeader || 'true' === $hideHeaderUrl) {
-      echo 'style="display:none"';  
+      add_filter( 'body_class', function( $classes ) { 
+        return array_merge( $classes, array( 'hide_header' ) );  
+      });
     }
 }
+add_action('wp_head', 'header_status', 10);
 
-// add class hide_header
-$hideHeader = get_field('hide_header');
-$hideHeaderUrl = $_GET['hideHeader'];  
-if (true === $hideHeader || 'true' === $hideHeaderUrl) {
-  add_filter( 'body_class', function( $classes ) { 
-    return array_merge( $classes, array( 'hide_header' ) );  
-  });
-}
-
-// enqueue style
+/* 
+  Header Status - enqueue csss
+*/
 function enqueue_style_header() {
   wp_enqueue_style('hide_header', get_template_directory_uri(). '/assets/dist/css/hide_header.css');
 }

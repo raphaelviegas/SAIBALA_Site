@@ -39,7 +39,7 @@
 			<?php endif; ?>
 		</head>
 		<body <?php body_class(); ?>>
-		<header class="black" <?php header_status(); ?>>
+		<header class="black">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-5 logo">
