@@ -1557,23 +1557,23 @@ header.black .logo {
 .catalogo__series-header span {
   font-weight: 800;
 }
+.catalogo__series .swiper {
+  padding: 0 5em;
+}
+.catalogo__series .swiper .swiper-slide {
+  opacity: 0.5;
+}
+.catalogo__series .swiper .swiper-slide.swiper-slide-visible {
+  opacity: 1;
+}
+@media (max-width: 960px) {
+  .catalogo__series .swiper {
+    width: 100%;
+    padding: 0 3em;
+  }
+}
 .catalogo__series .swiper-wrapper {
   height: auto;
-}
-.catalogo__series .swiper:after {
-  content: '';
-  position: absolute;
-  width: 300px;
-  height: 422px;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.9) 100%);
-}
-@media (max-width: 768) {
-  .catalogo__series .swiper:after {
-    width: 120px;
-  }
 }
 .series__itens {
   display: flex;
@@ -1831,6 +1831,7 @@ header.black .logo {
   height: 40px;
   top: -7px;
   right: 0;
+  pointer-events: none;
   z-index: 10;
   background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(250, 247, 247, 0.5) 30%, #faf7f7 100%);
 }
@@ -2023,7 +2024,7 @@ header.black .logo {
 @media (max-width: 768px) {
   .more-series-item-content-link .arrow,
   .more-programas-item-content-link .arrow {
-    width: 62%;
+    width: 43%;
   }
 }
 .more-series-item-content-link .arrow:before,
