@@ -29,7 +29,7 @@
 			</script>
 		</head>
 		<body <?php body_class(); ?>>
-		<header>
+		<header <?php header_status(); ?>>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-3 col-5 logo">

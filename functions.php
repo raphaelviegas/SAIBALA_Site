@@ -424,4 +424,35 @@ function custom_checkout_get_value( $value, $input ) {
       }
     }
 }
+
+
+/* 
+  Header Status
+  Return style on header
+*/
+function header_status() {
+    $hideHeader = get_field('hide_header');
+    $hideHeaderUrl = $_GET['hideHeader'];
+
+    if (true === $hideHeader || 'true' === $hideHeaderUrl) {
+      echo 'style="display:none"';  
+    }
+}
+
+// add class hide_header
+add_filter( 'body_class', function( $classes ) {
+  $hideHeader = get_field('hide_header');
+  $hideHeaderUrl = $_GET['hideHeader'];
+
+  if (true === $hideHeader || 'true' === $hideHeaderUrl) {
+	  return array_merge( $classes, array( 'hide_header' ) );
+  }
+});
+
+// enqueue style
+function enqueue_style_header() {
+  wp_enqueue_style('hide_header', get_template_directory_uri(). '/assets/dist/css/hide_header.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_style_header', PHP_INT_MAX);
+
 ?>
