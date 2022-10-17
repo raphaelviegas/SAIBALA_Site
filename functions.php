@@ -173,6 +173,19 @@ function create_post_type() {
     )
   );
 
+  register_post_type( 'headers',
+  array(
+    'labels' => array(
+      'name' => __( 'Headers' ),
+      'singular_name' => __( 'Headers' )
+    ),
+    'has_archive' => false,
+    'public' => false,
+    'show_ui' => true,
+    'supports' => array('title')
+    )
+  );
+
   flush_rewrite_rules();
 }
 
@@ -424,6 +437,34 @@ function custom_checkout_get_value( $value, $input ) {
       }
     }
 }
+
+
+/* Function Headers */
+function headers($id) {
+
+  $type = '';
+  $header = get_post($id);
+  if ($header) $type = $header->post_type;
+  if ('headers' === $type) {
+    include_once(get_template_directory().'/inc/header.php');
+  }
+
+}
+
+/* Style Headers */
+function enqueue_header_style() {
+  wp_enqueue_style('headers', get_template_directory_uri() . '/assets/dist/css/headers.css', array(), '0.1.0', 'all');
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_header_style');
+
+/* ID Header Colluns */
+add_filter('manage_headers_posts_columns', function($columns) {
+	return array_merge($columns, ['url' => __('URL', 'textdomain')]);
+});
+ 
+add_action('manage_headers_posts_custom_column', function($column_key, $post_id) {
+	echo '<div class="header__id" style="padding:10px 20px; font-weight:bold; border:1px dotted #000; display:table; border-radius:5px;" >?header='.$post_id.'</div>';
+}, 10, 2);
 
 
 /* 

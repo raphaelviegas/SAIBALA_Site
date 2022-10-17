@@ -1,0 +1,117 @@
+section.headers {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    min-width: 100%;
+    align-items: stretch;
+}
+
+section.headers .left {
+    width:49.1vw;
+    overflow: hidden;
+}
+
+section.headers .left img {
+    display: block;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.headers .left iframe {
+    height: 100% !important;
+}
+
+section.headers .right {
+    flex:1;
+    padding-left: 50px;
+    display: flex;
+    align-items: center; 
+}
+
+section.headers .right .content {
+    max-width: 75%;
+    padding: 60px 0;
+}
+
+section.headers .right .chamada:after {
+    content:url('../../img/after-remarketing.png');
+    width:100%;
+    position: relative;
+    left:-50px;
+    display: block;
+}
+
+section.headers h2 {
+    font-family: 'Vinila', 'Roboto', sans-serif !important;
+    font-weight: 900;
+    font-size: 76px;
+    text-transform: inherit;
+}
+
+section.headers p {
+    font-size: 22px;
+}
+
+section.headers a {
+    background: #ffff00;
+    font-size: 24px;
+    font-weight: bold;
+    color:#000;
+    padding: 15px 30px;
+    display: table;
+    margin-top: 60px;
+}
+
+@media (max-width:768px) {
+    section.headers {
+        flex-direction: column;
+    }
+
+    section.headers .right {
+        padding: 0;
+    }
+
+    section.headers .right .content {
+        min-width: 100%;
+        padding: 30px;
+    }
+
+    section.headers h2 {
+        font-size: 26px;
+    }
+
+    section.headers p {
+        font-size: 15px;
+    }
+
+    section.headers .left {
+        min-width:100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+
+    section.headers iframe,  section.headers img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+    }
+
+    section.headers a {
+        margin-top: 30px;
+        font-size: 14px;
+        text-align: center;
+        width:100%;
+    }
+
+    section.headers .right .chamada:after {
+        content:'';
+        background: url(../../img/after-remarketing.png) right bottom no-repeat;
+        width:100%;
+        height:100px;
+        background-size: cover;
+    }
+}
