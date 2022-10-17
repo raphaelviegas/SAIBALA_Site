@@ -463,7 +463,7 @@ add_filter('manage_headers_posts_columns', function($columns) {
 });
  
 add_action('manage_headers_posts_custom_column', function($column_key, $post_id) {
-	echo '<div class="header__id" style="padding:10px 30px; font-weight:bold; border:1px dotted #000; display:table; border-radius:5px;" >?header='.$post_id.'</div>';
+	echo '<div class="header__id" style="padding:10px 20px; font-weight:bold; border:1px dotted #000; display:table; border-radius:5px;" >?header='.$post_id.'</div>';
 }, 10, 2);
 
 ?>
