@@ -448,7 +448,7 @@ function headers($id) {
   if ('headers' === $type) {
     include_once(get_template_directory().'/inc/header.php');
   }
-  
+
 }
 
 /* Style Headers */
@@ -456,5 +456,14 @@ function enqueue_header_style() {
   wp_enqueue_style('headers', get_template_directory_uri() . '/assets/dist/css/headers.css', array(), '0.1.0', 'all');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_header_style');
+
+/* ID Header Colluns */
+add_filter('manage_headers_posts_columns', function($columns) {
+	return array_merge($columns, ['url' => __('URL', 'textdomain')]);
+});
+ 
+add_action('manage_headers_posts_custom_column', function($column_key, $post_id) {
+	echo '<div class="header__id" style="padding:10px 30px; font-weight:bold; border:1px dotted #000; display:table; border-radius:5px;" >?header='.$post_id.'</div>';
+}, 10, 2);
 
 ?>
