@@ -28,9 +28,18 @@
 			    var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
 			    var themeurl = "<?php echo get_template_directory_uri(); ?>";
 			</script>
+
+			<!-- ================== OGIMAGE ================== -->
+			<?php if (has_post_thumbnail($post->ID)): ?>
+				<meta property="og:image" content="<?= get_the_post_thumbnail_url($post->ID, 'full'); ?>"/>
+			<?php endif; ?>
+
+			<?php if (!has_post_thumbnail($post->ID)): ?>
+				<meta property="og:image" content="<?= get_template_directory_uri(); ?>/assets/img/og-image.jpg"/>
+			<?php endif; ?>
 		</head>
 		<body <?php body_class(); ?>>
-		<header class='black'>
+		<header class="black">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-5 logo">
