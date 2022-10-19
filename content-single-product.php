@@ -35,6 +35,11 @@ if ( post_password_required() ) {
 
 
 <?php 
+$headerId = intval($_GET['header']);
+if ($headerId) {
+	headers($headerId);
+}
+
 if ($product->sale_price !== '') {
 $desconto = round($product->sale_price / $product->regular_price - 1,2)*-100;
 $parcela = round($product->sale_price /12,2);
