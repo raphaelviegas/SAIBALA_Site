@@ -1,0 +1,7 @@
+body.hide_header {
+    margin-top: -66px !important;
+}
+
+body.hide_header header {
+    display: none !important;
+}
