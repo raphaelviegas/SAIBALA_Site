@@ -7,7 +7,7 @@
 			<div class="footer-contact">
 				<div class="footer-contact--container foter-contact--container-whatsapp">
 				<strong>Whatsapp</strong>
-				<a href="https://api.whatsapp.com/send?phone=5511999680694">+55 (11) 99968-0694</a>
+				<a href="https://api.whatsapp.com/send?phone=5511933938974">+55 (11) 93393-8974</a>
 				</div>
 
 				<div class="footer-contact--container">
@@ -26,7 +26,7 @@
 
 			<div class="footer-content">
 				<div class="footer-content--container">
-					<strong>Cursos:</strong>
+					<strong>Séries e Programas:</strong>
 					<ul>
 						<li>
 							<a href="<?php bloginfo ('url'); ?>/categoria-produto/jornadas/">
