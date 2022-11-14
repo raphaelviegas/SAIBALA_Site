@@ -1,8 +1,115 @@
 @yellow: #f6eb2a;
 
-body,
-html {
-  font-family: "Roboto", sans-serif !important;
+@font-face {
+  font-family: 'Vinila';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('../fonts/Vinila-Thin.woff2') format('woff2'),
+  url('../fonts/Vinila-Thin.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url('../fonts/Vinila-ThinOblique.woff2') format('woff2'),
+  url('../fonts/Vinila-ThinOblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/Vinila-Light.woff2') format('woff2'),
+  url('../fonts/Vinila-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/Vinila-LightOblique.woff2') format('woff2'),
+  url('../fonts/Vinila-LightOblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Vinila-Regular.woff2') format('woff2'),
+  url('../fonts/Vinila-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Vinila-Oblique.woff2') format('woff2'),
+  url('../fonts/Vinila-Oblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/Vinila-Bold.woff2') format('woff2'),
+  url('../fonts/Vinila-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/Vinila-BoldOblique.woff2') format('woff2'),
+  url('../fonts/Vinila-BoldOblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/Vinila-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Vinila-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/Vinila-ExtraBoldOblique.woff2') format('woff2'),
+  url('../fonts/Vinila-ExtraBoldOblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/Vinila-Black.woff2') format('woff2'),
+  url('../fonts/Vinila-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vinila';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/Vinila-BlackOblique.woff2') format('woff2'),
+  url('../fonts/Vinila-BlackOblique.woff') format('woff');
+}
+
+* {
+  font-family: "Vinila", sans-serif !important;
 }
 
 a {
@@ -22,7 +129,7 @@ a {
     }
   }
 }
-header {
+/*header {
   position: absolute;
   top: 0;
   left: 0;
@@ -110,7 +217,7 @@ header {
       }
     }
   }
-}
+}*/
 
 .footer {
   background: #151515;
@@ -425,11 +532,6 @@ header {
   width: 100%;
 }
 
-.menu-header-container {
-  display: inline-block;
-  margin: auto;
-}
-
 #review_form_wrapper {
   label {
     font-weight: bold;
@@ -571,5 +673,70 @@ header {
     border-radius: 0.25rem;
     list-style: none;
     margin: 0px 10px;
+  }
+}
+
+body {
+  &.home {
+    .container {
+      width: 978px;
+      padding: 0;
+    }
+    header {
+      .logo {
+        position: fixed;
+        top: 17.3px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+        img {
+          margin-left: 30px;
+        }
+      }
+      .menu-container {
+        display: flex;
+        justify-content: end;
+        position: absolute;
+        top: 13.5px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 2;
+        .menu {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: flex;
+          gap: 25.4px;
+          font-size: 20px;
+          font-weight: 300;
+          li {
+            a {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+    #intro {
+      position: relative;
+      h2 {
+        font-size: 12.7vw;
+        font-weight: 200;
+        line-height: 12vw;
+        text-transform: uppercase;
+        margin-left: -1.44vw;
+        b {
+          font-weight: 400;
+          font-style: italic;
+        }
+      }
+      svg {
+        height: 260px;
+        width: 83vw;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
   }
 }
