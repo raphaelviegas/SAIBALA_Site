@@ -30,8 +30,7 @@ já tem uma conta</h2>
 <form class="woocommerce-form woocommerce-form-login login" method="post" <?php echo ( $hidden ) ? 'style="display:none;"' : ''; ?>>
 
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
-
-	<?php// echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // @codingStandardsIgnoreLine ?>
+	
 	<?php
 	if(!is_checkout()){
 		if(isset($_POST['login'])){
