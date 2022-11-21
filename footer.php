@@ -44,32 +44,32 @@
 					<strong>Programas</strong>
 					<ul>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Inovação
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Carreira
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Tecnologia
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Transformação digital
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Design
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Áreas criativas
 							</a>
 						</li>
@@ -82,32 +82,32 @@
 					
 					<ul>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Inovação
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Carreira
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Tecnologia
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Transformação digital
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Design
 							</a>
 						</li>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>">
+							<a href="<?php bloginfo ('url'); ?>/catalogo">
 								Áreas criativas
 							</a>
 						</li>
@@ -119,7 +119,7 @@
 					<strong>Sobre</strong>
 					<ul>
 						<li>
-							<a href="<?php bloginfo ('url'); ?>/">
+							<a href="<?php bloginfo ('url'); ?>/sobre">
 								Sobre nós
 							</a>
 						</li>
