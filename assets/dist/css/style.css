@@ -2538,12 +2538,12 @@ header.black .logo {
 }
 #home .planejamento .top .legendas .text-01 {
   position: absolute;
-  top: -130px;
+  top: -122px;
   height: 130px;
 }
 #home .planejamento .top .legendas .text-02 {
   position: absolute;
-  top: -20px;
+  top: -7px;
   text-align: right;
   right: 0;
 }
@@ -3046,12 +3046,12 @@ header.black .logo {
     position: initial;
   }
   #home .principal .text {
-    padding-top: 10%;
+    padding-top: 20%;
   }
   #home .principal .text .text-principal > img {
-    right: 20px;
+    left: 0;
     bottom: -167px;
-    width: 467px;
+    width: 344px;
   }
   #home .principal .text .text-principal h1 {
     font-size: 90px;
@@ -3059,13 +3059,13 @@ header.black .logo {
     margin-bottom: 30px;
   }
   #home .principal .text .text-adicional {
-    left: 20px;
-    bottom: 0;
-    position: relative;
+    left: 10px;
+    bottom: 50px;
+    position: absolute;
     max-width: 80%;
   }
   #home .principal .text .text-adicional p {
-    font-size: 18px;
+    font-size: 16px;
   }
   #home .text {
     justify-content: flex-start;
@@ -3095,11 +3095,11 @@ header.black .logo {
     line-height: 36px;
   }
   #home .planejamento .top .legendas .text-01 {
-    top: -80px;
+    top: -67px;
     height: 70px;
   }
   #home .planejamento .top .legendas .text-02 {
-    top: -15px;
+    top: -5px;
   }
   #home .plano .text {
     justify-content: center;
