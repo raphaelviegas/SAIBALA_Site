@@ -15,6 +15,8 @@
 					<h1 class="wow fadeInLeft">
 						Isso <strong><em>não</em></strong> é pra <strong><em>você?</em></strong>
 					</h1>
+					<img class="m-auto desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-01.svg" alt="">
+					<img class="m-auto mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-01-mobile.svg" alt="">
 				</div>
 				<div class="text-adicional">
 					<div class="wow fadeIn" data-wow-delay="0.5s">
@@ -64,11 +66,11 @@
 					</div>
 				</div>
 				<div class="bottom">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-02-mobile.png" class="mobile wow fadeInRightBig"  data-wow-delay="0.5s">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-02-mobile.svg" class="mobile wow fadeInRightBig"  data-wow-delay="0.5s">
 					<p class="wow fadeIn">
 						A Saibalá <strong>vai acabar</strong> com <br> o monopólio da academia <br> sobre a educação
 					</p>
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-02.png" class="desk wow fadeInRightBig"  data-wow-delay="0.5s">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/Seta_02.svg" class="seta-02 desk wow fadeInRightBig"  data-wow-delay="0.5s">
 				</div>
 			</div>
 		</div>
@@ -180,7 +182,7 @@
 					Não há NADA  menos envolvente que os cursos online convencionais!
 				</p>
 			</div>
-			<img class="desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-04.svg" alt="">
+			<img class="desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/Seta_03.svg" alt="">
 			<img class="mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-04-mobile.svg" alt="">
 		</div>
 	</section>

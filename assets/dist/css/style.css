@@ -601,23 +601,35 @@ header.black .logo {
   }
 }
 @media (max-width: 426px) {
-  header .links.show {
-    max-height: 5000px;
-    transition: .3s;
+  header ul {
+    padding: 20px 0;
   }
   header ul li {
     width: 100%;
     text-align: center;
     padding: 5px 10px;
   }
-  header ul {
-    padding: 20px 0;
-  }
   header .links {
     max-height: 0;
     overflow: hidden;
     transition: .3s;
     height: 100%;
+  }
+  header .links.show {
+    max-height: 5000px;
+    transition: .3s;
+  }
+  .footer-content {
+    flex-wrap: wrap;
+  }
+  .footer-content--container:nth-child(3) {
+    margin-top: 30px;
+  }
+  .footer-content--container {
+    width: 45%;
+  }
+  .footer-content--container:nth-child(1) {
+    margin-right: 20px;
   }
 }
 
@@ -2468,8 +2480,18 @@ header.black .logo {
   width: 100%;
   height: 100%;
 }
+#home .principal .container {
+  position: relative;
+}
 #home .principal .text strong {
   font-weight: 500;
+}
+#home .principal .text .text-principal > img {
+  position: absolute;
+  bottom: -190px;
+  z-index: 2;
+  right: 20%;
+  bottom: -288px;
 }
 #home .principal .text .text-principal h1 {
   font-size: 184px;
@@ -2477,6 +2499,8 @@ header.black .logo {
   text-transform: uppercase;
   font-family: 'Vinila', sans-serif;
   color: #000;
+  line-height: 172px;
+  margin-bottom: 100px;
 }
 #home .principal .text .text-adicional {
   max-width: 70%;
@@ -2487,6 +2511,7 @@ header.black .logo {
 #home .principal .text .text-adicional p {
   font-family: 'Vinila', sans-serif;
   color: #000;
+  font-size: 22px;
 }
 #home .principal .text .text-adicional p strong {
   font-family: 'Vinila', sans-serif;
@@ -2524,8 +2549,14 @@ header.black .logo {
 #home .planejamento .bottom {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: 40px;
+  position: relative;
+}
+#home .planejamento .bottom .seta-02 {
+  position: absolute;
+  left: 400px;
+  height: 200px;
 }
 #home .planejamento .bottom p {
   margin-bottom: 0;
@@ -2602,6 +2633,8 @@ header.black .logo {
 #home .series .container-980 > img {
   position: absolute;
   top: 220px;
+  left: 0;
+  height: 400px;
 }
 #home .series .destaque {
   position: relative;
@@ -3005,20 +3038,33 @@ header.black .logo {
   #home br {
     display: none;
   }
+  #home .principal {
+    position: relative;
+  }
+  #home .principal .container {
+    position: initial;
+  }
   #home .principal .text {
-    padding-top: 30%;
+    padding-top: 10%;
+  }
+  #home .principal .text .text-principal > img {
+    right: 20px;
+    bottom: -167px;
+    width: 467px;
   }
   #home .principal .text .text-principal h1 {
     font-size: 90px;
     line-height: 1;
+    margin-bottom: 30px;
   }
   #home .principal .text .text-adicional {
-    position: absolute;
-    bottom: 50px;
-    left: 15px;
+    left: 20px;
+    bottom: 0;
+    position: relative;
+    max-width: 80%;
   }
   #home .principal .text .text-adicional p {
-    font-size: 14px;
+    font-size: 18px;
   }
   #home .text {
     justify-content: flex-start;
@@ -3031,7 +3077,6 @@ header.black .logo {
   #home .planejamento .bottom {
     padding-right: 10px;
     width: 100%;
-    justify-content: space-between;
     margin-top: 20px;
     padding-bottom: 20px;
   }
@@ -3108,6 +3153,7 @@ header.black .logo {
     position: relative;
     top: 0;
     margin-top: 20px;
+    height: auto;
   }
   #home .series .streaming {
     width: 60%;
@@ -3243,21 +3289,47 @@ header.black .logo {
     line-height: 18px;
   }
 }
-@media (min-width: 426px) and (max-width: 1050px) {
+@media (min-width: 426px) and (max-width: 1023px) {
+  #home .principal {
+    position: relative;
+  }
+  #home .principal .container {
+    position: initial;
+  }
+  #home .principal .text {
+    justify-content: flex-start;
+  }
+  #home .principal .text .text-principal > img {
+    bottom: -330px;
+  }
+  #home .principal .text .text-principal > img.mobile {
+    right: inherit;
+    bottom: -166px;
+    left: 0;
+    display: block !important;
+  }
+  #home .principal .text .text-principal > img.desk {
+    display: none;
+  }
   #home .principal .text .text-principal h1 {
     font-size: 140px;
     line-height: 140px;
-    margin-bottom: 150px;
+    margin-bottom: 30px;
   }
   #home .principal .text .text-adicional {
-    position: absolute;
-    right: 15%;
-    bottom: 12%;
+    right: inherit;
+    position: relative;
+    left: 35px;
+    align-items: flex-start;
+    max-width: 90%;
+    bottom: 0;
+  }
+  #home .principal .text .text-adicional p {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
   #home .planejamento .bottom {
     flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
   }
   #home .planejamento .bottom img {
     max-width: 90%;

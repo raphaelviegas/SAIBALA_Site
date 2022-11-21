@@ -683,25 +683,41 @@ header {
 
 @media (max-width: 426px) {
 
-  header .links.show {
-    max-height: 5000px;
-    transition: .3s;
-  }
-
-  header ul li {
-      width: 100%;
-      text-align: center;
-      padding: 5px 10px;
-  }
-
-  header ul {
+  header {
+    ul {
       padding: 20px 0;
-  }
-
-  header .links {
+      li {
+        width: 100%;
+        text-align: center;
+        padding: 5px 10px;
+      }
+    }
+    .links {
       max-height: 0;
       overflow: hidden;
       transition: .3s;
       height: 100%;
+      &.show {
+        max-height: 5000px;
+        transition: .3s;
+      }
+    }
   }
+
+  .footer-content {
+    flex-wrap: wrap;
+  }
+
+  .footer-content--container:nth-child(3) {
+    margin-top: 30px;
+  }
+
+  .footer-content--container {
+    width: 45%;
+  }
+
+  .footer-content--container:nth-child(1) {
+    margin-right: 20px;
+  }
+
 }
