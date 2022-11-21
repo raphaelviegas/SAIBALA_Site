@@ -382,7 +382,7 @@
 								</p>
 								<div class="thumb">
 									<a href="#" class="next">
-										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
+										<img class="d-none" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
 									</a>
 									<div class="texto">
 										<p class="nome">
@@ -393,9 +393,9 @@
 										<p class="profissao">
 											Product Manager
 										</p>
-										<p class="instagram">
+										<!-- <p class="instagram">
 											@joanãobubu
-										</p>
+										</p> -->
 									</div>
 									<div class="imagem">
 										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-01.png" alt="">
@@ -412,7 +412,7 @@
 								</p>
 								<div class="thumb">
 									<a href="#" class="next">
-										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
+										<img class="d-none" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
 									</a>
 									<div class="imagem">
 										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-02.png" alt="">
@@ -440,7 +440,7 @@
 								</p>
 								<div class="thumb">
 									<a href="#" class="next">
-										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
+										<img class="d-none" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
 									</a>
 									<div class="imagem">
 										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-03.png" alt="">
@@ -470,7 +470,7 @@
 									</p>
 									<div class="thumb">
 										<a href="#" class="next">
-											<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
+											<img class="d-none" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
 										</a>
 										<div class="imagem">
 											<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-03.png" alt="">
