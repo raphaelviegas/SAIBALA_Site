@@ -614,6 +614,7 @@ header.black .logo {
     overflow: hidden;
     transition: .3s;
     height: 100%;
+    order: 3;
   }
   header .links.show {
     max-height: 5000px;
