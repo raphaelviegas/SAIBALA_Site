@@ -4,578 +4,512 @@
 
 <div id="home">
 	
-	<section class="intro">
-		<div class='align' style="z-index:2;">
+	<section class="principal position-relative bg-yellow">
+		<div class="wrap-img">
+			<img class="m-auto desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/bg-01.png" alt="">
+			<img class="m-auto mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/bg-01-mobile.png" alt="">
+		</div>
+		<div class="text">
 			<div class="container">
+				<div class="text-principal">
+					<h1 class="wow fadeInLeft">
+						Isso <strong><em>não</em></strong> é pra <strong><em>você?</em></strong>
+					</h1>
+					<img class="m-auto desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-01.svg" alt="">
+					<img class="m-auto mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-01-mobile.svg" alt="">
+				</div>
+				<div class="text-adicional">
+					<div class="wow fadeIn" data-wow-delay="0.5s">
+						<p>
+							<strong>
+								Nunca mais aceite que te digam isso.
+							</strong>
+						</p>
+						<p>
+							Com as <strong>ferramentas certas</strong> é <br> pra você o que vc quiser.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="planejamento position-relative bg-green">
+		<div class="wrap-img">
+			<img class="m-auto desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/bg-02.png" alt="">
+			<img class="m-auto mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/bg-02-mobile.png" alt="">
+		</div>
+		<div class="text">
+			<div class="container">
+				<div class="top">
+					<div class="legendas">
+						<p class="text-01">
+							<span class="wow fadeInLeft" data-wow-offset="100">
+								Basta <br>
+								<strong>
+									planejamento
+								</strong>
+							</span>
+						</p>
+						<p class="text-02">
+							<span class="wow fadeInRight" data-wow-delay=".5s" data-wow-offset="100">
+								e estar <br>
+								<strong>
+									preparado
+								</strong>
+							</span>
+						</p>
+					</div>
+					<div class="imagem">
+						<img class="w-100 desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-02.png" alt="">
+						<img class="w-100 mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-02-mobile.png" alt="">
+					</div>
+				</div>
+				<div class="bottom">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-02-mobile.svg" class="mobile wow fadeInRightBig"  data-wow-delay="0.5s">
+					<p class="wow fadeIn">
+						A Saibalá <strong>vai acabar</strong> com <br> o monopólio da academia <br> sobre a educação
+					</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/Seta_02.svg" class="seta-02 desk wow fadeInRightBig"  data-wow-delay="0.5s">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="plano position-relative bg-purple">
+		<div class="wrap-img">
+			<img class="m-auto desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/bg-03.png" alt="">
+			<img class="m-auto mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/bg-03-mobile.png" alt="">
+		</div>
+		<div class="text">
+			<div class="container">
+				<h2 class="wow fadeIn">
+					O plano <br> é simples!
+				</h2>
+				<img class="desk wow fadeIn" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-03.png" alt="">
+				<img class="mobile wow fadeIn" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-03-mobile.png" alt="">
+				<p class="wow fadeIn" data-wow-delay="1s" >
+					<em>
+						transformar <br>
+						seu sonho em <br>
+						um caminho <br>
+						profissional.
+					</em>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="ensinando bg-white">
+		<div class="container-980">
+			<p>
+				te ensinando sobre:
+			</p>
+			<ul>
+				<li class="wow fadeIn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="192.412" height="189.206" viewBox="0 0 192.412 189.206">
+						<g id="Grupo_1438" data-name="Grupo 1438" transform="translate(0 -4.266)">
+							<g id="Grupo_1415" data-name="Grupo 1415" transform="translate(13.506 4.266)">
+							<path id="Caminho_643" data-name="Caminho 643" d="M58.332,73.6l17.308-16.3h33.217l9.776,16.3,9.776-16.3h33.217l17.319,16.3,6-16.3h16.379V4.266H35.938V57.291H52.327Z" transform="translate(-35.938 -4.266)" fill="#46beaa" fill-rule="evenodd"/>
+							</g>
+							<g id="Grupo_1416" data-name="Grupo 1416" transform="translate(0 18.176)">
+							<path id="Caminho_644" data-name="Caminho 644" d="M104.091,48.8h71.1a3.761,3.761,0,1,0,0-7.523h-71.1a3.761,3.761,0,0,0,0,7.523Z" transform="translate(-62.625 -41.28)"/>
+							<path id="Caminho_645" data-name="Caminho 645" d="M343.443,48.8h19.531a3.761,3.761,0,1,0,0-7.523H343.443a3.761,3.761,0,0,0,0,7.523Z" transform="translate(-212.028 -41.28)"/>
+							<path id="Caminho_646" data-name="Caminho 646" d="M277.3,88.331H206.183a3.761,3.761,0,0,0,0,7.523H277.3a3.761,3.761,0,1,0,0-7.523Z" transform="translate(-126.351 -70.649)"/>
+							<path id="Caminho_647" data-name="Caminho 647" d="M104.091,95.855h19.531a3.761,3.761,0,1,0,0-7.523H104.091a3.761,3.761,0,0,0,0,7.523Z" transform="translate(-62.625 -70.65)"/>
+							<path id="Caminho_648" data-name="Caminho 648" d="M185.665,265.672a23.6,23.6,0,1,0-33.424.3,21.135,21.135,0,0,0-4.206,5.165l-4.563,7.482H127.257a33.69,33.69,0,0,0-12.178-15.285,23.606,23.606,0,1,0-37.748,0A33.629,33.629,0,0,0,65.152,278.62H48.932l-4.555-7.483a21.111,21.111,0,0,0-4.212-5.168,23.6,23.6,0,1,0-33.421-.3C2.572,269.23,0,275.553,0,281.431v46.412A3.761,3.761,0,0,0,3.761,331.6H188.65a3.761,3.761,0,0,0,3.761-3.762V281.431c0-5.878-2.574-12.2-6.747-15.759ZM168.8,233.086a16.084,16.084,0,1,1-16.079,16.089A16.108,16.108,0,0,1,168.8,233.086Zm-58.388,62.383H81.991A12.18,12.18,0,0,0,73.3,278.892a26.125,26.125,0,0,1,9.63-10.213,23.556,23.556,0,0,0,26.555,0,26.154,26.154,0,0,1,9.628,10.215,12.177,12.177,0,0,0-8.7,16.576ZM96.2,233.086a16.084,16.084,0,1,1-16.079,16.089A16.108,16.108,0,0,1,96.2,233.086Zm-72.6,0A16.084,16.084,0,1,1,7.523,249.176,16.1,16.1,0,0,1,23.6,233.086ZM7.523,281.431c0-5.406,3.091-10.259,5.826-11a23.55,23.55,0,0,0,20.136.168c1.289.5,2.653,1.48,4.467,4.453l5.652,9.285a3.762,3.762,0,0,0,3.213,1.806H70.74a4.663,4.663,0,0,1,0,9.326H43.293a3.761,3.761,0,0,0-3.761,3.761v24.85H7.523Zm39.531,21.561h98.3v21.089h-98.3Zm137.834,21.089H152.88v-24.85a3.761,3.761,0,0,0-3.761-3.761H121.671a4.663,4.663,0,1,1,0-9.326h23.911a3.763,3.763,0,0,0,3.212-1.8l5.662-9.283c1.814-2.972,3.175-3.96,4.462-4.456a23.56,23.56,0,0,0,20.137-.169c2.739.742,5.834,5.595,5.834,11Z" transform="translate(0 -156.309)"/>
+							</g>
+						</g>
+					</svg>
+					<h2 class="font-green">
+						PESSOAS
+					</h2>
+				</li>
+				<li class="wow fadeIn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="192.695" height="208.708" viewBox="0 0 192.695 208.708">
+						<g id="Grupo_1422" data-name="Grupo 1422" transform="translate(-7.005 -6.17)">
+							<path id="Caminho_652" data-name="Caminho 652" d="M235.947,459.824H227.9L223.61,442.66a3.842,3.842,0,1,0-7.454,1.864l3.825,15.3H205.809l3.825-15.3a3.842,3.842,0,1,0-7.454-1.864l-4.291,17.164h-8.046a3.842,3.842,0,0,0,0,7.684h46.1a3.842,3.842,0,0,0,0-7.684Z" transform="translate(-109.542 -252.631)"/>
+							<path id="Caminho_653" data-name="Caminho 653" d="M141,287h101.01v74.66H141Z" transform="translate(-88.154 -168.953)" fill="#3196ff" fill-rule="evenodd"/>
+							<g id="Grupo_1421" data-name="Grupo 1421" transform="translate(7.005 6.17)">
+							<path id="Caminho_654" data-name="Caminho 654" d="M234.982,31.99a31.99,31.99,0,1,0-35.754,31.77v74.7a3.764,3.764,0,0,0,7.527,0V63.76A32.037,32.037,0,0,0,234.982,31.99Zm-31.99,5.645a5.645,5.645,0,1,1,5.645-5.645A5.652,5.652,0,0,1,202.991,37.636Zm12.041,15.644a24.43,24.43,0,0,1-24.083,0,15.045,15.045,0,0,1,24.083,0Zm-36.5-21.289a24.463,24.463,0,1,1,42.4,16.615,22.8,22.8,0,0,0-8.953-6.993,13.172,13.172,0,1,0-17.975,0,22.8,22.8,0,0,0-8.953,6.993A24.374,24.374,0,0,1,178.528,31.99Z" transform="translate(-106.644)"/>
+							<path id="Caminho_655" data-name="Caminho 655" d="M342.684,95a31.99,31.99,0,0,0-29.393,44.615l-19.609,11.321A3.763,3.763,0,0,0,291.8,154.2v30.174a3.764,3.764,0,0,0,7.527,0v-28l17.737-10.241A31.985,31.985,0,1,0,342.684,95ZM330.643,148.28a15.044,15.044,0,0,1,24.083,0,24.43,24.43,0,0,1-24.083,0Zm12.041-15.644a5.645,5.645,0,1,1,5.645-5.645A5.652,5.652,0,0,1,342.684,132.637Zm17.94,10.969a22.8,22.8,0,0,0-8.953-6.993,13.172,13.172,0,1,0-17.975,0,22.8,22.8,0,0,0-8.953,6.993,24.463,24.463,0,1,1,35.88,0Z" transform="translate(-181.979 -59.247)"/>
+							<path id="Caminho_656" data-name="Caminho 656" d="M80.993,150.936,61.384,139.615a32.084,32.084,0,1,0-3.774,6.512l17.737,10.241v28a3.764,3.764,0,1,0,7.527,0V154.2a3.763,3.763,0,0,0-1.882-3.259ZM7.527,126.991a24.463,24.463,0,1,1,42.4,16.615,22.8,22.8,0,0,0-8.953-6.993,13.172,13.172,0,1,0-17.975,0,22.8,22.8,0,0,0-8.953,6.993A24.374,24.374,0,0,1,7.527,126.991Zm24.463,5.645a5.645,5.645,0,1,1,5.645-5.645A5.652,5.652,0,0,1,31.99,132.636ZM19.949,148.28a15.044,15.044,0,0,1,24.083,0,24.43,24.43,0,0,1-24.083,0Z" transform="translate(0 -59.246)"/>
+							</g>
+						</g>
+					</svg>
+					<h2 class="font-blue">
+						SOCIEDADE <br>
+						EXPONENCIAL	
+					</h2>
+				</li>
+				<li class="wow fadeIn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="151.096" height="205.717" viewBox="0 0 151.096 205.717">
+						<g id="Grupo_1442" data-name="Grupo 1442" transform="translate(-44.218 -3)">
+							<g id="Grupo_1418" data-name="Grupo 1418" transform="translate(90.36 184.649)">
+							<path id="Caminho_649" data-name="Caminho 649" d="M158.228,458.645c0,10.828,8.6,17.956,19.066,17.956a18.011,18.011,0,0,0,17.955-17.956v-6.112H158.228Z" transform="translate(-158.228 -452.532)" fill="#a36fff" fill-rule="evenodd"/>
+							</g>
+							<g id="Grupo_1419" data-name="Grupo 1419" transform="translate(121.57 3)">
+							<path id="Caminho_650" data-name="Caminho 650" d="M298.7,60.612h17.167a13.138,13.138,0,1,1,26.277,0h17.167A60.61,60.61,0,0,0,298.7,0V17.167a13.138,13.138,0,0,0,0,26.277Z" transform="translate(-285.572 0)" fill="#a36fff" fill-rule="evenodd"/>
+							</g>
+							<path id="Caminho_651" data-name="Caminho 651" d="M169.477,111.555h-13.6a17.182,17.182,0,0,0-33.4,0h-9.555V98.435a4.047,4.047,0,0,0-4.047-4.047,9.091,9.091,0,1,1,0-18.182,4.047,4.047,0,0,0,4.047-4.047V54.99a4.047,4.047,0,0,0-4.047-4.047A64.732,64.732,0,0,0,44.218,115.6a63.774,63.774,0,0,0,13.523,39.582,56.235,56.235,0,0,0,9.425,9.319c5.65,4.661,8.761,7.229,8.761,20.533V203.1a14.444,14.444,0,0,0,14.434,14.422h37.021A14.444,14.444,0,0,0,141.816,203.1V185.036c0-13.305,3.112-15.873,8.761-20.533A56.228,56.228,0,0,0,160,155.183,63.774,63.774,0,0,0,173.524,115.6a4.047,4.047,0,0,0-4.047-4.047Zm-42.1,97.872H90.36a6.341,6.341,0,0,1-6.34-6.327v-6.34h49.7v6.34A6.34,6.34,0,0,1,127.382,209.427Zm26.237-59.221a48.748,48.748,0,0,1-8.194,8.053c-6.281,5.182-11.7,9.657-11.7,26.777v3.629h-20.8V161.575l14.566-10.169a4.047,4.047,0,0,0,1.73-3.318v-9.228a4.047,4.047,0,1,0-8.094,0v7.118l-12.25,8.552-12.26-8.553v-7.117a4.047,4.047,0,1,0-8.094,0v9.228a4.047,4.047,0,0,0,1.731,3.319l14.576,10.169v27.09H84.021v-3.629c0-17.12-5.424-21.6-11.7-26.777a48.735,48.735,0,0,1-8.193-8.052,55.751,55.751,0,0,1-11.812-34.6A56.641,56.641,0,0,1,104.83,59.181v9.411a17.187,17.187,0,0,0,0,33.409v13.6a4.047,4.047,0,0,0,4.047,4.047h17.167a4.047,4.047,0,0,0,4.047-4.047,9.085,9.085,0,1,1,18.17,0,4.047,4.047,0,0,0,4.047,4.047H165.29a55.558,55.558,0,0,1-11.671,30.557Z" transform="translate(0 -28.825)"/>
+						</g>
+					</svg>
+					<h2 class="font-purple">
+						INOVAÇÃO
+					</h2>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="series bg-white">
+		<div class="container-980">
+			<div class="destaque wow fadeInRightBig">
+				<h3>
+					Séries e programas <br>
+					de aprendizado
+				</h3>
+			</div>
+			<div class="streaming wow fadeIn" data-wow-offset="250">
+				<h4>
+					O STREAMING <br>
+					dA EDUCAÇÃO
+				</h4>
+				<p>
+					Aprendizado só existe com envolvimento.
+				</p>
+				<p>
+					Não há NADA  menos envolvente que os cursos online convencionais!
+				</p>
+			</div>
+			<img class="desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/Seta_03.svg" alt="">
+			<img class="mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/seta-04-mobile.svg" alt="">
+		</div>
+	</section>
+
+	<section class="mural bg-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-6 left">
+					<h2>
+						conheça o conceito de <br>
+						series de aprendizado:
+					</h2>
+					<div class="thumb yellow">
+						<img class="desk um" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-01.png" alt="">
+						<img class="mobile um" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-01-mobile.png" alt="">
+						<div class="box yellow wow fadeIn">
+							<a href="/produto/a-busca-pelo-produto-perfeito/" class="bg-yellow">
+								<h6>
+									A busca pelo produto perfeito
+								</h6>
+								<p>
+									<!-- Evaristo Costa -->
+								</p>
+								<hr>
+								<span class="ver-mais">
+									ver mais
+									<svg xmlns="http://www.w3.org/2000/svg" width="134.224" height="20.458" viewBox="0 0 134.224 20.458">
+										<g id="Grupo_1511" data-name="Grupo 1511" transform="translate(0 10.229)">
+											<path id="Caminho_685" data-name="Caminho 685" d="M203.952.354,214,10.406h0L203.952,20.458" transform="translate(-80.154 -10.406)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+											<path id="Caminho_536" data-name="Caminho 536" d="M-38.247,0H95.229" transform="translate(38.247)" fill="none" stroke="#000" stroke-width="0.5"/>
+										</g>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-md-6 right">
+					<div class="thumb blue">
+						<img class="desk dois" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-02.png" alt="">
+						<img class="mobile dois" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-02-mobile.png" alt="">
+						<div class="box blue wow fadeIn" data-wow-delay=".5s">
+							<a href="/produto/dna-da-transformacao/" class="bg-blue">
+								<h6>
+									DNA da transformação
+								</h6>
+								<p>
+									<!-- Evaristo Costa -->
+								</p>
+								<hr>
+								<span class="ver-mais">
+									ver mais
+									<svg xmlns="http://www.w3.org/2000/svg" width="134.224" height="20.458" viewBox="0 0 134.224 20.458">
+										<g id="Grupo_1516" data-name="Grupo 1516" transform="translate(0 10.229)">
+											<path id="Caminho_686" data-name="Caminho 686" d="M203.952.354,214,10.406h0L203.952,20.458" transform="translate(-80.154 -10.406)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+											<path id="Caminho_536" data-name="Caminho 536" d="M-38.247,0H95.229" transform="translate(38.247)" fill="none" stroke="#fff" stroke-width="0.5"/>
+										</g>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="thumb purple">
+						<img class="desk tres" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-03.png" alt="">
+						<img class="mobile tres" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-03-mobile.png" alt="">
+						<div class="box purple wow fadeIn">
+							<a href="/produto/tempos-exponenciais/" class="bg-purple">
+								<h6>
+									Tempos exponenciais
+								</h6>
+								<p>
+									<!-- Evaristo Costa -->
+								</p>
+								<hr>
+								<span class="ver-mais">
+									ver mais
+									<svg xmlns="http://www.w3.org/2000/svg" width="134.224" height="20.458" viewBox="0 0 134.224 20.458">
+										<g id="Grupo_1516" data-name="Grupo 1516" transform="translate(0 10.229)">
+											<path id="Caminho_686" data-name="Caminho 686" d="M203.952.354,214,10.406h0L203.952,20.458" transform="translate(-80.154 -10.406)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+											<path id="Caminho_536" data-name="Caminho 536" d="M-38.247,0H95.229" transform="translate(38.247)" fill="none" stroke="#fff" stroke-width="0.5"/>
+										</g>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-12">
+					<div class="thumb green">
+						<img class="desk quatro" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-04.png" alt="">
+						<img class="mobile quatro" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-04-mobile.png" alt="">
+						<div class="box green wow fadeIn">
+							<a href="/produto/tecnologias-que-vao-mudar-o-mundo/" class="bg-green">
+								<h6>
+									Tecnologias que vão mudar o mundo
+								</h6>
+								<p>
+									<!-- Evaristo Costa -->
+								</p>
+								<hr>
+								<span class="ver-mais">
+									ver mais
+									<svg xmlns="http://www.w3.org/2000/svg" width="134.224" height="20.458" viewBox="0 0 134.224 20.458">
+										<g id="Grupo_1516" data-name="Grupo 1516" transform="translate(0 10.229)">
+											<path id="Caminho_686" data-name="Caminho 686" d="M203.952.354,214,10.406h0L203.952,20.458" transform="translate(-80.154 -10.406)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+											<path id="Caminho_536" data-name="Caminho 536" d="M-38.247,0H95.229" transform="translate(38.247)" fill="none" stroke="#fff" stroke-width="0.5"/>
+										</g>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="aprendizado bg-blue">
+		<div class="container">
+			<div class="row">
+				<div class="col-8 col-md-8">
+					<img class="desk wow fadeIn um" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-06-01.png" alt="">
+					<img class="mobile wow fadeIn um" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-06-01-mobile.png" alt="">
+					<h2 class="desk">
+						ASSUMA AS RÉDEAS <br>
+						DO SEU APRENDIZADO
+					</h2>
+				</div>
+				<div class="col-4 col-md-4">
+					<img class="desk wow fadeIn dois" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-06-02.png" alt="">
+					<img class="mobile wow fadeIn dois" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-06-02-mobile.png" alt="">
+				</div>
+				<div class="col-12">
+					<h2 class="mobile">
+						ASSUMA AS RÉDEAS <br>
+						DO SEU APRENDIZADO
+					</h2>
+				</div>
+				<div class="col-3 col-md-6">
+					<img class="desk wow fadeIn tres" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-06-03.png" alt="">
+					<img class="mobile wow fadeIn tres" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-06-03-mobile.png" alt="">
+				</div>
+				<div class="col-9 col-md-6">
+					<div class="texto">
+						<p>
+							Você não precisa de sala <br>
+							de aula e hora marcada!
+						</p>
+						<p>
+							Aprenda no seu ritmo, nos <br>
+							seus horários, e volte quantas <br>
+							vezes quiser.
+						</p>
+						<p>
+							Você terá suas séries de <br>
+							aprendizado <strong>PRA SEMPRE!</strong>
+						</p>
+					</div>
+					<img class="desk wow fadeIn quatro" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-06-04.png" alt="">
+					<img class="mobile wow fadeIn quatro" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-06-04-mobile.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="teste bg-white">
+		<div class="container-980">
+			<div class="destaque">
+				<h2 class="wow flipInX">
+					Será que <br>
+					dá pra ser <br>
+					tão bom?
+				</h2>
+				<hr>
+				<p class="wow fadeIn" data-wow-offset="100">
+					faça um teste e veja se você aprendeu
+				</p>
+				<a href="/categoria-produto/jornadas/" class="btn wow fadeIn" data-wow-offset="100">
+					Episódio GrÁtis
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="quem-ja-e bg-white">
+		<div class="container-980">
+			<h2>
+				quem já é Saibalá
+			</h2>
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-4">
-						<h1>É aprendendo que você transforma o seu caminho. <b>Comece agora a sua transformação!</b></h1>
-						<a href="https://saibala.com.br/categoria-produto/jornadas/" class="btn btn-secondary">Comece aqui</a>
-					</div>
-					<div class="col-md-8 d-none d-md-block">
-						<video loop muted autoplay width="100%" height="420">
-						  <source src="<?php echo get_template_directory_uri(); ?>/assets/video.mp4" type="video/mp4">
-						  Your browser does not support the video tag.
-						</video>
-						<?php if(!wp_is_mobile()){?>
-						<?php } else {
-							?>
-							
-							<?php
-						}?>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- <?php if(!wp_is_mobile()){?>
-		<img class='w-100' src="<?php echo get_template_directory_uri(); ?>/assets/img/homeBanner.png"/>
-		<?php }?> -->
-	</section>
-
-	<section class="features">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="box">
-						<h2>Aprenda com os melhores profissionais:</h2>
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ico1.png"/>
-						</div>
-						<p>A Saibalá reuniu os professores mais renomados e especialistas em suas áreas de atuação para te ajudar nessa jornada!<br>Aqui você irá aprender com os melhores e poderá compartilhar da vivência e experiências de cada um deles pra encurtar seus caminhos.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="box">
-						<h2>Os melhores cursos:</h2>
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ico2.png"/>
-						</div>
-						<p>Nosso foco está na qualidade do seu aprendizado.<br>Com roteiros muito bem pensados, qualidade de cinema e ferramentas inovadoras, a Saibalá oferece uma experiência de aprendizagem criativa e diferente de tudo o que você já viu.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="box">
-						<h2>Autonomia no aprendizado:</h2>
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ico3.png"/>
-						</div>
-						<p>A Saibalá te entrega as ferramentas, mas é você quem constrói o seu caminho. Você assiste aos cursos quando e de onde quiser.<br>Seja o protagonista do seu projeto de vida.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="video">
-		<div class="container">
-			<div class="video">
-				<div style="padding:56.25% 0 0 0;position:relative;"><iframe
-				src="https://player.vimeo.com/video/536870710?badge=0&amp;autopause=0&amp;player_i
-				d=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-				allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Saibalá
-				Manifesto"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
-			</div>
-			<div class="text-center">
-				<div class="box">
-					<p>Uma nova visão de futuro,</p>
-					<h3>UMA NOVA VERSÃO DE VOCÊ!</h3>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="cta">
-		<div class="container">
-			<div class="col-md-10 offset-md-1">
-				<div class="box">
-					<h3>Quer fazer parte de um grupo exclusivo e receber as melhores dicas e conteúdos em primeira mão? <b>Assine já a nossa newsletter! </b></h3>
-					<a href="https://lancamento.saibala.com.br/landing-page-newsletter?utm_campaign=newsletter_saibala_4_edicao&utm_medium=email&utm_source=RD+Station" class="btn btn-warning">Assine!</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="cursos">
-		<div class="container">
-			<div class="text-center">
-				<h3 class="mb-2">Universo Saibalá</h3>
-				<p>Confira tudo o que você pode aprender</p>
-			</div>
-			<div class="tabs">
-				<?php
-					$terms = get_terms( array(
-					    'taxonomy' => 'product_cat',
-					    'hide_empty' => true,
-							'meta_query'	=> array(
-								'relation'		=> 'AND',
-								array(
-									'key'	  	=> 'show_on_home',
-									'value'	  	=> '1',
-									'compare' 	=> '=',
-								),
-							),
-							// 'meta_key'		=> 'show_on_home',
-							// 'meta_value'	=> '1'
-					) );
-					foreach ($terms as $term) {
-						$name = $term->name;
-						$id = $term->term_id;
-						$link = get_term_link($id,'product_cat');
-						echo "<a href='".$link."'>".$name."</a>";
-					}
-				?>
-			</div>
-			<div class="tabs-content">
-				<div class="tab active" id="t1">
-					<div class="owl-carousel">
-						<?php if( have_rows('cursos_em_destaque') ): ?>
-						    <?php while( have_rows('cursos_em_destaque') ): the_row(); 
-						        $id = get_sub_field('curso')[0];
-						        $meta = get_post_meta($id);
-						        $course = get_post($course_id);
-						        $author_id = $course->post_author;
-						        $lessons = count(learndash_get_lesson_list($id));
-						        $product = get_posts(array(
-								   // more args here        
-									'post_type' => 'product',
-									'meta_query' => array(
-									  // meta query takes an array of arrays, watch out for this!
-									  array(
-									     'key'     => '_related_course',
-									     'value'   => $id,
-									     'compare' => 'LIKE'
-									  )
-									)
-								))[0]->ID;
-
-						        ?>
-								<div class="item">
-									<?php
-										if(get_sub_field('embed')){
-											the_sub_field('embed');
-										} else {
-											echo get_post_meta($product,'video',true);
-										}
-									?>
-									<div class="nav">
-										<a href="<?php echo get_the_permalink($product);?>"><?php echo get_the_title($id);?></a>
-										<span class='nivel'> <i class='fa fa-bars'></i> <?php echo $lessons;?> lições</span>
-										<!--<span class='heart'> <i class='fal fa-heart'></i> 248</span>-->
+					<div class="col-12 col-md-6 left">
+						<div class="depoimento bg-blue wow fadeInLeft" data-wow-offset="100">
+							<div>
+								<p>
+									"Incrível, altamente instrutivo, ótimo, maravilhoso! Gostaria de dar os parabéns a todos que fizeram parte da criação deste curso. O curso me ajudou muito,  e de certa forma me deu uma direção (norte). Estou muito contente de ter feito parte do curso. Esses professores são verdadeiros mestres!"
+								</p>
+								<div class="thumb">
+									<a href="#" class="next">
+										<img class="d-none" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
+									</a>
+									<div class="texto">
+										<p class="nome">
+											<strong>
+												Rafael Cuba
+											</strong>
+										</p>
+										<p class="profissao">
+											Product Manager
+										</p>
+										<!-- <p class="instagram">
+											@joanãobubu
+										</p> -->
 									</div>
-								</div>
-						    <?php endwhile; ?>
-						<?php endif; ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="professores">
-		<div class="container">
-			<div class="text-center">
-				<h3>Conheça alguns de nossos professores</h3>
-			</div>
-			<div class="owl-carousel d-md-none">
-				<?php 
-					$args = array(
-							'post_type'  => 'professores', 
-							'showposts'=> 12,
-							'orderby' => 'rand'
-					);
-					$projetos = new WP_Query($args);
-					while ($projetos->have_posts()) : $projetos->the_post();
-						if(wp_is_mobile()){
-							?>
-							<div class="box">
-								<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" />
-								<div class="info">
-									<h4><?php the_title();?></h4>
-									<p><?php the_field('especialidade');?></p>
-								</div>
-							</div>
-							<?php
-						} else {
-					?>
-
-						<div class="col-md-3">
-							<div class="box">
-								<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" />
-								<div class="info">
-									<h4><?php the_title();?></h4>
-									<p><?php the_field('especialidade');?></p>
-								</div>
-							</div>
-						</div>
-
-					<?php
-						}
-					endwhile; 
-					$projetos = null; 
-					$projetos = $temp; 
-					wp_reset_postdata();
-					?>
-		
-			</div>
-			<div class="list row d-none d-md-flex">
-					<?php 
-						$args = array(
-								'post_type'  => 'professores', 
-								'showposts'=> 12,
-								'orderby' => 'rand'
-						);
-						$projetos = new WP_Query($args);
-						while ($projetos->have_posts()) : $projetos->the_post();
-							if(wp_is_mobile()){
-								?>
-								<div class="box">
-									<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" />
-									<div class="info">
-										<h4><?php the_title();?></h4>
-										<p><?php the_field('especialidade');?></p>
-									</div>
-								</div>
-								<?php
-							} else {
-						?>
-
-							<div class="col-md-3">
-								<div class="box">
-									<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" />
-									<div class="info">
-										<h4><?php the_title();?></h4>
-										<p><?php the_field('especialidade');?></p>
+									<div class="imagem">
+										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-01.png" alt="">
 									</div>
 								</div>
 							</div>
-
-						<?php
-							}
-						endwhile; 
-						$projetos = null; 
-						$projetos = $temp; 
-						wp_reset_postdata();
-						?>
-			
-			</div>
-		</div>
-	</section>
-
-	<section class="depoimentos">
-		<div class="container-fluid">
-			<div class="text-center">
-				<h3>O impacto que causamos em nossos alunos</h3>
-				<div class="owl-carousel">
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user1.jpg"/>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 right">
+						<div class="depoimento bg-purple wow fadeInRight" data-wow-offset="100">
+							<div>
+								<p>
+									"Um dos melhores cursos que já vi na minha vida! Abra sua mente, mude suas ideias, faça diferente, esse curso é isso, tira você da linha, mude seus paradigmas, ajuda na sua criatividade. Muito bom e divertido! Parabéns Saibalá"
+								</p>
+								<div class="thumb">
+									<a href="#" class="next">
+										<img class="d-none" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
+									</a>
+									<div class="imagem">
+										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-02.png" alt="">
+									</div>
+									<div class="texto">
+										<p class="nome">
+											<strong>
+												Maya Cristina
+											</strong>
+										</p>
+										<p class="profissao">
+											Publicitária
+										</p>
+										<!-- <p class="instagram">
+											@joanãobubu
+										</p> -->
+									</div>
+								</div>
 							</div>
-							<div class="col-md-8">
-								<h4>Pedro Zandonadi</h4>
-								<p>"Deliciosas essas aulas, gostaria muito de ter esse cara como meu professor
-								na faculdade, muito doido mas um baita profissional com trabalhos fantásticos. Sensacional.
-								Mudou minha percepção em relação aos projetos gráficos e a maneira de como lidar em
-								situações específicas de trabalho. Excelente!"</p>
+						</div>
+						<div class="depoimento bg-green wow fadeInRight desk" data-wow-offset="100">
+							<div>
+								<p>
+									"Pra mim, fazer curso online era coisa de outro mundo, mas me surpreendi, pelo fato de aprender em um ambiente calmo e silencioso. Cada aula me fez ver que se eu insistir no meu sonho não haverá barreiras para trabalhar com o que mais amo. Agradeço a cada um que faz parte dessa equipe, agradeço ao professor. Obrigado Saibalá"
+								</p>
+								<div class="thumb">
+									<a href="#" class="next">
+										<img class="d-none" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
+									</a>
+									<div class="imagem">
+										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-03.png" alt="">
+									</div>
+									<div class="texto">
+										<p class="nome">
+											<strong>
+												Alex Xavier
+											</strong>
+										</p>
+										<p class="profissao">
+											Empreendedor
+										</p>
+										<!-- <p class="instagram">
+											@joanãobubu
+										</p> -->
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user2.jpg"/>
+					<div class="col-12 col-md-5 right">	
+						<div class="depoimento bg-green wow fadeInRight mobile" data-wow-offset="100">
+								<div>
+									<p>
+										"Pra mim, fazer curso online era coisa de outro mundo, mas me surpreendi, pelo fato de aprender em um ambiente calmo e silencioso. Cada aula me fez ver que se eu insistir no meu sonho não haverá barreiras para trabalhar com o que mais amo. Agradeço a cada um que faz parte dessa equipe, agradeço ao professor. Obrigado Saibalá"
+									</p>
+									<div class="thumb">
+										<a href="#" class="next">
+											<img class="d-none" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
+										</a>
+										<div class="imagem">
+											<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-03.png" alt="">
+										</div>
+										<div class="texto">
+											<p class="nome">
+												<strong>
+												Alex Xavier
+												</strong>
+											</p>
+											<p class="profissao">
+												Empreendedor
+											</p>
+											<!-- <p class="instagram">
+												@joanãobubu
+											</p> -->
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-8">
-								<h4>Rafael Teles</h4>
-								<p>"O melhor curso da minha vida, sem exagero."</p>
-							</div>
-						</div>
-					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user3.jpg"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Alex Xavier</h4>
-								<p>: "Pra mim, fazer curso online era coisa de outro mundo, mais ai que me
-								surpreendi, pelo fato que aprendo em um ambiente calmo e em silêncio. O que é tudo o que
-								um desenhista precisa para estar em concentração máxima.
-								Cada aula me fez ver que se eu insistir no meu talento não haverá barreira para trabalhar
-								com o que eu mais amo, que é desenhar.
-								Agradeço a cada um que faz parte dessa equipe, agradeço ao Professor Leandro Spett.
-								Obrigado Saibalá!!! "</p>
-							</div>
-						</div>
-					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user4.jpg"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Luciana Oliveira</h4>
-								<p>"Achei ótimo! não tinha ideia de como era feita a criação de uma coleção de
-								moda e todo o processo que a envolve até a passarela. Ronaldo é um artista. Está de
-								parabéns pelo trabalho.
-								Gostei muito. Tinha várias ideias enquanto assistia às aulas e tive vontade de montar minha
-								própria coleção. As dicas foram ótimas e tudo muito profissional.</p>
-							</div>
-						</div>
-					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user5.jpg"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Renato Vono</h4>
-								<p>: "Gustavo Piqueira sabe descrever com maestria os processos no Design.
-								Consegue desconstruir mitos de processo profissionais em apenas algumas palavras.
-								Viceral, intuitivo, prático e simples. Parabéns parceiro, mestre e professor, AFUDÊ!"</p>
-							</div>
-						</div>
-					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user6.jpg"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Santos Cuba</h4>
-								<p>"Incrível, altamente instrutivo, ótimo, maravilhoso!
-								Gostaria de dar os parabéns a todos que fizeram parte da criação e desenvolvimento deste
-								curso. O curso me ajudou muito e de certa forma me deu uma direção (norte). Estou muito
-								contente de ter feito parte do curso, Obrigado Gian Franco Rocchiccioli e parabéns você é
-								um mestre e tanto!”</p>
-							</div>
-						</div>
-					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user7.jpg"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Maya Cristina</h4>
-								<p>"Um dos melhores cursos que já vi na minha vida! Abra sua mente, mude suas
-								idéias, faça diferente, esse curso é isso, tira você da linha, mude seus paradigmas, ajuda na
-								sua criatividade, André é muito bom e divertido. Parabéns Saibalá</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-<!--
-	<section class="depoimentos d-none">
-		<div class="container-fluid">
-			<div class="text-center">
-				<h3>Veja o que os professores  falam</h3>
-				<div class="owl-carousel">
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Fulaninho de Tal</h4>
-								<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-							</div>
-						</div>
-					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Fulaninho de Tal</h4>
-								<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-							</div>
-						</div>
-					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Fulaninho de Tal</h4>
-								<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-							</div>
-						</div>
-					</div>
-					<div class='item'>
-						<div class="row">
-							<div class="col-md-4">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png"/>
-							</div>
-							<div class="col-md-8">
-								<h4>Fulaninho de Tal</h4>
-								<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="timeline">
-		<div class="container">
-			<h3>Conheça a nossa história</h3>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="box box-1">
-						<h4>Janeiro 2015</h4>
-						<p>Lançamento da primeira versão da plataforma Saibalá com foco em áreas criativas</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="box box-2">
-						<h4>Mes x 2016</h4>
-						<p>Atingimos 50.ooo alunos, com taxa de conclusão de cursos 90% (média da indústria 33%)</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="box box-3">
-						<h4>Maio 2016</h4>
-						<p>Inicio de parcerias com grandes empresas para desenvolvimento de seus treinamentos corporativos. </p>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/timelinelogos.png"/>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="box box-4">
-						<h4>Junho 2019</h4>
-						<p>Realizamos um projeto junto ao Tesouro Nacional e Ministerio da fazenda para público alvo de 100 milhões de brasileiros</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="box box-5">
-						<h4>Maio 2017</h4>
-						<p>Fomos convidados para construir iniciativas educacionais para algumas das mais importantes instituições de ensino do país </p>
-						<ul>
-							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo1.png"/></a></li>
-							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo2.png"/></a></li>
-							<li><a href="#" class='arrow'><i class='fa fa-angle-right'></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-4">
-				</div>
-				<div class="col-md-4">
-					<div class="box box-6">
-						<h4>Fevereiro 2020</h4>
-						<p>Rebranding da Saibalá e novo posicionamento</p>
-						<a href="#" class='arrow'><i class='fa fa-angle-right'></i></a>
-					</div>
-				</div>
-				<div class="col-md-4 offset-md-4">
-					<div class="box box-7">
-						<h4>JULHO 2020</h4>
-						<p>Inicio do projeto Transformation Experts</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<section class="series-programacoes bg-white">
+		<div class="container-980">
+			<img class="desk" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-08.png" alt="">
+			<img class="mobile" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-08-mobile.png" alt="">
 
-	<section class="futuro">
-		<div class="container">
-			<h3>Hoje</h3>
-			<div class="row">
-				<div class="col-md-4">
-					<div class='box-numbers'>
-						<b class='mt-3'>Número de alunos:</b>
-						<span>>150k</span>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class='box-numbers'>
-						<b>Projetos de alunos compartilhados:</b>
-						<span>>1.100</span>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class='box-numbers'>
-						<b>Taxa média de conclusão de cursos:</b>
-						<span>>89%</span>
-					</div>
-				</div>
+			<div class="destaque wow flipInY">
+				<h5>
+					Dá uma olhada nas nossas séries e programas de aprendizado
+				</h5>
+				<a href="/categoria-produto/jornadas/" class="btn">
+					Vamos
+				</a>
 			</div>
-			<h3>Futuro</h3>
-			<div class="row">
-				<div class='col-md-6'>
-					<p>Com a velocidade de mudanças de mundo e do mercado não prometeremos um projeto específico, mas prometemos alguns valores. A Saibalá com suas iniciativas lutará pelo:</p>
-				</div>
-			</div>
-			<div class='row'>
-				<div class='col-md-4'>
-					<div class='box-feature'>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icoFuture1.png"/>
-						<h4>Life long learning</h4>
-						<p>Aprender, desaprender e aprender de novo.</p>
-					</div>
-				</div>
-				<div class='col-md-4'>
-					<div class='box-feature'>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icoFuture2.png"/>
-						<h4>Conexões profissionais</h4>
-						<p>Aproximar alunos, profissionais, referências e o mercado - juntos somos sempre mais fortes.</p>
-					</div>
-				</div>
-				<div class='col-md-4'>
-					<div class='box-feature'>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icoFuture3.png"/>
-						<h4>Autonomia no desenvolvimento</h4>
-						<p>Todos tomarão as rédeas de sua formação. Não haverão duas trajetórias iguais.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="projetos">
-		<div class="container">
-			<h3>Projetos ambiciosos</h3>
-			<div class="projetoVideo">
-				<div class="title">
-					<h4>PAT <span>O Game Changer do empreendedor</span></h4>
-				</div>
-				<iframe width="100%" height="500" src="https://www.youtube.com/embed/SnbjRxhG4aQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			<div class="projetoVideo">
-				<div class="title">
-					<h4>Realidade virtual para educação básica:</h4>
-				</div>
-				<iframe width="100%" height="500" src="https://www.youtube.com/embed/SnbjRxhG4aQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-		</div>
-	</section>
--->
-	<section class="form" name="formulario-home">
-		<div class="container">
-			<h3>Fale conosco:</h3>	
-			<?php echo apply_shortcodes( '[contact-form-7 title="Home"  html_id="contato-site"]' ); ?>
-
-			<!-- <form class="submitForm">
-				<div class="alert alert-success d-none">Mensagem enviada com sucesso</div>
-				<div class="row">
-					<div class="col-md-2 p-0"><label>E-mail</label></div>
-					<div class="col-md-4 p-0"><input type="email" required name='email'/></div>
-					<div class="col-md-2 p-0"><label>Assunto</label></div>
-					<div class="col-md-4 p-0"><input type="text" name='assunto' required/></div>
-					<div class="col-md-12 p-0">
-						<textarea name='msg' required rows="10"/></textarea>
-					</div>
-					<div class="text-right col-12 p-0">
-						<button class='btn btn-warning'>Enviar</button>
-					</div>
-				</div>
-			</form> -->
 		</div>
 	</section>
 

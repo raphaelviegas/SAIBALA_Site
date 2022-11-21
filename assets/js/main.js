@@ -16,7 +16,7 @@ var base = function () {
     return {
         //main function
         init: function () {
-
+            
             $('.projectForm').submit(function(e){
                 e.preventDefault();
                 var form = $(this)[0];
@@ -270,3 +270,19 @@ var base = function () {
 $(document).ready(function() {
     base.init();
 });
+
+window.onload = function() {
+    
+    var isMobile = $(window).width() <= 991,
+        isTablet = $(window).width() >= 991,
+        isDesktop = $(window).width() >= 1024,
+        isDesktopMed = $(window).width() >= 1200,
+        isDesktopMax = $(window).width() >= 1400;
+
+    if (isDesktop) {
+
+        // inicia o wow.js
+        new WOW().init();
+
+    }
+};
