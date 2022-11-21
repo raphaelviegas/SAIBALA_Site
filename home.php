@@ -199,13 +199,12 @@
 						<img class="desk um" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-01.png" alt="">
 						<img class="mobile um" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-01-mobile.png" alt="">
 						<div class="box yellow wow fadeIn">
-							<a href="#" class="bg-yellow">
+							<a href="/produto/a-busca-pelo-produto-perfeito/" class="bg-yellow">
 								<h6>
-									Programa de <br>
-									Caricatura
+									A busca pelo produto perfeito
 								</h6>
 								<p>
-									Evaristo Costa
+									<!-- Evaristo Costa -->
 								</p>
 								<hr>
 								<span class="ver-mais">
@@ -226,13 +225,12 @@
 						<img class="desk dois" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-02.png" alt="">
 						<img class="mobile dois" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-02-mobile.png" alt="">
 						<div class="box blue wow fadeIn" data-wow-delay=".5s">
-							<a href="#" class="bg-blue">
+							<a href="/produto/dna-da-transformacao/" class="bg-blue">
 								<h6>
-									Programa de <br>
-									Caricatura
+									DNA da transformação
 								</h6>
 								<p>
-									Evaristo Costa
+									<!-- Evaristo Costa -->
 								</p>
 								<hr>
 								<span class="ver-mais">
@@ -251,13 +249,12 @@
 						<img class="desk tres" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-03.png" alt="">
 						<img class="mobile tres" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-03-mobile.png" alt="">
 						<div class="box purple wow fadeIn">
-							<a href="#" class="bg-purple">
+							<a href="/produto/tempos-exponenciais/" class="bg-purple">
 								<h6>
-									Programa de <br>
-									Caricatura
+									Tempos exponenciais
 								</h6>
 								<p>
-									Evaristo Costa
+									<!-- Evaristo Costa -->
 								</p>
 								<hr>
 								<span class="ver-mais">
@@ -278,13 +275,12 @@
 						<img class="desk quatro" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-04.png" alt="">
 						<img class="mobile quatro" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-05-04-mobile.png" alt="">
 						<div class="box green wow fadeIn">
-							<a href="#" class="bg-green">
+							<a href="/produto/tecnologias-que-vao-mudar-o-mundo/" class="bg-green">
 								<h6>
-									Programa de <br>
-									Caricatura
+									Tecnologias que vão mudar o mundo
 								</h6>
 								<p>
-									Evaristo Costa
+									<!-- Evaristo Costa -->
 								</p>
 								<hr>
 								<span class="ver-mais">
@@ -364,7 +360,7 @@
 				<p class="wow fadeIn" data-wow-offset="100">
 					faça um teste e veja se você aprendeu
 				</p>
-				<a href="#" class="btn wow fadeIn" data-wow-offset="100">
+				<a href="/categoria-produto/jornadas/" class="btn wow fadeIn" data-wow-offset="100">
 					Episódio GrÁtis
 				</a>
 			</div>
@@ -374,7 +370,7 @@
 	<section class="quem-ja-e bg-white">
 		<div class="container-980">
 			<h2>
-				quem já é
+				quem já é Saibalá
 			</h2>
 			<div class="container-fluid">
 				<div class="row">
@@ -382,7 +378,7 @@
 						<div class="depoimento bg-blue wow fadeInLeft" data-wow-offset="100">
 							<div>
 								<p>
-									"posuere. et pharetra pharetra massa massa ultricies. viverra tellus in hac habitasse platea dictumst vestibulum. magna fringilla urna porttitor rhoncus dolor. nunc congue nisi vitae suscipit tellus. arcu non sodales neque sodales ut etiam sit amet nisl. neque sodales ut etiam sit amet nisl purus in mollis. ornare massa eget egestas purus viverra accumsan in. ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. cursus euismod quis viverra nibh cras. diam donec adipiscin"
+									"Incrível, altamente instrutivo, ótimo, maravilhoso! Gostaria de dar os parabéns a todos que fizeram parte da criação deste curso. O curso me ajudou muito,  e de certa forma me deu uma direção (norte). Estou muito contente de ter feito parte do curso. Esses professores são verdadeiros mestres!"
 								</p>
 								<div class="thumb">
 									<a href="#" class="next">
@@ -391,18 +387,18 @@
 									<div class="texto">
 										<p class="nome">
 											<strong>
-												Joana Albuquerque
+												Rafael Cuba
 											</strong>
 										</p>
 										<p class="profissao">
-											Designer
+											Policial Militar
 										</p>
 										<p class="instagram">
 											@joanãobubu
 										</p>
 									</div>
 									<div class="imagem">
-										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07.png" alt="">
+										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-01.png" alt="">
 									</div>
 								</div>
 							</div>
@@ -412,27 +408,27 @@
 						<div class="depoimento bg-purple wow fadeInRight" data-wow-offset="100">
 							<div>
 								<p>
-									"posuere. et pharetra pharetra massa massa ultricies. viverra tellus in hac habitasse platea dictumst vestibulum. magna fringilla urna porttitor rhoncus dolor. nunc congue nisi vitae suscipit tellus. arcu non sodales neque sodales ut etiam sit amet nisl. neque sodales ut etiam sit amet nisl purus in mollis. ornare massa eget egestas purus viverra accumsan in. ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. cursus euismod quis viverra nibh cras. diam donec adipiscin"
+									"Um dos melhores cursos que já vi na minha vida! Abra sua mente, mude suas ideias, faça diferente, esse curso é isso, tira você da linha, mude seus paradigmas, ajuda na sua criatividade. Muito bom e divertido! Parabéns Saibalá"
 								</p>
 								<div class="thumb">
 									<a href="#" class="next">
 										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
 									</a>
 									<div class="imagem">
-										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07.png" alt="">
+										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-02.png" alt="">
 									</div>
 									<div class="texto">
 										<p class="nome">
 											<strong>
-												Joana Albuquerque
+												Maya Cristina
 											</strong>
 										</p>
 										<p class="profissao">
-											Designer
+											Publicitária
 										</p>
-										<p class="instagram">
+										<!-- <p class="instagram">
 											@joanãobubu
-										</p>
+										</p> -->
 									</div>
 								</div>
 							</div>
@@ -440,27 +436,27 @@
 						<div class="depoimento bg-green wow fadeInRight desk" data-wow-offset="100">
 							<div>
 								<p>
-									"posuere. et pharetra pharetra massa massa ultricies. viverra tellus in hac habitasse platea dictumst vestibulum. magna fringilla urna porttitor rhoncus dolor. nunc congue nisi vitae suscipit tellus. arcu non sodales neque sodales ut etiam sit amet nisl. neque sodales ut etiam sit amet nisl purus in mollis. ornare massa eget egestas purus viverra accumsan in. ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. cursus euismod quis viverra nibh cras. diam donec adipiscin"
+									"Pra mim, fazer curso online era coisa de outro mundo, mas me surpreendi, pelo fato de aprender em um ambiente calmo e silencioso. Cada aula me fez ver que se eu insistir no meu sonho não haverá barreiras para trabalhar com o que mais amo. Agradeço a cada um que faz parte dessa equipe, agradeço ao professor. Obrigado Saibalá"
 								</p>
 								<div class="thumb">
 									<a href="#" class="next">
 										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
 									</a>
 									<div class="imagem">
-										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07.png" alt="">
+										<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-03.png" alt="">
 									</div>
 									<div class="texto">
 										<p class="nome">
 											<strong>
-												Joana Albuquerque
+												Alex Xavier
 											</strong>
 										</p>
 										<p class="profissao">
-											Designer
+											Empreendedor
 										</p>
-										<p class="instagram">
+										<!-- <p class="instagram">
 											@joanãobubu
-										</p>
+										</p> -->
 									</div>
 								</div>
 							</div>
@@ -470,27 +466,27 @@
 						<div class="depoimento bg-green wow fadeInRight mobile" data-wow-offset="100">
 								<div>
 									<p>
-										"posuere. et pharetra pharetra massa massa ultricies. viverra tellus in hac habitasse platea dictumst vestibulum. magna fringilla urna porttitor rhoncus dolor. nunc congue nisi vitae suscipit tellus. arcu non sodales neque sodales ut etiam sit amet nisl. neque sodales ut etiam sit amet nisl purus in mollis. ornare massa eget egestas purus viverra accumsan in. ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. cursus euismod quis viverra nibh cras. diam donec adipiscin"
+										"Pra mim, fazer curso online era coisa de outro mundo, mas me surpreendi, pelo fato de aprender em um ambiente calmo e silencioso. Cada aula me fez ver que se eu insistir no meu sonho não haverá barreiras para trabalhar com o que mais amo. Agradeço a cada um que faz parte dessa equipe, agradeço ao professor. Obrigado Saibalá"
 									</p>
 									<div class="thumb">
 										<a href="#" class="next">
 											<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/next-depoimentos.svg" alt="">
 										</a>
 										<div class="imagem">
-											<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07.png" alt="">
+											<img class="d-block" data-wow-delay=".5s" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/conteudo-07-03.png" alt="">
 										</div>
 										<div class="texto">
 											<p class="nome">
 												<strong>
-													Joana Albuquerque
+												Alex Xavier
 												</strong>
 											</p>
 											<p class="profissao">
-												Designer
+												Empreendedor
 											</p>
-											<p class="instagram">
+											<!-- <p class="instagram">
 												@joanãobubu
-											</p>
+											</p> -->
 										</div>
 									</div>
 								</div>
@@ -510,7 +506,7 @@
 				<h5>
 					Dá uma olhada nas nossas séries e programas de aprendizado
 				</h5>
-				<a href="#" class="btn">
+				<a href="/categoria-produto/jornadas/" class="btn">
 					Vamos
 				</a>
 			</div>

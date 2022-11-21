@@ -43,7 +43,7 @@ a {
   color: white;
 }
 header {
-  position: relative;
+  position: fixed;
   background: #FFFF00;
   width: 100%;
   z-index: 200;
@@ -2538,12 +2538,12 @@ header.black .logo {
 }
 #home .planejamento .top .legendas .text-01 {
   position: absolute;
-  top: -122px;
+  top: -128px;
   height: 130px;
 }
 #home .planejamento .top .legendas .text-02 {
   position: absolute;
-  top: -7px;
+  top: -15px;
   text-align: right;
   right: 0;
 }
@@ -3095,11 +3095,11 @@ header.black .logo {
     line-height: 36px;
   }
   #home .planejamento .top .legendas .text-01 {
-    top: -67px;
+    top: -70px;
     height: 70px;
   }
   #home .planejamento .top .legendas .text-02 {
-    top: -5px;
+    top: -10px;
   }
   #home .plano .text {
     justify-content: center;
