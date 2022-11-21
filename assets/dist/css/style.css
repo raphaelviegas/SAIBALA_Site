@@ -911,7 +911,6 @@ header.black .logo {
   padding: 0;
   box-sizing: border-box;
   width: 100%;
-  margin: 64px 0 0 0;
   font-family: "Vinila", sans-serif;
 }
 @media (max-width: 768px) {
@@ -4682,9 +4681,7 @@ header.black .logo {
 .product-detail-v2 .single-depoimentos .single-depoimentos-item .content p {
   font-weight: 300;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  display: block;
 }
 .product-detail-v2 .single-depoimentos .single-depoimentos-item .content p:not(:first-of-type) {
   display: none;
@@ -7046,4 +7043,28 @@ body.single .woocommerce-notices-wrapper .woocommerce-message .button {
   font-size: 15px;
   line-height: 17px;
   font-weight: 500;
+}
+
+/* Remove alerta boleto */
+div#pagarme-bank-slip-instructions {
+  display: none !important;
+}
+
+/* 404 */
+.page-404 {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.page-404 h1 {
+  font-size: 110px;
+}
+
+.page-404 a {
+  display: inline-block;
+  padding: 5px 15px;
+  background: #000;
+  color:#fff;
+  border-radius: 4px;
 }

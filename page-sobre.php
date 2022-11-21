@@ -301,3 +301,9 @@ get_header('shop');
 <?php
 get_footer();
 ?> 
+
+<style>
+	* {
+		font-family: "Vinila", sans-serif;
+	}
+</style>
