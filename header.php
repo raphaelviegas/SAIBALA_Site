@@ -42,17 +42,11 @@
 		<header>
 			<div class="container-980">
 				<div class="row justify-content-between">
-					<div class="col-md-3 col-5 logo">
+					<div class="col-4 col-md-3 logo">
 						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.png"/></a>
 					</div>
 
-					<div class="col-md-3 col-5 text-right">
-						<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50" style=" fill:#000;"><path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"></path></svg>
-						</a>
-					</div>
-
-					<div class="col-md-6 text-right links d-lg-flex justify-content-end collapse" id="collapseExample">
+					<div class="col-md-6 text-right links d-lg-flex justify-content-center collapse" id="collapseExample">
 						<?php
 						wp_nav_menu( array( 
 							'theme_location' => 'header-menu'
@@ -60,11 +54,30 @@
 						?>
 					</div>
 
+					<div class="col-8 col-md-3 d-flex d-lg-flex align-center justify-content-end">
+						<a class='px-3 p-2 btn-exp d-flex align-center' href="#search"><i class='fal fa-search'></i></a>
+						<?php
+						if ( is_user_logged_in() ) {
+							?>
+							<a class='px-3 p-2 btn-exp d-flex align-center' href="#myaccount"><i class='fal fa-user'></i></a>
+							<?php
+						} else {
+							?>
+							<a class='px-3 p-2 btn-exp d-flex align-center' href="#login"><i class='fal fa-user'></i></a>
+							<?php
+						}
+						?>						
+						<a class='px-3 p-2 btn-exp d-flex align-center' href="#cart"><i class='fal fa-shopping-cart'></i></a>
+						<a class='px-3 p-2 btn-exp d-flex align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+							<i class='fal fa-bars mobile'></i>
+						</a>
+					</div>
+
 				</div>
 			</div>
 		</header>
 		
-		<!-- <div class="box-expansivel box-myaccount" data-name='myaccount'>
+		<div class="box-expansivel box-myaccount" data-name='myaccount'>
 			<div class='header'>
 				<h3>Minha Conta</h3>
 				<button class='bclose'><i class='fal fa-times'></i></button>
@@ -77,9 +90,9 @@
 					) ); 
 				?>
 			</div>			
-		</div> -->
+		</div>
 
-		<!-- <div class="box-expansivel box-login" data-name='login'>
+		<div class="box-expansivel box-login" data-name='login'>
 			<div class='header'>
 				<h3>Área do Cliente</h3>
 				<button class='bclose'><i class='fal fa-times'></i></button>
@@ -89,9 +102,9 @@
 					<?php woocommerce_login_form( );?>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
-		<!-- <div class="box-expansivel" data-name='cart'>
+		<div class="box-expansivel" data-name='cart'>
 			<div class='header'>
 				<h3>Carrinho</h3>
 				<button class='bclose'><i class='fal fa-times'></i></button>
@@ -101,9 +114,9 @@
 					<?php woocommerce_mini_cart(); ?>		
 				</div>
 			</div>
-		</div> -->
+		</div>
 
-		<!-- <div class="box-expansivel box-search" data-name='search'>
+		<div class="box-expansivel box-search" data-name='search'>
 			<div class='header'>
 				<h3>Busca</h3>
 				<button class='bclose'><i class='fal fa-times'></i></button>
@@ -123,4 +136,5 @@
 					</div>
 				</form>
 			</div>
-		</div> -->
+		</div>
+		

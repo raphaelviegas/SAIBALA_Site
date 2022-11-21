@@ -839,17 +839,29 @@
 	}
 
 	.principal {
+		.container {
+			position: relative;
+		}
 		.text {
 			strong {
 				font-weight: 500;
 			}
 			.text-principal {
+				&> img {
+					position: absolute;
+					bottom: -190px;
+					z-index: 2;
+					right: 20%;
+					bottom: -288px;
+				}
 				h1 {
 					font-size: 184px;
 					font-weight: 200;
 					text-transform: uppercase;
 					font-family: 'Vinila', sans-serif;
 					color: #000;
+					line-height: 172px;
+					margin-bottom: 100px;
 				}
 			}
 			.text-adicional {
@@ -860,6 +872,7 @@
 				p {
 					font-family: 'Vinila', sans-serif;
 					color: #000;	
+					font-size: 22px;
 					strong {
 						font-family: 'Vinila', sans-serif;
 						font-weight: 900;
@@ -888,12 +901,12 @@
 				}
 				.text-01 {
 					position: absolute;
-					top: -130px;
+					top: -122px;
 					height: 130px;
 				}
 				.text-02 {
 					position: absolute;
-					top: -20px;
+					top: -7px;
 					text-align: right;
 					right: 0;
 				}
@@ -903,8 +916,14 @@
 		.bottom {
 			display: flex;
 			align-items: center;
-			justify-content: flex-end;
+			justify-content: flex-start;
 			margin-top: 40px;
+			position: relative;
+			.seta-02 {
+				position: absolute;
+				left: 400px;
+				height: 200px;
+			}
 			p {
 				margin-bottom: 0;
 				color: #fff;
@@ -991,6 +1010,8 @@
 			& > img {
 				position: absolute;
 				top: 220px;
+				left: 0;
+				height: 400px;
 			}
 		}
 		
@@ -1427,20 +1448,31 @@
 		}
 
 		.principal {
+			position: relative;
+			.container {
+				position: initial;
+			}
 			.text {
-				padding-top: 30%;
+				padding-top: 20%;
 				.text-principal {
+					&> img {
+						left: 0;
+						bottom: -167px;
+						width: 344px;
+					}
 					h1 {
 						font-size: 90px;
 						line-height: 1;
+						margin-bottom: 30px;
 					}
 				}
 				.text-adicional {
-					position: absolute;
+					left: 10px;
 					bottom: 50px;
-					left: 15px;
+					position: absolute;
+					max-width: 80%;
 					p {
-						font-size: 14px;
+						font-size: 16px;
 					}
 				}
 			}
@@ -1459,7 +1491,6 @@
 			.bottom {
 				padding-right: 10px;
 				width: 100%;
-				justify-content: space-between;
 				margin-top: 20px;
 				padding-bottom: 20px;
 				p {
@@ -1477,11 +1508,11 @@
 						line-height: 36px;
 					}
 					.text-01 {
-						top: -80px;
+						top: -67px;
 						height: 70px;
 					}
 					.text-02 {
-						top: -15px;
+						top: -5px;
 					}
 				}
 			}
@@ -1549,6 +1580,7 @@
 					position: relative;
 					top: 0;
 					margin-top: 20px;
+					height: auto;
 				}
 			}
 			.streaming {
@@ -1711,29 +1743,52 @@
 	}	
 }
 
-@media (min-width:426px) and (max-width: 1050px) {
+@media (min-width:426px) and (max-width: 1023px) {
 	#home {
 		.principal {
+			position: relative;
+			.container {
+				position: initial;
+			}
 			.text {
+				justify-content: flex-start;
 				.text-principal {
+					&> img {
+						bottom: -330px;
+						&.mobile {
+							right: inherit;
+							bottom: -166px;
+							left: 0;
+							display: block !important;
+						}
+						
+						&.desk {
+							display: none;
+						}
+					}					
 					h1 {
 						font-size: 140px;
 						line-height: 140px;
-						margin-bottom: 150px;
+						margin-bottom: 30px;
 					}
 				}
 				.text-adicional {
-					position: absolute;
-					right: 15%;
-					bottom: 12%;
+					right: inherit;
+					position: relative;
+					left: 35px;
+					align-items: flex-start;
+					max-width: 90%;
+					bottom: 0;
+					p {
+						font-size: 20px;
+						margin-bottom: 10px;
+					}
 				}
 			}
 		}
 		.planejamento {
 			.bottom {
 				flex-wrap: wrap;
-				text-align: center;
-				justify-content: center;
 				img {
 					max-width: 90%;
 					margin-top: 20px;
