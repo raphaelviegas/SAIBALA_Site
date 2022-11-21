@@ -18,6 +18,7 @@
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/wow/animate.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" />
+			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/fonts/vinila.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/style.css" rel="stylesheet" />
 			<!-- ================== END BASE CSS STYLE ================== -->
 
@@ -41,21 +42,42 @@
 		<header>
 			<div class="container-980">
 				<div class="row justify-content-between">
-					<div class="col-md-3 col-5 logo">
+					<div class="col-4 col-md-3 logo">
 						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.png"/></a>
 					</div>
-					<div class="col-md-6 text-right links d-none d-md-flex justify-content-end">
+
+					<div class="col-md-6 text-right links d-lg-flex justify-content-center collapse" id="collapseExample">
 						<?php
 						wp_nav_menu( array( 
 							'theme_location' => 'header-menu'
 							) ); 
 						?>
 					</div>
+
+					<div class="col-8 col-md-3 d-flex d-lg-flex align-center justify-content-end">
+						<a class='px-3 p-2 btn-exp d-flex align-center' href="#search"><i class='fal fa-search'></i></a>
+						<?php
+						if ( is_user_logged_in() ) {
+							?>
+							<a class='px-3 p-2 btn-exp d-flex align-center' href="#myaccount"><i class='fal fa-user'></i></a>
+							<?php
+						} else {
+							?>
+							<a class='px-3 p-2 btn-exp d-flex align-center' href="#login"><i class='fal fa-user'></i></a>
+							<?php
+						}
+						?>						
+						<a class='px-3 p-2 btn-exp d-flex align-center' href="#cart"><i class='fal fa-shopping-cart'></i></a>
+						<a class='px-3 p-2 btn-exp d-flex align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+							<i class='fal fa-bars mobile'></i>
+						</a>
+					</div>
+
 				</div>
 			</div>
 		</header>
 		
-		<!-- <div class="box-expansivel box-myaccount" data-name='myaccount'>
+		<div class="box-expansivel box-myaccount" data-name='myaccount'>
 			<div class='header'>
 				<h3>Minha Conta</h3>
 				<button class='bclose'><i class='fal fa-times'></i></button>
@@ -68,9 +90,9 @@
 					) ); 
 				?>
 			</div>			
-		</div> -->
+		</div>
 
-		<!-- <div class="box-expansivel box-login" data-name='login'>
+		<div class="box-expansivel box-login" data-name='login'>
 			<div class='header'>
 				<h3>Área do Cliente</h3>
 				<button class='bclose'><i class='fal fa-times'></i></button>
@@ -80,9 +102,9 @@
 					<?php woocommerce_login_form( );?>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
-		<!-- <div class="box-expansivel" data-name='cart'>
+		<div class="box-expansivel" data-name='cart'>
 			<div class='header'>
 				<h3>Carrinho</h3>
 				<button class='bclose'><i class='fal fa-times'></i></button>
@@ -92,10 +114,9 @@
 					<?php woocommerce_mini_cart(); ?>		
 				</div>
 			</div>
-		</div> -->
+		</div>
 
-
-		<!-- <div class="box-expansivel box-search" data-name='search'>
+		<div class="box-expansivel box-search" data-name='search'>
 			<div class='header'>
 				<h3>Busca</h3>
 				<button class='bclose'><i class='fal fa-times'></i></button>
@@ -115,4 +136,5 @@
 					</div>
 				</form>
 			</div>
-		</div> -->
+		</div>
+		
