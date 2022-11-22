@@ -234,7 +234,7 @@ get_header('shop');
               <?php the_field("metodologia_conteudo_02_titulo_01") ?>
             </h4>
             <p>
-              <?php the_field("metodologia_conteudo_02_texto_03") ?>
+              <?php the_field("metodologia_conteudo_02_texto_01") ?>
             
             </p>
           </div>
@@ -244,7 +244,7 @@ get_header('shop');
               <?php the_field("metodologia_conteudo_02_titulo_02") ?>
             </h4>
             <p>
-              <?php the_field("metodologia_conteudo_02_texto_03") ?>
+              <?php the_field("metodologia_conteudo_02_texto_02") ?>
            
             </p>
           </div>
