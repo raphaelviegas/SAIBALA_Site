@@ -387,7 +387,7 @@ endif;
     <div class="catalogo__programas-header">
       <h2>confira também nossos <span>programas</span>, clicando aqui:</h2>
         <a href="<?php echo bloginfo('url');
-        ;?>/catalogo/programas">programas</a>
+        ;?>/catalogo/programas-saibala">programas</a>
     </div>
 
     <div class="catalogo__programas-form">
@@ -459,7 +459,7 @@ endif;
 <!-- Initialize Swiper -->
 <script type="text/javascript">
   var swiper = new Swiper(".swiperSeries", {
-    loop: true,
+    loop: false,
 	  loopedSlides: 7,
     watchSlidesProgress: true,
 	  centeredSlides: true,
