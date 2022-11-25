@@ -4249,9 +4249,7 @@ header.black .logo {
 .product-detail-v2 .single-professores .jornada .single-professores-item .content p {
   font-weight: 300;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  display: block;
 }
 .product-detail-v2 .single-professores .jornada .single-professores-item .content p:not(:first-of-type) {
   display: none;
