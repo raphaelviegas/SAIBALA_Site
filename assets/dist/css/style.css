@@ -564,7 +564,7 @@ header.black .logo {
 .mobile {
   display: none;
 }
-@media (max-width: 425px) {
+@media (max-width: 550px) {
   .container-980 {
     padding: 0 15px;
   }
@@ -590,7 +590,7 @@ header.black .logo {
     padding: 75px 0;
   }
 }
-@media (min-width: 425px) and (max-width: 992px) {
+@media (min-width: 550px) and (max-width: 992px) {
   header .col-md-3.col-5 {
     padding: 0 30px;
   }
@@ -600,7 +600,7 @@ header.black .logo {
     display: none;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 550px) {
   header ul {
     padding: 20px 0;
   }
@@ -3022,7 +3022,13 @@ header.black .logo {
   font-weight: 600;
   margin-bottom: 30px;
 }
-@media (max-width: 425px) {
+@media (min-width: 410px) and (max-width: 550px) {
+  #home .principal .text .text-principal > img {
+    left: inherit !important;
+    right: 15px;
+  }
+}
+@media (max-width: 550px) {
   #home .principal img,
   #home .planejamento img,
   #home .series img,
@@ -3290,7 +3296,7 @@ header.black .logo {
     line-height: 18px;
   }
 }
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 550px) and (max-width: 1023px) {
   #home .principal {
     position: relative;
   }
