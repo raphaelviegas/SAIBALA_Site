@@ -165,7 +165,9 @@ endif;
             $featured_posts = get_sub_field('posts');
 
             if ($featured_posts) : ?>
+              <div class="container">
               <div class="series-itens swiper swiperSeries">
+               
                 <div class="swiper-wrapper">
                 <?php foreach ($featured_posts as $post) :
                   // Setup this post for WP functions (variable must be named $post).
@@ -236,6 +238,7 @@ endif;
                     </div>
                   </div>
                 <?php endforeach; ?>
+              </div>
               </div>
                 <?php
                 wp_reset_postdata(); ?>
@@ -462,7 +465,7 @@ endif;
     loop: false,
 	  loopedSlides: 7,
     watchSlidesProgress: true,
-	  centeredSlides: true,
+	  centeredSlides: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: false,
@@ -481,7 +484,7 @@ endif;
 		    spaceBetween: 20,
       },
       1200: {
-        slidesPerView: 5,
+        slidesPerView: 3,
 		    spaceBetween: 20,
       }
     }
