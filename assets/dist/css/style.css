@@ -1629,6 +1629,16 @@ header.black .logo {
   width: 100%;
   margin: 0;
 }
+
+.catalogo__series-wrapper .container {
+  width: 1000px;
+  max-width: 90%;
+}
+
+.swiperSeries {
+  overflow: visible !important;
+}
+
 .catalogo__series-header {
   width: 90%;
   max-width: 980px;
@@ -1680,9 +1690,6 @@ header.black .logo {
 .catalogo__series-header span {
   font-weight: 800;
 }
-.catalogo__series .swiper {
-  padding: 0 5em;
-}
 .catalogo__series .swiper .swiper-slide {
   opacity: 0.5;
 }
@@ -1692,7 +1699,6 @@ header.black .logo {
 @media (max-width: 960px) {
   .catalogo__series .swiper {
     width: 100%;
-    padding: 0 3em;
   }
 }
 .catalogo__series .swiper-wrapper {
@@ -1795,7 +1801,7 @@ header.black .logo {
   width: 100%;
   height: 72px;
   padding: 20px 0;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   font-size: 20px;
