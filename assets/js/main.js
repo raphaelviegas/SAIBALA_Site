@@ -80,7 +80,7 @@ var base = function () {
                 nav: true,
                 dots: false,
                 margin: 30,
-                autoplay: true,
+                autoplay: false,
                 autoplayTimeout: 7500,
                 autoplayHoverPause: true,
                 responsive: {
