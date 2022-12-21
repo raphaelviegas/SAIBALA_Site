@@ -174,33 +174,22 @@ if(get_field('professor')){
 		<h2>aprenda com <br>grandes nomes</h2>
 		<?php if(count($ids) > 1) { ?>
 			<div class="owl-carousel">
-				<?php
-					$args = array(
-						'post_type'  => 'professores', 
-						'showposts'=> -1,
-						'post__in'			=> $ids,
-					);
-					$projetos = new WP_Query($args);
-					while ($projetos->have_posts()) : $projetos->the_post();
-				?>
+				<?php foreach ($ids as $id): ?>
 					<div class="single-professores-item">
 						<div class="image-section">
-							<img src="<?php echo get_the_post_thumbnail_url(get_the_id(),'large');?>" />
+							<img src="<?php echo get_the_post_thumbnail_url( $id,'large');?>" />
 							<div class="overlay"></div>
 						</div>
 						<h3>
-							<?php the_title();?>
+							<?= get_the_title($id);?>
 						</h3>
 						<div class="content">
-							<?php the_content();?>
+							<?php
+								echo get_post_field('post_content', $id);
+							?>
 						</div>
 					</div>
-				<?php
-					endwhile; 
-					$projetos = null; 
-					$projetos = $temp; 
-					wp_reset_postdata();
-				?>
+				<?php endforeach; ?>
 			</div>
 			<?php } else {?>
 				<?php
