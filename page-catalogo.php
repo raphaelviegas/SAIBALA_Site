@@ -72,7 +72,8 @@ endif;
   <section class="catalogo__hero">
     <?php $hero = get_field('hero_item'); ?>
     <div class="catalogo__hero-bg-01" style="background-image:url(<?php echo $hero_image_01;?>)">
-  
+
+      <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
 
       <div class="catalogo__hero-bg-01--content">
         <h2><?php echo get_field('hero_01_postit_title');?></h2>
@@ -86,6 +87,9 @@ endif;
     </div>
     <div class="catalogo__hero-wrapper">
     <div class="catalogo__hero-bg-02" style="background-image:url(<?php echo $hero_image_02;?>)">
+
+      <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
+
       <div class="catalogo__hero-bg-02--content">
       <h2><?php echo get_field('hero_02_postit_title');?></h2>
         <p><?php echo get_field('hero_02_postit_subtitle');?></p>
@@ -97,6 +101,8 @@ endif;
       </div>
     </div>
     <div class="catalogo__hero-bg-03" style="background-image:url(<?php echo $hero_image_03;?>)">
+
+      <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>  
 
       <div class="catalogo__hero-bg-03--content">
       <h2><?php echo get_field('hero_03_postit_title');?></h2>
