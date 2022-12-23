@@ -48,6 +48,7 @@ header {
   width: 100%;
   z-index: 200;
   padding: 15px 0;
+  top:0;
 }
 header .container {
   width: 80%;
@@ -7077,4 +7078,16 @@ div#pagarme-bank-slip-instructions {
   background: #000;
   color:#fff;
   border-radius: 4px;
+}
+
+#customer_login {
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+
+.woocommerce-account .ld-profile-edit-link {
+  display: none !important;
 }
