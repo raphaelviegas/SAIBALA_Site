@@ -1,0 +1,381 @@
+* {
+    font-family: "Vinila", sans-serif !important;
+}
+
+/* Header */
+section.header__b2b {
+    background: #ffff00;
+    padding-top: 120px;
+    overflow: hidden;
+}
+
+section.header__b2b h2 {
+    font-size: 56px;
+    text-transform: uppercase;
+    line-height: 100%;
+    font-weight: 300;
+}
+
+section.header__b2b h2 strong {
+    font-weight: 600;
+}
+
+section.header__b2b .header__left {
+    background: url(../../img/bg-left-header-b2b.png) center bottom no-repeat;
+    background-size: 100%;
+    padding-bottom: 50px;
+    height: 325px;
+    position: relative;
+}
+
+section.header__b2b .header__left:after {
+    content:'';
+    width:5000px;
+    height: 17px;
+    background: #000;
+    display: block;
+    left:100%;
+    top:66px;
+    position: absolute;
+}
+
+section.header__b2b .header__right {
+    background: url(../../img/bg-right-header-b2b.png) 1px top no-repeat;
+    padding-bottom: 50px;
+    height: 345px;
+    position: relative;
+}
+
+section.header__b2b .header__right h2 {
+    text-align: right;
+}
+
+section.header__b2b .header__cta a {
+    display: table;
+    margin: auto;
+    color:#fff;
+    text-transform: uppercase;
+    padding: 15px 80px;
+    background: #000;
+    font-size: 24px;
+    position: relative;
+    left:-45px;
+    margin-top: 20px;
+}
+
+section.header__b2b .header__last {
+    margin-top: 100px;
+}
+
+section.header__b2b .header__last h2 {
+    line-height: 65px;
+    position: relative;
+    margin-bottom: -3px;
+}
+
+
+/* Causas */
+.causas__b2b {
+    padding-top: 100px;
+}
+
+.causas__b2b .causas__title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+
+.causas__b2b .causas__title-right {
+    background: url(../../img/bg-right-cusas.png) center center no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 430px;
+    height: 240px;
+    text-align: center;
+}
+
+.causas__b2b .causas__title-right h3 {
+    font-weight: 900;
+}
+
+.causas__b2b .causas__subtitle {
+    margin-top: 80px;
+}
+
+.causas__b2b .causas__subtitle p {
+    font-size: 28px;
+}
+
+.causas__b2b ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.causas__b2b ul li {
+    padding: 30px 0;
+}
+
+.causas__b2b ul li:nth-child(1) {
+    background: #a36fff;
+}
+
+.causas__b2b ul li:nth-child(2) {
+    background: #3196ff;
+}
+
+.causas__b2b ul li:nth-child(3) {
+    background: #46beaa;
+}
+
+.causas__b2b li h4 {
+    color:#fff;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap:10px;
+    position: relative;
+}
+
+.causas__b2b li h4:before {
+    content:'';
+    width:50px;
+    height: 50px;
+    display: block;
+    background: url(../../img/seta-branca.png) right center no-repeat;
+    background-size: 110px;
+}
+
+.causas__b2b li h4:after {
+    content: '';
+    width: 5000px;
+    height: 7px;
+    position: absolute;
+    right: calc(100% - 45px);
+    top: 22px;
+    background: #fff;
+    display: block;
+}
+
+
+/* Treinamentos */
+section.treinamentos h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 60px;
+    margin: 100px 0;
+}
+
+section.treinamentos .container {
+    width: 910px;
+}
+
+section.treinamentos .treinamentos__video {
+    display: block; 
+    width:100%;
+}
+
+section.treinamentos .treinamentos__video iframe {
+    display: block;    
+    height: 500px;
+    border-radius: 30px 30px 0 0px;
+    margin: auto;
+}
+
+section.treinamentos .treinamentos__mapa {
+    padding: 30px 0;
+    background: #a36fff;
+    display: flex;
+    justify-content: center;
+}
+
+section.treinamentos .treinamentos__mapa a {
+    display: flex;
+    color:#fff;
+    font-size: 24px;
+    text-align: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+section.treinamentos .treinamentos__mapa a::after {
+    content:'';
+    width: 100px;
+    height: 50px;
+    background: url(../../img/seta-mapa.jpg) right center no-repeat;
+    background-size: 100px;
+}
+
+section.treinamentos .bons__treinamenentos {
+    margin-bottom: 30px;
+    overflow: hidden;
+    display: block;
+}
+
+section.treinamentos .imagem__treinamento {
+    width:100%;
+    height: 400px;
+    display: block;
+    position: relative;
+    background: #3196ff;
+}
+
+section.treinamentos .imagem__treinamento img {
+    width:85vw;
+    top:0;
+    left:0;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 0 100px;
+    z-index: 10;
+    background: #fff;
+}
+
+section.treinamentos .bons__treinamenentos h4 {
+    background: #3196ff;
+    color:#fff;
+    padding: 35px 0;
+    font-size: 36px;
+    text-align: right;
+    position: relative;
+    border-radius: 0 0 0 100px;
+    margin: 0;
+}
+
+section.treinamentos .bons__treinamenentos h4:before {
+    content:'';
+    width:100px;
+    height: 100px;
+    background: #3196ff;
+    display: block;
+    position: absolute;
+    bottom:100%;
+    left:0;
+    z-index: 9;
+}
+
+section.treinamentos .bons__treinamenentos h4:after {
+    content:'';
+    width:5000px;
+    height: 100%;
+    background: #3196ff;
+    display: block;
+    position: absolute;
+    bottom:0;
+    left:100%;
+    z-index: 9;
+}
+
+section.treinamentos .bons__treinamenentos.verde .imagem__treinamento {
+    background: #46beaa;
+}
+
+section.treinamentos .bons__treinamenentos.verde .imagem__treinamento img {
+    left: inherit;
+    right: 0;
+    border-radius: 0 100px 0 0;
+}
+
+section.treinamentos .bons__treinamenentos.verde h4 {
+    text-align: left;
+    background: #46beaa;
+    border-radius:0 100px 0 0;
+}
+
+section.treinamentos .bons__treinamenentos.verde h4:before {
+    left:auto;
+    right:0;
+    top:100%;
+    bottom: inherit;
+    background: #46beaa;
+}
+
+section.treinamentos .bons__treinamenentos.verde h4:after {
+    right: 100%;
+    left: inherit;
+    background: #46beaa;
+}
+
+.plano__desenvolvimento {
+    padding: 90px 0;
+}
+
+.title__gaps {
+    display: table;
+    width: 100%;
+}
+.title__gaps h2 {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 0px;
+}
+
+.title__quantitativo {
+    background: #46beaa;
+    display: table;
+    width: 100%;
+}
+
+.title__quantitativo h2 {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    color:#fff;
+    margin-top: -12px;
+}
+
+section.rh {
+    background: #46beaa;
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+
+section.rh .seta {
+    margin: 30px auto;
+    display: block;
+}
+
+section.rh h2 {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 300;
+    color:#fff;
+    margin-bottom: 60px;
+}
+
+section.rh .rh__content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+    align-items: center;
+    padding-bottom: 60px;
+    color:#fff;
+}
+
+section.rh .rh__content h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+section.rh .rh__content p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+}
