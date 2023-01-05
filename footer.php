@@ -151,7 +151,7 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/main.js?v=4.7"></script>
 		<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/b57bc3a6-ff34-4e09-aed6-21c1227559c0-loader.js" ></script>
 		<!-- GRUNT LIVERELOAD -->
-		<script src="//localhost:35729/livereload.js"></script>
+		<script src="https://kit.fontawesome.com/953cbeec6b.js" crossorigin="anonymous"></script>
 		<?php wp_footer();?>
 	</body>
 </html>
