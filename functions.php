@@ -491,4 +491,12 @@ function enqueue_style_header() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_style_header', PHP_INT_MAX);
 
+
+
+/* Page b2b */
+function enqueue_b2b() {
+  wp_enqueue_style('page-b2b', get_template_directory_uri() . '/assets/dist/css/page-b2b.css');
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_b2b');
+
 ?>
