@@ -2,6 +2,11 @@
     font-family: "Vinila", sans-serif !important;
 }
 
+body.page-template-page-b2b {
+    color:#000;
+}
+
+
 /* Header */
 section.header__b2b {
     background: #ffff00;
@@ -31,6 +36,7 @@ section.header__b2b h2 {
     text-transform: uppercase;
     line-height: 100%;
     font-weight: 300;
+    color:#000;
 }
 
 section.header__b2b h2 strong {
@@ -52,6 +58,7 @@ section.header__b2b .header__right {
 
 section.header__b2b .header__right h2 {
     text-align: right;
+    color:#000
 }
 
 section.header__b2b .header__cta a {
@@ -74,6 +81,7 @@ section.header__b2b .header__last h2 {
     line-height: 43px;
     position: relative;
     margin-bottom: -3px;
+    color:#000
 }
 
 
@@ -462,7 +470,7 @@ section.disc__self ul {
 
 section.disc__self ul li {
     margin-bottom: 30px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 section.disc__self .self__container ul {
@@ -581,7 +589,7 @@ section.mensure h5 {
     font-size: 26px;
     text-transform: uppercase;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 30px;
 }
 
@@ -1025,6 +1033,11 @@ section.clientes a.active img {
 }
 
 
+.footer-content--container ul li a {
+    font-weight: 300;
+}
+
+
 /* Responsivo */
 @media (max-width:768px) {
 
@@ -1298,7 +1311,21 @@ section.clientes a.active img {
     }
 
     section.mensure__two .number p, section.clientes h2 {
-        font-size: 22px;
+        font-size: 28px;
+    }
+
+    section.mensure__two .number p br {
+        display: none;
+    }
+
+    section.mensure__two .number h3 {
+        font-size: 200px;
+        line-height: 140px;
+        top: -18px;
+    }
+
+    section.mensure__two .number.roxo h3 {
+        left: 13px;
     }
     
     section.cta .box__cta .content h2 {
