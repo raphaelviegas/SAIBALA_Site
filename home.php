@@ -93,7 +93,7 @@
 				<?php if( have_rows('destaques-rolagem-04') ): ?>
 					<?php while( have_rows('destaques-rolagem-04') ): the_row(); ?>
 						<li class="wow fadeIn">
-							<?php // echo get_sub_field('svg');?>
+							<?php echo get_sub_field('svg');?>
 							<h2 class="font-<?php if( get_row_index() === 1 ):?>green<?php elseif( get_row_index() === 2 ):?>blue<?php elseif( get_row_index() === 3 ):?>purple<?php elseif( get_row_index() === 4 ):?>green<?php elseif( get_row_index() === 5 ):?>blue<?php elseif( get_row_index() === 6 ):?>purple<?php endif; ?>">
 								<?php echo get_sub_field('texto');?>	
 							</h2>
