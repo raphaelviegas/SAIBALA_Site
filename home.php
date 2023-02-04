@@ -93,7 +93,7 @@
 				<?php if( have_rows('destaques-rolagem-04') ): ?>
 					<?php while( have_rows('destaques-rolagem-04') ): the_row(); ?>
 						<li class="wow fadeIn">
-							<?php echo get_sub_field('svg');?>
+							<?php // echo get_sub_field('svg');?>
 							<h2 class="font-<?php if( get_row_index() === 1 ):?>green<?php elseif( get_row_index() === 2 ):?>blue<?php elseif( get_row_index() === 3 ):?>purple<?php elseif( get_row_index() === 4 ):?>green<?php elseif( get_row_index() === 5 ):?>blue<?php elseif( get_row_index() === 6 ):?>purple<?php endif; ?>">
 								<?php echo get_sub_field('texto');?>	
 							</h2>
@@ -126,8 +126,10 @@
 							<div class="col-6 col-md-6 left">
 								<?php echo get_field('titulo-mural'); ?>
 								<div class="thumb yellow">
-									<img class="desk um" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
-									<img class="mobile um" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
+									<a href="<?php echo get_sub_field('mural-link'); ?>">
+										<img class="desk um" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
+										<img class="mobile um" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
+									</a>
 									<div class="box yellow wow fadeIn">
 										<a href="<?php echo get_sub_field('mural-link'); ?>" class="bg-yellow">
 											<?php echo get_sub_field('mural-texto'); ?>
@@ -149,8 +151,10 @@
 						<?php if( get_row_index() === 2):?>
 							<div class="col-6 col-md-6 right">
 								<div class="thumb blue">
-									<img class="desk dois" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
-									<img class="mobile dois" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
+									<a href="<?php echo get_sub_field('mural-link'); ?>">
+										<img class="desk dois" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
+										<img class="mobile dois" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
+									</a>
 									<div class="box blue wow fadeIn" data-wow-delay=".5s">
 										<a href="<?php echo get_sub_field('mural-link'); ?>" class="bg-blue">
 											<?php echo get_sub_field('mural-texto'); ?>
@@ -166,12 +170,14 @@
 											</span>
 										</a>
 									</div>
-								</div>									
+								</div>							
 						<?php endif; ?>
 						<?php if( get_row_index() === 3):?>
-								<div class="thumb purple">
+							<div class="thumb purple">
+								<a href="<?php echo get_sub_field('mural-link'); ?>">
 									<img class="desk tres" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
 									<img class="mobile tres" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
+								</a>
 									<div class="box purple wow fadeIn">
 										<a href="<?php echo get_sub_field('mural-link'); ?>" class="bg-purple">
 											<?php echo get_sub_field('mural-texto'); ?>
@@ -193,8 +199,10 @@
 						<?php if( get_row_index() === 4):?>
 							<div class="col-12 col-md-12">
 								<div class="thumb green">
+								<a href="<?php echo get_sub_field('mural-link'); ?>">
 									<img class="desk quatro" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
 									<img class="mobile quatro" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
+								</a>
 									<div class="box green wow fadeIn">
 										<a href="<?php echo get_sub_field('mural-link'); ?>" class="bg-green">
 											<?php echo get_sub_field('mural-texto'); ?>
