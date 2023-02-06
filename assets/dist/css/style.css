@@ -7120,3 +7120,7 @@ div#pagarme-bank-slip-instructions {
 .woocommerce-account .ld-profile-edit-link {
   display: none !important;
 }
+
+body.woocommerce-checkout .woocommerce-message{
+  display: none;
+}
