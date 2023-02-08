@@ -184,21 +184,99 @@ get_header('shop');
             <div class="mensure__assessments-content">
                <h5>TRABALHAMOS COM 24 <br>TIPOS DE ASSESSMENTS.</h5>
                <div class="assessments__slider">
-                  <?php for ($i = 0; $i <= 5; $i++): ?>
-                  <div class="slider__item  <?php if ($i == 0): ?>active<?php endif; ?>" id="slider__<?= $i; ?>">
+                  
+                  <div class="slider__item active" id="slider__1">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-lideranca.bmp">Liderança 4.0</h6>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
                      </div>
                   </div>
-                  <?php endfor; ?>
-                  <div class="slider__nav">
-                     <img src="<?= get_template_directory_uri(); ?>/assets/img/next-slider.bmp">
-                     <img src="<?= get_template_directory_uri(); ?>/assets/img/prev-slider.bmp">
+
+                  <div class="slider__item" id="slider__2">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/profissional-futuro.jpg">Profissional do Futuro</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
                   </div>
+
+                  <div class="slider__item" id="slider__3">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/inteligencia-emocioal.jpg">Inteligência Emocional</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__4">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/empreendedorismo.jpg">Empreendedorismo</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__5">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/vendas.jpg">Vendas Consultivas</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__6">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/lideranca.jpg">Liderança em Vendas</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__7">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/agile.jpg">Agile</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__8">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/profissional.jpg">Profissional</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__9">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/lideranca-slide.jpg">Liderança</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__10">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/diversidade.jpg">Diversidade</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__11">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/resiliencia.jpg">Resiliência</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__item" id="slider__12">
+                     <div class="slider__box">
+                        <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/conexao-bem-estar.jpg">Conexão Bem-estar</h6>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                     </div>
+                  </div>
+
+                  <div class="slider__nav">
+                     <img src="<?= get_template_directory_uri(); ?>/assets/img/next-slider.bmp" class="action__slider" id="prev">
+                     <img src="<?= get_template_directory_uri(); ?>/assets/img/prev-slider.bmp" class="action__slider" id="next">
+                  </div>
+
                   <div class="slider__dots">
-                     <?php for ($i = 0; $i <= 5; $i++): ?>
-                        <div class="dot <?php if ($i == 0): ?>active<?php endif; ?>" id="slider__<?= $i; ?>"></div>
+                     <?php for ($i = 1; $i <= 12; $i++): ?>
+                        <div class="slider__dot <?php if ($i == 1): ?>active<?php endif; ?>" id="dot__<?= $i; ?>"></div>
                      <?php endfor; ?>
                   </div>
                </div>
@@ -208,117 +286,173 @@ get_header('shop');
             <h3>COMPETÊNCIAS</h3>
 
             <ul class="competencias__list">
-               <li class="active">
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__1 slide__2 slide__3 slide__7 slide__8 slide__11 active">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/adaptabilidade.svg" alt=""></div>
                   <p>Adaptabilidade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__3">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/autoconhecimento.svg" alt=""></div>
                   <p>Autoconhecimento</p>   
                </li>
-               <li  class="active">
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-interatividade.bmp" alt=""></div>
+               <li class="slide__1 slide__7 active">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/interatividade.svg" alt=""></div>
                   <p>Interatividade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__2 slide__2">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/inovacao-empreendedorismo.svg" alt=""></div>
                   <p>Inovação e Empreendedorismo</p>   
                </li>
-               <li class="active">
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-empatia.bmp" alt=""></div>
+               <li class="slide__1 slide__2 slide__3 slide__8 slide__10 active">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/empatia.svg" alt=""></div>
                   <p>Empatia</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__2 slide__8">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/conectividade.svg" alt=""></div>
                   <p>Conectividade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/solucionar-problemas.svg" alt=""></div>
                   <p>Solucionar Problemas</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__7">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/afetividade.svg" alt=""></div>
                   <p>Afetividade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__9">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/autodominio.svg" alt=""></div>
                   <p>Autodomínio</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__2">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/mindset-critico-digital.svg" alt=""></div>
                   <p>Mindset Crítico e Digital</p>   
                </li>
-               <li class="active">
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-relacionamento.bmp" alt=""></div>
+               <li class="slide__1 slide__12 active">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/relacionamento-conectivo.svg" alt=""></div>
                   <p>Relacionamento Conectivo</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__3 slide__4 slide__5">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/trabalho-equipe.svg" alt=""></div>
                   <p>Trabalho em Equipe</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__4">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/resiliencia.svg" alt=""></div>
                   <p>Resiliência</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__4">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/relacionamento-interpessoal.svg" alt=""></div>
                   <p>Relacionamento Interpessoal</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__4 slide__6">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/lideranca.svg" alt=""></div>
                   <p>Liderança</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__7 slide__11">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/motivacao.svg" alt=""></div>
                   <p>Motivação</p>   
                </li>
-               <li class="active">
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-mindset.bmp" alt=""></div>
+               <li class="slide__1 active">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/mindset-inovador.svg" alt=""></div>
                   <p>Mindset Inovador</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-mindset.bmp" alt=""></div>
+               <li class="slide__7">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/geracao-valor.svg" alt=""></div>
                   <p>Geração de Valor</p>   
                </li>
-               <li class="active">
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
-                  <p>Solucionar Problemas</p>   
+               <li class="slide__12">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/vitalidade.svg" alt=""></div>
+                  <p>Vitalidade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
-                  <p>Simpatia</p>   
+               <li class="slide__7">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/simplicidade.svg" alt=""></div>
+                  <p>Simplicidade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__9">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/percepcao.svg" alt=""></div>
                   <p>Percepção</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__9">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/produtividade.svg" alt=""></div>
                   <p>Produtividade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
-                  <p>Adaptabilidade</p>   
+               <li class="slide__1 slide__2 slide__4 slide__5 slide__8 slide__11 active">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/criatividade.svg" alt=""></div>
+                  <p>Criatividade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__10">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/proatividade.svg" alt=""></div>
                   <p>Proatividade</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__11">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/inteligencia-emocional.svg" alt=""></div>
                   <p>Inteligência Emocional</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__3 slide__5 slide__11">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/visao-sistemica.svg" alt=""></div>
                   <p>Visão Sistemica</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__4">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/aceitacao-de-risco.svg" alt=""></div>
                   <p>Aceitação de Riscos</p>   
                </li>
-               <li>
-                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-adaptabilidade.bmp" alt=""></div>
+               <li class="slide__9">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/influencia.svg" alt=""></div>
                   <p>Influência</p>   
+               </li>
+               <li class="slide__6">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/estabelecer-prioridades.svg" alt=""></div>
+                  <p>Estabelecer Prioridades</p>   
+               </li>
+               <li>
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/relacionamento.svg" alt=""></div>
+                  <p>Relacionamento</p>   
+               </li>
+               <li class="slide__5 slide__8">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/foco-cliente.svg" alt=""></div>
+                  <p>Foco no Cliente</p>   
+               </li>
+               <li class="slide__5 slide__11">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/foco-resultado.svg" alt=""></div>
+                  <p>Foco no Resultado</p>   
+               </li>
+               <li class="slide__5">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/negociacao.svg" alt=""></div>
+                  <p>Negociação</p>   
+               </li>
+               <li class="slide__6">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/visao-estrategia.svg" alt=""></div>
+                  <p>Visão Estratégica</p>   
+               </li>
+               <li class="slide__6">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/visao-mercadologica.svg" alt=""></div>
+                  <p>Visão Mercadológica</p>   
+               </li>
+               <li class="slide__1 slide__3 slide__6 active">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/solucionar-problemas.svg" alt=""></div>
+                  <p>Solucionar Problemas</p>   
+               </li> 
+               <li class="slide__6 slide__10">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/compromentimento.svg" alt=""></div>
+                  <p>Compromentimento</p>   
+               </li>
+               <li class="slide__10">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/autoconsciencia.svg" alt=""></div>
+                  <p>Autoconsciência</p>   
+               </li>
+               <li class="slide__12">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/emocao-positiva.svg" alt=""></div>
+                  <p>Emoção Positiva</p>   
+               </li>
+               <li class="slide__12">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/realizacao.svg" alt=""></div>
+                  <p>Realização</p>   
+               </li>
+               <li class="slide__12">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/engajamento.svg" alt=""></div>
+                  <p>Engajamento</p>   
+               </li>
+               <li class="slide__12">
+                  <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/comp/proposito.svg" alt=""></div>
+                  <p>Propósito</p>   
                </li>
             </ul>
          </div>
