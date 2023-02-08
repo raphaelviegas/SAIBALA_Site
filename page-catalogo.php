@@ -71,50 +71,52 @@ endif;
 <div id="catalogo">
   <section class="catalogo__hero">
     <?php $hero = get_field('hero_item'); ?>
-    <div class="catalogo__hero-bg-01" style="background-image:url(<?php echo $hero_image_01;?>)">
-
-      <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
-
-      <div class="catalogo__hero-bg-01--content">
-        <h2><?php echo get_field('hero_01_postit_title');?></h2>
-        <p><?php echo get_field('hero_01_postit_subtitle');?></p>
-        <div class="catalogo__hero-bg-01--content-link">
-          <a href="<?php echo get_field('hero_01_postit_link');?>">ver mais </a>
-          <div class="arrow"></div>
-        </div>
-      </div>
- 
-    </div>
     <div class="catalogo__hero-wrapper">
+    <a href="<?php echo get_field('hero_01_postit_link');?>" class="catalogo__hero-bg-01">
+      <div class="catalogo__hero-bg-01" style="background-image:url(<?php echo $hero_image_01;?>)">
+      
+        <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
+        
+        <div class="catalogo__hero-bg-01--content">
+          <h2><?php echo get_field('hero_01_postit_title');?></h2>
+          <p><?php echo get_field('hero_01_postit_subtitle');?></p>
+          <div class="catalogo__hero-bg-01--content-link">
+            ver mais 
+            <div class="arrow"></div>
+          </div>
+        </div>
+        
+      </div>
+    </a>
+    </div>
+   
+    <div class="catalogo__hero-wrapper">
+    <a href="<?php echo get_field('hero_02_postit_link');?>" class="catalogo__hero-bg-02">
     <div class="catalogo__hero-bg-02" style="background-image:url(<?php echo $hero_image_02;?>)">
-
       <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
-
       <div class="catalogo__hero-bg-02--content">
       <h2><?php echo get_field('hero_02_postit_title');?></h2>
         <p><?php echo get_field('hero_02_postit_subtitle');?></p>
         <div class="catalogo__hero-bg-02--content-link">
-          <a href="<?php echo get_field('hero_02_postit_link');?>">ver mais </a>
+          ver mais 
           <div class="arrow"></div>
         </div>
-        
       </div>
     </div>
-    <div class="catalogo__hero-bg-03" style="background-image:url(<?php echo $hero_image_03;?>)">
-
-      <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>  
-
-      <div class="catalogo__hero-bg-03--content">
-      <h2><?php echo get_field('hero_03_postit_title');?></h2>
-        <p><?php echo get_field('hero_03_postit_subtitle');?></p>
-        <div class="catalogo__hero-bg-03--content-link">
-          <a href="<?php echo get_field('hero_03_postit_link');?>">ver mais </a>
-          <div class="arrow"></div>
+    </a>
+    <a href="<?php echo get_field('hero_03_postit_link');?>" class="catalogo__hero-bg-03">
+      <div class="catalogo__hero-bg-03" style="background-image:url(<?php echo $hero_image_03;?>)">
+        <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>  
+        <div class="catalogo__hero-bg-03--content">
+          <h2><?php echo get_field('hero_03_postit_title');?></h2>
+          <p><?php echo get_field('hero_03_postit_subtitle');?></p>
+          <div class="catalogo__hero-bg-03--content-link">
+            ver mais 
+            <div class="arrow"></div>
+          </div>
         </div>
-        
       </div>
-
-    </div>
+    </a>
     </div>
 
   </section>
