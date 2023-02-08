@@ -286,3 +286,95 @@ window.onload = function() {
 
     }
 };
+
+
+// Dots Nav 
+function dotsNav(action) {
+    let $dots = $('.assessments__slider .slider__dot');
+    if ($dots) {
+        // Geral 
+        let $count = 0;
+        let $atual = 1;
+
+        $($dots).each(function()  {
+            $count++;
+        })
+
+        // Ação
+        $($dots).each(function()  {
+            if ($(this).hasClass('active')) {
+                $atual = parseInt($(this).attr('id').replace('dot__',''));                 
+            }
+        })
+        
+        // Next 
+        if (action == 'next' && $atual < $count) {
+            $proximo = $atual + 1;
+            $('#dot__'+$atual).removeClass('active');
+            $('#dot__'+$proximo).addClass('active');
+            $atual = $atual + 1;
+        }
+
+        // Prev 
+        if (action == 'prev' && $atual > 1) {
+            $proximo = $atual - 1;
+            $('#dot__'+$atual).removeClass('active');
+            $('#dot__'+$proximo).addClass('active');
+            $atual = $atual - 1;
+        }
+    }
+}
+
+// Navegação B2B
+function navSlide(action) {
+    let $sliders = $('.assessments__slider .slider__item');
+
+    if ($sliders) {
+        // Geral 
+        let $count = 0;
+        let $atual = 1;
+
+        $($sliders).each(function() {
+            $count++;
+        })
+
+        // Ação
+        $($sliders).each(function()  {
+            if ($(this).hasClass('active')) {
+                $atual = parseInt($(this).attr('id').replace('slider__',''));                 
+            }
+        })
+        
+        // Next 
+        if (action == 'next' && $atual < $count) {
+            $proximo = $atual + 1;
+            $('#slider__'+$atual).removeClass('active');
+            $('#slider__'+$proximo).addClass('active');
+            $atual = $atual + 1;
+            dotsNav('next');
+        }
+
+        // Prev 
+        if (action == 'prev' && $atual > 1) {
+            $proximo = $atual - 1;
+            $('#slider__'+$atual).removeClass('active');
+            $('#slider__'+$proximo).addClass('active');
+            $atual = $atual - 1;
+            dotsNav('prev');
+        }
+
+        openCards($atual);
+    }
+}
+
+function openCards(id) {
+    $('.competencias__list li').each(function() {
+        $('.competencias__list li').removeClass('active');
+        $('.competencias__list li.slide__'+id).addClass('active');
+    })
+}
+
+$('.action__slider').click(function() {
+    let id = $(this).attr('id');
+    navSlide(id);
+})
