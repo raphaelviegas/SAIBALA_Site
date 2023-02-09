@@ -67,7 +67,6 @@ endif;
 
 ?>
 
-
 <div id="catalogo">
   <section class="catalogo__hero">
     <?php $hero = get_field('hero_item'); ?>
