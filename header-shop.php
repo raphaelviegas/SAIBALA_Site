@@ -58,14 +58,14 @@
 					</div>
 
 					<div class="col-6 col-md-5 col-lg-4 d-flex d-lg-flex align-center justify-content-end">
-						<a class='px-2 d-flex align-center button-cart-expansive mobile-d-none' href="#cart">	
+						<a class='px-2 d-flex align-center button-cart-expansive mobile-d-none' href="https://saibala.com.br/carrinho/">	
 							<span class="text-cart-expansive">
 								<i class='fal fa-shopping-cart'></i>
 								Carrinho
 							</span>
 						</a>
 						<a class='px-2 py-1 btn-exp d-flex align-center btn-login' href="#myaccount">Entrar</a>
-						<a class='px-2 align-center d-mobile-flex mt-2' href="#cart">	
+						<a class='px-2 align-center d-mobile-flex mt-2' href="https://saibala.com.br/carrinho/">	
 							<i class='fal fa-shopping-cart'></i>
 						</a>
 						<a class='px-2 py-1 btn-exp d-flex align-center btn-black mobile-d-none' href="#login">Cadastre-se</a>
