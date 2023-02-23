@@ -276,12 +276,28 @@ $(document).ready(function() {
       const menuHeader = mobileMenu.find("#menu-header");
       menuHeader.prepend(newMenuItem);
       const extraButtons = $("<div>").addClass("extra-buttons");
-      const button1 = $("<a class='mobile-only' href='#myaccount'>").text("Entrar");
-      const button2 = $("<a class='mobile-only' href='#login'>").text("Cadastre-se");
+      const button1 = $("<a class='mobile-only' href='#'>").text("Entrar");
+      const button2 = $("<a class='mobile-only' href='#'>").text("Cadastre-se");
       extraButtons.append(button1, button2);
       mobileMenu.children().first().after(extraButtons);
+  
+      button1.click(function(event) {
+        event.preventDefault(); 
+        $('body').trigger('wc_fragments_refreshed'); 
+        $('a[href="#myaccount"]').first().click(); 
+        $('#collapseExample').collapse('hide'); 
+      });
+      button2.click(function(event) {
+        event.preventDefault(); 
+        $('body').trigger('wc_fragments_refreshed'); 
+        $('a[href="#login"]').first().click(); 
+        $('#collapseExample').collapse('hide');
+      });
+      
     }
-});
+  });
+  
+  
 
 window.onload = function() {
     
