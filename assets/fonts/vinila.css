@@ -106,3 +106,111 @@
     font-display: swap;
 }
 
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-BlackObl.woff2') format('woff2'),
+        url('VinilaCompressed-BlackObl.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-Black.woff2') format('woff2'),
+        url('VinilaCompressed-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-BoldObl.woff2') format('woff2'),
+        url('VinilaCompressed-BoldObl.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-ExtraBoldObl.woff2') format('woff2'),
+        url('VinilaCompressed-ExtraBoldObl.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-LightObl.woff2') format('woff2'),
+        url('VinilaCompressed-LightObl.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-Regular.woff2') format('woff2'),
+        url('VinilaCompressed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-Bold.woff2') format('woff2'),
+        url('VinilaCompressed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-ExtraBold.woff2') format('woff2'),
+        url('VinilaCompressed-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-Obl.woff2') format('woff2'),
+        url('VinilaCompressed-Obl.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-Light.woff2') format('woff2'),
+        url('VinilaCompressed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-Thin.woff2') format('woff2'),
+        url('VinilaCompressed-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vinila Compressed';
+    src: url('VinilaCompressed-ThinObl.woff2') format('woff2'),
+        url('VinilaCompressed-ThinObl.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
