@@ -32,17 +32,21 @@ section.header__b2b img.seta {
 }
 
 section.header__b2b h2 {
-    font-size: 42px;
+    font-family: 'Vinila Compressed', serif !important;
+    font-size: 62px;
     text-transform: uppercase;
     line-height: 100%;
     font-weight: 300;
     color:#000;
 }
 
+.header__b2b .header__left h2 {
+    margin-top: -62px;
+}
+
 section.header__b2b h2 strong {
     font-family: 'Vinila Compressed', serif !important;
     font-weight: 900;
-    font-size: 72px;
 }
 
 section.header__b2b .header__left {
@@ -82,7 +86,6 @@ section.header__b2b .header__last {
 section.header__b2b .header__last h2 {
     line-height: 43px;
     position: relative;
-    margin-bottom: -3px;
     color:#000
 }
 
@@ -1104,7 +1107,7 @@ section.clientes a.active img {
     }
 
     section.header__b2b h2, section.header__b2b h2 strong {
-        font-size: 30px;
+        font-size: 42px;
     }
 
     section.header__b2b .header__cta a {
@@ -1154,7 +1157,7 @@ section.clientes a.active img {
     .causas__b2b li h4:before {
         width: 90px;
     }
-
+    section.header__b2b h2 strong
     section.treinamentos .container {
         width: 90%;
     }
@@ -1404,5 +1407,10 @@ section.clientes a.active img {
     section.header__b2b .header__last h2 strong {
         font-weight: 600;
         font-size: 48px !important;
+    }
+
+        
+    .assessments__slider .slider__box h6 {
+        font-size: 20px;
     }
 }
