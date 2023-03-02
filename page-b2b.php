@@ -188,84 +188,84 @@ get_header('shop');
                   <div class="slider__item active" id="slider__1">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-lideranca.bmp">Liderança 4.0</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>As mudanças de paradigma trazidas pela revolução 4.0 exigem que as empresas reestruturem suas equipes e desenvolva suas lideranças para um novo grupo de competências. Esse assessment mapeia as principais competências dos lideres do futuro: criatividade, adaptabilidade, relacionamento conectivo, capacidade de resolver problemas complexos, miindset inovador e empatia.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__2">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/profissional-futuro.jpg">Profissional do Futuro</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>O assessment faz o mapeamento de seis softskills essenciais para profissionais que desejam lidar com assertividade com as novas demandas de um mercado global inovador, disruptivo e digital. São elas: Conectividade, Adaptabilidade, Foco no Cliente e Empatia, Inovação e Empreendedorismo, Criatividade e Mindset Crítico e Digital.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__3">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/inteligencia-emocioal.jpg">Inteligência Emocional</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>Sem a capacidade de entender o outro, as próprias reações e atitudes e a forma como pessoas e organizações se relacionam, torna-se extremamente difícil solucionar problemas, entender o mercado e suas complexidades e atingir seus objetivos. O assessment faz o mapeamento de seis softskills essenciais para desenvolver a inteligência emocional e tornar mais assertivas as suas relações interpessoais e suas reações a eventos incertos deste mercado altamente volátil: Adaptabilidade, Autoconhecimento, Empatia, Solucionar Problemas, Trabalho em Equipe e Visão Sistêmica.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__4">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/empreendedorismo.jpg">Empreendedorismo</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>Ter um negócio não é fácil e, além de conhecimentos técnicos sobre a área de atuação do empreendedor, requer competências que o ajudem a lidar com problemas e atingir aquilo que os clientes desejam, para assim conquistar o seu mercado. O assessment mapeia seis softskills necessárias para o sucesso no complexo e desafiador ambiente de negócios brasileiro: Aceitação de Riscos, Criatividade, Liderança, Relacionamento Interpessoal, Resiliência e Trabalho em Equipe.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__5">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/vendas.jpg">Vendas Consultivas</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>O assessment mapeia seis softskills essenciais para o sucesso em uma carreira em vendas: Criatividade, Foco no Cliente, Foco no Resultado, Negociação, Trabalho em Equipe e Visão Sistêmica. Com ele, é possível conhecer oportunidades de desenvolvimento de competências e potencializar sua carreira em vendas com processos de aprendizado e crescimento contínuo</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__6">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/lideranca.jpg">Liderança em Vendas</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>O assessment mapeia seis seis softskills essenciais para líderes de equipes de vendas de alto rendimento: Comprometimento, Estabelecer Prioridades, Liderança, Solucionar Problemas, Visão Estratégica e Visão Mercadológica.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__7">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/agile.jpg">Agile</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>O assessment mensura se os colaboradores possuem softskills adequadas e adotam um mindset e as práticas propostas por metodologias ágeis de desenvolvimento de projetos. Mapaia-se seis competências que seguem os valores do Manifesto Ágil e englobam comportamentos necessários no mundo ágil: Adaptabilidade, Efetividade, Geração de Valor, Interatividade, Motivação e Simplicidade.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__8">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/profissional.jpg">Profissional</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>O assessment mapeia as competências básicas essenciais para profissionais que desejam seguir carreiras em diversos níveis e segmentos. Com ele, o usuário conhecerá melhor o seu nível de dominância de softskills e poderá se desenvolver profissionalmente e conquistar mais espaço no mercado de trabalho, com maior assertividade em suas ações e entregas.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__9">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/lideranca-slide.jpg">Liderança</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>O assessment mapeará  o seu nível de dominância de softskills e poderá se desenvolver profissionalmente e conquistar mais espaço no mercado de trabalho, com maior assertividade em suas ações, entregas e no gerenciamento de sua equipe.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__10">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/diversidade.jpg">Diversidade</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>O assessment ajudará a conhecer melhor o nível de dominância de softskills relacionadas à área de Diversidade & Inclusão de cada profissional de sua empresa e receberá indicações de ações corretivas para a promoção da diversidade na organização.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__11">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/resiliencia.jpg">Resiliência</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>É uma ferramenta que realiza o mapeamento de competências essenciais para o desenvolvimento e fortalecimento de um mindset resiliente em profissionais e organizações de qualquer segmento.</p>
                      </div>
                   </div>
 
                   <div class="slider__item" id="slider__12">
                      <div class="slider__box">
                         <h6><img src="<?= get_template_directory_uri(); ?>/assets/img/conexao-bem-estar.jpg">Conexão Bem-estar</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                        <p>Com base em estudos e teorias da Psicologia Positiva, criadas por autores como Martin Seligman, Mihaly Csikszentmihalyi e Tal Ben-Shahar, ele permite que o usuário conheça melhor o seu nível de dominância de softskills da área do bem-estar e se desenvolva, buscando a felicidade e a realização de seus propósitos por meio de ações práticas.</p>
                      </div>
                   </div>
 
