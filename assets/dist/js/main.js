@@ -269,6 +269,29 @@ var base = function () {
 
 $(document).ready(function() {
     base.init();
+    const mobileMenu = $(".menu-header-container");
+    if (mobileMenu.length) {
+      const newMenuItem = $("<li>").addClass("menu-item menu-item-type-post_type menu-item-object-page menu-item-78").html("<a class='mobile-only' href='#'>Carrinho</a>");
+      const menuHeader = mobileMenu.find("#menu-header");
+      menuHeader.prepend(newMenuItem);
+      const extraButtons = $("<div>").addClass("extra-buttons");
+      const button1 = $("<a class='mobile-only' href='#'>").text("Entrar");
+      const button2 = $("<a class='mobile-only' href='#'>").text("Cadastre-se");
+      extraButtons.append(button1, button2);
+      mobileMenu.children().first().after(extraButtons);
+      button1.click(function(event) {
+        event.preventDefault(); 
+        $('body').trigger('wc_fragments_refreshed'); 
+        $('a[href="#myaccount"]').first().click(); 
+        $('#collapseExample').collapse('hide'); 
+      });
+      button2.click(function(event) {
+        event.preventDefault(); 
+        $('body').trigger('wc_fragments_refreshed'); 
+        $('a[href="#login"]').first().click(); 
+        $('#collapseExample').collapse('hide');
+      });
+    }
 });
 
 window.onload = function() {
