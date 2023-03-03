@@ -7389,3 +7389,7 @@ body.woocommerce-checkout .woocommerce-message{
     background-color: #000;
     transform: translateY(-50%);
   }
+
+  .woocommerce .emptyCart {
+    padding-top: 150px;
+  }
