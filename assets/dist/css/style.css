@@ -575,6 +575,12 @@ header.black .logo {
   .mobile {
     display: block;
   }
+  .d-mobile-flex{
+    display: flex !important;
+  }
+    .d-mobile-flex .fa-shopping-cart{
+      position:revert;
+    }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .footer-wrapper {
@@ -591,9 +597,27 @@ header.black .logo {
     padding: 75px 0;
   }
 }
+@media (min-width: 550px){
+  .mobile-only{
+    display: none;
+  }
+}
+@media (min-width: 550px) and (max-width: 615px) {
+  .btn-black {
+    width: 170px !important;
+  }
+}
+@media (min-width: 616px) and (max-width: 992px) {
+  .btn-black {
+    width: 112px !important;
+  }
+}
 @media (min-width: 550px) and (max-width: 992px) {
   header .col-md-3.col-5 {
     padding: 0 30px;
+  }
+  .button-cart-expansive {
+    width: 103px !important;
   }
 }
 @media (min-width: 992px) {
@@ -632,6 +656,21 @@ header.black .logo {
   }
   .footer-content--container:nth-child(1) {
     margin-right: 20px;
+  }
+  .btn-login {
+    display: none;
+  }
+  .btn-black {
+    display: none;
+  }
+  .button-cart-expansive {
+    display: none;
+  }
+  .mobile-only{
+    display: inline-block;
+  }
+  .mobile-d-none{
+    display: none !important; 
   }
 }
 
@@ -941,7 +980,7 @@ header.black .logo {
   }
 }
 .catalogo__hero-bg-01 {
-  width: 50%;
+  width: 100%;
   height: 100%;
   position: relative;
   background-repeat: no-repeat;
@@ -952,8 +991,6 @@ header.black .logo {
   .catalogo__hero-bg-01 {
     width: 100%;
     height: 100%;
-    min-height: 436px;
-    max-height: 436px;
   }
 }
 .catalogo__hero-bg-01--content {
@@ -7124,3 +7161,236 @@ div#pagarme-bank-slip-instructions {
 body.woocommerce-checkout .woocommerce-message{
   display: none;
 }
+
+.woocommerce .emptyCart {
+  padding-top: 150px;
+}
+
+/*HEADER*/
+.button-cart-expansive {
+  background-color: transparent;
+  color: black;
+  border: 0px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  width: 165px;
+  height: 31px;
+}
+
+.button-cart-expansive:hover {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.text-cart-expansive {
+  position: absolute;
+  left: 100%;
+  white-space: nowrap;
+  background-color: #000;
+  color: #000;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  padding: 8px 10px 0 24px;
+  font-size: 15px;
+  margin: -3px 0 0 0;
+}
+.fa-shopping-cart {
+  position: absolute;
+  left: -24px;
+  top: 10px;
+}
+.button-cart-expansive:hover .text-cart-expansive {
+  left: 6px;
+  color: white;
+}
+
+.button-cart-expansive:hover .fa-shopping-cart {
+  left: 0;
+  color: white;
+}
+
+.btn-black{
+  font-size: 15px;
+  width: 149px;
+  background-color: #000;
+  color: #fff;
+  height: 31px;
+  margin-right: 10px;
+}
+  .btn-black:hover{
+    color: #fff;
+  }
+
+.extra-buttons{
+  display: flex;
+  flex-direction: column;
+}
+  .extra-buttons .mobile-only:nth-child(1){
+    align-self: center;
+    border: 1px solid #000;
+    padding: 8px 45px;
+    color: #000;
+    margin-bottom: 15px;
+  }
+  .extra-buttons .mobile-only:nth-child(2){
+    align-self: center;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 19px;
+    margin-bottom: 20px;
+  }
+  .d-mobile-flex{
+    display: none;
+  }
+
+
+/* Página de Acesso */
+.title-acesso-conta{
+  font-size: 110px;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-family: 'Vinila',sans-serif;
+  color: #000;
+  line-height: 110px;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+.form-acesso .form-group {
+  display: inline-flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+  .form-acesso form .form-group label{
+    font-size: 34px;
+    font-weight: 200;
+    text-transform: lowercase;
+    font-family: 'Vinila',sans-serif;
+    color: #000;
+    line-height: 34px;
+  }
+
+.form-acesso .form-control {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 8px;
+  border-radius: 0;
+  background: transparent;
+}
+
+.form-acesso .form-group.full-width {
+  width: 100%;
+}
+
+.form-acesso .form-group.half-width {
+  width: 49%;
+  margin: 0.4%;
+}
+
+.form-acesso a.back-home{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Vinila',sans-serif;
+  color: #000;
+  line-height: 20px;
+  margin-bottom: 50px;
+  font-style: italic;
+  text-decoration: none !important;
+  float: right;
+}
+
+.form-acesso form .checkbox-container {
+  display: grid;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  align-content: start;
+  line-height: 26px;
+}
+
+.form-acesso form .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form-acesso form .checkmark {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border:2px solid #000;
+}
+
+.form-acesso form .checkbox-container input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+.form-acesso form .checkbox-container .checkmark:after {
+  display: none;
+}
+
+.form-acesso a{
+  font-size: 19px;
+  font-weight: 200;
+  text-transform: lowercase;
+  font-family: 'Vinila',sans-serif;
+  color: #000;
+  line-height: 19px;
+  margin-bottom: 50px;
+  text-decoration: underline !important;
+  text-align: left;
+}
+
+
+  .btn-send-form {
+    position: relative;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    width: 470px;
+    text-align: left;
+    display: table;
+    font-family: 'Vinila',sans-serif;
+    margin: 40px auto 0;
+    height: 60px;
+  }
+
+  .arrow-btn-send-form {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 54px;
+    transform: translateY(-50%);
+  }
+
+  .arrow-btn-send-form:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -314px;
+    width: 333px;
+    height: 1px;
+    background-color: #000;
+    transform: translateY(-50%);
+  }

@@ -42,7 +42,10 @@
 		<header>
 			<div class="container-980">
 				<div class="row justify-content-between">
-					<div class="col-4 col-md-3 logo">
+					<div class="col-6 col-md-2 logo">
+						<a class='px-3 p-2 btn-exp d-flex align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+							<i class='fal fa-bars mobile'></i>
+						</a>
 						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.png"/></a>
 					</div>
 
@@ -54,23 +57,18 @@
 						?>
 					</div>
 
-					<div class="col-8 col-md-3 d-flex d-lg-flex align-center justify-content-end">
-						<a class='px-3 p-2 btn-exp d-flex align-center' href="#search"><i class='fal fa-search'></i></a>
-						<?php
-						if ( is_user_logged_in() ) {
-							?>
-							<a class='px-3 p-2 btn-exp d-flex align-center' href="#myaccount"><i class='fal fa-user'></i></a>
-							<?php
-						} else {
-							?>
-							<a class='px-3 p-2 btn-exp d-flex align-center' href="#login"><i class='fal fa-user'></i></a>
-							<?php
-						}
-						?>						
-						<a class='px-3 p-2 btn-exp d-flex align-center' href="#cart"><i class='fal fa-shopping-cart'></i></a>
-						<a class='px-3 p-2 btn-exp d-flex align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-							<i class='fal fa-bars mobile'></i>
+					<div class="col-6 col-md-5 col-lg-4 d-flex d-lg-flex align-center justify-content-end">
+						<a class='px-2 d-flex align-center button-cart-expansive mobile-d-none' href="https://saibala.com.br/carrinho/">
+							<span class="text-cart-expansive">
+								<i class='fal fa-shopping-cart'></i>
+								Carrinho
+							</span>
 						</a>
+						<a class='px-2 py-1 btn-exp d-flex align-center btn-login' href="#myaccount">Entrar</a>
+						<a class='px-2 align-center d-mobile-flex mt-2' href="https://saibala.com.br/carrinho/">	
+							<i class='fal fa-shopping-cart'></i>
+						</a>
+						<a class='px-2 py-1 btn-exp d-flex align-center btn-black mobile-d-none' href="#login">Cadastre-se</a>
 					</div>
 
 				</div>
