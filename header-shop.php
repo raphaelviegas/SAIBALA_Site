@@ -9,7 +9,7 @@
 			<meta charset="utf-8" />
 			<title><?php echo get_bloginfo( 'name' );?></title>
 			<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-			<meta content="<?php echo get_bloginfo( 'description' ); ?>" name="description" />
+			<meta content="A Saibalá é uma comunidade de criativos, um espaço coletivo, um ecossistema pra aprender fazendo, sempre com os melhores ;)" name="description" />
 			<!-- ================== BEGIN BASE CSS STYLE ================== -->
 			<link rel="preconnect" href="https://fonts.gstatic.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com">

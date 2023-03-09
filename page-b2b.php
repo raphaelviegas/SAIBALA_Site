@@ -12,7 +12,7 @@ get_header('shop');
          <h2>E crie <strong>planos de<br> desenvolvimento<br> assertivos</strong></h2>
       </div>
       <div class="header__cta">
-         <a href="#">Entre em contato</a>
+         <a href="mailto:contato@saibala.com.br">Entre em contato</a>
       </div>
       <div class="header__last">
          <h2><strong>Aprendizado direcionado<br> ao contexto real e prático<br> de cada colaborador.</strong></h2>
@@ -67,7 +67,7 @@ get_header('shop');
       </div>  
    </div>
    <div class="treinamentos__mapa">
-      <a href="#">Veja nosso mapa<br> de conteúdo</a>
+      <a href="https://saibala.com.br/catalogo/">Veja nosso mapa<br> de conteúdo</a>
    </div>
 
    <div class="bons__treinamenentos">
@@ -168,7 +168,7 @@ get_header('shop');
          <p>Nunca mais treinamentos inefetivos <br>
          Investimentos em T&D c/ resultados<br>
          comprováveis</p>
-         <a href="#">Entre em Contato</a>
+         <a href="mailto:contato@saibala.com.br">Entre em Contato</a>
       </div>
    </div>   
 </section>
@@ -489,8 +489,8 @@ get_header('shop');
                   <div class="content">
                      <div class="icone"><img src="<?= get_template_directory_uri(); ?>/assets/img/icone-empatia-analise.bmp" alt=""></div>
                      <div class="texto">
-                        <h6>Empatia</h6>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda laudantium iure et magni nam.  adipisicing elit. Assumenda laudantium iure et magni nam  adipisicing elit.</p>
+                        <h6>Cultura</h6>
+                        <p>Se você se interessa por cultura e tem vontade de saber mais sobre o processo de captação de recursos para projetos culturais, está no lugar certo.</p>
                      </div>
                   </div>
                </div>
@@ -498,12 +498,12 @@ get_header('shop');
             <img src="<?= get_template_directory_uri(); ?>/assets/img/seta-desenvolva.bmp" alt="">
             <div class="right">
                <h3>PROGRAMA <br>SELECIONADO</h3>
-               <div class="box" style="background-image:url(https://saibala.com.br/wp-content/uploads/2022/07/HERO_TecMudarmundo.jpg)">
+               <div class="box" style="background-image:url(https://saibala.com.br/wp-content/uploads/2021/04/1365x615_CaptacaoRecursos.png)">
                   <div class="content">
                      <div class="texto">
-                        <h6>Programa de Comunicação não violenta</h6>
-                        <p class="autor">Evarisco Costa</p>
-                        <a href="#">Ver mais</a>
+                        <h6>Captação de recursos</h6>
+                        <p class="autor">Daniele Torres</p>
+                        <a href="https://saibala.com.br/produto/captacao-de-recursos/">Ver mais</a>
                      </div>
                   </div>
                </div>
@@ -545,7 +545,7 @@ get_header('shop');
       <div class="box__cta">
          <div class="content">
             <h2>TORNE SEU TIME O MAIS <br>PREPARADO DO MERCADO</h2>
-            <a href="#">Faça uma consulta</a>
+            <a href="mailto:contato@saibala.com.br">Faça uma consulta</a>
          </div>
       </div>
    </div>
