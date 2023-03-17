@@ -1,5 +1,5 @@
 @media (min-width:998px) {
-    #major-publishing-actions {
+    body.post-type-product #major-publishing-actions {
         position: fixed;
         bottom: 0px;
         left: 160px;
