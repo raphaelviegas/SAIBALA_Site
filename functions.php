@@ -493,12 +493,22 @@ add_action('wp_enqueue_scripts', 'enqueue_style_header', PHP_INT_MAX);
 
 
 
-/* Page b2b */
-function enqueue_b2b() {
+/* LURA Scripts */
+function enqueue_lura_front() {
   if (is_page_template('page-b2b.php')) {
     wp_enqueue_style('page-b2b', get_template_directory_uri() . '/assets/dist/css/page-b2b.css');
   }  
+
+  if (is_singular('product')) {
+    wp_enqueue_style('single-cursos', get_template_directory_uri() . '/assets/dist/css/single-cursos.css');
+  }
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_b2b');
+add_action( 'wp_enqueue_scripts', 'enqueue_lura_front');
+
+
+function enqueue_lura_admin() {
+    wp_enqueue_style('admin-css', get_template_directory_uri() . '/assets/dist/css/painel-wordpress.css');
+}
+add_action( 'admin_enqueue_scripts', 'enqueue_lura_admin' );
 
 ?>

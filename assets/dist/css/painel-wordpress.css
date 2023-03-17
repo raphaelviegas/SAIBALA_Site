@@ -1,0 +1,12 @@
+@media (min-width:998px) {
+    #major-publishing-actions {
+        position: fixed;
+        bottom: 0px;
+        left: 160px;
+        z-index: 9999;
+        width: 100%;
+        width: calc(100% - 160px);
+        box-sizing: border-box;
+        padding: 15px;
+    }
+}

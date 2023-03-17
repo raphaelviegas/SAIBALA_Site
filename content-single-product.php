@@ -68,72 +68,68 @@ if(get_field('layout') == 'v2') { ?>
 	<p>comprando agora ganhe <span><?php echo $desconto?>%</span> de desconto</p>
 </section>
 
-<section class="single-header">
+
+<section class="intro__curso">
+	<?php the_post_thumbnail('full',['class'=>'background']); ?>
 	<div class="container">
-		<div class="content">
-			<h1><?php the_title() ?></h1>
-			<p><?php the_field('subtitulo') ?></p>
-			<?php 
-			if(get_field('vimeo_video_id')){ ?>
-			<a data-fslightbox="lightbox" href="#vimeo" class="lightbox-trigger d-md-none">Assista o video</a>
+		<h1><span><span><?= get_field('aprender_titulo'); ?></span></span></h1>
+		<p><?php the_field('subtitulo') ?></p>
+		<?php if(get_field('vimeo_video_id')){ ?>
+			<a data-fslightbox="lightbox" href="#vimeo" class="lightbox-trigger cta__video">Assista o trailer</a>
 			<div class="d-none">
-				<iframe
-					src="https://player.vimeo.com/video/<?php the_field('vimeo_video_id'); ?>"
-					id="vimeo"
-					width="1920px"
-					height="1080px"
-					frameBorder="0"
-					allow="autoplay; fullscreen"
-					allowFullScreen>
-				</iframe>
+				<iframe src="https://player.vimeo.com/video/<?php the_field('vimeo_video_id'); ?>" id="vimeo" width="1920px" height="1080px" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
 			</div>	
-			<?php } ?>
-		</div>
-		<div class="hero-block">
-			<span class="overlay d-md-none"></span>
-			<?php
-			the_post_thumbnail('full',['class'=>'w-100']);
-			if(get_field('vimeo_video_id')){ ?>
-				<a data-fslightbox="lightbox" href="#vimeo" class="lightbox-trigger d-none d-md-block">Assista o video</a>
-			<?php }
-			/*
-			if(get_field('video')){
-				the_field('video');
-				the_post_thumbnail('full',['class'=>'d-md-none w-100']);
-			} else { 
-				if (get_field('hero_imagem')) { ?>
-					<img src="<?php the_field('hero_imagem');?>" class='w-100'/>
-				<?php } else {
-					the_post_thumbnail('full',['class'=>'w-100']);
-				}
-			} 
-			*/
-			?>
+		<?php } ?>
+		<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
+	</div>
+</section>
+
+
+<section class="jeito__saibala">
+	<div class="container">
+		<h2>Jeito saibalá de ensinar:</h2>
+		<div class="jeito__list">
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-cinema.svg">
+				<h3>Qualidade de cinema</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ponto-vista.svg">
+				<h3>Especialistas com diferentes pontos de vistas</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-simples.svg">
+				<h3>Tornamos o complexo em simples</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ritimo.svg">
+				<h3>Aprenda no seu ritmo</h3>
+			</div>
 		</div>
 	</div>
 </section>
 
-<section class="single-um-jeito-de-aprender">
+
+<section class="oque__aprender">
 	<div class="container">
-		<h2>jeito saibalá de aprender:</h2>
-		<div class="row mx-md-0">
-			<div class="col-md-3 content">
-				<h3>qualidade de cinema</h3>
-				<p>Utilizamos as melhores ferramentas de audiovisual para você aprender em qualidade de cinema. Assista ao nosso trailer!</p>
+		<div class="row principal">
+			<div class="col-md-4 left__aprender">
+				<h2><?php the_field('o-que-aprender-destaque')?></h2>
 			</div>
-			<div class="col-md-3 content">
-				<h3>professores de peso</h3>
-				<p>Aprenda com quem faz. Reunimos alguns dos profissionais mais renomados no mercado que você só encontra aqui na Saibalá!</p>
-			</div>
-			<div class="col-md-3 content">
-				<h3>acesso vitalício</h3>
-				<p>Você terá acesso vitalício a todas as aulas do programa para consultar e reassistir sempre que quiser!</p>
-			</div>
-			<div class="col-md-3 content">
-				<h3>aprenda no seu ritmo</h3>
-				<p>Todas as aulas são online e gravadas para você mergulhar nos conteúdos de onde quiser e quando quiser!</p>
+			<div class="col-md-7 offset-md-1 right__aprender">
+				<div class="row">
+					<?php if( have_rows('o-que-aprender-items') ): ?>
+						<?php while( have_rows('o-que-aprender-items') ): the_row(); ?>
+							<div class="col-md-6 content">
+								<h3><?php the_sub_field('o-que-aprender-items-titulo');?></h3>
+								<p><?php the_sub_field('o-que-aprender-items-conteudo');?></p>
+							</div>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
 			</div>
 		</div>
+		<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
 	</div>
 </section>
 
@@ -248,29 +244,6 @@ if(get_field('professor')){
 						<?php endwhile; ?>
 					<?php endif; ?>
 
-		</div>
-	</div>
-</section>
-
-<section class="single-o-que-aprender">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 main">
-				<h2><?php the_field('o-que-aprender-destaque')?></h2>
-				<!-- <p><?php the_field('o-que-aprender-conteudo')?></p> -->
-			</div>
-			<div class="col-md-7 offset-md-1">
-				<div class="row">
-					<?php if( have_rows('o-que-aprender-items') ): ?>
-						<?php while( have_rows('o-que-aprender-items') ): the_row(); ?>
-							<div class="col-md-6 content">
-								<h3><?php the_sub_field('o-que-aprender-items-titulo');?></h3>
-								<p><?php the_sub_field('o-que-aprender-items-conteudo');?></p>
-							</div>
-						<?php endwhile; ?>
-					<?php endif; ?>
-				</div>
-			</div>
 		</div>
 	</div>
 </section>
