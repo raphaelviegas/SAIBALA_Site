@@ -496,29 +496,6 @@ $loop = new WP_Query( $args );
 
 <section class="single-faq">
 	<div class="container">
-		<?php if($loop->have_posts()) {?>
-			<h2>perguntas<br>frequentes</h2>
-			<div class="row items">
-				<?php
-					$count = 0;
-					while ( $loop->have_posts() ) : $loop->the_post(); 
-					$count = $count + 1;
-						?>
-							<div class="item col-md-12">
-								<a class="faq-toogle-button collapsed" role="button" data-toggle="collapse" href="#faq-<?php echo $count;?>" aria-expanded="false" aria-controls="faq-<?php echo $count;?>">
-									<div>
-										<p><?php the_title();?></p>
-									</div>
-								</a>
-								<div class="collapse" id="faq-<?php echo $count;?>">
-									<div class="content">
-										<?php the_content()?>
-									</div>
-								</div>
-							</div>
-				<?php	endwhile; ?>
-			</div>
-		<?php }?>
 		<div class="contato">
 			<h2>ainda tem dúvidas?</h2>
 			<a href="mailto:contato@saibala.com.br">converse com a nossa equipe</a>
