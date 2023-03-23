@@ -69,7 +69,6 @@
 						</a>
 						<a class='px-2 py-1 btn-exp d-flex align-center btn-black mobile-d-none' href="#login">Cadastre-se</a>
 					</div>
-
 				</div>
 			</div>
 		</header>

@@ -12,7 +12,7 @@
 
 				<div class="footer-contact--container">
 				<strong>E-mail:</strong>
-				<a href="mailto:contato@saibala.com.br">contato@saibala.com.br</a>  
+				<a href="mailto:contato@saibala.com.br">contato@saibala.com.br</a>
 				</div>
 
 				<div class="footer-contact--medias">
