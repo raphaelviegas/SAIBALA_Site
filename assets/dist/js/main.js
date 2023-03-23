@@ -262,6 +262,7 @@ var base = function () {
             //     }
             //     lastScrollPosition = scroll
             // });
+            
         }
     };
 }();
@@ -279,6 +280,7 @@ $(document).ready(function() {
       const button2 = $("<a class='mobile-only' href='#'>").text("Cadastre-se");
       extraButtons.append(button1, button2);
       mobileMenu.children().first().after(extraButtons);
+  
       button1.click(function(event) {
         event.preventDefault(); 
         $('body').trigger('wc_fragments_refreshed'); 
@@ -291,8 +293,11 @@ $(document).ready(function() {
         $('a[href="#login"]').first().click(); 
         $('#collapseExample').collapse('hide');
       });
+      
     }
-});
+  });
+  
+  
 
 window.onload = function() {
     

@@ -74,9 +74,9 @@ endif;
     <div class="catalogo__hero-wrapper">
     <a href="<?php echo get_field('hero_01_postit_link');?>" class="catalogo__hero-bg-01">
       <div class="catalogo__hero-bg-01" style="background-image:url(<?php echo $hero_image_01;?>)">
-
+      
         <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
-
+        
         <div class="catalogo__hero-bg-01--content">
           <h2><?php echo get_field('hero_01_postit_title');?></h2>
           <p><?php echo get_field('hero_01_postit_subtitle');?></p>
@@ -85,11 +85,11 @@ endif;
             <div class="arrow"></div>
           </div>
         </div>
-
+        
       </div>
     </a>
     </div>
-
+   
     <div class="catalogo__hero-wrapper">
     <a href="<?php echo get_field('hero_02_postit_link');?>" class="catalogo__hero-bg-02">
     <div class="catalogo__hero-bg-02" style="background-image:url(<?php echo $hero_image_02;?>)">

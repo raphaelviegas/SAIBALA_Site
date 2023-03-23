@@ -7248,7 +7248,6 @@ body.woocommerce-checkout .woocommerce-message{
     display: none;
   }
 
-
 /* Página de Acesso */
 .title-acesso-conta{
   font-size: 110px;
@@ -7375,7 +7374,6 @@ body.woocommerce-checkout .woocommerce-message{
     margin: 40px auto 0;
     height: 60px;
   }
-
   .arrow-btn-send-form {
     position: absolute;
     top: 50%;
@@ -7383,7 +7381,6 @@ body.woocommerce-checkout .woocommerce-message{
     font-size: 54px;
     transform: translateY(-50%);
   }
-
   .arrow-btn-send-form:before {
     content: "";
     position: absolute;

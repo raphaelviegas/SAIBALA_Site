@@ -170,14 +170,14 @@
 											</span>
 										</a>
 									</div>
-								</div>									
+								</div>							
 						<?php endif; ?>
 						<?php if( get_row_index() === 3):?>
-								<div class="thumb purple">
-									<a href="<?php echo get_sub_field('mural-link'); ?>">
-										<img class="desk tres" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
-										<img class="mobile tres" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
-									</a>
+							<div class="thumb purple">
+								<a href="<?php echo get_sub_field('mural-link'); ?>">
+									<img class="desk tres" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
+									<img class="mobile tres" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
+								</a>
 									<div class="box purple wow fadeIn">
 										<a href="<?php echo get_sub_field('mural-link'); ?>" class="bg-purple">
 											<?php echo get_sub_field('mural-texto'); ?>
@@ -199,10 +199,10 @@
 						<?php if( get_row_index() === 4):?>
 							<div class="col-12 col-md-12">
 								<div class="thumb green">
-									<a href="<?php echo get_sub_field('mural-link'); ?>">
-										<img class="desk quatro" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
-										<img class="mobile quatro" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
-									</a>
+								<a href="<?php echo get_sub_field('mural-link'); ?>">
+									<img class="desk quatro" src="<?php echo get_sub_field('mural-imagem-desk'); ?>" alt="">
+									<img class="mobile quatro" src="<?php echo get_sub_field('mural-imagem-mobile'); ?>" alt="">
+								</a>
 									<div class="box green wow fadeIn">
 										<a href="<?php echo get_sub_field('mural-link'); ?>" class="bg-green">
 											<?php echo get_sub_field('mural-texto'); ?>
