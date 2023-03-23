@@ -79,7 +79,6 @@ var base = function () {
                 items:1,
                 nav: true,
                 dots: false,
-                margin: 30,
                 autoplay: false,
                 autoplayTimeout: 7500,
                 autoplayHoverPause: true,

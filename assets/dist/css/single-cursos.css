@@ -200,3 +200,449 @@ section.oque__aprender h3:before {
 section.oque__aprender .comprar__default {
     margin-top: 40px;
 }
+
+
+/* Professores */
+section.single-professores {
+    background: #FAF7F7;
+}
+
+section.single-professores .container {
+    max-width: 940px;
+}
+
+section.single-professores .blocos__simples {
+    display: flex;
+    justify-content: center;
+}
+
+section.single-professores h2 {
+    color: #168dff !important;
+    text-align: center;
+    font-size: 56px;
+    line-height: 56px;
+    font-weight: 900;
+    text-transform: none;
+}
+
+section.single-professores .intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section.single-professores .image-section {
+    background: #000;
+    max-width: 250px;
+    margin: auto;
+    max-height: 300px;
+}
+
+section.single-professores .image-section h3 {
+    position: absolute;
+    color: #fff;
+    font-weight: 800;
+    font-size: 24px;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+    padding: 0 20px;
+    line-height: 24px;
+}
+
+.product-detail-v2 .single-professores .single-professores-item .image-section .overlay {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 39%, rgba(49,150,255,0.8155637254901961) 100%);
+}
+
+.product-detail-v2 .single-professores .jornada .owl-nav {
+    width: 325px;
+}
+
+.product-detail-v2 .single-professores .jornada .owl-nav.disabled {
+    display: none;
+}
+
+section.single-professores .content {
+    margin: auto;
+    max-width: 250px;
+    color: #000;
+}
+
+section.single-professores .owl-nav span {
+    color: #3196FF;
+}
+
+
+/* Empresas */
+section.empresas {
+    background: #FAF7F7;
+    padding: 40px 0;
+}
+
+section.empresas .container {
+    max-width: 940px;
+}
+
+section.empresas  .row {
+    align-items: center;
+}
+
+section.empresas h2 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+section.empresas a.comprar__default {
+    margin-top: 30px;
+}
+
+section.empresas .empresas__logos img {
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* Pra quem */
+section.single-para-quem {
+    padding: 90px 0;
+}
+
+section.single-para-quem .container {
+    max-width: 940px;
+}
+
+section.single-para-quem h2 {
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 48px;
+    text-transform: none;
+    margin-bottom: 46px;
+}
+
+section.single-para-quem h3 {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color:#A36FFF;
+}
+
+section.single-para-quem .box p {
+    font-weight: 400;
+}
+
+
+/* Aulas */
+.product-detail-v2 .single-programa-completo {
+    padding: 90px 0;
+    background: #FAF7F7;
+}
+
+section.single-programa-completo .container {
+    max-width: 940px;
+}
+
+section.single-programa-completo h2 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 50px;
+    text-transform: none;
+} 
+
+section.single-programa-completo .item .container {
+    border-top: 1px #828282 solid;
+    position: relative;
+    padding: 20px 0;
+}
+
+section.single-programa-completo .item:last-child .container {
+    border-bottom: 1px #828282 solid;
+}
+
+section.single-programa-completo .item h3 {
+    color: #A36FFF;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+section.single-programa-completo .item a.jornada-toogle-button {
+    min-height: auto !important;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: fit-content;
+    margin: 0 !important;
+}
+
+section.single-programa-completo .item a.jornada-toogle-button[aria-expanded="true"] {
+    transform: rotate(90deg);
+    top: 35px;
+}
+
+section.single-programa-completo .item a.jornada-toogle-button img {
+    max-width: 24px;
+}
+
+section.single-programa-completo .item h6 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+
+/* Depoimentos */
+section.single-depoimentos {
+    padding-top: 90px;
+    padding-bottom: 0;
+    background: #FFF;
+}
+
+section.single-depoimentos .container {
+    max-width: 940px;
+}
+
+section.single-depoimentos h2 {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 72px;
+    margin-bottom: 40px
+}
+
+section.single-depoimentos .owl-stage {
+    display: flex;
+    align-items: stretch; 
+}
+
+
+section.single-depoimentos .owl-item .single-depoimentos-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+section.single-depoimentos .owl-item .single-depoimentos-item .after {
+    background: #59C7FF;
+    border-radius: 40px 40px 0 0;
+    display: block;
+    flex: 1;
+    margin-top: 15px;
+    min-height: 30px;
+}
+
+section.single-depoimentos .blocos__simples {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+section.single-depoimentos .blocos__simples .single-depoimentos-item {
+    width: 33.33%;
+    display: flex;
+}
+
+section.single-depoimentos .owl-item .single-depoimentos-item .bloco,
+section.single-depoimentos .blocos__simples .bloco {
+    background: #C7B5FF;
+    border-radius: 40px 0 40px 0;
+    padding: 15px;
+    color: #fff;
+}
+
+section.single-depoimentos .owl-item:nth-child(2n) .single-depoimentos-item .bloco {
+    background: #59C7FF;
+}
+
+section.single-depoimentos .owl-item:nth-child(2n) .single-depoimentos-item .after {
+    background: #46BEAA;
+}
+
+section.single-depoimentos .owl-item:nth-child(3n) .single-depoimentos-item .bloco {
+    background: #46BEAA;
+}
+
+section.single-depoimentos .owl-item:nth-child(3n) .single-depoimentos-item .after {
+    background: #C7B5FF;
+}
+
+section.single-depoimentos .image-section {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+section.single-depoimentos .image-section img {
+    width: 70px;
+    height: 70px;
+    border: 5px #fff solid;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.single-depoimentos .image-section h3 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+section.single-depoimentos .content p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+section.single-depoimentos .owl-nav {
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% + 80px);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -40px;
+    font-size: 55px;
+    color: #c7b5ff;
+
+}
+
+
+/* Bonus */
+section.bonus {
+    padding: 90px 0;
+    background: #FAF7F7;
+}
+
+section.bonus .container {
+    max-width: 940px;
+}
+
+section.bonus .row {
+    align-items: center;
+}
+
+section.bonus h2 {
+    font-weight: 500;
+    font-size: 135px;
+    line-height: 100%;
+    color: #46BEAA;
+    border-bottom: 10px #46BEAA solid;
+    display: table;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+section.bonus h3 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32px;
+    color: #46BEAA;
+    margin-bottom: 15px;
+}
+
+section.bonus p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+}
+
+section.bonus img {
+    width: 100%;
+    border-radius: 50px;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+/* Comprar */
+section.comprar {
+    padding: 90px 0;
+    background: #FAF7F7;
+}
+
+section.comprar .container {
+    max-width: 940px;
+}
+
+section.comprar .row {
+    align-items: center;
+}
+
+section.comprar .box__comprar {
+    background: #A36FFF;
+    border-radius: 15px;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+section.comprar .box__comprar a {
+    border-radius: 15px;
+}
+
+section.comprar .box__comprar .preco__de {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+section.comprar .box__comprar .preco__parcelado {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 120%;
+}
+
+section.comprar .box__comprar .preco__por {
+    font-size: 25px;
+    margin-bottom: 40px;
+    display: block;
+}
+
+section.comprar .pagamento__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+section.comprar h2 {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 42px;
+    color: #A36FFF;
+    margin-bottom: 35px;
+}
+
+section.comprar .comprar__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section.comprar .comprar__list li {
+    display: flex;
+    gap: 10px;
+    min-width: 100%;
+    align-items: flex-start;
+    margin-bottom: 15px
+}
+
+section.comprar .comprar__list li:before {
+    content: '';
+    min-width: 30px;
+    min-height: 30px;
+    background: url(../../img/seta-pagamento.svg) center center no-repeat #A36FFF;
+    border-radius: 3px;
+    display: block;
+}

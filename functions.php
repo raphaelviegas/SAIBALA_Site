@@ -511,4 +511,134 @@ function enqueue_lura_admin() {
 }
 add_action( 'admin_enqueue_scripts', 'enqueue_lura_admin' );
 
+
+
+/* Hora Bônus - Página do Produto */
+if( function_exists('acf_add_local_field_group') ):
+
+  acf_add_local_field_group(array(
+    'key' => 'group_641bad37e80fd',
+    'title' => 'Hora do Bônus',
+    'fields' => array(
+      array(
+        'key' => 'field_641bae84af08b',
+        'label' => 'Ativar',
+        'name' => 'ativar__bonus',
+        'type' => 'true_false',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'message' => 'Ativar "Hora do Bônus"',
+        'default_value' => 0,
+        'ui' => 0,
+        'ui_on_text' => '',
+        'ui_off_text' => '',
+      ),
+      array(
+        'key' => 'field_641bad44af504',
+        'label' => 'Título',
+        'name' => 'titulo__bonus',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+      array(
+        'key' => 'field_641bad58af505',
+        'label' => 'Introdução',
+        'name' => 'introducao__bonus',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+      array(
+        'key' => 'field_641bad70af506',
+        'label' => 'Descrição',
+        'name' => 'descricao__bonus',
+        'type' => 'wysiwyg',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'tabs' => 'all',
+        'toolbar' => 'full',
+        'media_upload' => 0,
+        'delay' => 0,
+      ),
+      array(
+        'key' => 'field_641bad8baf507',
+        'label' => 'Imagem',
+        'name' => 'imagem__bonus',
+        'type' => 'image',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'return_format' => 'url',
+        'preview_size' => 'thumbnail',
+        'library' => 'all',
+        'min_width' => '',
+        'min_height' => '',
+        'min_size' => '',
+        'max_width' => '',
+        'max_height' => '',
+        'max_size' => '',
+        'mime_types' => '',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'product',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  endif;
 ?>
