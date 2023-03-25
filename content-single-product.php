@@ -42,7 +42,7 @@ if ($headerId) {
 
 
 if(get_field('layout') == 'v2') { ?>
-
+<!--
 <section class="single-fixed-cta">
 	<?php
 		echo apply_filters(
@@ -61,7 +61,7 @@ if(get_field('layout') == 'v2') { ?>
 	?>
 	<p>comprando agora ganhe <span><?php echo $desconto?>%</span> de desconto</p>
 </section>
-
+-->
 
 <section class="intro__curso">
 	<?php the_post_thumbnail('full',['class'=>'background']); ?>
@@ -165,7 +165,7 @@ if(get_field('professor')){
 	<div class="container jornada">
 		<h2>Aprenda com <br>Profissionais de sucesso</h2>
 		<p class="intro">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page </p>
-		<div class="<?php if (count(get_field('professor')) >= 3) { ?>owl-carousel<?php  } else { echo 'blocos__simples'; } ?>">
+		<div class="<?php if (count(get_field('professor')) >= 2) { ?>owl-carousel<?php  } else { echo 'blocos__simples'; } ?>">
 			<?php foreach ($ids as $id): ?>
 				<div class="single-professores-item">
 					<div class="image-section">
@@ -188,7 +188,7 @@ if(get_field('professor')){
 	}
 ?>
 
-<section class="empresas">
+<section class="empresas"> 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
@@ -196,22 +196,22 @@ if(get_field('professor')){
 			</div>
 			<div class="col-md-8 empresas__logos">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-4 col-6">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/google.svg" alt="Saibalá">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 col-6">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vivo.svg" alt="Saibalá">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 col-6">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/ibm.svg" alt="Saibalá">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 col-6">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook.svg" alt="Saibalá">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 col-6">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/inter.svg" alt="Saibalá">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 col-6">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/magalu.svg" alt="Saibalá">
 					</div>
 				</div>
@@ -225,23 +225,21 @@ if(get_field('professor')){
 	<div class="container">
 		<h2>Para quem <br>funciona?</h2>
 		<div class="row mx-md-0">
-
-					<?php if( have_rows('paraquem_lista') ): ?>
-						<?php while( have_rows('paraquem_lista') ): the_row(); 
-							$image = get_sub_field('image');
-							?>
-								<div class="col-md-4 px-0">
-									<div class="box">
-										<div class="box-content">
-											<h3><?php the_sub_field('titulo');?></h3>
-											<p><?php the_sub_field('descricao');?></p>
-										</div>
-										<img src="<?php the_sub_field('icone');?>"/>
-									</div>
+			<?php if( have_rows('paraquem_lista') ): ?>
+				<?php while( have_rows('paraquem_lista') ): the_row(); 
+					$image = get_sub_field('image');
+					?>
+						<div class="col-md-4 px-0">
+							<div class="box">
+								<div class="box-content">
+									<h3><?php the_sub_field('titulo');?></h3>
+									<p><?php the_sub_field('descricao');?></p>
 								</div>
-						<?php endwhile; ?>
-					<?php endif; ?>
-
+								<img src="<?php the_sub_field('icone');?>"/>
+							</div>
+						</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
