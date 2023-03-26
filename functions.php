@@ -472,8 +472,13 @@ add_action('manage_headers_posts_custom_column', function($column_key, $post_id)
   Return style on header
 */
 function header_status() {
+    global $post;
     $hideHeader = get_field('hide_header', $post->ID);
-    $hideHeaderUrl = $_GET['hideHeader'];
+    if (isset($_GET['hideHeader'])) {
+      $hideHeaderUrl = $_GET['hideHeader'];
+    } else {
+      $hideHeaderUrl = false;
+    }
 
     if (true === $hideHeader || 'true' === $hideHeaderUrl) {
       add_filter( 'body_class', function( $classes ) { 
