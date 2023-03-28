@@ -81,6 +81,29 @@ if(get_field('layout') == 'v2') { ?>
 </section>
 
 
+<section class="single-para-quem">
+	<div class="container">
+		<h2>Para quem <br>funciona?</h2>
+		<div class="row mx-md-0">
+			<?php if( have_rows('paraquem_lista') ): ?>
+				<?php while( have_rows('paraquem_lista') ): the_row(); 
+					$image = get_sub_field('image');
+					?>
+						<div class="col-md-4 px-0">
+							<div class="box">
+								<div class="box-content">
+									<h3><?php the_sub_field('titulo');?></h3>
+									<p><?php the_sub_field('descricao');?></p>
+								</div>
+								<img src="<?php the_sub_field('icone');?>"/>
+							</div>
+						</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</div>
+	</div>
+</section>
+
 <section class="jeito__saibala">
 	<div class="container">
 		<h2>Jeito saibalá de ensinar:</h2>
@@ -110,7 +133,7 @@ if(get_field('layout') == 'v2') { ?>
 	<div class="container">
 		<div class="row principal">
 			<div class="col-md-4 left__aprender">
-				<h2><?php the_field('o-que-aprender-destaque')?></h2>
+				<h2><?php the_field('o-que-aprender-destaque'); ?></h2>
 			</div>
 			<div class="col-md-7 offset-md-1 right__aprender">
 				<div class="row">
@@ -129,30 +152,6 @@ if(get_field('layout') == 'v2') { ?>
 	</div>
 </section>
 
-<!--
-<section class="single-beneficios">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<h2><?php the_field('beneficio-destaque')?></h2>
-				<p><?php the_field('beneficios-conteudo')?></p>
-			</div>
-			<div class="col-md-5 offset-md-1 content-box">
-				<div class="row">
-					<?php if( have_rows('sub-beneficios') ): ?>
-						<?php while( have_rows('sub-beneficios') ): the_row(); ?>
-							<div class="col-md-12 content">
-								<h3><?php the_sub_field('sub-beneficio-titulo');?></h3>
-								<p><?php the_sub_field('sub-beneficio-conteudo');?></p>
-							</div>
-						<?php endwhile; ?>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
--->
 
 <?php 
 if(get_field('professor')){
@@ -190,6 +189,7 @@ if(get_field('professor')){
 	}
 ?>
 
+<?php if (get_field('ativar_as_marcas')): ?>
 <section class="empresas"> 
 	<div class="container">
 		<div class="row">
@@ -198,80 +198,20 @@ if(get_field('professor')){
 			</div>
 			<div class="col-md-8 empresas__logos">
 				<div class="row">
-					<div class="col-md-4 col-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/google.svg" alt="Saibalá">
-					</div>
-					<div class="col-md-4 col-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vivo.svg" alt="Saibalá">
-					</div>
-					<div class="col-md-4 col-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/ibm.svg" alt="Saibalá">
-					</div>
-					<div class="col-md-4 col-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook.svg" alt="Saibalá">
-					</div>
-					<div class="col-md-4 col-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/inter.svg" alt="Saibalá">
-					</div>
-					<div class="col-md-4 col-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/magalu.svg" alt="Saibalá">
-					</div>
+					<?php if( have_rows('marcas') ): ?>
+						<?php while( have_rows('marcas') ): the_row(); ?>
+							<div class="col-md-4 col-6">
+								<img src="<?= get_sub_field('imagem'); ?>" alt="Saibalá">
+							</div>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
 		<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
 	</div>
 </section>
-
-<section class="single-para-quem">
-	<div class="container">
-		<h2>Para quem <br>funciona?</h2>
-		<div class="row mx-md-0">
-			<?php if( have_rows('paraquem_lista') ): ?>
-				<?php while( have_rows('paraquem_lista') ): the_row(); 
-					$image = get_sub_field('image');
-					?>
-						<div class="col-md-4 px-0">
-							<div class="box">
-								<div class="box-content">
-									<h3><?php the_sub_field('titulo');?></h3>
-									<p><?php the_sub_field('descricao');?></p>
-								</div>
-								<img src="<?php the_sub_field('icone');?>"/>
-							</div>
-						</div>
-				<?php endwhile; ?>
-			<?php endif; ?>
-		</div>
-	</div>
-</section>
-
-<!--
-<section class="single-certificado">
-	<div class="container">
-		<div class="row align-items-md-center">
-			<div class="col-md-2 icon-wrapper">
-				<div class="icon-box">
-					<svg xmlns="http://www.w3.org/2000/svg" width="75.503" height="97.88" viewBox="0 0 75.503 97.88">
-						<g data-name="Grupo 64">
-								<g data-name="Grupo 63" style="clip-path:url(#a8nvqminea)">
-										<path data-name="Caminho 50" d="M39.474 0c.691.208 1.393.384 2.07.63a11.227 11.227 0 0 1 6.712 6.128c.8 1.787 1.866 3.374 3.873 3.767a10 10 0 0 0 3.839-.092c4.8-.991 8.83.308 11.841 4.1a10.968 10.968 0 0 1 1.283 12.281c-.856 1.789-1.36 3.543-.6 5.492a7.6 7.6 0 0 0 2.655 3.057 11.236 11.236 0 0 1 4.353 9.33 11.561 11.561 0 0 1-8.86 10.968 12 12 0 0 0-3.422 1.326 4.756 4.756 0 0 0-2.192 3.935 65.044 65.044 0 0 0-.172 3.717 2.767 2.767 0 0 0 .331 1.162c2.93 6.1 5.889 12.193 8.8 18.308a4.788 4.788 0 0 1 .555 2.356 2.935 2.935 0 0 1-3.778 2.5c-3.392-.826-6.773-1.693-10.246-2.566-.441.953-.882 1.894-1.313 2.841-.974 2.14-1.958 4.277-2.91 6.427a3.131 3.131 0 0 1-2.941 2.19 3.179 3.179 0 0 1-2.978-2.157q-4.106-8.553-8.235-17.1c-.151-.314-.31-.623-.535-1.072-.232.452-.428.8-.591 1.155q-3.75 8.3-7.494 16.6c-.144.318-.282.642-.455.943a2.986 2.986 0 0 1-5.341.017c-.675-1.186-1.217-2.447-1.814-3.678-.955-1.972-1.9-3.946-2.889-5.987-2.9.8-5.769 1.6-8.641 2.389a12.87 12.87 0 0 1-2.223.5 2.926 2.926 0 0 1-3.092-3.8 9 9 0 0 1 .436-1.155c2.894-6.4 6.054-12.695 8.592-19.233 1.491-3.837.494-8.572-4.573-9.486a11.344 11.344 0 0 1-7.649-5.072 11.584 11.584 0 0 1 2.343-15.24q.561-.446 1.114-.9a5.434 5.434 0 0 0 1.537-6.708 13.379 13.379 0 0 1-1.619-7.434 11.593 11.593 0 0 1 14.106-10.03 7.482 7.482 0 0 0 3.949.2A5.805 5.805 0 0 0 27.076 7.1a11.1 11.1 0 0 1 5.408-5.814A33.7 33.7 0 0 1 36.034 0zM20.549 61.555v.955a5.443 5.443 0 0 0 6.455 5.514 7.642 7.642 0 0 0 3.149-1.619 11.811 11.811 0 0 1 9.915-2.551 12.977 12.977 0 0 1 5.854 3.046 5.493 5.493 0 0 0 8.71-2.509 9.45 9.45 0 0 0 .3-2.82 11.467 11.467 0 0 1 4.483-9.371 14.335 14.335 0 0 1 6.014-2.5 5.482 5.482 0 0 0 3.956-6.32 6.443 6.443 0 0 0-2.785-3.932 11.3 11.3 0 0 1-4.569-9.227 12.845 12.845 0 0 1 1.627-6.006 5.3 5.3 0 0 0-1.205-6.6c-1.689-1.613-3.639-1.576-5.788-1.177a14.844 14.844 0 0 1-4.994.206 11.3 11.3 0 0 1-8.681-6.857 7.275 7.275 0 0 0-1.949-2.632c-2.985-2.3-6.9-1.02-8.591 2.69a11.609 11.609 0 0 1-13.7 6.65 7.661 7.661 0 0 0-3.461-.1c-3.591.9-5.025 4.7-3.245 8.247a11.574 11.574 0 0 1-3.41 15.056 8.484 8.484 0 0 0-1.675 1.671 5.61 5.61 0 0 0 3.841 8.558 11.389 11.389 0 0 1 9.753 11.628m5.743 26.158L33.6 71.55c-5.355 3.728-10.419 3.464-15.433-.357l-4.813 10.661c2.123-.587 4.033-1.136 5.957-1.638a5.077 5.077 0 0 1 1.679-.208 3.115 3.115 0 0 1 2.564 2.024c.871 1.822 1.754 3.64 2.738 5.681m22.957 0c.947-2.083 1.782-3.966 2.658-5.829a3.145 3.145 0 0 1 3.981-1.892c.554.136 1.1.294 1.658.432 1.429.355 2.862.7 4.487 1.1l-4.89-10.15c-5.353 3.866-10.566 3.833-15.829-.123l7.935 16.458" style="fill:#1a1818"/>
-										<path data-name="Caminho 51" d="M35.48 13.463A22.537 22.537 0 1 1 12.9 35.978a22.621 22.621 0 0 1 22.58-22.515m-.018 6.078A16.46 16.46 0 1 0 51.9 35.993a16.434 16.434 0 0 0-16.438-16.452" transform="translate(2.313 2.414)" style="fill:#1a1818"/>
-										<path data-name="Caminho 52" d="M31.043 33.895c2.676-1.953 5.3-3.9 7.968-5.787a4.758 4.758 0 0 1 2.058-.851 2.763 2.763 0 0 1 2.939 1.809 2.872 2.872 0 0 1-.8 3.377c-.946.8-1.974 1.5-2.974 2.229q-3.847 2.816-7.7 5.622c-1.96 1.42-3.591 1.149-4.971-.807-.935-1.323-1.874-2.645-2.789-3.982a3.035 3.035 0 0 1 .585-4.453c1.458-1.015 3.2-.618 4.38 1 .429.59.843 1.189 1.3 1.838" transform="translate(4.316 4.882)" style="fill:#1a1818"/>
-								</g>
-						</g>
-				</svg>
-				</div>
-			</div>
-			<div class="col-md-10 px-0">
-				<h2>certificado da saibalá</h2>
-				<p>Ao concluir o curso você ainda recebe um certificado digital para poder compartilhar em seu Linkedin, fazer novas conexões e networking, e mostrar suas habilidades para o mercado com o certificado Saibalá.</p>
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/certificado.png" alt="Certificado Saibalá">
-			</div>
-		</div>
-	</div>
-</section>
--->
+<?php endif; ?>
 
 <section class="single-programa-completo">
 	<div class="container">
