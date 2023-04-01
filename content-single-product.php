@@ -68,7 +68,7 @@ if(get_field('layout') == 'v2') { ?>
 <section class="intro__curso">
 	<?php the_post_thumbnail('full',['class'=>'background']); ?>
 	<div class="container">
-		<h1><span><span><?php if (get_field('aprender_titulo')) { echo get_field('aprender_titulo'); } else { echo get_the_title(); } ?></span></span></h1>
+		<h1><span><span><?php echo get_the_title(); ?></span></span></h1>
 		<p><?php the_field('subtitulo') ?></p>
 		<?php if(get_field('vimeo_video_id')){ ?>
 			<a data-fslightbox="lightbox" href="#vimeo" class="lightbox-trigger cta__video">Assista o trailer</a>
@@ -83,7 +83,7 @@ if(get_field('layout') == 'v2') { ?>
 
 <section class="single-para-quem">
 	<div class="container">
-		<h2>Para quem <br>funciona?</h2>
+		<h2>Para quem <br>indicamos?</h2>
 		<div class="row mx-md-0">
 			<?php if( have_rows('paraquem_lista') ): ?>
 				<?php while( have_rows('paraquem_lista') ): the_row(); 
@@ -101,6 +101,29 @@ if(get_field('layout') == 'v2') { ?>
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
+	</div>
+</section>
+
+<section class="oque__aprender">
+	<div class="container">
+		<div class="row principal">
+			<div class="col-md-4 left__aprender">
+				<h2><?php the_field('o-que-aprender-destaque'); ?></h2>
+			</div>
+			<div class="col-md-7 offset-md-1 right__aprender">
+				<div class="row">
+					<?php if( have_rows('o-que-aprender-items') ): ?>
+						<?php while( have_rows('o-que-aprender-items') ): the_row(); ?>
+							<div class="col-md-6 content">
+								<h3><?php the_sub_field('o-que-aprender-items-titulo');?></h3>
+								<p><?php the_sub_field('o-que-aprender-items-conteudo');?></p>
+							</div>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
+		<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
 	</div>
 </section>
 
@@ -129,30 +152,6 @@ if(get_field('layout') == 'v2') { ?>
 </section>
 
 
-<section class="oque__aprender">
-	<div class="container">
-		<div class="row principal">
-			<div class="col-md-4 left__aprender">
-				<h2><?php the_field('o-que-aprender-destaque'); ?></h2>
-			</div>
-			<div class="col-md-7 offset-md-1 right__aprender">
-				<div class="row">
-					<?php if( have_rows('o-que-aprender-items') ): ?>
-						<?php while( have_rows('o-que-aprender-items') ): the_row(); ?>
-							<div class="col-md-6 content">
-								<h3><?php the_sub_field('o-que-aprender-items-titulo');?></h3>
-								<p><?php the_sub_field('o-que-aprender-items-conteudo');?></p>
-							</div>
-						<?php endwhile; ?>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-		<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
-	</div>
-</section>
-
-
 <?php 
 if(get_field('professor')){
 	$ids = array();
@@ -177,7 +176,8 @@ if(get_field('professor')){
 					
 					<div class="content">
 						<?php
-							echo get_post_field('post_content', $id);
+							//$post = get_post($id);
+							echo strip_tags(get_post_field('post_content', $id));
 						?>
 					</div>
 				</div>
@@ -213,6 +213,7 @@ if(get_field('professor')){
 </section>
 <?php endif; ?>
 
+<?php if (have_rows('etapas')): ?>
 <section class="single-programa-completo">
 	<div class="container">
 		<h2>Confira o programa completo</h2>
@@ -254,12 +255,14 @@ if(get_field('professor')){
 		</div>
 	</div>
 </section>
+<?php endif; ?>
+
 
 <?php if( have_rows('depoimentos') ): ?>
 <section class="single-depoimentos">
 	<div class="container">
 		<div class="header">
-			<h2>Quem passou pela Saibalá:</h2>
+			<h2>O que dizem alunos Saibalá:</h2>
 		</div>
 		<div class="<?php if (count(get_field('depoimentos')) >= 3) { ?>owl-carousel<?php  } else { echo 'blocos__simples'; } ?>">
 			<?php
