@@ -262,6 +262,10 @@ section.single-professores .content {
     margin: auto;
     max-width: 250px;
     color: #000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;  /* Number of lines displayed before it truncate */
+     overflow: hidden;
 }
 
 section.single-professores .owl-nav span {
