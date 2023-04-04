@@ -18,6 +18,41 @@
 }
 
 /* Intro */
+.video__section {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0000007c;
+}
+
+.video__section .video__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../../img/close.svg) center center no-repeat #00000042;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.video__section iframe {
+    display: block;
+    min-width: 90vw !important;
+    min-height: 90vh !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+}
+
 section.intro__curso {
     padding: 0;
     position: relative;
@@ -75,6 +110,11 @@ section.intro__curso .cta__video {
     font-style: italic;
     color: #fff;
     text-align: center;
+    cursor: pointer;
+}
+
+section.intro__curso .cta__video:hover {
+    color: #fff;
 }
 
 section.intro__curso .cta__video:before {
