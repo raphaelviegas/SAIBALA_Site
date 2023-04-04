@@ -79,7 +79,6 @@ var base = function () {
                 items:1,
                 nav: true,
                 dots: false,
-                margin: 30,
                 autoplay: false,
                 autoplayTimeout: 7500,
                 autoplayHoverPause: true,
@@ -400,4 +399,13 @@ function openCards(id) {
 $('.action__slider').click(function() {
     let id = $(this).attr('id');
     navSlide(id);
+})
+
+
+
+
+/* Modal Vídeo */
+$('.video__section .video__close, .cta__video').click(function(e) {
+    e.preventDefault();
+    $('.video__section').fadeToggle();
 })
