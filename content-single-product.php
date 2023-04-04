@@ -35,9 +35,11 @@ if ( post_password_required() ) {
 
 
 <?php 
-$headerId = intval($_GET['header']);
-if ($headerId) {
-	headers($headerId);
+if (isset($_GET['header'])) {
+	$headerId = intval($_GET['header']);
+	if ($headerId) {
+		headers($headerId);
+	}
 }
 
 if ($product->sale_price !== '') {
@@ -369,8 +371,6 @@ if(get_field('professor')){
 				</div>
 			<?php
 				endwhile; 
-				$projetos = null; 
-				$projetos = $temp; 
 				wp_reset_postdata();
 			?>
 		</div>
