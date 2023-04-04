@@ -1,3 +1,7 @@
+<div class="video__section" style="display:none">
+		<span class="video__close"></span>
+		<iframe src="https://player.vimeo.com/video/<?php the_field('vimeo_video_id'); ?>" width="90%" height="90%" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+	</div>	
 <?php
 /**
  * The template for displaying product content in the single-product.php template
@@ -71,10 +75,7 @@ if(get_field('layout') == 'v2') { ?>
 		<h1><span><span><?php echo get_the_title(); ?></span></span></h1>
 		<p><?php the_field('subtitulo') ?></p>
 		<?php if(get_field('vimeo_video_id')){ ?>
-			<a data-fslightbox="lightbox" href="#vimeo" class="lightbox-trigger cta__video">Assista o trailer</a>
-			<div class="d-none">
-				<iframe src="https://player.vimeo.com/video/<?php the_field('vimeo_video_id'); ?>" id="vimeo" width="1920px" height="1080px" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
-			</div>	
+			<a class="cta__video">Assista o trailer</a>
 		<?php } ?>
 		<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
 	</div>
@@ -104,6 +105,7 @@ if(get_field('layout') == 'v2') { ?>
 	</div>
 </section>
 
+
 <section class="oque__aprender">
 	<div class="container">
 		<div class="row principal">
@@ -126,31 +128,6 @@ if(get_field('layout') == 'v2') { ?>
 		<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
 	</div>
 </section>
-
-<section class="jeito__saibala">
-	<div class="container">
-		<h2>Jeito saibalá de ensinar:</h2>
-		<div class="jeito__list">
-			<div class="jeito__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-cinema.svg">
-				<h3>Qualidade de cinema</h3>
-			</div>
-			<div class="jeito__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ponto-vista.svg">
-				<h3>Especialistas com diferentes pontos de vistas</h3>
-			</div>
-			<div class="jeito__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-simples.svg">
-				<h3>Tornamos o complexo em simples</h3>
-			</div>
-			<div class="jeito__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ritimo.svg">
-				<h3>Aprenda no seu ritmo</h3>
-			</div>
-		</div>
-	</div>
-</section>
-
 
 <?php 
 if(get_field('professor')){
@@ -188,6 +165,31 @@ if(get_field('professor')){
 <?php
 	}
 ?>
+
+<section class="jeito__saibala">
+	<div class="container">
+		<h2>Jeito saibalá de ensinar:</h2>
+		<div class="jeito__list">
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-cinema.svg">
+				<h3>Qualidade de cinema</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ponto-vista.svg">
+				<h3>Especialistas com diferentes pontos de vistas</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-simples.svg">
+				<h3>Tornamos o complexo em simples</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ritimo.svg">
+				<h3>Aprenda no seu ritmo</h3>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <?php if (get_field('ativar_as_marcas')): ?>
 <section class="empresas"> 
