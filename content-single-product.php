@@ -141,7 +141,7 @@ if(get_field('professor')){
 <section class="single-professores">
 	<div class="container jornada">
 		<h2>Aprenda com <br>Profissionais de sucesso</h2>
-		<p class="intro">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page </p>
+		<p class="intro"><?= get_field('descricao-prof'); ?></p>
 		<div class="<?php if (count(get_field('professor')) >= 2) { ?>owl-carousel<?php  } else { echo 'blocos__simples'; } ?>">
 			<?php foreach ($ids as $id): ?>
 				<div class="single-professores-item">
@@ -219,7 +219,7 @@ if(get_field('professor')){
 <section class="single-programa-completo">
 	<div class="container">
 		<h2>Confira o programa completo</h2>
-		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+		<p><?= get_field('percurso_titulo'); ?></p>
 	</div>
 	<div class="container-fluid px-0">
 		<div class="row items">
