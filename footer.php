@@ -1,13 +1,18 @@
 <footer class="footer wow fadeIn" data-wow-offset="00">
 	<div class="footer-container">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.svg" class="footer-logo"/>
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-yellow.svg" class="footer-logo"/>
+		<br><br>
 
 		<div class="footer-wrapper">
 
 			<div class="footer-contact">
 				<div class="footer-contact--container">
-				<strong>E-mail:</strong>
-				<a href="mailto:contato@saibala.com.br">contato@saibala.com.br</a>
+					<strong>Whatsapp:</strong>
+					<a href="https://wa.me/+5511999680694" target="_blank">+55 (11) 9968-0694</a>
+					<br>
+
+					<strong>E-mail:</strong>
+					<a href="mailto:contato@saibala.com.br">contato@saibala.com.br</a>
 				</div>
 
 				<div class="footer-contact--medias">
@@ -154,4 +159,4 @@
 		<script src="https://kit.fontawesome.com/953cbeec6b.js" crossorigin="anonymous"></script>
 		<?php wp_footer();?>
 	</body>
-</html>
+</html> 

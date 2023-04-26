@@ -400,12 +400,3 @@ $('.action__slider').click(function() {
     let id = $(this).attr('id');
     navSlide(id);
 })
-
-
-
-
-/* Modal Vídeo */
-$('.video__section .video__close, .cta__video').click(function(e) {
-    e.preventDefault();
-    $('.video__section').fadeToggle();
-})

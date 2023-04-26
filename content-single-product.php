@@ -1,7 +1,3 @@
-<div class="video__section" style="display:none">
-		<span class="video__close"></span>
-		<iframe src="https://player.vimeo.com/video/<?php the_field('vimeo_video_id'); ?>" width="90%" height="90%" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
-	</div>	
 <?php
 /**
  * The template for displaying product content in the single-product.php template
@@ -72,10 +68,13 @@ if(get_field('layout') == 'v2') { ?>
 <section class="intro__curso">
 	<?php the_post_thumbnail('full',['class'=>'background']); ?>
 	<div class="container">
-		<h1><span><span><?php echo get_the_title(); ?></span></span></h1>
+		<h1><span><span><?php if (get_field('aprender_titulo')) { echo get_field('aprender_titulo'); } else { echo get_the_title(); } ?></span></span></h1>
 		<p><?php the_field('subtitulo') ?></p>
 		<?php if(get_field('vimeo_video_id')){ ?>
-			<a class="cta__video">Assista o trailer</a>
+			<a data-fslightbox="lightbox" href="#vimeo" class="lightbox-trigger cta__video">Assista o trailer</a>
+			<div class="d-none">
+				<iframe src="https://player.vimeo.com/video/<?php the_field('vimeo_video_id'); ?>" id="vimeo" width="1920px" height="1080px" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+			</div>	
 		<?php } ?>
 		<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
 	</div>
@@ -84,7 +83,7 @@ if(get_field('layout') == 'v2') { ?>
 
 <section class="single-para-quem">
 	<div class="container">
-		<h2>Para quem <br>indicamos?</h2>
+		<h2>Para quem <br>funciona?</h2>
 		<div class="row mx-md-0">
 			<?php if( have_rows('paraquem_lista') ): ?>
 				<?php while( have_rows('paraquem_lista') ): the_row(); 
@@ -101,6 +100,30 @@ if(get_field('layout') == 'v2') { ?>
 						</div>
 				<?php endwhile; ?>
 			<?php endif; ?>
+		</div>
+	</div>
+</section>
+
+<section class="jeito__saibala">
+	<div class="container">
+		<h2>Jeito saibalá de ensinar:</h2>
+		<div class="jeito__list">
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-cinema.svg">
+				<h3>Qualidade de cinema</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ponto-vista.svg">
+				<h3>Especialistas com diferentes pontos de vistas</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-simples.svg">
+				<h3>Tornamos o complexo em simples</h3>
+			</div>
+			<div class="jeito__item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ritimo.svg">
+				<h3>Aprenda no seu ritmo</h3>
+			</div>
 		</div>
 	</div>
 </section>
@@ -129,6 +152,7 @@ if(get_field('layout') == 'v2') { ?>
 	</div>
 </section>
 
+
 <?php 
 if(get_field('professor')){
 	$ids = array();
@@ -141,7 +165,7 @@ if(get_field('professor')){
 <section class="single-professores">
 	<div class="container jornada">
 		<h2>Aprenda com <br>Profissionais de sucesso</h2>
-		<p class="intro"><?= get_field('descricao-prof'); ?></p>
+		<p class="intro">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page </p>
 		<div class="<?php if (count(get_field('professor')) >= 2) { ?>owl-carousel<?php  } else { echo 'blocos__simples'; } ?>">
 			<?php foreach ($ids as $id): ?>
 				<div class="single-professores-item">
@@ -153,8 +177,7 @@ if(get_field('professor')){
 					
 					<div class="content">
 						<?php
-							//$post = get_post($id);
-							echo strip_tags(get_post_field('post_content', $id));
+							echo get_post_field('post_content', $id);
 						?>
 					</div>
 				</div>
@@ -165,31 +188,6 @@ if(get_field('professor')){
 <?php
 	}
 ?>
-
-<section class="jeito__saibala">
-	<div class="container">
-		<h2>Jeito saibalá de ensinar:</h2>
-		<div class="jeito__list">
-			<div class="jeito__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-cinema.svg">
-				<h3>Qualidade de cinema</h3>
-			</div>
-			<div class="jeito__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ponto-vista.svg">
-				<h3>Especialistas com diferentes pontos de vistas</h3>
-			</div>
-			<div class="jeito__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-simples.svg">
-				<h3>Tornamos o complexo em simples</h3>
-			</div>
-			<div class="jeito__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-ritimo.svg">
-				<h3>Aprenda no seu ritmo</h3>
-			</div>
-		</div>
-	</div>
-</section>
-
 
 <?php if (get_field('ativar_as_marcas')): ?>
 <section class="empresas"> 
@@ -215,11 +213,10 @@ if(get_field('professor')){
 </section>
 <?php endif; ?>
 
-<?php if (have_rows('etapas')): ?>
 <section class="single-programa-completo">
 	<div class="container">
 		<h2>Confira o programa completo</h2>
-		<p><?= get_field('percurso_titulo'); ?></p>
+		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 	</div>
 	<div class="container-fluid px-0">
 		<div class="row items">
@@ -257,14 +254,12 @@ if(get_field('professor')){
 		</div>
 	</div>
 </section>
-<?php endif; ?>
-
 
 <?php if( have_rows('depoimentos') ): ?>
 <section class="single-depoimentos">
 	<div class="container">
 		<div class="header">
-			<h2>O que dizem alunos Saibalá:</h2>
+			<h2>Quem passou pela Saibalá:</h2>
 		</div>
 		<div class="<?php if (count(get_field('depoimentos')) >= 3) { ?>owl-carousel<?php  } else { echo 'blocos__simples'; } ?>">
 			<?php
