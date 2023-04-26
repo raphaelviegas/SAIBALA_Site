@@ -19,7 +19,6 @@
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/fonts/vinila.css" rel="stylesheet" />
-			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/style.css" rel="stylesheet" />
 			<!-- ================== END BASE CSS STYLE ================== -->
 
 			<!-- ================== FAVICON END ================== -->
@@ -64,11 +63,12 @@
 								Carrinho
 							</span>
 						</a>
-						<a class='px-2 py-1 btn-exp d-flex align-center btn-login' href="#myaccount">Entrar</a>
+						<a class="px-2 py-1 d-flex align-center btn-login" href="javascript:;" onclick="saibalaLoginModal.show();">Entrar</a>
 						<a class='px-2 align-center d-mobile-flex mt-2' href="https://saibala.com.br/carrinho/">	
 							<i class='fal fa-shopping-cart'></i>
 						</a>
-						<a class='px-2 py-1 btn-exp d-flex align-center btn-black mobile-d-none' href="#login">Cadastre-se</a>
+						<!-- <a class='px-2 py-1 btn-exp d-flex align-center btn-black mobile-d-none' href="#login">Cadastre-se</a> -->
+						<a class='px-2 py-1 d-flex align-center btn-black mobile-d-none' href="javascript:;" onclick="saibalaCadastroModal.show()">Cadastre-se</a>
 					</div>
 
 				</div>
@@ -136,3 +136,5 @@
 			</div>
 		</div>
 		
+		<?php get_template_part('template-parts/cadastro'); ?>
+		<?php get_template_part('template-parts/login'); ?>

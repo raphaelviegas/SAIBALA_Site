@@ -10,6 +10,11 @@ include "functions/product_sidebar.php";
 // include "functions/acf_fields.php";
 
 
+// API endpoints
+include __DIR__ . '/api/cadastro.php';
+include __DIR__ . '/api/login.php';
+
+
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
