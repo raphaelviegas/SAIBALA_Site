@@ -257,7 +257,7 @@ header.black .logo {
 @media (max-width: 767px) {
   .footer-contact--medias {
     width: 90%;
-    max-width: 80%;
+    max-width: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
   }
@@ -1025,6 +1025,7 @@ header.black .logo {
   bottom: 60px;
   left: 10%;
   background: #ffff00;
+  color: #000;
 }
 
 .selo__hero {
