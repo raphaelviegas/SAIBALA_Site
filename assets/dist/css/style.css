@@ -228,7 +228,7 @@ header.black .logo {
 @media (max-width: 767px) {
   .footer-contact--medias {
     width: 90%;
-    max-width: 80%;
+    max-width: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
   }
