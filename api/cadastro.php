@@ -8,8 +8,7 @@ add_action('rest_api_init', function() {
     'callback' => function(WP_REST_Request $request) {
       $params = (object) array_merge([
         'name' => null,
-        'pronoun' => null,
-        'age' => null,
+        'birth_year' => null,
         'email' => null,
         'phone' => null,
         'profession' => null,
@@ -26,8 +25,8 @@ add_action('rest_api_init', function() {
         $errors['name'][] = 'Nome é obrigatório';
       }
 
-      if (!$params->age) {
-        $errors['age'][] = 'Informe sua idade';
+      if (!$params->birth_year) {
+        $errors['birth_year'][] = 'Informe seu ano de nascimento';
       }
 
       if (!filter_var($params->email, FILTER_VALIDATE_EMAIL)) {
@@ -40,14 +39,6 @@ add_action('rest_api_init', function() {
       if (!$params->phone) {
         $errors['phone'][] = 'Informe seu telefone';
       }
-      
-      // if (!$params->profession) {
-      //   $errors['profession'][] = 'Qual sua profissão?';
-      // }
-      
-      // if (!$params->professional_goal) {
-      //   $errors['professional_goal'][] = 'Qual sua meta profissional?';
-      // }
 
       if (!$params->password) {
         $errors['password'][] = 'Senha é obrigatória';
@@ -67,8 +58,9 @@ add_action('rest_api_init', function() {
 
       $params->accept_terms = $params->accept_terms ? 1 : null;
       $params->accept_news = $params->accept_news ? 1 : null;
-      $params->birth_date = date('Y-m-d', strtotime("first day of this year - {$params->age} years"));
-      unset($params->age);
+
+      $params->birth_date = date('Y-m-d', strtotime("{$params->birth_year}-01-01"));
+      unset($params->birth_year);
 
       $params->user_id = wp_create_user($params->email, $params->password, $params->email);
 
@@ -76,6 +68,12 @@ add_action('rest_api_init', function() {
         if (in_array($name, ['user_id', 'name', 'email', 'password', 'password_confirm'])) continue;
         update_user_meta($params->user_id, $name, $value);
       }
+
+      wp_signon([
+        'user_login' => $params->email,
+        'user_password' => $params->password,
+        'remember' => true,
+      ]);
 
       return $params;
     },
