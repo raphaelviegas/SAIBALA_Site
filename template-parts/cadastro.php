@@ -44,6 +44,10 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
             <a href="javascript:;" class="section-cadastro-modal--voltar" @click="dialog=false">Voltar Home</a>
             <div class="section-cadastro-modal--title">Olá,<br><strong>Seja bem-vindo</strong></div>
             <br><br>
+
+            <v-alert v-if="success" type="success" class="bg-green">
+              Cadastro completo! Você está sendo redirecionado para a sua página de cursos.
+            </v-alert>
   
             <v-row no-gutters>
               <v-col cols="12" md="12">
@@ -58,28 +62,16 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
                 </div>
               </v-col>
   
-              <v-col cols="12" md="8">
+              <v-col cols="12" md="12">
                 <div class="section-cadastro-modal--form-field">
-                  <div class="section-cadastro-modal--form-field-label">pronome</div>
-                  <v-text-field
-                    placeholder='digite seu pronome, exemplo: "ele, dele"'
-                    v-model="post.pronoun"
-                    :error-messages="getError('pronoun')"
-                    :hide-details="!getError('pronoun')"
-                  ></v-text-field>
-                </div>
-              </v-col>
-  
-              <v-col cols="12" md="4">
-                <div class="section-cadastro-modal--form-field">
-                  <div class="section-cadastro-modal--form-field-label">idade</div>
-                  <v-text-field
-                    placeholder="digite sua idade"
-                    type="number"
-                    v-model="post.age"
-                    :error-messages="getError('age')"
-                    :hide-details="!getError('age')"
-                  ></v-text-field>
+                  <div class="section-cadastro-modal--form-field-label">nascimento</div>
+                  <v-autocomplete
+                    placeholder="informe seu ano de nascimento"
+                    v-model="post.birth_year"
+                    :items="birthYears"
+                    :error-messages="getError('birth_year')"
+                    :hide-details="!getError('birth_year')"
+                  ></v-autocomplete>
                 </div>
               </v-col>
   
@@ -225,6 +217,9 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
             const { data } = await axios.post('<?php echo site_url('/wp-json/saibala/v1/register'); ?>', this.post);
             this.success = data;
             this.post = this.postDefault();
+            setTimeout(() => {
+              location.href = "<?php echo site_url('/minha-conta'); ?>";
+            }, 3000);
           } catch(err) {
             this.error = err.response.data;
           }
@@ -236,8 +231,7 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
         postDefault() {
           return {
             name: '',
-            pronoun: '',
-            age: '',
+            birth_year: '',
             email: '',
             phone: '',
             profession: '',
@@ -257,6 +251,15 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
           post: this.postDefault(),
           error: false,
           success: false,
+          birthYears: (() => {
+            const yearStart = (new Date()).getFullYear() - 10;
+            const yearFinal = yearStart - 80;
+            let birthYears = [];
+            for(let i=yearStart; i>=yearFinal; i--) {
+              birthYears.push(i);
+            }
+            return birthYears;
+          })(),
         };
       },
 
