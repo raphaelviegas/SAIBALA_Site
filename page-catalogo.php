@@ -12,9 +12,7 @@ $hero_image_03 = get_field('hero_image_03');
 // $hero_image_02 = 'https://saibala.com.br/wp-content/uploads/2022/11/Landscape_Temposexponenciais.png';
 // $hero_image_03 = 'https://saibala.com.br/wp-content/uploads/2022/12/Landscape_CaminhoProfissionalFuturo.png';
 
-// add_action('wp_header', function() {
-//   wp_register_style('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
-// });
+wp_enqueue_style('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
 
 get_header('shop');
 
@@ -264,12 +262,20 @@ endif;
   <section class="more-series" id="series">
     <div class="more-series-wrapper">
 
-      <h2 class="more-series-title">confira todas as <span>séries</span> da saibalá:</h2>
+      <h2 class="more-series-title">confira todos os <span>cursos</span> da saibalá:</h2>
 
-      <div class="more-series-menu">
+      <div class="more-series-menu" id="more-series-cursos">
         <div class="swiper menuSwiper">
           <?php
-            $terms = get_field('products_categories');
+
+            $products_categories = get_field('products_categories');
+            $products_categories = is_array($products_categories) ? $products_categories : [];
+
+            $journeys_categories = get_field('journeys_categories');
+            $journeys_categories = is_array($journeys_categories) ? $journeys_categories : [];
+
+            $terms = array_merge($products_categories, $journeys_categories);
+            
             if ($terms) : ?>
                 <ul class="swiper-wrapper">
                   <?php foreach ($terms as $term):
@@ -284,6 +290,16 @@ endif;
           <?php endif; ?>
         </div>
       </div>
+
+      <script>
+        addEventListener('DOMContentLoaded', () => {
+          const target = document.querySelector('#more-series-cursos .btn-more-series');
+          target.click();
+          setTimeout(() => {
+            target.closest('ul').style.transform = 'translate3d(0px, 0px, 0px)';
+          }, 100);
+        });
+      </script>
 
 
       <div class="more-series-content">
@@ -380,11 +396,10 @@ endif;
 
   <section class="catalogo__programas">
 
-    <div class="catalogo__programas-header">
+    <?php /*<div class="catalogo__programas-header">
       <h2>confira também nossos <span>programas</span>, clicando aqui:</h2>
-        <a href="<?php echo bloginfo('url');
-        ;?>/catalogo/programas-saibala">programas</a>
-    </div>
+      <a href="<?php echo bloginfo('url');?>/catalogo/programas-saibala">programas</a>
+    </div>*/ ?>
 
     <div class="catalogo__programas-form">
       <div class="catalogo__programas-form-content">
