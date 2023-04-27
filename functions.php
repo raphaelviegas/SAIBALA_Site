@@ -759,4 +759,7 @@ if( function_exists('acf_add_local_field_group') ):
   ));
   
   endif;
-?>
+
+add_action('acf/init', function() {
+  include __DIR__ . '/acf/fields/page-catalogo.php';
+});
