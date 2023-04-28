@@ -2,6 +2,10 @@
 
 // Template Name: Catalogo
 
+// Dependências
+wp_enqueue_script('vue', 'https://unpkg.com/vue@3.2.47/dist/vue.global.js');
+wp_enqueue_style('mdi', 'https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css');
+
 $email_contact = get_field('email_contact');
 $hero_image_01 = get_field('hero_image_01');
 $hero_image_02 = get_field('hero_image_02');
@@ -259,140 +263,7 @@ endif;
       
     <?php endif; ?>
 
-  <section class="more-series" id="series">
-    <div class="more-series-wrapper">
-
-      <h2 class="more-series-title">confira todos os <span>cursos</span> da saibalá:</h2>
-
-      <div class="more-series-menu" id="more-series-cursos">
-        <div class="swiper menuSwiper">
-          <?php
-
-            $products_categories = get_field('products_categories');
-            $products_categories = is_array($products_categories) ? $products_categories : [];
-
-            $journeys_categories = get_field('journeys_categories');
-            $journeys_categories = is_array($journeys_categories) ? $journeys_categories : [];
-
-            $terms = array_merge($products_categories, $journeys_categories);
-            
-            if ($terms) : ?>
-                <ul class="swiper-wrapper">
-                  <?php foreach ($terms as $term):
-                    $termObject = get_term($term);
-                    if ($termObject->taxonomy != 'product_cat') continue;
-                  ?>
-                    <div class="swiper-slide">
-                      <button class="btn-more-series" data-category-id="<?php echo $term?>"><?php echo $termObject -> name?></button>
-                    </div>
-                  <?php endforeach; ?>
-                </ul>
-          <?php endif; ?>
-        </div>
-      </div>
-
-      <script>
-        addEventListener('DOMContentLoaded', () => {
-          const target = document.querySelector('#more-series-cursos .btn-more-series');
-          target.click();
-          setTimeout(() => {
-            target.closest('ul').style.transform = 'translate3d(0px, 0px, 0px)';
-          }, 100);
-        });
-      </script>
-
-
-      <div class="more-series-content">
-      <?php
-
-        if ($terms) : ?>
-            <?php foreach ($terms as $term) :?>
-                <?php
-                $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-
-                $the_query = new WP_Query([
-                  'paged' => $paged,
-                  'post_type' => 'product',
-                  'posts_per_page' => -1,
-                  'tax_query' => [
-                    [
-                      'taxonomy' => 'product_cat',
-                      'field' => 'id',
-                      'terms' => $term,
-                    ],
-                  ],
-                ]);
-
-                ?>
-                 <div class="more-series-container" data-container-category-id="<?php echo $term?>">
-                 <div class="more-series-container-wrapper">
-
-                <?php if (have_posts()) :
-                    while ($the_query->have_posts()) :
-                        $the_query->the_post();
-                        $permalinkSeries = get_permalink(); ?>
-                        
-                      
-                        <div class="more-series-item" style="background-image: url(<?php echo get_the_post_thumbnail_url()?>)">
-                          <div class="more-series-item-content">
-                            <div class="more-series-item-content-container">
-                              <strong><?php the_title();?></strong>
-                              <?php
-                                $professor_posts_series = get_field('professor');
-                                $maxS = 3;
-                                $iS = 0;
-                                $prof_names_series = array();
-
-                                if ($professor_posts_series) : ?>
-                                          <?php foreach ($professor_posts_series as $post) :
-                                                $iS++; ?>
-                                      
-                                                <?php if ($iS > $maxS) {
-                                                    break;
-                                                } ?>
-                                                <?php setup_postdata($post); ?>
-                                            
-                                                <?php array_push($prof_names_series, get_the_title());
-                                                ?>
-                                          <?php endforeach; ?>
-                                
-                                        <?php
-
-                                        wp_reset_postdata(); ?>
-                                <?php endif;
-                                ?>
-                               <?php if (count($prof_names_series) > 2) :
-                                                ;?>
-                                            <p><?php echo $prof_names_series[0] ?>, <?php echo $prof_names[1] ?>, e mais <?php echo count($prof_names_series) - 2?></p>
-                                  
-                               <?php else : ?>
-                                                <p><?php echo implode(", ", $prof_names_series);
-                                                ?></p>
-                               <?php endif ?>         
-                              
-                            </div>
-                            
-                            <a href="<?php echo esc_url($permalinkSeries);?>" class="more-series-item-content-link">
-                            ver mais 
-                            <div class="arrow"></div>
-                          </a>
-                          </div>
-                        </div>
-                    <?php endwhile; ?>
-                    </div>
-              
-                    <?php else : ?>
-                <?php endif; ?>
-                </div>
-            <?php endforeach; ?>
-        
-        <?php endif; ?>
-
-      </div>
-
-
-    </div>
-  </section>
+  <?php get_template_part('template-parts/catalogo-cursos'); ?>
 
   <section class="catalogo__programas">
 

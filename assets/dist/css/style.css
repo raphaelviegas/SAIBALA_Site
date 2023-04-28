@@ -47,7 +47,7 @@ a {
 /* section-header */
 .section-header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   background: none;
   color: #ffff00;
@@ -2003,6 +2003,23 @@ header.black .logo {
     font-size: 26px;
     line-height: 28px;
   }
+}
+.more-series-input-search {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.more-series-input-search .mdi {
+  padding: 5px 10px;
+}
+.more-series-input-search input {
+  border: none;
+  background: none;
+  flex-grow: 1;
+  outline: none !important;
+  padding: 0 10px 0 0;
 }
 .more-series {
   border-bottom: 5px solid #3196ff;
