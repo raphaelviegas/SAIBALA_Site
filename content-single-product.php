@@ -312,7 +312,7 @@ if(get_field('professor')){
 <section class="comprar">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6 <?php if (!get_field('textos_vendas')) { echo 'offset-md-3'; } ?>">
 				<?php 
 					if ($product->sale_price !== '') {
 						$desconto = round($product->sale_price / $product->regular_price - 1,2)*-100;
@@ -341,16 +341,18 @@ if(get_field('professor')){
 					<li><img src="<?= get_template_directory_uri(); ?>/assets/img/pagamento-boleto.svg"></li>
 				</ul>
 			</div>
+			<?php  if (get_field('textos_vendas') && have_rows('textos_vendas') ): ?>
 			<div class="col-md-6">
 				<h2>Garanta já sua vaga</h2>
 				<ul class="comprar__list">
-					<li><span>Aprenda a criar produtos que vendem muito e  pare de gastar tempo, mão de obra e dinheiro em produtos que não dão retorno.</span></li>
-					<li><span>Descubra por onde começar e o passo a passo para criar o seu produto ou serviço de sucesso.</span></li>
-					<li><span>Transforme suas ideias em produtos ou serviços de destaque.</span></li>
-					<li><span>Torne-se um expert em produtos.</span></li>
-					<li><span>Caso não funcione para você, basta solicitar o reembolso dentro do prazo de garantia que <strong>devolvemos 100% do seu dinheiro.</strong></span></li>
+					<?php 
+						while( have_rows('textos_vendas') ): the_row();
+							echo '<li><span>'.get_sub_field('texto').'</span></li>';
+						endwhile;
+					?>						
 				</ul>
 			</div>
+			<?php endif; ?>
 		</div>		
 	</div>
 </section>
