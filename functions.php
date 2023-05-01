@@ -757,6 +757,72 @@ if( function_exists('acf_add_local_field_group') ):
     'active' => true,
     'description' => '',
   ));
+
+
+  // Campo textos vendas
+  acf_add_local_field_group(array(
+    'key' => 'group_64503dce10530',
+    'title' => 'Cursos - Textos Vendas',
+    'fields' => array(
+      array(
+        'key' => 'field_64503de560d9b',
+        'label' => 'Textos Vendas',
+        'name' => 'textos_vendas',
+        'type' => 'repeater',
+        'instructions' => 'Texto exibido ao lado do box de compra do curso.',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'collapsed' => '',
+        'min' => 0,
+        'max' => 0,
+        'layout' => 'table',
+        'button_label' => '',
+        'sub_fields' => array(
+          array(
+            'key' => 'field_64503dfe60d9c',
+            'label' => 'Texto',
+            'name' => 'texto',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+          ),
+        ),
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'product',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'acf_after_title',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
   
   endif;
 
