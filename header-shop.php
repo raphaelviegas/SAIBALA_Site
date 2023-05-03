@@ -1,3 +1,11 @@
+<?php
+
+$args = (object) array_merge([
+	'header_logo' => '/assets/img/new-home/logo-yellow.svg',
+	'header_link_color' => '#ffff00',
+], $args);
+
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> 
 <html lang="pt" class="ie8">
@@ -37,6 +45,34 @@
 			<?php if (!has_post_thumbnail($post->ID)): ?>
 				<meta property="og:image" content="<?= get_template_directory_uri(); ?>/assets/img/og-image.jpg"/>
 			<?php endif; ?>
+
+			<style>
+				/* section-header */
+				.section-header {
+					width: 100%;
+					position: absolute;
+					top: 0;
+					background: none;
+					color: #ffff00;
+					padding: 10px;
+					z-index: 99;
+				}
+
+				.section-header-menu {
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+					display: flex;
+				}
+
+				.section-header-menu > li > a {
+					display: block;
+					padding: 10px 10px;
+					color: <?php echo $args->header_link_color; ?>;
+					font-size: 20px ;
+					font-weight: 100;
+				}
+			</style>
 		</head>
 		<body <?php body_class(); ?>>
 
@@ -44,7 +80,7 @@
 			<div class="container-980 d-flex align-items-center" style="gap:15px;">
 				<div>
 					<a href="<?php echo get_home_url();?>" class='logo'>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-yellow.svg" width="100" />
+						<img src="<?php echo get_template_directory_uri() . $args->header_logo; ?>" width="100" />
 					</a>
 				</div>
 				<div class="flex-grow-1"></div>

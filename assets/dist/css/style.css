@@ -44,32 +44,6 @@ a {
   color: white;
 }
 
-/* section-header */
-.section-header {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  background: none;
-  color: #ffff00;
-  padding: 10px;
-  z-index: 99;
-}
-
-.section-header-menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.section-header-menu > li > a {
-  display: block;
-  padding: 10px 10px;
-  color: #ffff00;
-  font-size: 20px ;
-  font-weight: 100;
-}
-
 header {
   position: fixed;
   background: #FFFF00;
