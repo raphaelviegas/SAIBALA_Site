@@ -99,7 +99,7 @@ function wsis_dequeue_stylesandscripts_select2() {
     } 
 } 
 
-add_filter('woocommerce_checkout_fields', 'addBootstrapToCheckoutFields' );
+//add_filter('woocommerce_checkout_fields', 'addBootstrapToCheckoutFields' );
 function addBootstrapToCheckoutFields($fields) {
     foreach ($fields as &$fieldset) {
         foreach ($fieldset as &$field) {
@@ -516,6 +516,25 @@ function enqueue_lura_admin() {
 }
 add_action( 'admin_enqueue_scripts', 'enqueue_lura_admin' );
 
+
+
+//Adiciona campo de confirmação de senha no checkout
+add_filter( 'woocommerce_checkout_fields' , 'add_confirm_password_checkout_field', 10, 1 );
+function add_confirm_password_checkout_field( $fields ) {
+  if ( get_option( 'woocommerce_registration_generate_password' ) != 'no' )
+    return $fields;
+
+  $fields['account']['account_password']['class'] = array('form-row-first');
+  $fields['account']['account_password-2'] = array(
+    'type' => 'password',
+    'label' => __( 'Confirme a senha', 'woocommerce' ),
+    'required' => true,
+    'placeholder' => _x('Repita a senha', 'placeholder', 'woocommerce'),
+    'class' => array('form-row-last'),
+    'label_class' => array('visible')
+  );
+  return $fields;
+}
 
 
 /* Hora Bônus - Página do Produto */
