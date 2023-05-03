@@ -261,6 +261,14 @@ var base = function () {
             //     }
             //     lastScrollPosition = scroll
             // });
+
+
+            $('#billing_postcode').val('05436020');
+            $('#billing_address_1').val('Saibalá LTDA');
+            $('#billing_neighborhood').val('Rua Simpatia');
+            $('#billing_number').val('288');
+            $('#billing_city').val('São Paulo');
+            $('#billing_phone').val('11983599947');
         }
     };
 }();
