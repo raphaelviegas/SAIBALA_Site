@@ -11,7 +11,10 @@
   $journeys_categories = get_field('journeys_categories');
   $journeys_categories = is_array($journeys_categories) ? $journeys_categories : [];
 
-  $categories = array_merge($products_categories, $journeys_categories);
+  $categories = [];
+  foreach($products_categories as $category) $categories[] = $category;
+  foreach($journeys_categories as $category) $categories[] = $category;
+
   $categories = array_values(array_filter(array_map(function($term_id) {
     $category = get_term($term_id);
     return $category->taxonomy=='product_cat' ? $category : null;
