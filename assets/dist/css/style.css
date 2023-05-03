@@ -18,7 +18,7 @@ html {
   color: #A36FFF;
 }
 .bg-green {
-  background-color: #46BEAA;
+  background-color: #46BEAA !important;
 }
 .bg-blue {
   background-color: #3196FF;
@@ -2590,6 +2590,14 @@ header.black .logo {
 #home .principal .text .text-adicional p strong {
   font-family: 'Vinila', sans-serif;
   font-weight: 900;
+}
+#home .planejamento {
+  height: 1080px !important;
+}
+@media (min-width: 0) and (max-width: 670px) {
+  #home .planejamento {
+    height: 800px !important;
+  }
 }
 #home .planejamento .text {
   justify-content: flex-end;
