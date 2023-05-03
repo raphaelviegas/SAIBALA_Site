@@ -27,7 +27,7 @@
 		</div>
 	</section>
 
-	<section class="planejamento position-relative bg-green">
+	<section class="planejamento position-relative bg-green" style="height:1080px;">
 		<div class="wrap-img">
 			<img class="m-auto desk" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/bg-02.png" alt="">
 			<img class="m-auto mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/bg-02-mobile.png" alt="">
