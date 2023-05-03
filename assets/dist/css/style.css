@@ -7242,7 +7242,9 @@ body.woocommerce-checkout .woocommerce-message{
 
 .cadastro__form #gift_purchase_field, 
 .cadastro__form #billing_persontype_field,
-.woocommerce-checkout #minicart input {
+.woocommerce-checkout #minicart input,
+.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper,
+.woocommerce-checkout #payment .btn-neutral {
   display: none;
 }
 
