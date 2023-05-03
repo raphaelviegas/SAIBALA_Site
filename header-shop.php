@@ -19,7 +19,6 @@
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/fonts/vinila.css" rel="stylesheet" />
-			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/style.css" rel="stylesheet" />
 			<!-- ================== END BASE CSS STYLE ================== -->
 
 			<!-- ================== FAVICON END ================== -->
@@ -39,43 +38,41 @@
 			<?php endif; ?>
 		</head>
 		<body <?php body_class(); ?>>
+		<header>
+			<div class="container-980">
+				<div class="row justify-content-between">
+					<div class="col-6 col-md-2 logo">
+						<a class='px-3 p-2 btn-exp d-flex align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+							<i class='fal fa-bars mobile'></i>
+						</a>
+						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.png"/></a>
+					</div>
 
-		<header class="section-header">
-			<div class="container-980 d-flex align-items-center" style="gap:15px;">
-				<div>
-					<a href="<?php echo get_home_url();?>" class='logo'>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-yellow.svg" width="100" />
-					</a>
-				</div>
-				<div class="flex-grow-1"></div>
-				<div class="d-none d-lg-block">
-					<?php wp_nav_menu([
-						'theme_location' => 'header-menu',
-						'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-						'menu_class' => 'section-header-menu',
-					]); ?>
-				</div>
-				<div class="d-lg-none">
-					<a href="#box-menu" style="color:#ffff00;" class="btn-exp">
-						<i class="fal fa-bars"></i>
-					</a>
+					<div class="col-md-6 text-right links d-lg-flex justify-content-center collapse" id="collapseExample">
+						<?php
+						wp_nav_menu( array( 
+							'theme_location' => 'header-menu'
+							) ); 
+						?>
+					</div>
+
+					<div class="col-6 col-md-5 col-lg-4 d-flex d-lg-flex align-center justify-content-end">
+						<a class='px-2 d-flex align-center button-cart-expansive mobile-d-none' href="https://saibala.com.br/carrinho/">
+							<span class="text-cart-expansive">
+								<i class='fal fa-shopping-cart'></i>
+								Carrinho
+							</span>
+						</a>
+						<a class='px-2 py-1 btn-exp d-flex align-center btn-login' href="#myaccount">Entrar</a>
+						<a class='px-2 align-center d-mobile-flex mt-2' href="https://saibala.com.br/carrinho/">	
+							<i class='fal fa-shopping-cart'></i>
+						</a>
+						<a class='px-2 py-1 btn-exp d-flex align-center btn-black mobile-d-none' href="#login">Cadastre-se</a>
+					</div>
+
 				</div>
 			</div>
 		</header>
-
-		<div class="box-expansivel box-menu" data-name="box-menu">
-			<div class='header'>
-				<h3>Menu</h3>
-				<button class='bclose'><i class='fal fa-times'></i></button>
-			</div>
-			<div class="scroll">
-				<?php wp_nav_menu([
-					'theme_location' => 'header-menu',
-					'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-					'menu_class' => 'section-header-menu-overlay-menu',
-				]); ?>
-			</div>
-		</div>
 		
 		<div class="box-expansivel box-myaccount" data-name='myaccount'>
 			<div class='header'>

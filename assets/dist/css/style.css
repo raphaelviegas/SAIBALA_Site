@@ -467,6 +467,18 @@ header.black .logo {
 .box-myaccount ul li a {
   color: black;
 }
+ul.section-header-menu-overlay-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.section-header-menu-overlay-menu li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 5px;
+}
+ul.section-header-menu-overlay-menu li a {
+  color: black;
+}
 .woocommerce-input-wrapper,
 .password-input {
   width: 100%;
