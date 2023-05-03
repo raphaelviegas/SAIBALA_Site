@@ -7258,3 +7258,28 @@ body.woocommerce-checkout .woocommerce-message{
     background-color: #000;
     transform: translateY(-50%);
   }
+
+
+
+/* Checkout */
+.cadastro__form label {
+  display: block;
+  color: #a6a6a6;
+}
+
+.cadastro__form #gift_purchase_field, 
+.cadastro__form #billing_persontype_field,
+.woocommerce-checkout #minicart input,
+.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper,
+.woocommerce-checkout #payment .btn-neutral {
+  display: none;
+}
+
+.cadastro__form input, 
+.cadastro__form select,
+.woocommerce-checkout #minicart input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0px;
+  border:2px #a6a6a6 solid !important
+}
