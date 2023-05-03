@@ -65,6 +65,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 											
 						
 					</div>
+					
+					<div style="display:none">
+						<input type="hidden" name="billing_country" id="billing_country" value="BR">
+						<input type="hidden" name="billing_postcode" id="billing_postcode" value="17067-410">
+						<input type="hidden" name="billing_address_1" id="billing_address_1" value="Avenida Engenheiro Paulo Frontin">
+						<input type="hidden" name="billing_number" id="billing_number" value="1004">
+						<input type="hidden" name="billing_number" id="billing_number" value="1004">
+						<input type="hidden" name="billing_neighborhood" id="billing_neighborhood" value="Parque Santa Edwiges">
+						<input type="hidden" name="billing_city" id="billing_city" value="Bauru">
+						<input type="hidden" name="billing_state" id="billing_state" value="SP">
+						<input type="hidden" name="billing_state" id="billing_state" value="SP">
+						<input type="hidden" name="billing_phone" id="billing_phone" value="(14) 99693-1327">
+					</div>
+
+					<div style="display:none">
+						<input type="hidden" name="shipping_country" id="shipping_country" value="BR">
+						<input type="hidden" name="shipping_postcode" id="shipping_postcode" value="17067-410">
+						<input type="hidden" name="shipping_address_1" id="shipping_address_1" value="Avenida Engenheiro Paulo Frontin">
+						<input type="hidden" name="shipping_number" id="shipping_number" value="1004">
+						<input type="hidden" name="shipping_number" id="shipping_number" value="1004">
+						<input type="hidden" name="shipping_neighborhood" id="shipping_neighborhood" value="Parque Santa Edwiges">
+						<input type="hidden" name="shipping_city" id="shipping_city" value="Bauru">
+						<input type="hidden" name="shipping_state" id="shipping_state" value="SP">
+						<input type="hidden" name="shipping_state" id="shipping_state" value="SP">
+						<input type="hidden" name="shipping_phone" id="shipping_phone" value="(14) 99693-1327">
+					</div>
 
 					<div class="forma__pagamento">
 						<h3 id="order_review_heading"><?php esc_html_e( 'Payment', 'woocommerce' ); ?></h3>

@@ -537,6 +537,22 @@ function add_confirm_password_checkout_field( $fields ) {
 }
 
 
+
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+function custom_override_checkout_fields( $fields ) {
+  unset($fields['billing']['billing_last_name']); //remove o sobrenome
+  unset($fields['billing']['billing_company']); //remove o nome da empresa
+  unset($fields['billing']['billing_address_1']); //remove o endereço 1
+  unset($fields['billing']['billing_address_2']); //remove o endereço 2
+  unset($fields['billing']['billing_country']); //remove o país
+  unset($fields['billing']['billing_state']); //remove o estado
+  unset($fields['billing']['billing_city']); //remove a cidade
+  unset($fields['billing']['billing_postcode']); //remove o cep
+  unset($fields['billing']['billing_phone']); //remove o telefone
+  unset($fields['order']['order_comments']); //remove o comentários do pedido
+  return $fields;
+}
+
 /* Hora Bônus - Página do Produto */
 if( function_exists('acf_add_local_field_group') ):
 
