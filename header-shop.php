@@ -126,7 +126,7 @@ $args = (object) array_merge([
 					</div>
 				</div>
 				<div class="d-lg-none">
-					<a href="#box-menu" style="color:#ffff00;" class="btn-exp">
+					<a href="#box-menu" style="color: <?php echo $args->header_link_color; ?>;" class="btn-exp">
 						<i class="fal fa-bars"></i>
 					</a>
 				</div>

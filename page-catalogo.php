@@ -11,10 +11,10 @@ $hero_image_01 = get_field('hero_image_01');
 $hero_image_02 = get_field('hero_image_02');
 $hero_image_03 = get_field('hero_image_03');
 
-// Localhost imagem correta para teste
-$hero_image_01 = 'https://saibala.com.br/wp-content/uploads/2022/11/Retrato_Embuscadoprodutoperfeito.png';
-$hero_image_02 = 'https://saibala.com.br/wp-content/uploads/2022/11/Landscape_Temposexponenciais.png';
-$hero_image_03 = 'https://saibala.com.br/wp-content/uploads/2022/12/Landscape_CaminhoProfissionalFuturo.png';
+// // Localhost imagem correta para teste
+// $hero_image_01 = 'https://saibala.com.br/wp-content/uploads/2022/11/Retrato_Embuscadoprodutoperfeito.png';
+// $hero_image_02 = 'https://saibala.com.br/wp-content/uploads/2022/11/Landscape_Temposexponenciais.png';
+// $hero_image_03 = 'https://saibala.com.br/wp-content/uploads/2022/12/Landscape_CaminhoProfissionalFuturo.png';
 
 wp_enqueue_style('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
 
