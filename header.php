@@ -63,12 +63,24 @@
 								Carrinho
 							</span>
 						</a>
-						<a class="px-2 py-1 d-flex align-center btn-login" href="javascript:;" onclick="saibalaLoginModal.show();">Entrar</a>
-						<a class='px-2 align-center d-mobile-flex mt-2' href="https://saibala.com.br/carrinho/">	
-							<i class='fal fa-shopping-cart'></i>
-						</a>
-						<!-- <a class='px-2 py-1 btn-exp d-flex align-center btn-black mobile-d-none' href="#login">Cadastre-se</a> -->
-						<a class='px-2 py-1 d-flex align-center btn-black mobile-d-none' href="javascript:;" onclick="saibalaCadastroModal.show()">Cadastre-se</a>
+						<?php if (is_user_logged_in()): ?>
+							<a class="px-2 py-1 d-flex align-center btn-login" href="<?php echo site_url('/minha-conta'); ?>" style="white-space:nowrap;">
+								Meus cursos
+							</a>
+							<a class="px-2 py-1 d-flex align-center btn-login" href="<?php echo wp_logout_url(site_url()); ?>">
+								Sair
+							</a>
+						<?php else: ?>
+							<a class="px-2 py-1 d-flex align-center btn-login" href="javascript:;" onclick="saibalaLoginModal.show();">
+								Entrar
+							</a>
+							<a class='px-2 align-center d-mobile-flex mt-2' href="https://saibala.com.br/carrinho/">	
+								<i class='fal fa-shopping-cart'></i>
+							</a>
+							<a class='px-2 py-1 d-flex align-center btn-black mobile-d-none' href="javascript:;" onclick="saibalaCadastroModal.show()">
+								Cadastre-se
+							</a>
+						<?php endif; ?>
 					</div>
 
 				</div>
