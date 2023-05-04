@@ -1,6 +1,9 @@
 <?php
 // Template Name: B2B
-get_header('shop');
+get_header('shop', [
+   'header_logo' => '/assets/img/new-home/logo-black.svg',
+   'header_link_color' => '#000',
+]);
 ?>
 
 <section class="header__b2b">

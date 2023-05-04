@@ -44,32 +44,6 @@ a {
   color: white;
 }
 
-/* section-header */
-.section-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background: none;
-  color: #ffff00;
-  padding: 10px;
-  z-index: 99;
-}
-
-.section-header-menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.section-header-menu > li > a {
-  display: block;
-  padding: 10px 10px;
-  color: #ffff00;
-  font-size: 20px ;
-  font-weight: 100;
-}
-
 header {
   position: fixed;
   background: #FFFF00;
@@ -465,6 +439,18 @@ header.black .logo {
   padding: 10px 5px;
 }
 .box-myaccount ul li a {
+  color: black;
+}
+ul.section-header-menu-overlay-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.section-header-menu-overlay-menu li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 5px;
+}
+ul.section-header-menu-overlay-menu li a {
   color: black;
 }
 .woocommerce-input-wrapper,
@@ -2005,6 +1991,23 @@ header.black .logo {
     line-height: 28px;
   }
 }
+.more-series-input-search {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.more-series-input-search .mdi {
+  padding: 5px 10px;
+}
+.more-series-input-search input {
+  border: none;
+  background: none;
+  flex-grow: 1;
+  outline: none !important;
+  padding: 0 10px 0 0;
+}
 .more-series {
   border-bottom: 5px solid #3196ff;
 }
@@ -2617,6 +2620,14 @@ header.black .logo {
 #home .principal .text .text-adicional p strong {
   font-family: 'Vinila', sans-serif;
   font-weight: 900;
+}
+#home .planejamento {
+  height: 1080px !important;
+}
+@media (min-width: 0) and (max-width: 670px) {
+  #home .planejamento {
+    height: 800px !important;
+  }
 }
 #home .planejamento .text {
   justify-content: flex-end;

@@ -143,7 +143,7 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
             this.post = this.postDefault();
             setTimeout(() => {
               location.reload();
-            }, 3000);
+            }, 1000);
           } catch(err) {
             this.error = err.response.data;
           }

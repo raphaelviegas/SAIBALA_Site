@@ -1,3 +1,11 @@
+<?php
+
+$args = (object) array_merge([
+	'header_logo' => '/assets/img/new-home/logo-yellow.svg',
+	'header_link_color' => '#ffff00',
+], $args);
+
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> 
 <html lang="pt" class="ie8">
@@ -19,6 +27,7 @@
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/fonts/vinila.css" rel="stylesheet" />
+			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/style.css" rel="stylesheet" />
 			<!-- ================== END BASE CSS STYLE ================== -->
 
 			<!-- ================== FAVICON END ================== -->
@@ -36,6 +45,34 @@
 			<?php if (!has_post_thumbnail($post->ID)): ?>
 				<meta property="og:image" content="<?= get_template_directory_uri(); ?>/assets/img/og-image.jpg"/>
 			<?php endif; ?>
+
+			<style>
+				/* section-header */
+				.section-header {
+					width: 100%;
+					position: absolute;
+					top: 0;
+					background: none;
+					color: #ffff00;
+					padding: 10px;
+					z-index: 99;
+				}
+
+				.section-header-menu {
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+					display: flex;
+				}
+
+				.section-header-menu > li > a {
+					display: block;
+					padding: 10px 10px;
+					color: <?php echo $args->header_link_color; ?>;
+					font-size: 20px ;
+					font-weight: 100;
+				}
+			</style>
 		</head>
 		<body <?php body_class(); ?>>
 
@@ -43,19 +80,53 @@
 			<div class="container-980 d-flex align-items-center" style="gap:15px;">
 				<div>
 					<a href="<?php echo get_home_url();?>" class='logo'>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-yellow.svg" width="100" />
+						<img src="<?php echo get_template_directory_uri() . $args->header_logo; ?>" width="100" />
 					</a>
 				</div>
 				<div class="flex-grow-1"></div>
 				<div class="d-none d-lg-block">
-					<?php wp_nav_menu([
-						'theme_location' => 'header-menu',
-						'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-						'menu_class' => 'section-header-menu',
-					]); ?>
+					<div class="menu-header-container">
+						<ul class="section-header-menu">
+							<?php wp_nav_menu([
+								'theme_location' => 'header-menu',
+								'items_wrap' => '%3$s',
+								'container' => false,
+							]); ?>
+
+							<?php if (is_user_logged_in()): ?>
+								<li>
+									<a href="<?php echo site_url('/minha-conta'); ?>" style="white-space:nowrap;">
+										Meus cursos
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo wp_logout_url(site_url()); ?>">
+										Sair
+									</a>
+								</li>
+
+							<?php else: ?>
+								<li>
+									<a href="javascript:;" onclick="saibalaLoginModal.show();">
+										Entrar
+									</a>
+								</li>
+								<!-- <li>
+									<a href="https://saibala.com.br/carrinho/">	
+										<i class='fal fa-shopping-cart'></i>
+									</a>
+								</li> -->
+								<li>
+									<a href="javascript:;" onclick="saibalaCadastroModal.show()">
+										Cadastre-se
+									</a>
+								</li>
+							<?php endif; ?>
+						</ul>
+					</div>
 				</div>
 				<div class="d-lg-none">
-					<a href="#box-menu" style="color:#ffff00;" class="btn-exp">
+					<a href="#box-menu" style="color: <?php echo $args->header_link_color; ?>;" class="btn-exp">
 						<i class="fal fa-bars"></i>
 					</a>
 				</div>
@@ -73,6 +144,40 @@
 					'items_wrap' => '<ul class="%2$s">%3$s</ul>',
 					'menu_class' => 'section-header-menu-overlay-menu',
 				]); ?>
+
+				<div class="menu-header-container">
+					<ul class="section-header-menu-overlay-menu">
+						<?php if (is_user_logged_in()): ?>
+							<li>
+								<a href="<?php echo site_url('/minha-conta'); ?>" style="white-space:nowrap;">
+									Meus cursos
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo wp_logout_url(site_url()); ?>">
+									Sair
+								</a>
+							</li>
+
+						<?php else: ?>
+							<li>
+								<a href="javascript:;" onclick="saibalaLoginModal.show();">
+									Entrar
+								</a>
+							</li>
+							<!-- <li>
+								<a href="https://saibala.com.br/carrinho/">	
+									<i class='fal fa-shopping-cart'></i>
+								</a>
+							</li> -->
+							<li>
+								<a href="javascript:;" onclick="saibalaCadastroModal.show()">
+									Cadastre-se
+								</a>
+							</li>
+						<?php endif; ?>
+					</ul>
+				</div>
 			</div>
 		</div>
 		
@@ -137,3 +242,5 @@
 			</div>
 		</div>
 		
+		<?php get_template_part('template-parts/cadastro'); ?>
+		<?php get_template_part('template-parts/login'); ?>
