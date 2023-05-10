@@ -148,17 +148,27 @@
 
       computed: {
         coursesFilter() {
-          return this.courses.filter(course => {
-            if (this.params.search) {
-              if (!JSON.stringify(course).toLowerCase().includes(this.params.search.toLowerCase())) {
-                return false;
-              }
-            }
-            if (this.params.category_id && course.category_id!=this.params.category_id) {
-              return false;
-            }
-            return true;
+          const filterSearch = (courses) => {
+            return courses.filter((course) => {
+              return JSON.stringify(course).toLowerCase().includes(this.params.search.toLowerCase());
+            });
+          }
+          
+          const filtercategory = (courses) => courses.filter((course) => {
+            return course.category_id==this.params.category_id;
           });
+
+          let courses = this.courses;
+
+          if (this.params.search) {
+            courses = filterSearch(courses);
+          }
+
+          else if (this.params.category_id) {
+            courses = filtercategory(courses);
+          }
+
+          return courses;
         },
       },
 
