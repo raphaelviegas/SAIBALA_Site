@@ -347,7 +347,7 @@ header.black .logo {
 .box-expansivel.active {
   transform: translateX(0);
 }
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .box-expansivel {
     right: auto;
     left: 0px;
@@ -355,7 +355,7 @@ header.black .logo {
     z-index: 100;
     top: 67px;
   }
-}
+} */
 .box-expansivel hr {
   margin: 30px 0px;
 }

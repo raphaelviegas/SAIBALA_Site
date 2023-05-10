@@ -57,11 +57,8 @@
 					</div>
 
 					<div class="col-6 col-md-5 col-lg-4 d-flex d-lg-flex align-center justify-content-end">
-						<a class='px-2 d-flex align-center button-cart-expansive mobile-d-none' href="https://saibala.com.br/carrinho/">	
-							<span class="text-cart-expansive">
-								<i class='fal fa-shopping-cart'></i>
-								Carrinho
-							</span>
+						<a class="px-2 align-center d-mobile-flex mt-2" href="<?php echo wc_get_cart_url(); ?>">	
+							<i class='fal fa-shopping-cart'></i>
 						</a>
 						<?php if (is_user_logged_in()): ?>
 							<a class="px-2 py-1 d-flex align-center btn-login" href="<?php echo site_url('/minha-conta'); ?>" style="white-space:nowrap;">
@@ -74,10 +71,7 @@
 							<a class="px-2 py-1 d-flex align-center btn-login" href="javascript:;" onclick="saibalaLoginModal.show();">
 								Entrar
 							</a>
-							<a class='px-2 align-center d-mobile-flex mt-2' href="https://saibala.com.br/carrinho/">	
-								<i class='fal fa-shopping-cart'></i>
-							</a>
-							<a class='px-2 py-1 d-flex align-center btn-black mobile-d-none' href="javascript:;" onclick="saibalaCadastroModal.show()">
+							<a class="px-2 py-1 text-center btn-black mobile-d-none" href="javascript:;" onclick="saibalaCadastroModal.show()" style="white-space:nowrap;">
 								Cadastre-se
 							</a>
 						<?php endif; ?>

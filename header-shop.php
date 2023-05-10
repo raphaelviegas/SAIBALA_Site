@@ -1,8 +1,8 @@
 <?php
 
 $args = (object) array_merge([
-	'header_logo' => '/assets/img/new-home/logo-yellow.svg',
-	'header_link_color' => '#ffff00',
+	'header_logo' => '/assets/img/new-home/logo-black.svg', // or /assets/img/new-home/logo-yellow.svg
+	'header_link_color' => '#000000', // #000000 or #ffff00
 ], $args);
 
 ?>
