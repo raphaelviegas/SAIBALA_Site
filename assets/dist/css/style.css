@@ -2649,12 +2649,12 @@ ul.section-header-menu-overlay-menu li a {
 }
 #home .planejamento .top .legendas .text-01 {
   position: absolute;
-  top: -128px;
+  top: -120px;
   height: 130px;
 }
 #home .planejamento .top .legendas .text-02 {
   position: absolute;
-  top: -15px;
+  top: -6px;
   text-align: right;
   right: 0;
 }
