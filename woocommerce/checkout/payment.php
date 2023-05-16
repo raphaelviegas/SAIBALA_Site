@@ -43,7 +43,7 @@ if ( ! is_ajax() ) {
 					<a href="#" class='btn-prev btn btn-neutral px-5 mb-3'><?php esc_attr_e( 'Previous', 'woocommerce' ); ?></a>
 				</div>
 			</div>
-			<div class="col-md-6 text-right">
+			<div class="col-md-12 text-right">
 				<noscript>
 					<?php
 					/* translators: $1 and $2 opening and closing emphasis tags respectively */

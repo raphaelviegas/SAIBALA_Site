@@ -15,6 +15,9 @@
  * @version 3.8.0
  */
 
+wp_redirect(wc_get_checkout_url());
+exit();
+
 defined( 'ABSPATH' ) || exit;
 
  ?>
@@ -150,7 +153,7 @@ defined( 'ABSPATH' ) || exit;
 					<?php do_action( 'woocommerce_after_cart_table' ); ?>
 				</form>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-12">
 
 				<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
