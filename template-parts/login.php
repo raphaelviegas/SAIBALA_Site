@@ -4,7 +4,7 @@
  * Como usar:
  * 
  * incluir página
- * get_template_part('template-parts/cadastro');
+ * get_template_part('template-parts/login');
  * 
  * abrir modal:
  * com <a href="javascript:;" onclick="saibalaLoginModal.show()">Cadastre-se</a>

@@ -347,7 +347,7 @@ header.black .logo {
 .box-expansivel.active {
   transform: translateX(0);
 }
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .box-expansivel {
     right: auto;
     left: 0px;
@@ -355,7 +355,7 @@ header.black .logo {
     z-index: 100;
     top: 67px;
   }
-}
+} */
 .box-expansivel hr {
   margin: 30px 0px;
 }
@@ -2649,12 +2649,12 @@ ul.section-header-menu-overlay-menu li a {
 }
 #home .planejamento .top .legendas .text-01 {
   position: absolute;
-  top: -128px;
+  top: -120px;
   height: 130px;
 }
 #home .planejamento .top .legendas .text-02 {
   position: absolute;
-  top: -15px;
+  top: -6px;
   text-align: right;
   right: 0;
 }
