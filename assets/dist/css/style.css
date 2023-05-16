@@ -931,7 +931,11 @@ header.black .logo {
   line-height: 14px;
 }
 #minicart .shop_table .priceBox .amount {
-  font-weight: bold;
+  font-weight: 900;
+  font-family: 'Vinila', sans-serif;
+  margin-top: 25px;
+  display: block;
+  font-size: 20px;
 }
 #minicart .shop_table .priceBox .iva {
   display: inline-block;
@@ -939,9 +943,7 @@ header.black .logo {
   font-size: 10px;
   color: #999;
 }
-#minicart .shop_table td:last-child {
-  text-align: right;
-}
+
 #minicart .shop_table td:last-child label {
   display: none;
 }
@@ -2307,11 +2309,30 @@ header.black .logo {
   padding: 0;
 }
 #checkout .payment_methods li {
-  display: inline-block;
   width: 100%;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 5px;
+  border: 2px solid #a6a6a6;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+
+#checkout .payment_methods li input {
+  display: none;
+}
+
+#checkout .payment_methods li label {
+  margin: 0;
+  padding: 15px 5px;
+  color: #a6a6a6;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding-left: 70px;
+}
+
 #checkout h2.secure span {
   font-size: 12px;
   display: inline-block;
@@ -2343,11 +2364,6 @@ header.black .logo {
 }
 #checkout .expandCart {
   color: black;
-}
-@media (max-width: 576px) {
-  #checkout .exp .table.shop_table {
-    display: none;
-  }
 }
 #checkout .step1 .form-register-box {
   display: none;
@@ -2407,6 +2423,7 @@ header.black .logo {
 #checkout .cart-collaterals .shop_table td,
 #checkout .cart-collaterals .shop_table th {
   padding: 8px;
+  vertical-align: middle;
 }
 #checkout .cart-collaterals .includes_tax {
   display: inline-block;
@@ -7235,9 +7252,21 @@ body.woocommerce-checkout .woocommerce-message{
 
 
 /* Checkout */
+#checkout {
+  padding-top: 140px;
+}
+
 .cadastro__form label {
   display: block;
   color: #a6a6a6;
+}
+
+#checkout .form__intro {
+  margin-top: 30px;
+}
+
+.woocommerce-checkout .container {
+  max-width: 1140px;
 }
 
 .cadastro__form #gift_purchase_field, 
@@ -7257,11 +7286,14 @@ body.woocommerce-checkout .woocommerce-message{
 #billing_state_field,
 #billing_number_field,
 #billing_phone_field,
-.woocommerce-order-received .woocommerce-customer-details {
+.woocommerce-order-received .woocommerce-customer-details,
+#checkout .cart-subtotal, 
+.payment_box .mgn-description,
+.create-account .woocommerce-form__label-for-checkbox  {
   display: none !important;
 }
 
-.cadastro__form input, 
+.cadastro__form input:not([type="checkout"]), 
 .cadastro__form select,
 .woocommerce-checkout #minicart input {
   width: 100%;
@@ -7269,4 +7301,92 @@ body.woocommerce-checkout .woocommerce-message{
   border-radius: 0px;
   border:2px #a6a6a6 solid !important;
   height: 50px;
+}
+
+.cadastro__form input::placeholder {
+  color: #dedede;
+}
+
+.woocommerce-checkout h2.secure {
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    font-family: 'Vinila', sans-serif !important;
+    font-size: 30px !important;
+}
+
+.woocommerce-checkout .cart-collaterals .minicartBox {
+  border:2px #a6a6a6 solid !important;
+  padding: 10px;
+}
+
+#checkout .cart-collaterals {
+  margin-top: -45px;
+}
+
+
+#order_review_heading {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+
+#checkout .payment_methods li {
+  position: relative;
+}
+
+#checkout .payment_methods li img {
+  display: none !important;
+}
+
+.wc_payment_method .payment_box {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  border: 2px #0070e3 solid;
+  box-sizing: content-box;
+  text-indent: -999999px !important;
+}
+
+
+#checkout #minicart {
+  text-align: right;
+  font-family: 'Vinila', sans-serif !important;
+}
+
+#checkout #minicart strong {
+  font-size: 30px;
+  font-weight: 900;
+  display: block;
+  font-family: 'Vinila', sans-serif !important;
+}
+
+#checkout #minicart strong * {
+  font-family: 'Vinila', sans-serif !important;
+}
+
+#place_order {
+  width: 100%;
+}
+
+
+.payment_method_pagarme-banking-ticket {
+  background: url(../../img/icone-boleto.jpg) 10px center no-repeat;
+}
+
+.payment_method_pagarme-credit-card {
+  background: url(../../img/icone-cartao.jpg) 10px center no-repeat;
+}
+
+.payment_method_wc_pagarme_pix_payment_geteway {
+  background: url(../../img/icone-pix.jpg) 10px center no-repeat;
+}
+
+#checkout .cart-collaterals .shop_table td {
+  text-align: left;
+  font-family: 'Vinila', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;  
 }

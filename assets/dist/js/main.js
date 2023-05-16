@@ -417,3 +417,6 @@ $('.video__section .video__close, .cta__video').click(function(e) {
     e.preventDefault();
     $('.video__section').fadeToggle();
 })
+
+
+$('#createaccount').trigger('click');
