@@ -220,7 +220,7 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
 
   .section-login-modal-dialog .section-login-modal-dialog-limit {
     max-width: 622px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px) !important;
     overflow: auto !important;
   }
 
