@@ -77,9 +77,9 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
   
                 <v-col cols="12" md="12" class="pa-3">
                   não tem conta?
-                  <a href="javascript:;">cadastre-se agora.</a>
+                  <a href="javascript:;" @click="modalCadastro()">cadastre-se agora.</a>
                   esqueceu a senha?
-                  <a href="javascript:;">redefina aqui.</a>
+                  <a href="<?php echo site_url('/minha-conta/lost-password/'); ?>">redefina aqui.</a>
                 </v-col>
   
                 <v-col cols="12" md="12" class="pa-3">
@@ -133,6 +133,16 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
       methods: {
         show() {
           this.dialog = true;
+        },
+        hide() {
+          this.dialog = false;
+        },
+        modalCadastro() {
+          this.hide();
+          setTimeout(() => {
+            if (!saibalaCadastroModal) return;
+            saibalaCadastroModal.show();
+          }, 500);
         },
         async submit() {
           this.loading = true;
@@ -210,8 +220,8 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
 
   .section-login-modal-dialog .section-login-modal-dialog-limit {
     max-width: 622px;
-    height: 90vh;
-    overflow: auto;
+    height: calc(100vh - 60px) !important;
+    overflow: auto !important;
   }
 
   .section-login-modal--voltar {
@@ -283,5 +293,13 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
     font-size: 18px;
     color: #ffffff !important;
     font-family: 'Vinila';
+  }
+
+  /* https://getbootstrap.com/docs/5.1/layout/breakpoints/#available-breakpoints */
+  @media (min-width: 0) and (max-width: 576px) {
+    .section-login-modal--title {
+      font-size: 80px !important;
+      line-height: 60px !important;
+    }
   }
 </style>
