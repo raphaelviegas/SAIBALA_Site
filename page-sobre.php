@@ -16,10 +16,12 @@ $background_image_02 = get_field('welcome_background_02');
 $methodology_header_image = get_field('metodologia_header_image');
 $methodology_content_03_image = get_field('metodologia_conteudo_03_imagem');
 
-get_header('shop', [
-  'header_logo' => '/assets/img/new-home/logo-black.svg',
-  'header_link_color' => '#000',
-]);
+// get_header('shop', [
+//   'header_logo' => '/assets/img/new-home/logo-black.svg',
+//   'header_link_color' => '#000',
+// ]);
+
+get_header();
 
 ?>
 

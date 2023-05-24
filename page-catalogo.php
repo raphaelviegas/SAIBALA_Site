@@ -18,10 +18,12 @@ $hero_image_03 = get_field('hero_image_03');
 
 wp_enqueue_style('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
 
-get_header('shop', [
-  'header_logo' => '/assets/img/new-home/logo-yellow.svg',
-	'header_link_color' => '#ffff00',
-]);
+// get_header('shop', [
+//   'header_logo' => '/assets/img/new-home/logo-yellow.svg',
+// 	'header_link_color' => '#ffff00',
+// ]);
+
+get_header();
 
 
 if (! function_exists('hex2rgba')) :
