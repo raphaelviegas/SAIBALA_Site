@@ -1,14 +1,10 @@
 <?php
-get_header('shop');
-?>
+// get_header('shop');
+get_header();
 
-	<?php while ( have_posts() ) : the_post(); ?>
+while (have_posts()) {
+	the_post();
+	the_content();
+}
 
-			<?php the_content(); ?>
-
-	<?php endwhile;  ?>
-
-
-<?php
 get_footer();
-?>

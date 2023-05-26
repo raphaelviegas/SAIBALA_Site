@@ -1,5 +1,5 @@
 <?php
-get_header('shop');
+get_header();
 ?>
 
 <div id="projetos">

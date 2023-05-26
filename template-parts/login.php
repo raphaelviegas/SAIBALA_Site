@@ -93,7 +93,7 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
                     rounded="0"
                   >
                     <div class="me-3">acessar minha conta</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="134.224" height="20.458" viewBox="0 0 134.224 20.458">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="134.224" height="20.458" viewBox="0 0 134.224 20.458" class="d-none d-sm-block">
                       <g transform="translate(0 10.229)">
                         <path style="fill:none; stroke:#666; stroke-miterlimit:10; stroke-width:1;" d="M203.952.354,214,10.406h0L203.952,20.458" transform="translate(-80.154 -10.406)"></path>
                         <path style="fill:none; stroke:#666; stroke-width:1;" d="M-38.247,0H95.229" transform="translate(38.247)"></path>
@@ -298,8 +298,8 @@ wp_enqueue_script('imask', 'https://unpkg.com/imask@6.6.1-alpha.1/dist/imask.min
   /* https://getbootstrap.com/docs/5.1/layout/breakpoints/#available-breakpoints */
   @media (min-width: 0) and (max-width: 576px) {
     .section-login-modal--title {
-      font-size: 80px !important;
-      line-height: 60px !important;
+      font-size: 40px !important;
+      line-height: 40px !important;
     }
   }
 </style>

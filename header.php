@@ -42,36 +42,32 @@
 			<div class="container-980">
 				<div class="row justify-content-between">
 					<div class="col-6 col-md-2 logo">
-						<a class='px-3 p-2 btn-exp d-flex align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-							<i class='fal fa-bars mobile'></i>
+						<a class='px-3 p-2 btn-exp d-flex d-sm-none align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+							<i class='fal fa-bars'></i>
 						</a>
 						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.png"/></a>
 					</div>
 
 					<div class="col-md-6 text-right links d-lg-flex justify-content-center collapse" id="collapseExample">
-						<?php
-						wp_nav_menu( array( 
-							'theme_location' => 'header-menu'
-							) ); 
-						?>
+						<?php wp_nav_menu([ 'theme_location' => 'header-menu' ]); ?>
 					</div>
 
-					<div class="col-6 col-md-5 col-lg-4 d-flex d-lg-flex align-center justify-content-end">
-						<a class="px-2 align-center d-mobile-flex mt-2" href="<?php echo wc_get_cart_url(); ?>">	
-							<i class='fal fa-shopping-cart'></i>
+					<div class="col-6 col-md-5 col-lg-4 align-center align-center justify-content-end d-none d-sm-flex" style="display:none;">
+						<a class="px-2" href="<?php echo wc_get_cart_url(); ?>">	
+							<i class="fal fa-shopping-cart"></i>
 						</a>
 						<?php if (is_user_logged_in()): ?>
-							<a class="px-2 py-1 d-flex align-center btn-login" href="<?php echo site_url('/minha-conta'); ?>" style="white-space:nowrap;">
-								Meus cursos
-							</a>
-							<a class="px-2 py-1 d-flex align-center btn-login" href="<?php echo wp_logout_url(site_url()); ?>">
+							<a class="px-2 d-flex align-center" href="<?php echo wp_logout_url(site_url()); ?>">
 								Sair
 							</a>
+							<a class="px-2 d-flex align-center justify-center btn-black" href="<?php echo site_url('/minha-conta'); ?>" style="white-space:nowrap;">
+								Meus cursos
+							</a>
 						<?php else: ?>
-							<a class="px-2 py-1 d-flex align-center btn-login" href="javascript:;" onclick="saibalaLoginModal.show();">
+							<a class="px-2 d-flex align-center" href="javascript:;" onclick="saibalaLoginModal.show();">
 								Entrar
 							</a>
-							<a class="px-2 py-1 text-center btn-black mobile-d-none" href="javascript:;" onclick="saibalaCadastroModal.show()" style="white-space:nowrap;">
+							<a class="px-2 d-flex align-center justify-center btn-black" href="javascript:;" onclick="saibalaCadastroModal.show()" style="white-space:nowrap;">
 								Cadastre-se
 							</a>
 						<?php endif; ?>
