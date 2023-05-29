@@ -168,7 +168,7 @@ if(get_field('professor')){
 
 <section class="jeito__saibala">
 	<div class="container">
-		<h2>Jeito saibalá de ensinar:</h2>
+		<h2>Jeito saaibalá de ensinar:</h2>
 		<div class="jeito__list">
 			<div class="jeito__item">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icone-cinema.svg">
