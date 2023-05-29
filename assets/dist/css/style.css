@@ -7090,11 +7090,6 @@ body.woocommerce-checkout .woocommerce-message{
   font-size: 15px;
   margin: -3px 0 0 0;
 }
-.fa-shopping-cart {
-  position: absolute;
-  left: -24px;
-  top: 10px;
-}
 .button-cart-expansive:hover .text-cart-expansive {
   left: 6px;
   color: white;

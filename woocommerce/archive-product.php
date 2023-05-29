@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-get_header( 'shop' );
+get_header();
 ?>
 
 <div id="list">

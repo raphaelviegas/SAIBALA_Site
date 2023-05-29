@@ -4,7 +4,7 @@
 $email_contact = get_field('email_contact');
 $shortcode = get_field('shortcode');
 
-get_header('shop');
+get_header();
 ?>
 
 <link
