@@ -58,6 +58,11 @@ function getTplPageURL($TEMPLATE_NAME){
 
 
 
+add_filter( 'woocommerce_registration_error_email_exists', function() {
+  $html = 'Já existe uma conta criada para este e-mail! <a href="#login" class="loginSaibala">Fazer Login</a>';
+  return $html;
+} );
+
 
 add_action( 'wp_footer', 'cart_update_qty_script' ); 
 function cart_update_qty_script() { 

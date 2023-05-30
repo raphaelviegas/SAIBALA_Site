@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 		<div class="col-md-8">
 			
-
+		
 				<form name="checkout" method="post" class="mt-0 pt-0 checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 					<div class="cadastro__form">
 						<?php if ( $checkout->get_checkout_fields() ) : ?>
