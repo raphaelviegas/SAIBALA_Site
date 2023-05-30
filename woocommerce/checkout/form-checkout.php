@@ -24,7 +24,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="row">
 		<div class="col-md-12">
 			<h2 class='secure'>Finalize sua compra</h2>
-			<p class="form__intro">Preencha seus dados (se você já for cadastrado basta email e senha)</p>
+			<?php if (is_user_logged_in()): ?>
+				<p class="form__intro">Preencha seus dados:</p>
+			<?php endif; ?>
+			<?php if (!is_user_logged_in()): ?>
+				<p class="form__intro">Já possui cadastro: <a href="#" class="openLoginModal">Faça login</a>
+				<br>Se não tem cadastro, preencha os dados abaixo:</p>
+			<?php endif; ?>
 		</div>
 		<div class="col-md-8">
 			

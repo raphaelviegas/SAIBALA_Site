@@ -431,3 +431,13 @@ setInterval(() => {
 }, 300);
 
 
+setInterval(() => {
+    $('.openLoginModal').click(function(e) {
+        e.preventDefault;
+        saibalaLoginModal.show();    
+    })
+}, 300);
+
+
+
+
