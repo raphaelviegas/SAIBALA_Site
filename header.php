@@ -24,8 +24,13 @@
 			<!-- ================== FAVICON END ================== -->
 			<?php wp_head();?>
 			<script type="text/javascript">
-			    var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
-			    var themeurl = "<?php echo get_template_directory_uri(); ?>";
+				var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+				var themeurl = "<?php echo get_template_directory_uri(); ?>";
+				window.wpParams = <?php echo json_encode([
+					'isLogged' => is_user_logged_in(),
+					'logoutUrl' => wp_logout_url(site_url()),
+					'myAccountUrl' => site_url('/minha-conta'),
+				]); ?>;
 			</script>
 
 			<!-- ================== OGIMAGE ================== -->
@@ -49,7 +54,7 @@
 					</div>
 
 					<div class="col-md-6 text-right links d-lg-flex justify-content-center collapse" id="collapseExample">
-						<?php wp_nav_menu([ 'theme_location' => 'header-menu' ]); ?>
+						<?php wp_nav_menu([ 'theme_location' => 'header-menu', 'menu_class' => 'header-menu-wrapper' ]); ?>
 					</div>
 
 					<div class="col-6 col-md-5 col-lg-4 align-center align-center justify-content-end d-none d-sm-flex" style="display:none;">
