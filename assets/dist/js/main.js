@@ -420,3 +420,11 @@ $('.video__section .video__close, .cta__video').click(function(e) {
 
 
 $('#createaccount').trigger('click');
+
+
+
+/* Cart */
+$('.showlogin').click(function(e) {
+    e.preventDefault;
+    saibalaLoginModal.show();    
+})
