@@ -36,7 +36,6 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
 					<tr class="woocommerce-cart-form__cart-item border-bottom  <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-
 						<td class="product-thumbnail border-0">
 						<?php
 						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
@@ -50,6 +49,21 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						</td>
 
 						<td class="product-detail border-0" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+
+						<?php
+							echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								'woocommerce_cart_item_remove_link',
+								sprintf(
+									'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+									esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+									esc_html__( 'Remove this item', 'woocommerce' ),
+									esc_attr( $product_id ),
+									esc_attr( $_product->get_sku() )
+								),
+								$cart_item_key
+							);
+						?>
+
 						<?php
 						echo  $_product->get_name();
 

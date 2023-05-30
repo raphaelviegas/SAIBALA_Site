@@ -7390,3 +7390,21 @@ body.woocommerce-checkout .woocommerce-message{
   font-weight: bold;
   line-height: 20px;  
 }
+
+.woocommerce-cart-form__cart-item .product-detail {
+  position: relative;
+  padding-top: 25px !important;
+}
+.woocommerce-cart-form__cart-item  .remove {
+  font-size: 24px;
+  color: #ccc;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border: 1px #dedede solid;
+  align-items: center;
+  justify-content: center;
+}
