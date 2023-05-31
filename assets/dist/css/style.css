@@ -2613,12 +2613,13 @@ header.black .logo {
   position: absolute;
   top: -128px;
   height: 130px;
+  left: -154px;
 }
 #home .planejamento .top .legendas .text-02 {
   position: absolute;
   top: -15px;
   text-align: right;
-  right: 0;
+  right: -155px;
 }
 #home .planejamento .bottom {
   display: flex;
@@ -3176,10 +3177,22 @@ header.black .logo {
   #home .planejamento .top .legendas .text-01 {
     top: -70px;
     height: 70px;
+    left: -15px;
   }
+
+  #home .planejamento .top .legendas .text-01 span {
+    font-family: 'Vinila',sans-serif!important;
+  }
+
   #home .planejamento .top .legendas .text-02 {
     top: -10px;
+    right: -15px;
   }
+
+  #home .planejamento .top .legendas .text-02 span {
+    font-family: 'Vinila',sans-serif!important;
+  }
+
   #home .plano .text {
     justify-content: center;
   }
