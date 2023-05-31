@@ -437,5 +437,18 @@ setInterval(() => {
 }, 300);
 
 
+setInterval(() => {
+    $('#place_order').click(function() {
+        $('#customer_details input').each(function() {
+            if ($(this).val() == "") {
+                $(this).addClass('invalido');
+            } else {
+                $(this).removeClass('invalido');
+            }
+        })
+    })
+}, 300);
+
+
 
 
