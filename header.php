@@ -30,6 +30,7 @@
 					'isLogged' => is_user_logged_in(),
 					'logoutUrl' => wp_logout_url(site_url()),
 					'myAccountUrl' => site_url('/minha-conta'),
+					'cartUrl' => wc_get_cart_url(),
 				]); ?>;
 			</script>
 

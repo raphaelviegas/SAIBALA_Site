@@ -278,7 +278,7 @@ $(document).ready(function() {
     base.init();
     const mobileMenu = $(".menu-header-container");
     if (mobileMenu.length) {
-        const newMenuItem = $("<li>").addClass("menu-item menu-item-type-post_type menu-item-object-page menu-item-78").html("<a class='mobile-only' href='#'>Carrinho</a>");
+        const newMenuItem = $("<li>").addClass("menu-item menu-item-type-post_type menu-item-object-page menu-item-78").html(`<a class='mobile-only' href='${window.wpParams.cartUrl}'>Carrinho</a>`);
         const menuHeader = mobileMenu.find("#menu-header");
         menuHeader.prepend(newMenuItem);
         const extraButtons = $("<div>").addClass("extra-buttons");
