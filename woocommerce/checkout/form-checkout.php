@@ -23,11 +23,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="checkout">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class='secure'><span><i class='fal fa-lock'></i> Pagamento seguro</span><?php esc_attr_e( 'Checkout', 'woocommerce' ); ?></h2>
+			<h2 class='secure'>Finalize sua compra</h2>
+			<?php if (is_user_logged_in()): ?>
+				<p class="form__intro">Preencha seus dados:</p>
+			<?php endif; ?>
+			<?php if (!is_user_logged_in()): ?>
+				<p class="form__intro">Já possui cadastro: <a href="#" class="openLoginModal">Faça login</a>
+				<br>Se não tem cadastro, preencha os dados abaixo:</p>
+			<?php endif; ?>
 		</div>
 		<div class="col-md-8">
 			
-
+		
 				<form name="checkout" method="post" class="mt-0 pt-0 checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 					<div class="cadastro__form">
 						<?php if ( $checkout->get_checkout_fields() ) : ?>
@@ -68,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					
 
 					<div class="forma__pagamento">
-						<h3 id="order_review_heading"><?php esc_html_e( 'Payment', 'woocommerce' ); ?></h3>
+						<h3 id="order_review_heading">Escolha seu método de pagamento</h3>
 						<?php do_action( 'woocommerce_new_local_pay' ); ?>
 					</div>
 
@@ -78,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="col-md-4 cart-collaterals">
 			<a href="#" class='expandCart mt-5 d-block d-md-none mb-2'><h2 class='d-inline-block'>Resumo da compra</h2> <i class='fal fa-plus mt-4 pt-3 float-right'></i></a>
 			<div class='exp'>
-				<h2 class='pt-0 mt-0 d-none d-md-block'>Resumo da compra</h2>
+				<h2 class='pt-0 mt-0 d-none d-md-block'>Produtos</h2>
 				<div class='minicartBox'>
 					<?php woocommerce_mini_cart(); ?>
 				</div>

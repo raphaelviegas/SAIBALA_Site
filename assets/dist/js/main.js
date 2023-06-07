@@ -415,3 +415,40 @@ $('.video__section .video__close, .cta__video').click(function(e) {
     e.preventDefault();
     $('.video__section').fadeToggle();
 })
+
+
+$('#createaccount').trigger('click');
+
+
+/* Cart */
+setInterval(() => {
+    $('.loginSaibala').click(function(e) {
+        e.preventDefault;
+        saibalaLoginModal.show();    
+    })
+}, 300);
+
+
+setInterval(() => {
+    $('.openLoginModal').click(function(e) {
+        e.preventDefault;
+        saibalaLoginModal.show();    
+    })
+}, 300);
+
+
+setInterval(() => {
+    $('#place_order').click(function() {
+        $('#customer_details input').each(function() {
+            if ($(this).val() == "") {
+                $(this).addClass('invalido');
+            } else {
+                $(this).removeClass('invalido');
+            }
+        })
+    })
+}, 300);
+
+
+
+
