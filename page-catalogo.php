@@ -1,19 +1,29 @@
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
-
 <?php
 
 // Template Name: Catalogo
+
+// Dependências
+wp_enqueue_script('vue', 'https://unpkg.com/vue@3.2.47/dist/vue.global.js');
+wp_enqueue_style('mdi', 'https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css');
 
 $email_contact = get_field('email_contact');
 $hero_image_01 = get_field('hero_image_01');
 $hero_image_02 = get_field('hero_image_02');
 $hero_image_03 = get_field('hero_image_03');
 
+// // Localhost imagem correta para teste
+// $hero_image_01 = 'https://saibala.com.br/wp-content/uploads/2022/11/Retrato_Embuscadoprodutoperfeito.png';
+// $hero_image_02 = 'https://saibala.com.br/wp-content/uploads/2022/11/Landscape_Temposexponenciais.png';
+// $hero_image_03 = 'https://saibala.com.br/wp-content/uploads/2022/12/Landscape_CaminhoProfissionalFuturo.png';
 
-get_header('shop');
+wp_enqueue_style('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
+
+// get_header('shop', [
+//   'header_logo' => '/assets/img/new-home/logo-yellow.svg',
+// 	'header_link_color' => '#ffff00',
+// ]);
+
+get_header();
 
 
 if (! function_exists('hex2rgba')) :
@@ -72,88 +82,88 @@ endif;
   <section class="catalogo__hero">
     <?php $hero = get_field('hero_item'); ?>
     <div class="catalogo__hero-wrapper">
-    <a href="<?php echo get_field('hero_01_postit_link');?>" class="catalogo__hero-bg-01">
-      <div class="catalogo__hero-bg-01" style="background-image:url(<?php echo $hero_image_01;?>)">
-
-        <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
-
-        <div class="catalogo__hero-bg-01--content">
-          <h2><?php echo get_field('hero_01_postit_title');?></h2>
-          <p><?php echo get_field('hero_01_postit_subtitle');?></p>
-          <div class="catalogo__hero-bg-01--content-link">
-            ver mais 
-            <div class="arrow"></div>
+      <a href="<?php echo get_field('hero_01_postit_link');?>" class="catalogo__hero-bg-01">
+        <div class="catalogo__hero-bg-01" style="background-image:url(<?php echo $hero_image_01;?>)">
+          <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
+          <div class="catalogo__hero-bg-01--content">
+            <h2><?php echo get_field('hero_01_postit_title');?></h2>
+            <p><?php echo get_field('hero_01_postit_subtitle');?></p>
+            <div class="catalogo__hero-bg-01--content-link">
+              ver mais <div class="arrow"></div>
+            </div>
           </div>
         </div>
-
-      </div>
-    </a>
+      </a>
     </div>
 
     <div class="catalogo__hero-wrapper">
-    <a href="<?php echo get_field('hero_02_postit_link');?>" class="catalogo__hero-bg-02">
-    <div class="catalogo__hero-bg-02" style="background-image:url(<?php echo $hero_image_02;?>)">
-      <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
-      <div class="catalogo__hero-bg-02--content">
-      <h2><?php echo get_field('hero_02_postit_title');?></h2>
-        <p><?php echo get_field('hero_02_postit_subtitle');?></p>
-        <div class="catalogo__hero-bg-02--content-link">
-          ver mais 
-          <div class="arrow"></div>
-        </div>
-      </div>
-    </div>
-    </a>
-    <a href="<?php echo get_field('hero_03_postit_link');?>" class="catalogo__hero-bg-03">
-      <div class="catalogo__hero-bg-03" style="background-image:url(<?php echo $hero_image_03;?>)">
-        <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>  
-        <div class="catalogo__hero-bg-03--content">
-          <h2><?php echo get_field('hero_03_postit_title');?></h2>
-          <p><?php echo get_field('hero_03_postit_subtitle');?></p>
-          <div class="catalogo__hero-bg-03--content-link">
-            ver mais 
-            <div class="arrow"></div>
+      <a href="<?php echo get_field('hero_02_postit_link');?>" class="catalogo__hero-bg-02">
+        <div class="catalogo__hero-bg-02" style="background-image:url(<?php echo $hero_image_02;?>)">
+          <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
+          <div class="catalogo__hero-bg-02--content">
+            <h2><?php echo get_field('hero_02_postit_title');?></h2>
+            <p><?php echo get_field('hero_02_postit_subtitle');?></p>
+            <div class="catalogo__hero-bg-02--content-link">
+              ver mais <div class="arrow"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </a>
-    </div>
-
-  </section>
-
-  
-
-  <section class="catalogo__about">
-      <h2 class="catalogo__about-title"><?php echo get_field('about_header_title');?></h2>
-
-      <div class="catalogo__about-wrapper">
-
-      <div class="catalogo__about-content">
-        <div class="catalogo__about-content_header">
-          <h3><?php echo get_field('about_content_01_title');?></h3>
-          <p><?php echo get_field('about_content_01_subtitle');?> <span><?php echo get_field('about_content_01_subtitle_details_mid');?></span> <?php echo get_field('about_content_01_subtitle_continue');?> <span><?php echo get_field('about_content_01_subtitle_details_end');?></span></p>
+      </a>
+      
+      <a href="<?php echo get_field('hero_03_postit_link');?>" class="catalogo__hero-bg-03">
+        <div class="catalogo__hero-bg-03" style="background-image:url(<?php echo $hero_image_03;?>)">
+          <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>  
+          <div class="catalogo__hero-bg-03--content">
+            <h2><?php echo get_field('hero_03_postit_title');?></h2>
+            <p><?php echo get_field('hero_03_postit_subtitle');?></p>
+            <div class="catalogo__hero-bg-03--content-link">
+              ver mais <div class="arrow"></div>
+            </div>
+          </div>
         </div>
-
-        <div class="catalogo__about-content-img">
-          <img src="<?php echo get_field('about_content_01_image');?>"/>
-        </div>
-      </div>
-
-      <div class="catalogo__about-content catalogo__about-content-02">
-        <div class="catalogo__about-content_header">
-          <h3><?php echo get_field('about_content_02_title');?></h3>
-          <p><?php echo get_field('about_content_02_subtitle');?> <span><?php echo get_field('about_content_02_subtitle_details_mid');?></span> <?php echo get_field('about_content_02_subtitle_continue');?> <span><?php echo get_field('about_content_02_subtitle_details_end');?></span></p>
-        </div>
-
-        <div class="catalogo__about-content-img">
-          <img src="<?php echo get_field('about_content_02_image');?>"/>
-        </div>
-      </div>
+      </a>
     </div>
   </section>
+
+  <?php if (have_rows('ancora_topo')): ?>
+    <section class="catalogo__about">
+        <h2 class="catalogo__about-title">
+          Em qual momento da sua carreira você está?  
+        </h2>
+
+        <div class="row">
+          <?php while(have_rows('ancora_topo')):
+            $ancora = (object) the_row();
+            $ancora->ancora_topo_image = $ancora->ancora_topo_image ? wp_get_attachment_url($ancora->ancora_topo_image) : null;
+          ?>
+          <div class="col-6 col-md-3 align-end">
+            <a href="javascript:ancoraTopoScrollTo(<?php echo $ancora->ancora_topo_link_bloco_series; ?>);" style="color:#444!important;">
+              <img style="height:270px; max-width:100%; object-fit:cover;" src="<?php echo $ancora->ancora_topo_image; ?>" alt="<?php echo $ancora->ancora_topo_title; ?>">
+              <div class="px-3">
+                <strong><?php echo $ancora->ancora_topo_title; ?></strong>
+                <div style="margin-top:10px;"><?php echo $ancora->ancora_topo_text; ?></div>
+              </div>
+            </a>
+          </div>
+          <?php endwhile; ?>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function ancoraTopoScrollTo(index) {
+        const target = document.querySelector(`#series_bloco_index_${index}`);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+    </script>
+  <?php endif; ?>
 
     <?php if (have_rows('series_bloco')) : ?>
-        <?php while (have_rows('series_bloco')) :
+        <?php
+          
+          $series_bloco_index = 0;
+          while (have_rows('series_bloco')):
+            $series_bloco_index++;
             the_row();
 
             $color = get_sub_field('color');
@@ -161,7 +171,7 @@ endif;
             $rgba = hex2rgba($color, 0.2);
             ?>
 
-             <section class="catalogo__series" style="background: linear-gradient(180deg, #FFFFFF, #FAF7ED, <?php echo $rgba?>)">
+             <section id="series_bloco_index_<?php echo $series_bloco_index; ?>" class="catalogo__series" style="background: linear-gradient(180deg, #FFFFFF, #FAF7ED, <?php echo $rgba?>)">
               <div class="catalogo__series-wrapper">
                 <div class="catalogo__series-header">
                   <h2><span><?php the_sub_field('title_details_first') ?></span> <?php the_sub_field('title') ?> <span><?php the_sub_field('title_details_last') ?></span></h2>
@@ -258,148 +268,14 @@ endif;
       
     <?php endif; ?>
 
-  <section class="more-series" id="series">
-    <div class="more-series-wrapper">
-
-      <h2 class="more-series-title">confira todas as <span>séries</span> da saibalá:</h2>
-
-      <div class="more-series-menu">
-        <div class="swiper menuSwiper">
-          <?php
-            $terms = get_field('products_categories');
-          if ($terms) : ?>
-                <ul class="swiper-wrapper">
-                  <?php foreach ($terms as $term) : ?>
-                      <?php $termObject = get_term($term);
-                      ?>
-                    <div class="swiper-slide">
-                      <button class="btn-more-series" data-category-id="<?php echo $term?>"><?php echo $termObject -> name?></button>
-                    </div>
-                  <?php endforeach; ?>
-                </ul>
-          <?php endif; ?>
-        </div>
-      </div>
-
-
-      <div class="more-series-content">
-      <?php
-        $terms = get_field('products_categories');
-
-        if ($terms) : ?>
-            <?php foreach ($terms as $term) :?>
-                <?php
-                $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-                $args = array(
-                  'paged' => $paged,
-                'post_type' => 'product',
-                'posts_per_page' => 6,
-                'tax_query' => array(
-                  array(
-                    'taxonomy' => 'product_cat',
-                    'field' => 'id',
-                    'terms' => $term
-                  )
-                ),
-                );
-                $the_query = new WP_Query($args);
-                ?>
-                 <div class="more-series-container" data-container-category-id="<?php echo $term?>">
-                 <div class="more-series-container-wrapper">
-
-                <?php if (have_posts()) :
-                    while ($the_query->have_posts()) :
-                        $the_query->the_post();
-                        $permalinkSeries = get_permalink(); ?>
-                        
-                      
-                        <div class="more-series-item" style="background-image: url(<?php echo get_the_post_thumbnail_url()?>)">
-                          <div class="more-series-item-content">
-                            <div class="more-series-item-content-container">
-                              <strong><?php the_title();?></strong>
-                              <?php
-                                $professor_posts_series = get_field('professor');
-                                $maxS = 3;
-                                $iS = 0;
-                                $prof_names_series = array();
-
-                                if ($professor_posts_series) : ?>
-                                          <?php foreach ($professor_posts_series as $post) :
-                                                $iS++; ?>
-                                      
-                                                <?php if ($iS > $maxS) {
-                                                    break;
-                                                } ?>
-                                                <?php setup_postdata($post); ?>
-                                            
-                                                <?php array_push($prof_names_series, get_the_title());
-                                                ?>
-                                          <?php endforeach; ?>
-                                
-                                        <?php
-
-                                        wp_reset_postdata(); ?>
-                                <?php endif;
-                                ?>
-                               <?php if (count($prof_names_series) > 2) :
-                                                ;?>
-                                            <p><?php echo $prof_names_series[0] ?>, <?php echo $prof_names[1] ?>, e mais <?php echo count($prof_names_series) - 2?></p>
-                                  
-                               <?php else : ?>
-                                                <p><?php echo implode(", ", $prof_names_series);
-                                                ?></p>
-                               <?php endif ?>         
-                              
-                            </div>
-                            
-                            <a href="<?php echo esc_url($permalinkSeries);?>" class="more-series-item-content-link">
-                            ver mais 
-                            <div class="arrow"></div>
-                          </a>
-                          </div>
-                        </div>
-                    <?php endwhile; ?>
-                    </div>
-                    
-                    <div class="more-series-container-footer">
-                      <?php
-                        echo paginate_links(array(
-                        'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
-                        'total'        => $the_query->max_num_pages,
-                        'current'      => max(1, get_query_var('paged')),
-                        'format'       => '?paged=%#%',
-                        'show_all'     => false,
-                        'type'         => 'plain',
-                        'end_size'     => 2,
-                        'mid_size'     => 1,
-                        'prev_next'    => false,
-                        'add_args'     => false,
-                        'add_fragment' => '#series',
-                        ));
-                        wp_reset_query(); ?>
-                    </div>
-              
-                    <?php
-                else : ?>
-                <?php endif; ?>
-                </div>
-            <?php endforeach; ?>
-        
-        <?php endif; ?>
-
-      </div>
-
-
-    </div>
-  </section>
+  <?php get_template_part('template-parts/catalogo-cursos'); ?>
 
   <section class="catalogo__programas">
 
-    <div class="catalogo__programas-header">
+    <?php /*<div class="catalogo__programas-header">
       <h2>confira também nossos <span>programas</span>, clicando aqui:</h2>
-        <a href="<?php echo bloginfo('url');
-        ;?>/catalogo/programas-saibala">programas</a>
-    </div>
+      <a href="<?php echo bloginfo('url');?>/catalogo/programas-saibala">programas</a>
+    </div>*/ ?>
 
     <div class="catalogo__programas-form">
       <div class="catalogo__programas-form-content">
@@ -571,6 +447,5 @@ endif;
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<?php
-  get_footer();
-?>
+
+<?php get_footer(); ?>

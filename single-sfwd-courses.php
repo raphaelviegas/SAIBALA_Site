@@ -1,5 +1,5 @@
 <?php
-get_header('shop');
+get_header();
 ?>
 <div class="container mt-5 pt-4">
 	<?php while ( have_posts() ) : the_post(); ?>

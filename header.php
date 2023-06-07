@@ -19,14 +19,19 @@
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/plugins/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" />
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/fonts/vinila.css" rel="stylesheet" />
-			<link href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/style.css" rel="stylesheet" />
 			<!-- ================== END BASE CSS STYLE ================== -->
 
 			<!-- ================== FAVICON END ================== -->
 			<?php wp_head();?>
 			<script type="text/javascript">
-			    var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
-			    var themeurl = "<?php echo get_template_directory_uri(); ?>";
+				var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+				var themeurl = "<?php echo get_template_directory_uri(); ?>";
+				window.wpParams = <?php echo json_encode([
+					'isLogged' => is_user_logged_in(),
+					'logoutUrl' => wp_logout_url(site_url()),
+					'myAccountUrl' => site_url('/minha-conta'),
+					'cartUrl' => wc_get_cart_url(),
+				]); ?>;
 			</script>
 
 			<!-- ================== OGIMAGE ================== -->
@@ -43,32 +48,35 @@
 			<div class="container-980">
 				<div class="row justify-content-between">
 					<div class="col-6 col-md-2 logo">
-						<a class='px-3 p-2 btn-exp d-flex align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-							<i class='fal fa-bars mobile'></i>
+						<a class='px-3 p-2 btn-exp d-flex d-sm-none align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+							<i class='fal fa-bars'></i>
 						</a>
 						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.png"/></a>
 					</div>
 
 					<div class="col-md-6 text-right links d-lg-flex justify-content-center collapse" id="collapseExample">
-						<?php
-						wp_nav_menu( array( 
-							'theme_location' => 'header-menu'
-							) ); 
-						?>
+						<?php wp_nav_menu([ 'theme_location' => 'header-menu', 'menu_class' => 'header-menu-wrapper' ]); ?>
 					</div>
 
-					<div class="col-6 col-md-5 col-lg-4 d-flex d-lg-flex align-center justify-content-end">
-						<a class='px-2 d-flex align-center button-cart-expansive mobile-d-none' href="https://saibala.com.br/carrinho/">	
-							<span class="text-cart-expansive">
-								<i class='fal fa-shopping-cart'></i>
-								Carrinho
-							</span>
+					<div class="col-6 col-md-5 col-lg-4 align-center align-center justify-content-end d-none d-sm-flex" style="display:none;">
+						<a class="px-2" href="<?php echo wc_get_cart_url(); ?>">	
+							<i class="fal fa-shopping-cart"></i>
 						</a>
-						<a class='px-2 py-1 btn-exp d-flex align-center btn-login' href="#myaccount">Entrar</a>
-						<a class='px-2 align-center d-mobile-flex mt-2' href="https://saibala.com.br/carrinho/">	
-							<i class='fal fa-shopping-cart'></i>
-						</a>
-						<a class='px-2 py-1 btn-exp d-flex align-center btn-black mobile-d-none' href="#login">Cadastre-se</a>
+						<?php if (is_user_logged_in()): ?>
+							<a class="px-2 d-flex align-center" href="<?php echo wp_logout_url(site_url()); ?>">
+								Sair
+							</a>
+							<a class="px-2 d-flex align-center justify-center btn-black" href="<?php echo site_url('/minha-conta'); ?>" style="white-space:nowrap;">
+								Meus cursos
+							</a>
+						<?php else: ?>
+							<a class="px-2 d-flex align-center" href="javascript:;" onclick="saibalaLoginModal.show();">
+								Entrar
+							</a>
+							<a class="px-2 d-flex align-center justify-center btn-black" href="javascript:;" onclick="saibalaCadastroModal.show()" style="white-space:nowrap;">
+								Cadastre-se
+							</a>
+						<?php endif; ?>
 					</div>
 
 				</div>
@@ -136,3 +144,5 @@
 			</div>
 		</div>
 		
+		<?php get_template_part('template-parts/cadastro'); ?>
+		<?php get_template_part('template-parts/login'); ?>

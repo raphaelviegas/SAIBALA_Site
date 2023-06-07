@@ -10,6 +10,11 @@ include "functions/product_sidebar.php";
 // include "functions/acf_fields.php";
 
 
+// API endpoints
+include __DIR__ . '/api/cadastro.php';
+include __DIR__ . '/api/login.php';
+
+
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
@@ -99,7 +104,7 @@ function wsis_dequeue_stylesandscripts_select2() {
     } 
 } 
 
-add_filter('woocommerce_checkout_fields', 'addBootstrapToCheckoutFields' );
+//add_filter('woocommerce_checkout_fields', 'addBootstrapToCheckoutFields' );
 function addBootstrapToCheckoutFields($fields) {
     foreach ($fields as &$fieldset) {
         foreach ($fieldset as &$field) {
@@ -518,6 +523,37 @@ add_action( 'admin_enqueue_scripts', 'enqueue_lura_admin' );
 
 
 
+//Adiciona campo de confirmação de senha no checkout
+add_filter( 'woocommerce_checkout_fields' , 'add_confirm_password_checkout_field', 10, 1 );
+function add_confirm_password_checkout_field( $fields ) {
+  if ( get_option( 'woocommerce_registration_generate_password' ) != 'no' )
+    return $fields;
+
+  $fields['account']['account_password']['class'] = array('form-row-first');
+  $fields['account']['account_password-2'] = array(
+    'type' => 'password',
+    'label' => __( 'Confirme a senha', 'woocommerce' ),
+    'required' => true,
+    'placeholder' => _x('Repita a senha', 'placeholder', 'woocommerce'),
+    'class' => array('form-row-last'),
+    'label_class' => array('visible')
+  );
+  return $fields;
+}
+
+
+
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+function custom_override_checkout_fields( $fields ) {
+  unset($fields['billing']['billing_last_name']); //remove o sobrenome
+  unset($fields['billing']['billing_company']); //remove o nome da empresa
+  unset($fields['billing']['billing_cellphone']); //remove o telefone
+  unset($fields['billing']['billing_address_2']); //remove o telefone
+  //unset($fields['billing']['billing_phone']); //remove o telefone
+  unset($fields['order']['order_comments']); //remove o comentários do pedido
+  return $fields;
+}
+
 /* Hora Bônus - Página do Produto */
 if( function_exists('acf_add_local_field_group') ):
 
@@ -820,4 +856,7 @@ if( function_exists('acf_add_local_field_group') ):
   ));
   
   endif;
-?>
+
+add_action('acf/init', function() {
+  include __DIR__ . '/acf/fields/page-catalogo.php';
+});

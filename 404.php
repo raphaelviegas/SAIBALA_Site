@@ -1,5 +1,5 @@
 <?php
-get_header('shop');
+get_header();
 ?>
 
 	<div class="container page-404">
