@@ -978,6 +978,7 @@ ul.section-header-menu-overlay-menu li a {
   box-sizing: border-box;
   width: 100%;
   font-family: "Vinila", sans-serif;
+  margin-top: 60px;
 }
 /* @media (max-width: 768px) {
   #catalogo {
