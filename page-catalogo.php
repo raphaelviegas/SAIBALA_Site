@@ -384,45 +384,6 @@ endif;
     }
   });
 
-  /* Changed Series */
-    
-  const btnSeries = document.querySelectorAll('.btn-more-series')
-  if(window.screen.width >= 769) {
-    btnSeries.item(0).style.fontWeight = 'bold'
-    btnSeries.item(0).style.borderBottom = '5px solid #3196ff'
-  }
-  else {
-    btnSeries.item(0).style.fontWeight = 'bold'
-    btnSeries.item(0).style.borderBottom = '3px solid #3196ff'
-  }
- 
-  
-  btnSeries.forEach(element => {
-    element.addEventListener('click', async () => {
-      btnSeries.forEach(item => {
-        item.style.borderBottom  = 'none';
-        item.style.fontWeight = '300';
-      })
-      element.style.fontWeight = 'bold';
-      if(window.screen.width >= 769) {
-       
-        element.style.borderBottom = '5px solid #3196ff'
-      }
-      else {
-        
-        element.style.borderBottom = '3px solid #3196ff'
-      }
-
-      const dataCategory = element.getAttribute('data-category-id')
-      const container = document.querySelector(`[data-container-category-id='${dataCategory}']`)
-      const allContainers = document.querySelectorAll('.more-series-container')
-      allContainers.forEach(element => {
-       
-        element.style.display = 'none';
-      });
-      container.style.display = 'block';
-    })
-  })
 
   
   /* Faq Animation */
