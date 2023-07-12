@@ -36,7 +36,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function custom_css() {
     wp_enqueue_style('learndash-css',  get_stylesheet_directory_uri() . '/assets/dist/css/style.css');
-    wp_enqueue_style('grid',  'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/scss/mixins/_grid.scss');
+    wp_enqueue_style('grid', 'https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.min.css');
 }
 add_action('wp_enqueue_scripts', 'custom_css');
 /* Cria menus */
