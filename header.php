@@ -51,7 +51,7 @@
 						<a class='px-3 p-2 btn-exp d-flex d-sm-none align-center' data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
 							<i class='fal fa-bars'></i>
 						</a>
-						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.png"/></a>
+						<a href="<?php echo get_home_url();?>" class='logo'><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-home/logo-black.svg"/></a>
 					</div>
 
 					<div class="col-md-6 text-right links d-lg-flex justify-content-center collapse" id="collapseExample">

@@ -76,7 +76,13 @@ header a {
 header .logo {
   display: flex;
   align-items: center;
+  max-width: 170px;
 }
+
+header .logo img {
+  max-width: 100%;
+}
+
 header .buttons {
   display: flex;
   justify-content: flex-end;
@@ -2563,6 +2569,11 @@ ul.section-header-menu-overlay-menu li a {
   background: #000;
   overflow: hidden;
 }
+
+#home * {
+  font-family: 'Vinila', sans-serif;
+}
+
 #home .btn {
   display: block;
   background: #3196FF;
