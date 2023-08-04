@@ -5,7 +5,7 @@
 <section class="home__v2">
 	<section class="intro">
 		<video autoplay="" muted="" loop="" playsinline=""> 
-			<source src="<?= get_template_directory_uri(); ?>/assets/img/intro.mp4" type="video/mp4">
+			<source src="<?= get_template_directory_uri(); ?>/assets/img/saibala-small.mp4" type="video/mp4">
 		</video>
 		<div class="container">		
 			<img src="<?= get_template_directory_uri(); ?>/assets/img/play-intro.svg" alt="Play" class="play">
@@ -15,7 +15,7 @@
 		<div class="popup__intro" style="display:none">
 			<a href="#" class="fechar">X</a>
 			<video controls> 
-				<source src="<?= get_template_directory_uri(); ?>/assets/img/intro.mp4" type="video/mp4">
+				<source src="<?= get_template_directory_uri(); ?>/assets/img/saibala-small.mp4" type="video/mp4">
 			</video>
 		</div>
 	</section>
