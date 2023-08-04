@@ -714,6 +714,34 @@ section.cta__rodape a:hover {
         align-items: center;
     }
 
+    section.intro a {
+        font-size: 22px;
+    }
+
+    section.cursos .select__cursos {
+        gap: 15px;
+    }
+
+    section.cursos .select__cursos li {
+        font-size: 18px;
+        padding: 5px 10px;
+        line-height: 24px;
+        gap: 5px;
+    }
+
+    section.cursos .select__cursos svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    section.cursos .cursos__list ul li {
+        height: 235px;
+    }
+
+    section.cursos .cursos__list h3 {
+        font-size: 16px;
+    }
+
     section.diferenciais {
         background: url(../../img/bg-diferenciais-mobile.jpg) center center no-repeat;
         background-size: cover;
@@ -740,8 +768,34 @@ section.cta__rodape a:hover {
         line-height: 1;
     }
 
+    section.profissionais .splide__profissionais {
+        margin: 40px 0;
+    }
+
+    section.profissionais h2 {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    section.profissionais h3 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    section.profissionais .empresas__profissionais h5 {
+        font-size: 20px;
+        line-height: 1.5;
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     section.cta__rodape h2 {
         font-size: 48px;
         line-height: 1;
+    }
+
+    section.profissionais .empresas__profissionais ul li img {
+        max-height: 20px;
     }
 }
