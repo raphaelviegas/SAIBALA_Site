@@ -15,7 +15,7 @@
 		<div class="popup__intro" style="display:none">
 			<a href="#" class="fechar">X</a>
 			<video controls> 
-				<source src="<?= get_template_directory_uri(); ?>/assets/img/saibala-small.mp4" type="video/mp4">
+				<source src="<?= get_template_directory_uri(); ?>/assets/img/saibala-full.mp4" type="video/mp4">
 			</video>
 		</div>
 	</section>
