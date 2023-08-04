@@ -35,11 +35,13 @@
 			</script>
 
 			<!-- ================== OGIMAGE ================== -->
-			<?php if (has_post_thumbnail($post->ID)): ?>
+			<?php 
+				global $post;
+				if ($post && has_post_thumbnail($post->ID)): ?>
 				<meta property="og:image" content="<?= get_the_post_thumbnail_url($post->ID, 'full'); ?>"/>
 			<?php endif; ?>
 
-			<?php if (!has_post_thumbnail($post->ID)): ?>
+			<?php if ($post && !has_post_thumbnail($post->ID)): ?>
 				<meta property="og:image" content="<?= get_template_directory_uri(); ?>/assets/img/og-image.jpg"/>
 			<?php endif; ?>
 		</head>
