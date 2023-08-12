@@ -261,7 +261,7 @@
 
 		<div class="empresas__profissionais">
 			<div class="container">
-				<h5>empresas que os especialistas já atuaram:</h5>
+				<h5>empresas nas quais os especialistas ja atuaram:</h5>
 				<ul>
 					<?php 
 						if( have_rows('empresas') ):
@@ -284,7 +284,7 @@
 
 	<section class="teste__gratis">
 		<div class="container">
-			<a href="#" class="box">
+			<a href="https://lancamento.saibala.com.br/aulagratuita" class="box">
 				<h2>Faça um<br> teste grátis</h2>
 				<span>Clique aqui e faça o teste</span>
 			</a>

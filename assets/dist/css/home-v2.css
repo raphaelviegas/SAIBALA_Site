@@ -261,6 +261,7 @@ section.cursos .cursos__list ul li {
     overflow: hidden;
 }
 
+/*
 section.cursos .cursos__list ul li:after {
     content: '';
     width: 100%;
@@ -272,6 +273,7 @@ section.cursos .cursos__list ul li:after {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.53) 64.58%, #000 100%);
     z-index: 2;
 }
+*/
 
 section.cursos .cursos__list ul li a {
     display: block;

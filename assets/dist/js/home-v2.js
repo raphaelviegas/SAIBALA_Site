@@ -21,10 +21,15 @@ jQuery(document).ready(function($) {
     $('section.intro .popup__intro .fechar').click(function(e) {
         e.preventDefault();
         $('section.intro .popup__intro').fadeToggle();
+        document.querySelector('section.intro .popup__intro video').pause();
     })
 
     $('section.intro .play').click(function(e) {
         $('section.intro .popup__intro').fadeToggle();
+        setTimeout(() => {
+            document.querySelector('section.intro .popup__intro video').play();
+        }, 100);
+        
     })
 
 
