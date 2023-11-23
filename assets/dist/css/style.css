@@ -1032,7 +1032,8 @@ ul.section-header-menu-overlay-menu li a {
   top:10%;
   left:10%;
   z-index: 9;
-  width:130px
+  width:130px;
+  display: none;
 }
 
 .selo__hero img {
@@ -1135,6 +1136,7 @@ ul.section-header-menu-overlay-menu li a {
   padding: 10px;
   max-width: 200px;
   height: auto;
+  display: none !important;
 }
 .catalogo__hero-bg-01--content h2,
 .catalogo__hero-bg-02--content h2,
