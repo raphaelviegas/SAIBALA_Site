@@ -7399,35 +7399,35 @@ body.woocommerce-checkout .woocommerce-message{
   display: none !important;
 }
 
-#checkout .wc_payment_method.payment_method_pagarme-credit-card {
+#checkout .wc_payment_method.payment_method_woo-pagarme-payments-credit_card {
   flex-wrap: wrap;
 }
 
-#checkout .payment_box.payment_method_pagarme-credit-card {
+#checkout .payment_box.payment_method_woo-pagarme-payments-credit_card {
   border-top: 3px #a6a6a6 solid;
   min-width: 100%;
 }
 
-#checkout .payment_box.payment_method_pagarme-credit-card > p {
+#checkout .payment_box > p {
   display: none;
 } 
 
 
-#checkout .payment_box.payment_method_pagarme-credit-card fieldset {
+#checkout .payment_box.payment_method_woo-pagarme-payments-credit_card fieldset {
   background: #f5f5f5;
   padding: 30px;
 }
 
-#checkout .payment_box.payment_method_pagarme-credit-card .form-row {
+#checkout .payment_box.payment_method_woo-pagarme-payments-credit_card .form-row {
   flex-wrap: wrap;
 }
 
-#checkout .payment_box.payment_method_pagarme-credit-card .form-row label {
+#checkout .payment_box.payment_method_woo-pagarme-payments-credit_card .form-row label {
   min-width: 100%;
 }
 
-#checkout .payment_box.payment_method_pagarme-credit-card input, 
-#checkout .payment_box.payment_method_pagarme-credit-card select {
+#checkout .payment_box.payment_method_woo-pagarme-payments-credit_card input, 
+#checkout .payment_box.payment_method_woo-pagarme-payments-credit_card select {
   background: #fff;
   border: 1px #dedede solid;
   border-radius: 5px;
@@ -7472,8 +7472,8 @@ body.woocommerce-checkout .woocommerce-message{
 
 
 .payment_method_pagarme-banking-ticket,
-.payment_method_woo-pagarme-payments-billet {
-  background: url(../../img/icone-boleto.jpg) 10px center no-repeat;
+li.payment_method_woo-pagarme-payments-billet {
+  background: url(../../img/icone-boleto.jpg) 10px 10px no-repeat;
 }
 
 .payment_method_pagarme-credit-card,
@@ -7483,7 +7483,7 @@ body.woocommerce-checkout .woocommerce-message{
 
 .payment_method_wc_pagarme_pix_payment_geteway,
 .payment_method_woo-pagarme-payments-pix {
-  background: url(../../img/icone-pix.jpg) 10px center no-repeat;
+  background: url(../../img/icone-pix.jpg) 10px 10px no-repeat;
 }
 
 #checkout .cart-collaterals .shop_table td {
