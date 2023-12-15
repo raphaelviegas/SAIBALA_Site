@@ -7472,8 +7472,8 @@ body.woocommerce-checkout .woocommerce-message{
 
 
 .payment_method_pagarme-banking-ticket,
-.payment_method_woo-pagarme-payments-billet {
-  background: url(../../img/icone-boleto.jpg) 10px center no-repeat;
+li.payment_method_woo-pagarme-payments-billet {
+  background: url(../../img/icone-boleto.jpg) 10px 10px no-repeat;
 }
 
 .payment_method_pagarme-credit-card,
@@ -7483,7 +7483,7 @@ body.woocommerce-checkout .woocommerce-message{
 
 .payment_method_wc_pagarme_pix_payment_geteway,
 .payment_method_woo-pagarme-payments-pix {
-  background: url(../../img/icone-pix.jpg) 10px center no-repeat;
+  background: url(../../img/icone-pix.jpg) 10px 10px no-repeat;
 }
 
 #checkout .cart-collaterals .shop_table td {
