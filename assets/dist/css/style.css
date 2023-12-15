@@ -7413,7 +7413,7 @@ body.woocommerce-checkout .woocommerce-message{
 } 
 
 
-#checkout .payment_box.payment_method_woo-pagarme-payments-credit_card fieldset {
+#checkout fieldset {
   background: #f5f5f5;
   padding: 30px;
 }
@@ -7433,6 +7433,10 @@ body.woocommerce-checkout .woocommerce-message{
   border-radius: 5px;
   padding: 5px;
   font-size: 16px !important;
+  width: 100%;
+}
+
+#checkout .pagarme-brand-image {
   width: 100%;
 }
 
@@ -7476,13 +7480,13 @@ li.payment_method_woo-pagarme-payments-billet {
   background: url(../../img/icone-boleto.jpg) 10px 10px no-repeat;
 }
 
-.payment_method_pagarme-credit-card,
-.payment_method_woo-pagarme-payments-credit_card {
+li.payment_method_pagarme-credit-card,
+li.payment_method_woo-pagarme-payments-credit_card {
   background: url(../../img/icone-cartao.jpg) 10px 10px no-repeat;
 }
 
-.payment_method_wc_pagarme_pix_payment_geteway,
-.payment_method_woo-pagarme-payments-pix {
+li.payment_method_wc_pagarme_pix_payment_geteway,
+li.payment_method_woo-pagarme-payments-pix {
   background: url(../../img/icone-pix.jpg) 10px 10px no-repeat;
 }
 
