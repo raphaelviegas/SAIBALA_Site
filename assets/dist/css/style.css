@@ -2358,6 +2358,7 @@ ul.section-header-menu-overlay-menu li a {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 
@@ -7477,17 +7478,17 @@ body.woocommerce-checkout .woocommerce-message{
 
 .payment_method_pagarme-banking-ticket,
 li.payment_method_woo-pagarme-payments-billet {
-  background: url(../../img/icone-boleto.jpg) 10px 10px no-repeat;
+  background: url(../../img/icone-boleto.jpg) 10px 5px no-repeat;
 }
 
 li.payment_method_pagarme-credit-card,
 li.payment_method_woo-pagarme-payments-credit_card {
-  background: url(../../img/icone-cartao.jpg) 10px 10px no-repeat;
+  background: url(../../img/icone-cartao.jpg) 10px 5px no-repeat;
 }
 
 li.payment_method_wc_pagarme_pix_payment_geteway,
 li.payment_method_woo-pagarme-payments-pix {
-  background: url(../../img/icone-pix.jpg) 10px 10px no-repeat;
+  background: url(../../img/icone-pix.jpg) 10px 5px no-repeat;
 }
 
 #checkout .cart-collaterals .shop_table td {
