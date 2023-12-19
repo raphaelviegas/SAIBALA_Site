@@ -7532,3 +7532,53 @@ li.payment_method_woo-pagarme-payments-pix {
   color: #14ac9a;
   font-weight: bold;
 }
+
+
+
+/* Cupom */
+#checkout .checkout_coupon {
+  display: block !important;
+}
+
+.cupom__aplicado {  
+  padding: 10px;
+  margin-top: 30px;
+  background: #dbffdb;
+  text-align: center;
+  border: 2px green dotted;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.cupom__aplicado i {
+  font-size: 24px;  
+  margin-right: 5px;
+}
+
+.checkout_coupon  {
+  border: 2px #a6a6a6 solid;
+  margin-top: 30px;
+  padding: 20px
+}
+
+.checkout_coupon h3 {
+  font-size: 22px;
+}
+
+.checkout_coupon button {
+  width: 100%;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 10px
+}
+
+.checkout_coupon input {
+  padding: 10px;
+  width: 100%;
+}

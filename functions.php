@@ -872,3 +872,18 @@ if( function_exists('acf_add_local_field_group') ):
 add_action('acf/init', function() {
   include __DIR__ . '/acf/fields/page-catalogo.php';
 });
+
+
+
+add_action('wp_footer', 'woocommerce_custom_update_checkout', 50);
+function woocommerce_custom_update_checkout() {
+  if (is_checkout()) {
+?>
+<script type="text/javascript">
+
+  jQuery( document.body ).on( 'applied_coupon_in_checkout removed_coupon_in_checkout', function () {
+      location.reload();
+  });
+
+</script>
+<?php }} ?>
