@@ -972,6 +972,27 @@ ul.section-header-menu-overlay-menu li a {
   display: none;
 }
 
+
+.catalogo__intro {
+  display: block;
+  width: 100%;
+}
+
+.catalogo__intro img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width:768px) {
+  .catalogo__intro img.desktop {
+    display: none;
+  }
+  .catalogo__intro img.mobile {
+    display: block !important;
+  }
+}
+
 #catalogo {
   overflow-x: hidden;
   padding: 0;
@@ -1810,6 +1831,8 @@ ul.section-header-menu-overlay-menu li a {
   position: relative;
   background-size: cover;
   background-position:center;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .series__itens-card--img {
   z-index: 10;
@@ -1817,11 +1840,19 @@ ul.section-header-menu-overlay-menu li a {
 .series__itens-card--content {
   width: 100%;
   z-index: 20;
-  top: 0;
+  bottom: 20px;
   left: 0;
   padding: 20px 11px 0 20px;
   color: #fff;
+  position: absolute;
+  transition: all .5s;
 }
+
+
+.series__itens-card:hover .series__itens-card--content {
+  bottom: 30px;
+}
+
 .series__itens-card--content strong {
   display: inline-block;
   width: 100%;
@@ -1893,19 +1924,12 @@ ul.section-header-menu-overlay-menu li a {
 }
 .series__itens-card--btn {
   position: absolute;
-  bottom: 0;
+  background: transparent;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 72px;
-  padding: 20px 0;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  line-height: 1;
-  font-weight: 300;
-  color: #fff;
-  border: none;
-  outline: none;
+  height: 100%;
+  z-index: 99;
 }
 .series__itens-card--btn:focus {
   outline: 2px solid #000;
