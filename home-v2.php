@@ -8,7 +8,7 @@
 			<source src="<?= get_template_directory_uri(); ?>/assets/img/saibala-small.mp4" type="video/mp4">
 		</video>
 		<div class="container">		
-			<img src="<?= get_template_directory_uri(); ?>/assets/img/play-intro.svg" alt="Play" class="play">
+			<img src="<?= get_template_directory_uri(); ?>/assets/img/play-home.svg" width="160px" alt="Play" class="play">
 			<a href="<?= site_url(); ?>/catalogo">Nossos cursos</a>
 		</div>
 

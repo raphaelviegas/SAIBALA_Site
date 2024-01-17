@@ -5,8 +5,9 @@ body.page-template-home-v2 .home__v2 * {
 section.intro {
     background:#000;
     background-size: cover;
-    padding: 200px 0;
+    padding: 270px 0;
     position: relative;
+    min-height: 100%;
 }
 
 section.intro > video {
@@ -72,13 +73,16 @@ section.intro .container {
 }
 
 section.intro img.play {
-    width: 100%;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
     text-align: center;
     display: block;
-    margin-bottom: 40px;
     cursor: pointer;
     opacity: .7;
     transition: .5s;
+    margin: auto;
+    margin-bottom: 50px;
 }
 
 section.intro img.play:hover {
