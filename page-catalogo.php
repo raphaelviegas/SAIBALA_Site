@@ -7,14 +7,8 @@ wp_enqueue_script('vue', 'https://unpkg.com/vue@3.2.47/dist/vue.global.js');
 wp_enqueue_style('mdi', 'https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css');
 
 $email_contact = get_field('email_contact');
-$hero_image_01 = get_field('hero_image_01');
-$hero_image_02 = get_field('hero_image_02');
-$hero_image_03 = get_field('hero_image_03');
 
-// // Localhost imagem correta para teste
-// $hero_image_01 = 'https://saibala.com.br/wp-content/uploads/2022/11/Retrato_Embuscadoprodutoperfeito.png';
-// $hero_image_02 = 'https://saibala.com.br/wp-content/uploads/2022/11/Landscape_Temposexponenciais.png';
-// $hero_image_03 = 'https://saibala.com.br/wp-content/uploads/2022/12/Landscape_CaminhoProfissionalFuturo.png';
+
 
 wp_enqueue_style('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
 
@@ -79,84 +73,10 @@ endif;
 
 
 <div id="catalogo">
-  <section class="catalogo__hero">
-    <?php $hero = get_field('hero_item'); ?>
-    <div class="catalogo__hero-wrapper">
-      <a href="<?php echo get_field('hero_01_postit_link');?>" class="catalogo__hero-bg-01">
-        <div class="catalogo__hero-bg-01" style="background-image:url(<?php echo $hero_image_01;?>)">
-          <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
-          <div class="catalogo__hero-bg-01--content">
-            <h2><?php echo get_field('hero_01_postit_title');?></h2>
-            <p><?php echo get_field('hero_01_postit_subtitle');?></p>
-            <div class="catalogo__hero-bg-01--content-link">
-              ver mais <div class="arrow"></div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="catalogo__hero-wrapper">
-      <a href="<?php echo get_field('hero_02_postit_link');?>" class="catalogo__hero-bg-02">
-        <div class="catalogo__hero-bg-02" style="background-image:url(<?php echo $hero_image_02;?>)">
-          <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>
-          <div class="catalogo__hero-bg-02--content">
-            <h2><?php echo get_field('hero_02_postit_title');?></h2>
-            <p><?php echo get_field('hero_02_postit_subtitle');?></p>
-            <div class="catalogo__hero-bg-02--content-link">
-              ver mais <div class="arrow"></div>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <a href="<?php echo get_field('hero_03_postit_link');?>" class="catalogo__hero-bg-03">
-        <div class="catalogo__hero-bg-03" style="background-image:url(<?php echo $hero_image_03;?>)">
-          <div class="selo__hero"><img src="<?= get_template_directory_uri(); ?>/assets/img/selo-lancamento.png"></div>  
-          <div class="catalogo__hero-bg-03--content">
-            <h2><?php echo get_field('hero_03_postit_title');?></h2>
-            <p><?php echo get_field('hero_03_postit_subtitle');?></p>
-            <div class="catalogo__hero-bg-03--content-link">
-              ver mais <div class="arrow"></div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <?php if (have_rows('ancora_topo')): ?>
-    <section class="catalogo__about">
-        <h2 class="catalogo__about-title">
-          Em qual momento da sua carreira você está?  
-        </h2>
-
-        <div class="row">
-          <?php while(have_rows('ancora_topo')):
-            $ancora = (object) the_row();
-            $ancora->ancora_topo_image = $ancora->ancora_topo_image ? wp_get_attachment_url($ancora->ancora_topo_image) : null;
-          ?>
-          <div class="col-6 col-md-3 align-end">
-            <a href="javascript:ancoraTopoScrollTo(<?php echo $ancora->ancora_topo_link_bloco_series; ?>);" style="color:#444!important;">
-              <img style="height:270px; max-width:100%; object-fit:cover;" src="<?php echo $ancora->ancora_topo_image; ?>" alt="<?php echo $ancora->ancora_topo_title; ?>">
-              <div class="px-3">
-                <strong><?php echo $ancora->ancora_topo_title; ?></strong>
-                <div style="margin-top:10px;"><?php echo $ancora->ancora_topo_text; ?></div>
-              </div>
-            </a>
-          </div>
-          <?php endwhile; ?>
-        </div>
-      </div>
-    </section>
-
-    <script>
-      function ancoraTopoScrollTo(index) {
-        const target = document.querySelector(`#series_bloco_index_${index}`);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'end' });
-      }
-    </script>
-  <?php endif; ?>
+	<section class="catalogo__intro">
+		<img src="<?= get_field('intro_desktop'); ?>" class="desktop">
+		<img src="<?= get_field('intro_mobile'); ?>" class="mobile" style="display:none">
+	</section>
 
     <?php if (have_rows('series_bloco')) : ?>
         <?php
@@ -196,14 +116,8 @@ endif;
                     
 
                   <div class="swiper-slide">
-                    <div class="series__itens-card" style = "background-image: linear-gradient(
-                            180deg,
-                            #000,
-                            #595656 0.1%,
-                            rgba(255, 255, 255, 0)
-                          ), url('<?php echo get_the_post_thumbnail_url($post->ID) ?>'); " >
+                    <div class="series__itens-card" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID) ?>'); " >
                       <div class = "series__itens-card--content" >
-                        <strong> <?php the_title(); ?></strong>
                         
                         
                         <div class="series__itens-card--content-profs">
@@ -252,7 +166,7 @@ endif;
                         </div>
                       </div>
                       
-                      <a href="<?php echo esc_url($permalink); ?>" class="series__itens-card--btn" style="background: <?php echo $rgb?>" >ver mais <div class="arrow"></div></a>
+                      <a href="<?php echo esc_url($permalink); ?>" class="series__itens-card--btn"></a>
                     </div>
                   </div>
                 <?php endforeach; ?>
