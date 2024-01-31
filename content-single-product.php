@@ -70,7 +70,14 @@ if(get_field('layout') == 'v2') { ?>
 -->
 
 <section class="intro__curso">
-	<?php the_post_thumbnail('full',['class'=>'background']); ?>
+	<?php 
+		$bg_intro = get_field('background_introducao');
+		if ($bg_intro) {
+			echo '<img src="'.$bg_intro.'" alt="'.get_the_title().'" class="background">';
+		} else {
+			the_post_thumbnail('full',['class'=>'background']);
+		}
+	?>
 	<div class="container">
 		<h1><span><span><?php echo get_the_title(); ?></span></span></h1>
 		<p><?php the_field('subtitulo') ?></p>
