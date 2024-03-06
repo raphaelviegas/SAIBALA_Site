@@ -321,6 +321,7 @@ if(get_field('professor')){
 		<div class="row">
 			<div class="col-md-6 <?php if (!get_field('textos_vendas')) { echo 'offset-md-3'; } ?>">
 				<?php 
+
 					if ($product->sale_price !== '') {
 						$desconto = round($product->sale_price / $product->regular_price - 1,2)*-100;
 						$parcela = round($product->sale_price /12,2);
@@ -328,19 +329,37 @@ if(get_field('professor')){
 						$desconto = '100';
 						$parcela = '0';
 					}
+
+					if (get_field('ocultar_desconto')) {
 				?>
-				<div class="box__comprar">
-					<div class="preco__de">
-						<?php echo wc_price($product->get_regular_price(), array('decimals' => 2)); ?>
+
+					<div class="box__comprar">
+						<div class="preco__parcelado">
+							<?php echo wc_price($product->get_sale_price(), array('decimals' => 2)); ?>
+						</div>
+						<div class="preco__por">
+							<p>12x de <?php echo wc_price($parcela, array('decimals' => 2)); ?></p>
+						</div>
+						<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
 					</div>
-					<div class="preco__parcelado">
-						<p>12x de <?php echo wc_price($parcela, array('decimals' => 2)); ?></p>
+
+				<?php
+					} else {
+						
+				?>
+					<div class="box__comprar">
+						<div class="preco__de">
+							<?php echo wc_price($product->get_regular_price(), array('decimals' => 2)); ?>
+						</div>
+						<div class="preco__parcelado">
+							<p>12x de <?php echo wc_price($parcela, array('decimals' => 2)); ?></p>
+						</div>
+						<div class="preco__por">
+							<span class="preco"><?php echo wc_price($product->get_sale_price(), array('decimals' => 2)); ?></span>
+						</div>
+						<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
 					</div>
-					<div class="preco__por">
-						<span class="preco"><?php echo wc_price($product->get_sale_price(), array('decimals' => 2)); ?></span>
-					</div>
-					<a href="<?= $product->add_to_cart_url(); ?>" data-quantity="1" class="comprar__default">compre agora!</a>
-				</div>
+				<?php } ?>
 				<ul class="pagamento__list">
 					<li><img src="<?= get_template_directory_uri(); ?>/assets/img/pagamento-pix.svg"></li>
 					<li><img src="<?= get_template_directory_uri(); ?>/assets/img/pagamento-mastercard.svg"></li>
