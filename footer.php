@@ -8,7 +8,7 @@
 			<div class="footer-contact">
 				<div class="footer-contact--container">
 					<strong>Whatsapp:</strong>
-					<a href="https://wa.me/+5511999680694" target="_blank">+55 (11) 9968-0694</a>
+					<a href="https://wa.me/+5511933938974" target="_blank">+55 (11) 93393-8974</a>
 					<br>
 
 					<strong>E-mail:</strong>
