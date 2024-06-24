@@ -990,7 +990,7 @@ section.mensure__two .number.amarelo p, section.mensure__two .number.amarelo h3 
 
 /* Section CTA */
 section.cta .box__cta {
-    background: url(../../img/bg-cta.bmp) center center no-repeat;
+    background: url(../../img/bg-cta.jpg) center center no-repeat;
     background-size: cover;
     height: 590px;
     position: relative;
