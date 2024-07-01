@@ -137,7 +137,7 @@ endif;
                                             break;
                                         } ?>
                                         <?php setup_postdata($post); ?>
-                                            <img src="<?php echo get_the_post_thumbnail_url($post->ID) ?>"/>
+                                            <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'small') ?>"/>
                                             <?php array_push($prof_names, get_the_title());
                                             ?>
                                   <?php endforeach; ?>

@@ -36,7 +36,7 @@
 
     foreach($query->posts as $course) {
       $course->category_id = $cat->term_id;
-      $course->thumbnail_url = get_the_post_thumbnail_url($course);
+      $course->thumbnail_url = get_the_post_thumbnail_url($course, 'shop_single');
       $course->permalink = get_permalink($course);
       
       $course->professor_posts_series_more = 0;
