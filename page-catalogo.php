@@ -116,7 +116,7 @@ endif;
                     
 
                   <div class="swiper-slide">
-                    <div class="series__itens-card" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID) ?>'); " >
+                    <div class="series__itens-card" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID) ?>', 'medium_large'); " >
                       <div class = "series__itens-card--content" >
                         
                         
