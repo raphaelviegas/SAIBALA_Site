@@ -7404,6 +7404,11 @@ body.woocommerce-checkout .woocommerce-message{
   margin-top: -45px;
 }
 
+@media (max-width:998px) {
+  #checkout .cart-collaterals {
+    margin-top: 0 !important;
+  }
+}
 
 #order_review_heading {
   font-size: 18px;
