@@ -1965,6 +1965,8 @@ ul.section-header-menu-overlay-menu li a {
   bottom: 0;
   left: 5%;
 }
+
+
 .swiper-button-next,
 .swiper-button-prev {
   margin-top: 0;
@@ -1973,7 +1975,33 @@ ul.section-header-menu-overlay-menu li a {
   display: initial;
   position: absolute;
   z-index: 1000;
+  filter: invert(1) grayscale(1) brightness(0);
+  z-index: 9999;
+  position: static !important;
+  margin: 0 !important;
+  width: 20px !important;
+  height: 35px !important;
 }
+
+.navegacao {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.navegacao__next,
+.navegacao__prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev {
+  left: -100px;
+}
+
 .swiper-button-next ion-icon,
 .swiper-button-prev ion-icon {
   width: 100%;

@@ -104,8 +104,7 @@ endif;
 
             if ($featured_posts) : ?>
               <div class="container">
-              <div class="series-itens swiper swiperSeries">
-               
+              <div class="series-itens swiper swiperSeries">                            
                 <div class="swiper-wrapper">
                 <?php foreach ($featured_posts as $post) :
                   // Setup this post for WP functions (variable must be named $post).
@@ -170,7 +169,15 @@ endif;
                     </div>
                   </div>
                 <?php endforeach; ?>
-              </div>
+                </div>
+                <div class="navegacao">
+                  <div class="navegacao__prev">
+                    <div class="swiper-button-prev"></div>
+                  </div>  
+                  <div class="navegacao__next">
+                    <div class="swiper-button-next"></div>
+                  </div>                                      
+                </div>      
               </div>
                 <?php
                 wp_reset_postdata(); ?>
@@ -266,7 +273,7 @@ endif;
 	  centeredSlides: false,
     pagination: {
       el: ".swiper-pagination",
-      clickable: false,
+      clickable: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
