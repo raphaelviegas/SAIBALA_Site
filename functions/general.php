@@ -29,7 +29,7 @@ function csv_open($mimes = array()) {
 }
 add_filter('upload_mimes', 'csv_open');
 
-/* Temporary ACF active */
+/* Temporary ACF active 
 class AutoActivator {		
   const ACTIVATION_KEY = 'youractivationkeyhere';
   public function __construct() {
@@ -42,7 +42,7 @@ class AutoActivator {
     }
   }  
 }     
-new AutoActivator();
+new AutoActivator();*/
 
 function dd() {
   foreach(func_get_args() as $data) {
